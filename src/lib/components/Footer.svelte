@@ -116,7 +116,7 @@
                 <ul class="space-y-3 font-body-md text-sm">
                     <li class="text-text-muted">Pekalongan, Jawa Tengah</li>
                     <li><a class="text-text-muted hover:text-primary transition-colors" href="https://wa.me/6285158418944" target="_blank" rel="noopener noreferrer">WhatsApp Support (+62 851-5841-8944)</a></li>
-                    <li><a class="text-text-muted hover:text-primary transition-colors" href="mailto:info@svralabs.id">info@svralabs.id</a></li>
+                    <li><a class="text-text-muted hover:text-primary transition-colors" href="mailto:svralabs@gmail.com">svralabs@gmail.com</a></li>
                 </ul>
             </div>
         </div>
