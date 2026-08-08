@@ -35,7 +35,7 @@
 
             <a 
                 use:magneticButton 
-                href="https://wa.me/6281234567890?text=Halo%20Svralabs,%20saya%20ingin%20konsultasi%20mengenai%20sistem%20digitalisasi%20bisnis." 
+                href="https://wa.me/6285158418944?text=Halo%20Svralabs,%20saya%20ingin%20konsultasi%20mengenai%20sistem%20digitalisasi%20bisnis." 
                 target="_blank"
                 rel="noopener noreferrer"
                 class="bg-primary text-on-primary font-label-bold text-base py-4 px-9 rounded-full transition-all duration-300 shadow-lg hover:shadow-primary/30 inline-flex items-center gap-2"
@@ -115,7 +115,7 @@
                 <h3 class="font-inter text-sm font-semibold uppercase tracking-wider text-on-surface mb-4">Kontak</h3>
                 <ul class="space-y-3 font-body-md text-sm">
                     <li class="text-text-muted">Pekalongan, Jawa Tengah</li>
-                    <li><a class="text-text-muted hover:text-primary transition-colors" href="https://wa.me/6281234567890" target="_blank">WhatsApp Support</a></li>
+                    <li><a class="text-text-muted hover:text-primary transition-colors" href="https://wa.me/6285158418944" target="_blank" rel="noopener noreferrer">WhatsApp Support (+62 851-5841-8944)</a></li>
                     <li><a class="text-text-muted hover:text-primary transition-colors" href="mailto:info@svralabs.id">info@svralabs.id</a></li>
                 </ul>
             </div>
