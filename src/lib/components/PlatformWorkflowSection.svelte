@@ -24,10 +24,10 @@
                 
                 <ul class="space-y-4">
                     <li class="flex items-center gap-3 font-body-md text-on-surface">
-                        <span class="material-symbols-outlined text-success">check_circle</span> Proses checkout 3x lebih cepat
+                        <span class="material-symbols-outlined text-success">check_circle</span> Proses checkout lebih cepat, antrian tidak menumpuk
                     </li>
                     <li class="flex items-center gap-3 font-body-md text-on-surface">
-                        <span class="material-symbols-outlined text-success">check_circle</span> Mendukung berbagai metode pembayaran
+                        <span class="material-symbols-outlined text-success">check_circle</span> Mendukung berbagai metode pembayaran termasuk QRIS
                     </li>
                 </ul>
             </div>

@@ -47,7 +47,7 @@
         <div class="flex-1 w-full max-w-[500px] mx-auto md:mx-0">
             <div use:scaleIn={{ delay: 0.2 }} class="relative w-full aspect-[3/4] group">
                 <div class="absolute inset-0 bg-surface-faint rounded-[24px] overflow-hidden transition-transform duration-500 group-hover:-translate-y-2 border border-border-hairline shadow-sm">
-                    <img class="w-full h-full object-cover" alt="Tampilan sistem operasional UMKM" src="/laundry management/Tangkapan Layar 2026-08-09 pukul 00.34.44.png"/>
+                    <img class="w-full h-full object-cover" alt="Tampilan sistem manajemen laundry Svralabs di tablet" src="/laundry management/Tangkapan Layar 2026-08-09 pukul 00.34.44.png"/>
                 </div>
                 
                 <div class="absolute -left-6 md:-left-12 bottom-12 glass-panel rounded-xl p-4 w-56 transition-transform duration-500 delay-100 group-hover:-translate-y-4">

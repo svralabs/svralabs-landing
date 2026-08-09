@@ -7,13 +7,13 @@
 <div use:fadeUp={{ duration: 0.8 }} class="text-center max-w-4xl mx-auto mb-16 md:mb-24">
 <div class="inline-flex items-center space-x-2 bg-surface-container px-4 py-1.5 rounded-full mb-8 border border-border-hairline">
 <span class="material-symbols-outlined text-primary text-sm">star</span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">INVESTASI</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">HARGA &amp; PAKET</span>
 </div>
 <h2 use:headlineMaskReveal class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg mb-6">
-                    Solusi Sesuai <i class="text-text-muted font-light">Kebutuhan Bisnismu</i>
+                    Mulai dari Rp 499.000/bulan — <i class="text-text-muted font-light">tidak ada biaya kejutan</i>
 </h2>
 <p use:blurReveal={{ delay: 0.15 }} class="font-body-lg text-body-lg text-text-muted max-w-2xl mx-auto">
-                    Mulai dari produk siap pakai yang cepat diimplementasikan, hingga pengembangan sistem custom berskala besar.
+                    Produk siap pakai bisa langsung dipakai hari ini. Sistem custom? Konsultasi dulu, bayar kalau cocok.
                 </p>
 </div>
 <div use:staggerFadeUp={{ staggerDelay: 0.15 }} class="perspective-grid grid grid-cols-1 md:grid-cols-3 gap-8 items-end max-w-6xl mx-auto">
@@ -97,13 +97,13 @@
 <div class="mb-8">
 <div class="flex items-center gap-3 mb-4">
 <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-full">corporate_fare</span>
-<h3 class="font-label-bold text-label-bold text-on-surface text-lg">Paket Enterprise UMKM</h3>
+<h3 class="font-label-bold text-label-bold text-on-surface text-lg">Paket Enterprise</h3>
 </div>
 <div class="flex items-baseline mb-2">
 <span class="font-headline-md text-headline-md text-on-surface tabular-nums">Rp 2.899.000</span>
 <span class="font-body-md text-body-md text-text-muted ml-2">/bulan</span>
 </div>
-<p class="font-body-md text-body-md text-text-muted text-sm">Solusi menyeluruh dengan kustomisasi untuk operasional besar.</p>
+<p class="font-body-md text-body-md text-text-muted text-sm">Solusi menyeluruh dengan kustomisasi penuh untuk operasional skala besar dan multi-cabang.</p>
 </div>
 <ul class="flex flex-col gap-4 flex-grow mb-8 font-body-md text-body-md text-on-surface-variant">
 <li class="flex items-start gap-3">

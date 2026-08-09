@@ -22,15 +22,15 @@
         <div use:fadeUp={{ duration: 0.8 }} class="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-6">
                 <span class="material-symbols-outlined text-[16px] text-primary-fixed" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-surface/90">MULAI DIGITALISASI</span>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-surface/90">KONSULTASI GRATIS</span>
             </div>
 
             <h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-surface mb-6 leading-tight">
-                Capai keunggulan operasional bisnis dengan <i class="text-primary-fixed font-light">sistem terintegrasi</i>
+                Sistem yang bikin operasional beres, biar kamu bisa <i class="text-primary-fixed font-light">fokus analisa bisnis</i>
             </h2>
 
             <p class="font-body-lg text-body-lg text-surface/75 mb-10 max-w-2xl">
-                Dirancang oleh praktisi teknologi Pekalongan untuk membantu UMKM ritel, F&B, dan fasilitas publik berkembang tanpa batas.
+                Ceritakan tantangan operasional bisnismu. Kami siap bantu rancang sistem yang pas — tanpa ribet, tanpa mahal.
             </p>
 
             <a 
@@ -66,7 +66,7 @@
             </a>
             
             <p class="font-body-md text-sm text-text-muted">
-                Software house asal Pekalongan. Solusi sistem kasir POS, rekam medis EMR, dan custom software untuk UMKM hingga enterprise.
+                Software house untuk bisnis yang mau tumbuh. Sistem kasir POS, rekam medis EMR, laundry, dan custom software.
             </p>
 
             <div>
@@ -125,7 +125,7 @@
 
     <!-- Copyright & Big Wordmark -->
     <div class="max-w-7xl mx-auto px-gutter pb-6 flex flex-col sm:flex-row justify-between items-center text-text-muted font-label-bold text-xs border-t border-border-hairline pt-6">
-        <p>© 2026 Svralabs. Digitalisasi UMKM gak perlu mahal dan ribet.</p>
+        <p>© 2026 Svralabs. Digitalisasi usaha, gak perlu mahal dan ribet.</p>
         <div class="flex gap-4 mt-2 sm:mt-0">
             <a class="hover:text-primary transition-colors" href="/#kontak" onclick={(e) => navigateOrScroll(e, 'kontak')}>Privasi</a>
             <a class="hover:text-primary transition-colors" href="/#kontak" onclick={(e) => navigateOrScroll(e, 'kontak')}>Syarat & Ketentuan</a>

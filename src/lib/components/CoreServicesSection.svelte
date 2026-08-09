@@ -9,7 +9,7 @@
                 CORE SOLUTIONS
             </span>
             <h2 use:headlineMaskReveal class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg mb-6">
-                Pilihan solusi digital yang <i class="text-text-muted font-light">fleksibel</i> untuk bisnismu
+                Tiga cara kerja Svralabs — pilih yang paling cocok <i class="text-text-muted font-light">buat bisnismu</i>
             </h2>
         </div>
         <button use:shimmerButton class="bg-surface-container-lowest text-on-surface border border-border-hairline px-6 py-3 rounded-full font-label-bold hover:bg-surface-container transition-colors shadow-sm whitespace-nowrap">
@@ -46,7 +46,7 @@
                 Custom Development
             </h3>
             <p class="font-body-md text-body-md text-text-muted mb-8 flex-grow">
-                Untuk UMKM dan perusahaan yang punya alur kerja unik dan butuh sistem yang dijahit khusus sesuai kebutuhan.
+                Bisnis punya alur kerja unik? Kami bangun sistem yang dijahit sesuai kebutuhan — dari ritel, klinik, hingga manufaktur.
             </p>
             <a use:spotlightButton class="inline-flex items-center gap-2 bg-on-background text-on-primary font-label-bold text-label-bold rounded-full px-6 py-3 w-fit transition-colors duration-300 hover:bg-primary-container" href="#kontak">
                 Konsultasi Kebutuhan

@@ -24,13 +24,13 @@
 <div use:staggerFadeUp={{ staggerDelay: 0.15 }} class="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center">
 <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md border border-border-hairline rounded-full px-4 py-1.5 mb-8 shadow-sm">
 <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-text-muted">Software House Pekalongan</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-text-muted">Sistem Kasir · EMR · Custom Software</span>
 </div>
 <h1 use:headlineMaskReveal class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface max-w-4xl mb-6">
-                Digitalisasi UMKM <span class="italic font-light text-primary">Gak Perlu</span> Mahal dan Ribet
+                Digitalisasi Usaha, <span class="italic font-light text-primary">Gak Perlu</span> Mahal dan Ribet
             </h1>
 <p use:blurReveal={{ delay: 0.2 }} class="font-body-lg text-body-lg text-text-muted max-w-2xl mb-12">
-                Sistem harus mempermudah, bukan mempersulit. Svralabs hadir untuk bantu usahamu beralih ke digital dengan cepat dan efisien.
+                Operasional manual bikin pusing? Svralabs bantu bisnismu beralih digital dengan sistem yang langsung jalan — cepat, efisien, dan terjangkau.
             </p>
 <div class="flex flex-col sm:flex-row gap-4 mb-24">
 <button use:magneticButton onclick={() => scrollTo('kontak')} class="bg-on-surface text-surface px-8 py-4 rounded-full font-label-bold hover:bg-primary transition-colors duration-300 shadow-lg">

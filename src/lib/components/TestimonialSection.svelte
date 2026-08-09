@@ -6,13 +6,13 @@
 <div use:fadeUp={{ duration: 0.8 }} class="text-center mb-24">
 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-highest/50 mb-6 border border-border-hairline backdrop-blur-md">
 <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">BUKTI NYATA</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">STUDI KASUS NYATA</span>
 </div>
 <h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface max-w-3xl mx-auto">
-                Solusi yang sudah teruji di lapangan
+                Sistem yang sudah jalan — bukan sekadar demo
             </h2>
 <p class="font-body-md text-body-md text-on-surface-variant mt-4 max-w-2xl mx-auto">
-                Implementasi nyata sistem Svralabs di berbagai sektor industri lokal.
+                Dari klinik fasilitas kesehatan hingga grosir konveksi. Ini bukan portofolio, ini sistem yang dipakai sehari-hari.
             </p>
 </div>
 

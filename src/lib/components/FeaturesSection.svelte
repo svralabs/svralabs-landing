@@ -44,8 +44,8 @@ dan <span class="italic text-primary-container">antrian panjang?</span>
 <div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center mb-6 shadow-md">
 <span class="material-symbols-outlined text-white" data-icon="cloud_sync">cloud_sync</span>
 </div>
-<h3 class="font-headline-md text-[20px] font-semibold text-on-surface mb-3">Transformasi Digital UMKM</h3>
-<p class="font-body-md text-[14px] text-text-muted">Integrasikan seluruh alur kerja bisnis tradisional ke dalam satu ekosistem cloud modern.</p>
+<h3 class="font-headline-md text-[20px] font-semibold text-on-surface mb-3">Digitalisasi Alur Bisnis</h3>
+<p class="font-body-md text-[14px] text-text-muted">Integrasikan seluruh alur kerja bisnis ke dalam satu ekosistem cloud modern — dari kasir hingga laporan.</p>
 </div>
 <div use:tiltCard class="bg-white rounded-24 p-8 border border-border-hairline flex flex-col items-start text-left">
 <div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center mb-6 shadow-md">
