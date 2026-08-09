@@ -30,7 +30,7 @@
                         <span class="material-symbols-outlined text-white" data-icon="language">language</span>
                     </div>
                     <h3 class="font-label-bold text-label-bold text-on-surface mb-2">Pantau Darimana Saja</h3>
-                    <p class="font-body-md text-body-md text-text-muted">Kontrol bisnis secara real-time meski tidak di tempat.</p>
+                    <p class="font-body-md text-body-md text-text-muted">Cek omset dan stok toko dari HP, meski kamu lagi di luar.</p>
                 </div>
                 
                 <div class="flex flex-col items-start">

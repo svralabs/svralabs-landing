@@ -22,7 +22,7 @@
 dan <span class="italic text-primary-container">antrian panjang?</span>
                 </h2>
 <p use:blurReveal={{ delay: 0.15 }} class="mt-6 text-on-surface-variant font-body-md max-w-2xl mx-auto">
-                    Kami paham sakit kepalanya ngurus operasional manual. Svralabs merancang sistem yang bantu selesaikan akar masalahnya.
+                    Kami paham sakit kepalanya — stok nggak cocok, laporan kelewatan, antrian numpuk. Svralabs bikin sistem yang beresin itu satu per satu.
                 </p>
 </div>
 <div use:staggerFadeUp={{ staggerDelay: 0.1 }} class="perspective-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full mb-16">

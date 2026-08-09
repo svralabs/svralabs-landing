@@ -181,14 +181,14 @@
                         </div>
 
                         <h3 class="font-headline-md text-headline-md text-on-surface mb-5 group-hover:text-primary transition-colors duration-300">
-                            Progress kerjaan susah dipantau, harus nanya terus?
+                            Mau tahu cucian atau antrian mana yang belum selesai, harus nanya dulu?
                         </h3>
 
                         <p class="font-body-md text-body-md text-text-muted mb-4 leading-relaxed">
-                            Status suatu proses — barang, dokumen, antrian — cuma ada di kepala orang yang megang, atau harus ditanya manual satu-satu. Kalau orangnya lagi sibuk, informasi jadi telat sampai ke yang butuh.
+                            Cucian yang masih diproses, antrian pasien yang belum dipanggil, orderan konveksi yang belum dikerjakan — semuanya cuma ada di kepala satu orang. Kalau dia lagi sibuk atau nggak di tempat, yang lain nunggu, nanya-nanya, atau salah ambil langkah.
                         </p>
                         <p class="font-body-md text-body-md text-on-surface leading-relaxed mb-8">
-                            Sistem yang bikin status kerjaan kelihatan real-time, dari mulai masuk sampai selesai. Semua orang yang perlu tahu, tinggal cek — nggak perlu tanya-tanya lagi. Operasional lebih efisien, dan kamu bisa mulai analisa pola dari data yang tercatat rapi.
+                            Setiap cucian, antrian pasien, atau orderan punya statusnya sendiri — kelihatan langsung di layar, tanpa harus nanya ke siapapun. Karyawan laundry tahu mana yang belum selesai, admin klinik tahu siapa yang harus dipanggil berikutnya. Kamu tinggal pantau dari mana aja — dan mulai lihat pola dari data yang otomatis tercatat.
                         </p>
 
                         <!-- Proof Point -->
