@@ -50,6 +50,15 @@
         <ul class="flex items-center gap-8">
             <li>
                 <a 
+                    href="/#solusi" 
+                    onclick={(e) => navigateOrScroll(e, 'solusi')}
+                    class="text-on-surface-variant font-label-bold hover:text-primary transition-colors duration-300"
+                >
+                    Solusi
+                </a>
+            </li>
+            <li>
+                <a 
                     href="/#layanan" 
                     onclick={(e) => navigateOrScroll(e, 'layanan')}
                     class="text-on-surface-variant font-label-bold hover:text-primary transition-colors duration-300"
@@ -121,6 +130,14 @@
     <!-- Mobile Drawer Menu -->
     {#if mobileMenuOpen}
         <div class="mt-2 bg-white/95 backdrop-blur-2xl border border-border-hairline rounded-2xl p-6 shadow-2xl flex flex-col gap-5 transition-all">
+            <a 
+                href="/#solusi" 
+                onclick={(e) => navigateOrScroll(e, 'solusi')}
+                class="font-label-bold text-on-surface text-lg py-1 border-b border-border-hairline/50 flex justify-between items-center"
+            >
+                Solusi
+                <span class="material-symbols-outlined text-sm text-text-muted">chevron_right</span>
+            </a>
             <a 
                 href="/#layanan" 
                 onclick={(e) => navigateOrScroll(e, 'layanan')}

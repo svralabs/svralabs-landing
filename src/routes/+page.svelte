@@ -1,6 +1,7 @@
 <script lang="ts">
   import Navbar from '$lib/components/Navbar.svelte';
   import HeroSection from '$lib/components/HeroSection.svelte';
+  import SolutionCategorySection from '$lib/components/SolutionCategorySection.svelte';
   import MissionSection from '$lib/components/MissionSection.svelte';
   import FeaturesSection from '$lib/components/FeaturesSection.svelte';
   import PlatformWorkflowSection from '$lib/components/PlatformWorkflowSection.svelte';
@@ -43,6 +44,7 @@
   <Navbar />
   <main>
     <HeroSection />
+    <SolutionCategorySection />
     <MissionSection />
     <FeaturesSection />
     <PlatformWorkflowSection />
