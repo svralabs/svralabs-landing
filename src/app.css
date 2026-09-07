@@ -194,17 +194,9 @@
 }
 
 @layer base {
-  html {
-    scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
-  }
   body {
     background-color: var(--color-surface);
     color: var(--color-on-surface);
-  }
-  section {
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
   }
 }
 
@@ -216,11 +208,11 @@
   box-shadow: 0 10px 40px -10px rgba(17, 24, 39, 0.04);
 }
 .card-hover-effect {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.3s cubic-bezier(0.32, 0.72, 0, 1);
 }
 .card-hover-effect:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 38px -10px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 .giant-wordmark {
   font-size: clamp(72px, 16vw, 180px);
@@ -231,8 +223,41 @@
   white-space: nowrap;
 }
 
-/* 3D perspective context for tiltCard / glareCard effects */
+/* 3D perspective context for tilt3D / parallax effects */
 .perspective-grid {
   perspective: 1200px;
   perspective-origin: center center;
 }
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.translate-z-12 {
+  transform: translateZ(12px);
+}
+
+.translate-z-24 {
+  transform: translateZ(24px);
+}
+
+.translate-z-36 {
+  transform: translateZ(36px);
+}
+
+/* Zero-cost hardware-accelerated atmospheric glow (smooth feathered falloff with zero clipping artifacts) */
+.glow-orb-primary {
+  background: radial-gradient(circle at center, rgba(0, 105, 72, 0.16) 0%, rgba(0, 105, 72, 0.08) 35%, rgba(0, 105, 72, 0.02) 55%, transparent 70%);
+}
+
+.glow-orb-primary-fixed {
+  background: radial-gradient(circle at center, rgba(133, 248, 196, 0.20) 0%, rgba(133, 248, 196, 0.10) 35%, rgba(133, 248, 196, 0.02) 55%, transparent 70%);
+}
+
+.glow-orb-primary-fixed-dim {
+  background: radial-gradient(circle at center, rgba(104, 219, 169, 0.16) 0%, rgba(104, 219, 169, 0.08) 35%, rgba(104, 219, 169, 0.02) 55%, transparent 70%);
+}
+
+
+
+

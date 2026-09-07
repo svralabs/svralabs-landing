@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Navbar from '$lib/components/Navbar.svelte';
   import HeroSection from '$lib/components/HeroSection.svelte';
   import SolutionCategorySection from '$lib/components/SolutionCategorySection.svelte';
   import MissionSection from '$lib/components/MissionSection.svelte';
@@ -11,6 +10,7 @@
   import TestimonialSection from '$lib/components/TestimonialSection.svelte';
   import BlogSection from '$lib/components/BlogSection.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import { initBoundaryTransitions } from '$lib/actions/sectionTransition';
 </script>
 
 <svelte:head>
@@ -40,8 +40,7 @@
   })}<\/script>`}
 </svelte:head>
 
-<div class="bg-surface text-on-surface antialiased min-h-screen font-body-md selection:bg-primary-container selection:text-on-primary-container">
-  <Navbar />
+<div use:initBoundaryTransitions class="bg-surface text-on-surface antialiased min-h-screen font-body-md selection:bg-primary-container selection:text-on-primary-container">
   <main>
     <HeroSection />
     <SolutionCategorySection />

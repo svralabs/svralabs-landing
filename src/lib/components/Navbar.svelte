@@ -1,5 +1,7 @@
 <script lang="ts">
-    import { magneticButton, shimmerButton } from '$lib/actions/motion';
+    import { magneticButton } from '$lib/actions/gsapParallax';
+    import { shimmerButton } from '$lib/actions/motion';
+    import { ScrollSmoother } from 'gsap/ScrollSmoother';
     
     let y = $state(0);
     let lastY = $state(0);
@@ -8,26 +10,39 @@
     let atTop = $derived(y <= 50);
     
     $effect(() => {
-        if (y > 50) {
-            if (y > lastY && y > 200) {
+        const currentY = y;
+        const diff = currentY - lastY;
+
+        if (currentY <= 100) {
+            isHidden = false;
+            lastY = currentY;
+            return;
+        }
+
+        if (Math.abs(diff) >= 28) {
+            if (diff > 0 && currentY > 250) {
                 isHidden = true;
                 mobileMenuOpen = false;
-            } else if (y < lastY) {
+            } else if (diff < 0) {
                 isHidden = false;
             }
-        } else {
-            isHidden = false;
+            lastY = currentY;
         }
-        lastY = y;
     });
 
     function navigateOrScroll(event: MouseEvent, targetId: string) {
-        if (window.location.pathname === '/') {
+        if (typeof window !== 'undefined' && window.location.pathname === '/') {
             event.preventDefault();
             mobileMenuOpen = false;
             const el = document.getElementById(targetId);
             if (el) {
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const smoother = ScrollSmoother.get();
+                if (smoother) {
+                    smoother.scrollTo(el, true, 'top 80px');
+                } else {
+                    const top = el.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
             }
         }
     }
@@ -39,12 +54,12 @@
 <nav class="fixed left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full border z-50 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] {isHidden ? '-top-24 opacity-0 scale-95' : 'top-6 opacity-100 scale-100'} {atTop ? 'bg-white/60 border-white/30 shadow-none backdrop-blur-md' : 'bg-white/90 border-white/50 shadow-[0px_20px_40px_rgba(17,24,39,0.08)] backdrop-blur-xl'} hidden md:block">
     <div class="flex justify-between items-center px-8 py-3.5">
         <a 
-            class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-2.5" 
+            class="flex items-center" 
             href="/#hero"
             onclick={(e) => navigateOrScroll(e, 'hero')}
+            aria-label="svralabs"
         >
-            <img src="/logowotext.png" alt="Svralabs" class="h-8 w-auto object-contain" />
-            Svralabs
+            <img src="/logo.webp" alt="svralabs" class="h-7 lg:h-8 w-auto object-contain" />
         </a>
 
         <ul class="flex items-center gap-8">
@@ -110,12 +125,12 @@
 <nav class="fixed left-4 right-4 z-50 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] {isHidden ? '-top-24 opacity-0 scale-95' : 'top-4 opacity-100 scale-100'} md:hidden">
     <div class="flex justify-between items-center rounded-2xl p-4 {atTop ? 'bg-white/80 border border-white/40 backdrop-blur-md' : 'bg-white/95 border border-border-hairline shadow-lg backdrop-blur-xl'}">
         <a 
-            class="font-headline-md text-headline-lg-mobile font-bold text-on-surface flex items-center gap-2" 
+            class="flex items-center" 
             href="/#hero"
             onclick={(e) => navigateOrScroll(e, 'hero')}
+            aria-label="svralabs"
         >
-            <img src="/logowotext.png" alt="Svralabs" class="h-7 w-auto object-contain" />
-            Svralabs
+            <img src="/logo.webp" alt="svralabs" class="h-6.5 w-auto object-contain" />
         </a>
 
         <button 

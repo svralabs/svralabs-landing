@@ -13,9 +13,8 @@
   <header class="fixed left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full border z-50 top-6 bg-white/80 border-white/40 shadow-[0px_20px_40px_rgba(17,24,39,0.08)] backdrop-blur-xl">
     <div class="flex justify-between items-center px-6 md:px-8 py-3.5">
       <div class="flex items-center gap-3">
-        <a class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-2.5" href="/">
-          <img src="/logowotext.png" alt="Svralabs" class="h-8 w-auto object-contain" />
-          Svralabs
+        <a class="flex items-center" href="/" aria-label="svralabs">
+          <img src="/logo.webp" alt="svralabs" class="h-7 md:h-8 w-auto object-contain" />
         </a>
         <span class="text-text-muted/40 hidden sm:inline">/</span>
         <span class="font-label-sm text-text-muted hidden sm:inline">Studi Kasus</span>
@@ -58,7 +57,7 @@
         <div use:glareCard class="bg-surface-container-lowest rounded-[28px] p-3 md:p-4 border border-border-hairline shadow-[0_30px_70px_rgba(0,0,0,0.08)]">
           <div class="bg-surface-faint rounded-[20px] overflow-hidden border border-border-hairline aspect-[16/10] relative">
             <img 
-              src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.23.png" 
+              src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.23.webp" 
               alt="Tampilan Antarmuka POS Kasir Konveksi Wonopringgo" 
               class="w-full h-full object-cover object-top"
             />
@@ -169,7 +168,7 @@
           <!-- Screenshot 1 -->
           <div use:floatCard class="bg-white rounded-[24px] p-4 border border-border-hairline shadow-sm overflow-hidden flex flex-col">
             <div class="rounded-xl overflow-hidden border border-border-hairline aspect-video mb-4 bg-surface-faint">
-              <img src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.23.png" alt="Kasir POS Konveksi" class="w-full h-full object-cover object-top" />
+              <img src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.23.webp" alt="Kasir POS Konveksi" class="w-full h-full object-cover object-top" />
             </div>
             <h3 class="font-headline-md text-[18px] font-bold text-on-surface px-2">Layar Kasir & Pencarian Produk Cepat</h3>
             <p class="font-body-md text-sm text-text-muted px-2 mt-1">Staf toko dapat mencari varian ukuran & warna pakaian dengan cepat saat antrean transaksi grosir ramai.</p>
@@ -178,7 +177,7 @@
           <!-- Screenshot 2 -->
           <div use:floatCard class="bg-white rounded-[24px] p-4 border border-border-hairline shadow-sm overflow-hidden flex flex-col">
             <div class="rounded-xl overflow-hidden border border-border-hairline aspect-video mb-4 bg-surface-faint">
-              <img src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.39.png" alt="Manajemen Stok & Harga" class="w-full h-full object-cover object-top" />
+              <img src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.39.webp" alt="Manajemen Stok & Harga" class="w-full h-full object-cover object-top" />
             </div>
             <h3 class="font-headline-md text-[18px] font-bold text-on-surface px-2">Pengaturan Harga Grosir & Eceran</h3>
             <p class="font-body-md text-sm text-text-muted px-2 mt-1">Sistem otomatis menerapkan skema harga potongan khusus jika pelanggan membeli dalam jumlah kodi atau lusinan.</p>
@@ -187,7 +186,7 @@
           <!-- Screenshot 3 -->
           <div use:floatCard class="bg-white rounded-[24px] p-4 border border-border-hairline shadow-sm overflow-hidden flex flex-col">
             <div class="rounded-xl overflow-hidden border border-border-hairline aspect-video mb-4 bg-surface-faint">
-              <img src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.56.png" alt="Detail Stok Gudang" class="w-full h-full object-cover object-top" />
+              <img src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.56.webp" alt="Detail Stok Gudang" class="w-full h-full object-cover object-top" />
             </div>
             <h3 class="font-headline-md text-[18px] font-bold text-on-surface px-2">Monitoring Stok Real-Time</h3>
             <p class="font-body-md text-sm text-text-muted px-2 mt-1">Setiap barang teruji terpotong otomatis begitu nota dicetak, mencegah terjadinya barang hilang tak terdeteksi.</p>
@@ -196,7 +195,7 @@
           <!-- Screenshot 4 -->
           <div use:floatCard class="bg-white rounded-[24px] p-4 border border-border-hairline shadow-sm overflow-hidden flex flex-col">
             <div class="rounded-xl overflow-hidden border border-border-hairline aspect-video mb-4 bg-surface-faint">
-              <img src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.25.16.png" alt="Laporan Penjualan" class="w-full h-full object-cover object-top" />
+              <img src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.25.16.webp" alt="Laporan Penjualan" class="w-full h-full object-cover object-top" />
             </div>
             <h3 class="font-headline-md text-[18px] font-bold text-on-surface px-2">Laporan Penjualan & Arus Kas</h3>
             <p class="font-body-md text-sm text-text-muted px-2 mt-1">Pemilik toko dapat memantau total omset, profit bersih, serta produk paling laku tanpa hitung kalkulator manual.</p>

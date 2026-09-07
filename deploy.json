@@ -1,0 +1,7 @@
+{
+  "target": "cloudflare",
+  "project_name": "svralabs-landing",
+  "domain": "landing.app.svralabs.com",
+  "output_dir": "dist",
+  "framework": "vite"
+}

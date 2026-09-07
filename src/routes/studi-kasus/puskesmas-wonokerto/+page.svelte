@@ -13,9 +13,8 @@
   <header class="fixed left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full border z-50 top-6 bg-white/80 border-white/40 shadow-[0px_20px_40px_rgba(17,24,39,0.08)] backdrop-blur-xl">
     <div class="flex justify-between items-center px-6 md:px-8 py-3.5">
       <div class="flex items-center gap-3">
-        <a class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-2.5" href="/">
-          <img src="/logowotext.png" alt="Svralabs" class="h-8 w-auto object-contain" />
-          Svralabs
+        <a class="flex items-center" href="/" aria-label="svralabs">
+          <img src="/logo.webp" alt="svralabs" class="h-7 md:h-8 w-auto object-contain" />
         </a>
         <span class="text-text-muted/40 hidden sm:inline">/</span>
         <span class="font-label-sm text-text-muted hidden sm:inline">Studi Kasus</span>
@@ -58,7 +57,7 @@
         <div use:glareCard class="bg-surface-container-lowest rounded-[28px] p-3 md:p-4 border border-border-hairline shadow-[0_30px_70px_rgba(0,0,0,0.08)]">
           <div class="bg-surface-faint rounded-[20px] overflow-hidden border border-border-hairline aspect-[16/10] relative">
             <img 
-              src="/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 22.04.52.png" 
+              src="/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 22.04.52.webp" 
               alt="Dashboard Utama Puskesmas Wonokerto" 
               class="w-full h-full object-cover object-top"
             />
@@ -169,7 +168,7 @@
           <!-- Screenshot 1 -->
           <div use:floatCard class="bg-white rounded-[24px] p-4 border border-border-hairline shadow-sm overflow-hidden flex flex-col">
             <div class="rounded-xl overflow-hidden border border-border-hairline aspect-video mb-4 bg-surface-faint">
-              <img src="/puskesmas wonokerto/Tangkapan Layar 2026-06-17 pukul 20.43.07.png" alt="Sistem Pelayanan Puskesmas" class="w-full h-full object-cover object-top" />
+              <img src="/puskesmas wonokerto/Tangkapan Layar 2026-06-17 pukul 20.43.07.webp" alt="Sistem Pelayanan Puskesmas" class="w-full h-full object-cover object-top" />
             </div>
             <h3 class="font-headline-md text-[18px] font-bold text-on-surface px-2">Modul Utama & Navigasi Pasien</h3>
             <p class="font-body-md text-sm text-text-muted px-2 mt-1">Antarmuka sederhana yang memudahkan petugas loket memasukkan data pasien dalam hitungan detik.</p>
@@ -178,7 +177,7 @@
           <!-- Screenshot 2 -->
           <div use:floatCard class="bg-white rounded-[24px] p-4 border border-border-hairline shadow-sm overflow-hidden flex flex-col">
             <div class="rounded-xl overflow-hidden border border-border-hairline aspect-video mb-4 bg-surface-faint">
-              <img src="/puskesmas wonokerto/Tangkapan Layar 2026-06-17 pukul 20.43.13.png" alt="Formulir & Rekam Medis" class="w-full h-full object-cover object-top" />
+              <img src="/puskesmas wonokerto/Tangkapan Layar 2026-06-17 pukul 20.43.13.webp" alt="Formulir & Rekam Medis" class="w-full h-full object-cover object-top" />
             </div>
             <h3 class="font-headline-md text-[18px] font-bold text-on-surface px-2">Pencatatan Rekam Medis Digital</h3>
             <p class="font-body-md text-sm text-text-muted px-2 mt-1">Dokter dapat langsung meninjau riwayat penyakit terdahulu dan menginput rekam medis tanpa kertas.</p>
@@ -187,7 +186,7 @@
           <!-- Screenshot 3 -->
           <div use:floatCard class="bg-white rounded-[24px] p-4 border border-border-hairline shadow-sm overflow-hidden flex flex-col">
             <div class="rounded-xl overflow-hidden border border-border-hairline aspect-video mb-4 bg-surface-faint">
-              <img src="/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 21.59.46.png" alt="Aplikasi Antrean Mobile" class="w-full h-full object-cover object-top" />
+              <img src="/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 21.59.46.webp" alt="Aplikasi Antrean Mobile" class="w-full h-full object-cover object-top" />
             </div>
             <h3 class="font-headline-md text-[18px] font-bold text-on-surface px-2">Responsif & Ramah Perangkat</h3>
             <p class="font-body-md text-sm text-text-muted px-2 mt-1">Dapat diakses dengan lancar baik melalui PC desktop loket maupun tablet/mobile medis.</p>
@@ -196,7 +195,7 @@
           <!-- Screenshot 4 -->
           <div use:floatCard class="bg-white rounded-[24px] p-4 border border-border-hairline shadow-sm overflow-hidden flex flex-col">
             <div class="rounded-xl overflow-hidden border border-border-hairline aspect-video mb-4 bg-surface-faint">
-              <img src="/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 21.59.56.png" alt="Detail Layanan Pasien" class="w-full h-full object-cover object-top" />
+              <img src="/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 21.59.56.webp" alt="Detail Layanan Pasien" class="w-full h-full object-cover object-top" />
             </div>
             <h3 class="font-headline-md text-[18px] font-bold text-on-surface px-2">Integrasi Data & Laporan Real-time</h3>
             <p class="font-body-md text-sm text-text-muted px-2 mt-1">Data statistik harian otomatis direkap untuk pelaporan dinas kesehatan tanpa rekap ulang manual.</p>
