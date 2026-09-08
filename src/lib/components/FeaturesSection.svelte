@@ -26,24 +26,25 @@
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: fiturRoot,
-          start: 'top 52%',
-          toggleActions: 'play none none reverse',
+          start: 'top 65%',
+          toggleActions: 'play none none none',
+          once: true,
         },
-        defaults: { ease: 'power3.out' },
+        defaults: { ease: 'power2.out' },
       });
 
       tl.fromTo(
         '.fitur-kicker',
-        { opacity: 0, y: -24, scale: 0.88, filter: 'blur(6px)' },
-        { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 0.7, ease: 'back.out(1.6)' },
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' },
         0
       );
 
       tl.fromTo(
         '.fitur-kicker-icon',
-        { scale: 0, rotate: -60 },
-        { scale: 1, rotate: 0, duration: 0.5, ease: 'back.out(2.2)' },
-        0.1
+        { opacity: 0, scale: 0.85 },
+        { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' },
+        0.08
       );
 
       if (words.length > 0) {

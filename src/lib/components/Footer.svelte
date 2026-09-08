@@ -31,26 +31,27 @@
       const entranceTl = gsap.timeline({
         scrollTrigger: {
           trigger: footerRoot,
-          start: 'top 52%',
-          toggleActions: 'play none none reverse',
+          start: 'top 65%',
+          toggleActions: 'play none none none',
+          once: true,
         },
-        defaults: { ease: 'power3.out' },
+        defaults: { ease: 'power2.out' },
       });
 
-      // 1. CTA Card: 3D Perspective Spring Rise
+      // 1. CTA Card: Smooth Rise
       entranceTl.fromTo(
         '.footer-cta-card',
-        { opacity: 0, y: 70, scale: 0.92, rotateX: 8, filter: 'blur(8px)' },
-        { opacity: 1, y: 0, scale: 1, rotateX: 0, filter: 'blur(0px)', duration: 0.95, ease: 'back.out(1.4)' },
+        { opacity: 0, y: 50, scale: 0.95 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'power2.out' },
         0.05
       );
 
-      // 2. Kicker Badge Drop
+      // 2. Kicker Badge: Smooth Fade & Rise
       entranceTl.fromTo(
         '.footer-kicker',
-        { opacity: 0, y: -20, scale: 0.88 },
-        { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.8)' },
-        0.2
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' },
+        0.15
       );
 
       // 3. Headline Masked Kinetic Words

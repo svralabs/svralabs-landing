@@ -21,17 +21,18 @@
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: missionRoot,
-          start: 'top 52%',
-          toggleActions: 'play none none reverse',
+          start: 'top 65%',
+          toggleActions: 'play none none none',
+          once: true,
         },
-        defaults: { ease: 'power3.out' },
+        defaults: { ease: 'power2.out' },
       });
 
-      // 1. Kicker Badge: 3D Spring Drop with optical blur clear
+      // 1. Kicker Badge: Smooth Fade & Subtle Rise
       tl.fromTo(
         '.mission-kicker',
-        { opacity: 0, y: -20, scale: 0.88, filter: 'blur(6px)' },
-        { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 0.75, ease: 'back.out(1.6)' },
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' },
         0.05
       );
 

@@ -17,26 +17,27 @@
       const entranceTl = gsap.timeline({
         scrollTrigger: {
           trigger: workflowRoot,
-          start: 'top 52%',
-          toggleActions: 'play none none reverse',
+          start: 'top 65%',
+          toggleActions: 'play none none none',
+          once: true,
         },
-        defaults: { ease: 'power3.out' },
+        defaults: { ease: 'power2.out' },
       });
 
-      // Kicker Badge: 3D Spring Drop with blur clear
+      // Kicker Badge: Smooth Fade & Subtle Rise
       entranceTl.fromTo(
         '.workflow-kicker',
-        { opacity: 0, y: -24, scale: 0.88, filter: 'blur(6px)' },
-        { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 0.75, ease: 'back.out(1.6)' },
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' },
         0.05
       );
 
-      // Kicker Star Icon Pop
+      // Kicker Star Icon Fade & Settle
       entranceTl.fromTo(
         '.workflow-kicker-icon',
-        { scale: 0, rotate: -60 },
-        { scale: 1, rotate: 0, duration: 0.55, ease: 'back.out(2.2)' },
-        0.15
+        { opacity: 0, scale: 0.85 },
+        { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' },
+        0.12
       );
 
       // Headline Masked Kinetic Words

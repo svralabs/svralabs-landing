@@ -1,5 +1,10 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { fadeUp, fadeIn, staggerFadeUp, glareCard, floatCard, tiltCard, magneticButton, shimmerButton } from '$lib/actions/motion';
+
+  onMount(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  });
 </script>
 
 <svelte:head>

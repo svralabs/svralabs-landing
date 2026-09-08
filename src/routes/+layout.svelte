@@ -1,6 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { onMount, onDestroy } from 'svelte';
+  import { afterNavigate } from '$app/navigation';
   import { page } from '$app/state';
   import Navbar from '$lib/components/Navbar.svelte';
   import { pageTransition } from '$lib/actions/motion';
@@ -13,8 +14,27 @@
   let smoother: ScrollSmoother | null = null;
   let ctx: gsap.Context | null = null;
 
+  afterNavigate(() => {
+    if (typeof window === 'undefined') return;
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (smoother) {
+      smoother.scrollTo(0, false);
+      smoother.scrollTop(0);
+    }
+    setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      if (smoother) {
+        smoother.scrollTo(0, false);
+      }
+      ScrollTrigger.refresh();
+    }, 50);
+  });
+
   onMount(() => {
     if (typeof window === 'undefined') return;
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
 
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     (window as any).ScrollTrigger = ScrollTrigger;
