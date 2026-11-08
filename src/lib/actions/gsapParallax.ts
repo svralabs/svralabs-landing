@@ -135,6 +135,8 @@ export function mouseParallax(node: HTMLElement, options: MouseParallaxOptions =
   const setX = gsap.quickTo(node, 'x', { duration: 0.8, ease: 'power2.out' });
   const setY = gsap.quickTo(node, 'y', { duration: 0.8, ease: 'power2.out' });
 
+  let isListening = false;
+
   const handleMouseMove = (e: MouseEvent) => {
     const normX = (e.clientX / window.innerWidth) * 2 - 1;
     const normY = (e.clientY / window.innerHeight) * 2 - 1;
@@ -142,11 +144,31 @@ export function mouseParallax(node: HTMLElement, options: MouseParallaxOptions =
     setY(normY * strengthY * mult);
   };
 
-  window.addEventListener('mousemove', handleMouseMove, { passive: true });
+  // Only track mouse movements when the element is actually inside or near the viewport
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (!isListening) {
+          window.addEventListener('mousemove', handleMouseMove, { passive: true });
+          isListening = true;
+        }
+      } else {
+        if (isListening) {
+          window.removeEventListener('mousemove', handleMouseMove);
+          isListening = false;
+        }
+      }
+    });
+  }, { rootMargin: '100px' });
+
+  observer.observe(node);
 
   return {
     destroy() {
-      window.removeEventListener('mousemove', handleMouseMove);
+      observer.disconnect();
+      if (isListening) {
+        window.removeEventListener('mousemove', handleMouseMove);
+      }
     }
   };
 }
@@ -168,6 +190,7 @@ export interface Tilt3DOptions {
  * Svelte Action: tilt3D
  * Realistic 3D card tilt tracking cursor over the card with generous trigger padding,
  * auto-reset, and optional specular glare to prevent edge jitter/glitching.
+ * Optimized with on-demand mouse tracking to eliminate layout thrashing & forced reflows.
  */
 export function tilt3D(node: HTMLElement, options: Tilt3DOptions = {}) {
   if (typeof window === 'undefined' || isReducedMotion() || isTouchDevice()) return;
@@ -198,9 +221,15 @@ export function tilt3D(node: HTMLElement, options: Tilt3DOptions = {}) {
   gsap.set(node, { rotateX: 0, rotateY: 0, scale: 1 });
 
   let isHovered = false;
+  let cachedRect: DOMRect | null = null;
+
+  const updateRect = () => {
+    cachedRect = node.getBoundingClientRect();
+  };
 
   const handleMouseMove = (e: MouseEvent) => {
-    const rect = node.getBoundingClientRect();
+    if (!cachedRect) updateRect();
+    const rect = cachedRect!;
     const extendedLeft = rect.left - padding;
     const extendedRight = rect.right + padding;
     const extendedTop = rect.top - padding;
@@ -214,7 +243,6 @@ export function tilt3D(node: HTMLElement, options: Tilt3DOptions = {}) {
     );
 
     if (insideTrigger) {
-      isHovered = true;
       const centerX = rect.left + rect.width / 2;
       const centerY = rect.top + rect.height / 2;
 
@@ -244,6 +272,8 @@ export function tilt3D(node: HTMLElement, options: Tilt3DOptions = {}) {
       }
     } else if (isHovered) {
       isHovered = false;
+      cachedRect = null;
+      window.removeEventListener('mousemove', handleMouseMove);
       gsap.to(node, {
         rotateX: 0,
         rotateY: 0,
@@ -258,11 +288,21 @@ export function tilt3D(node: HTMLElement, options: Tilt3DOptions = {}) {
     }
   };
 
-  window.addEventListener('mousemove', handleMouseMove, { passive: true });
+  const handleMouseEnter = () => {
+    if (isHovered) return;
+    isHovered = true;
+    updateRect();
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+  };
+
+  node.addEventListener('mouseenter', handleMouseEnter, { passive: true });
 
   return {
     destroy() {
-      window.removeEventListener('mousemove', handleMouseMove);
+      node.removeEventListener('mouseenter', handleMouseEnter);
+      if (isHovered) {
+        window.removeEventListener('mousemove', handleMouseMove);
+      }
       glareEl?.remove();
     }
   };
@@ -316,6 +356,7 @@ export function magneticButton(node: HTMLElement, options: MagneticOptions = {})
 /**
  * Svelte Action: idleFloat
  * Continuous organic breathing / bobbing animation for floating cards and badges.
+ * Automatically pauses when scrolled off-screen to preserve CPU/GPU cycles.
  */
 export function idleFloat(node: HTMLElement, options: { y?: number; duration?: number; delay?: number } = {}) {
   if (typeof window === 'undefined' || isReducedMotion()) return;
@@ -332,11 +373,25 @@ export function idleFloat(node: HTMLElement, options: { y?: number; duration?: n
     delay,
     ease: 'sine.inOut',
     yoyo: true,
-    repeat: -1
+    repeat: -1,
+    paused: true
   });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        tween.play();
+      } else {
+        tween.pause();
+      }
+    });
+  }, { rootMargin: '50px' });
+
+  observer.observe(node);
 
   return {
     destroy() {
+      observer.disconnect();
       tween.kill();
     }
   };

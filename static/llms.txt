@@ -1,0 +1,23 @@
+# Svralabs — Software House & Solusi Sistem Bisnis Digital
+
+> Svralabs adalah studio software engineering dan konsultan teknologi digital berbasis di Pekalongan, Jawa Tengah, Indonesia. Kami merancang dan membangun sistem digitalisasi bisnis, aplikasi kasir (POS), Enterprise Resource Planning (ERP), SIMPUS (Sistem Informasi Manajemen Puskesmas) terintegrasi SATUSEHAT, serta platform kustom untuk UMKM dan enterprise.
+
+## Layanan & Produk Utama
+
+- [POS & Ritel](https://www.svralabs.com/#layanan): Aplikasi kasir multi-kasir, cetak nota thermal Bluetooth, scan barcode, dan laporan keuangan harian otomatis.
+- [SIMPUS / EMR Rekam Medis](https://www.svralabs.com/studi-kasus/puskesmas-wonokerto): Sistem informasi puskesmas dan klinik terintegrasi rekam medis elektronik dan standar Kemenkes SATUSEHAT.
+- [ERP & Multi-Gudang Grosir](https://www.svralabs.com/studi-kasus/pos-wonopringgo): Manajemen inventaris bahan baku vs barang jadi, stok multi-cabang, dan sistem otomatisasi invoice/surat jalan.
+- [Sistem Kustom & Integrasi API](https://www.svralabs.com/#layanan): Pengembangan web app berbasis arsitektur modern (SvelteKit, Tailwind CSS, high-security backend).
+- [Live Demo](https://demo.svralabs.com): Akses langsung katalog demo interaktif solusi dan template bisnis kami.
+
+## Studi Kasus Nyata
+
+- [Puskesmas Wonokerto](https://www.svralabs.com/studi-kasus/puskesmas-wonokerto): Implementasi SIMPUS & EMR terintegrasi SATUSEHAT di Pekalongan. Waktu tunggu pendaftaran berkurang dari 15-20 menit menjadi 3-5 menit per pasien.
+- [POS Konveksi Wonopringgo](https://www.svralabs.com/studi-kasus/pos-wonopringgo): Digitalisasi grosir dan ritel pakaian dengan pelacakan inventaris bahan baku real-time dan potongan grosir otomatis.
+
+## Kontak & Kerjasama
+
+- Website: https://www.svralabs.com
+- WhatsApp: https://wa.me/6285158418944
+- Email: svralabs@gmail.com
+- Lokasi: Pekalongan, Jawa Tengah, Indonesia

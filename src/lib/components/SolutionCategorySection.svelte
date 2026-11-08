@@ -299,6 +299,8 @@
                 src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.23.webp"
                 alt="Foto Toko Konveksi Wonopringgo"
                 class="w-8 h-8 rounded-lg object-cover border border-border-hairline shrink-0"
+                loading="lazy"
+                decoding="async"
               />
               <div class="text-left">
                 <div class="flex items-center gap-1">
@@ -503,6 +505,8 @@
                 src="/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 21.59.46.webp"
                 alt="Foto Sistem Puskesmas Wonokerto"
                 class="w-8 h-8 rounded-lg object-cover border border-border-hairline shrink-0"
+                loading="lazy"
+                decoding="async"
               />
               <div class="text-left">
                 <div class="flex items-center gap-1">

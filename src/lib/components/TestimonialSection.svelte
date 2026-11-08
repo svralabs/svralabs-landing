@@ -157,7 +157,7 @@
                   <span class="material-symbols-outlined text-[18px]">local_hospital</span>
                 </div>
                 <div>
-                  <h4 class="font-label-bold text-xs text-white font-semibold">SIMPUS Wonokerto (EMR)</h4>
+                  <p class="font-label-bold text-xs text-white font-semibold">SIMPUS Wonokerto (EMR)</p>
                   <p class="text-[10px] text-emerald-300">Poli Umum • Shift Pagi</p>
                 </div>
               </div>
@@ -209,10 +209,10 @@
           <div class="p-6 md:p-8 flex flex-col gap-5">
             <!-- Problem -->
             <div class="p-4 rounded-2xl bg-surface-faint border border-border-hairline/70">
-              <h4 class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
+              <p class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
                 <span class="material-symbols-outlined text-amber-600 text-[18px]">report_problem</span>
                 Problem
-              </h4>
+              </p>
               <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
                 Antrian pasien panjang dan pencarian arsip rekam medis kertas manual yang memakan waktu lama setiap harinya.
               </p>
@@ -220,10 +220,10 @@
 
             <!-- Solution -->
             <div class="p-4 rounded-2xl bg-surface-faint border border-border-hairline/70">
-              <h4 class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
+              <p class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
                 <span class="material-symbols-outlined text-primary text-[18px]">lightbulb</span>
                 Solution
-              </h4>
+              </p>
               <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
                 Digitalisasi alur pendaftaran terintegrasi dengan database pasien dan rekam medis elektronik (EMR) yang tersentral.
               </p>
@@ -231,10 +231,10 @@
 
             <!-- Outcome -->
             <div class="p-4 rounded-2xl bg-primary/8 border border-primary/15">
-              <h4 class="font-label-bold text-xs uppercase tracking-wider text-primary mb-1.5 flex items-center gap-1.5">
+              <p class="font-label-bold text-xs uppercase tracking-wider text-primary mb-1.5 flex items-center gap-1.5">
                 <span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
                 Outcome
-              </h4>
+              </p>
               <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
                 Pelayanan jauh lebih cepat, bebas antrian panjang yang menumpuk, dan arsip rekam medis 100% aman dan mudah diakses.
               </p>
@@ -272,7 +272,7 @@
                   <span class="material-symbols-outlined text-[18px]">inventory_2</span>
                 </div>
                 <div>
-                  <h4 class="font-label-bold text-xs text-white font-semibold">Wonopringgo Fashion ERP</h4>
+                  <p class="font-label-bold text-xs text-white font-semibold">Wonopringgo Fashion ERP</p>
                   <p class="text-[10px] text-primary-fixed-dim">Grosir &amp; Multi-Gudang Bahan</p>
                 </div>
               </div>
@@ -310,6 +310,8 @@
                   src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.23.webp"
                   alt="Dokumentasi Toko Konveksi Wonopringgo"
                   class="w-6 h-6 rounded-md object-cover border border-white/30"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <span class="text-[10px] text-white/90 font-label-bold">Foto Asli</span>
               </div>
@@ -320,10 +322,10 @@
           <div class="p-6 md:p-8 flex flex-col gap-5">
             <!-- Problem -->
             <div class="p-4 rounded-2xl bg-surface-faint border border-border-hairline/70">
-              <h4 class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
+              <p class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
                 <span class="material-symbols-outlined text-amber-600 text-[18px]">report_problem</span>
                 Problem
-              </h4>
+              </p>
               <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
                 Susah melacak stok kain, bahan baku, dan baju jadi yang keluar masuk setiap harinya secara akurat di gudang.
               </p>
@@ -331,10 +333,10 @@
 
             <!-- Solution -->
             <div class="p-4 rounded-2xl bg-surface-faint border border-border-hairline/70">
-              <h4 class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
+              <p class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
                 <span class="material-symbols-outlined text-primary text-[18px]">lightbulb</span>
                 Solution
-              </h4>
+              </p>
               <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
                 Sistem POS khusus grosir/manufaktur dengan manajemen inventaris multi-gudang untuk bahan baku &amp; barang jadi.
               </p>
@@ -342,10 +344,10 @@
 
             <!-- Outcome -->
             <div class="p-4 rounded-2xl bg-primary/8 border border-primary/15">
-              <h4 class="font-label-bold text-xs uppercase tracking-wider text-primary mb-1.5 flex items-center gap-1.5">
+              <p class="font-label-bold text-xs uppercase tracking-wider text-primary mb-1.5 flex items-center gap-1.5">
                 <span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
                 Outcome
-              </h4>
+              </p>
               <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
                 Stok terpotong presisi, tidak ada lagi selisih laporan kas, dan mencegah barang hilang tanpa jejak catatan.
               </p>

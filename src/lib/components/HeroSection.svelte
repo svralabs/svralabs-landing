@@ -223,7 +223,7 @@
               <span class="material-symbols-outlined text-white text-[16px] md:text-[18px]" style="font-variation-settings: 'FILL' 1;">store</span>
             </div>
             <div class="text-left">
-              <h3 class="font-label-bold text-xs md:text-sm text-on-surface">POS Coffee Shop</h3>
+              <p class="font-label-bold text-xs md:text-sm text-on-surface">POS Coffee Shop</p>
               <p class="font-label-sm text-[10px] md:text-xs text-text-muted">Ready-Made Product</p>
             </div>
           </div>
@@ -242,7 +242,7 @@
               <div class="flex justify-between items-start mb-2 md:mb-3">
                 <div>
                   <p class="font-label-sm text-[11px] md:text-xs text-text-muted mb-0.5">Pendapatan Bulan Ini</p>
-                  <h2 class="font-headline-md text-lg md:text-xl font-bold text-on-surface">Rp 124.500.000</h2>
+                  <p class="font-headline-md text-lg md:text-xl font-bold text-on-surface">Rp 124.500.000</p>
                 </div>
                 <div class="bg-success/10 text-success px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-success/20">
                   <span class="material-symbols-outlined text-xs">trending_up</span>
@@ -279,7 +279,7 @@
                 <span class="material-symbols-outlined text-primary text-[16px] md:text-[18px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
                 <p class="font-label-bold text-xs text-on-surface">Total Transaksi</p>
               </div>
-              <h3 class="font-headline-md text-base md:text-lg font-bold text-on-surface mb-0.5">1,482</h3>
+              <p class="font-headline-md text-base md:text-lg font-bold text-on-surface mb-0.5">1,482</p>
               <p class="font-label-sm text-[10px] md:text-[11px] text-text-muted">Rata-rata: Rp 84.000 / transaksi</p>
             </div>
 

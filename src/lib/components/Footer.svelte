@@ -244,13 +244,13 @@
 
     </div>
 
-    <!-- Bottom Legal Strip -->
-    <div class="w-full pt-8 border-t border-border-hairline/70 flex flex-col sm:flex-row justify-between items-center text-xs text-text-muted gap-4">
-      <p>&copy; {new Date().getFullYear()} Svralabs. Hak cipta dilindungi.</p>
-      <div class="flex gap-6">
-        <a href="#kontak" class="hover:text-on-surface transition-colors">Privasi &amp; Syarat Ketentuan</a>
-      </div>
-    </div>
+  </div>
 
+  <!-- Bottom Legal Strip (Kept outside section-depth-stage for accessible 100% contrast & zero opacity degradation) -->
+  <div class="w-full max-w-7xl mx-auto pt-8 border-t border-border-hairline/70 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-700 relative z-10 gap-4">
+    <p class="text-slate-700 font-medium">&copy; {new Date().getFullYear()} Svralabs. Hak cipta dilindungi.</p>
+    <div class="flex gap-6">
+      <a href="#kontak" class="text-slate-700 font-medium hover:text-primary transition-colors">Privasi &amp; Syarat Ketentuan</a>
+    </div>
   </div>
 </footer>
