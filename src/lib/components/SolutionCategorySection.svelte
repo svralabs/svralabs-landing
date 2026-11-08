@@ -234,7 +234,7 @@
             <div class="bg-primary/5 border border-primary/15 rounded-xl px-3.5 py-2 mb-3.5 flex items-start gap-2.5">
               <span class="material-symbols-outlined text-primary text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
               <p class="font-body-md text-xs text-on-surface">
-                Sudah dipakai untuk sistem kasir toko konveksi (real project), dan tersedia versi siap pakai untuk coffee shop — tinggal sesuaikan, nggak perlu bangun dari nol.
+                Sudah dipakai di Toko Konveksi Wonopringgo dan tersedia live demo siap pakai POS Cafe &amp; Kedai Kopi Seruni.
               </p>
             </div>
           </div>
@@ -242,13 +242,13 @@
           <!-- CTA -->
           <a
             use:magneticButton={{ strength: 10 }}
-            href="https://demo.svralabs.com/pos"
+            href="https://demo.svralabs.com/pos/pos-fb"
             target="_blank"
             rel="noopener noreferrer"
             class="bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold px-6 py-2.5 md:py-3 rounded-full inline-flex items-center gap-2 w-fit text-xs md:text-sm shadow-md hover:shadow-primary/25"
           >
             <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-            Coba Demo Kasir
+            Coba Demo POS Kopi Seruni
           </a>
         </div>
 
@@ -441,22 +441,34 @@
             <div class="bg-primary/5 border border-primary/15 rounded-xl px-3.5 py-2 mb-3.5 flex items-start gap-2.5">
               <span class="material-symbols-outlined text-primary text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
               <p class="font-body-md text-xs text-on-surface">
-                Sudah dipakai untuk administrasi Puskesmas Wonokerto (real project) dan siap pakai untuk manajemen laundry — tinggal sesuaikan alurmu.
+                Sudah dipakai di Puskesmas Wonokerto, SVRA Laundry, serta otomasi scan OCR nota belanja di Warmindo Garwo.
               </p>
             </div>
           </div>
 
           <!-- CTA -->
-          <a
-            use:magneticButton={{ strength: 10 }}
-            href="https://demo.svralabs.com/operational"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold px-6 py-2.5 md:py-3 rounded-full inline-flex items-center gap-2 w-fit text-xs md:text-sm shadow-md hover:shadow-primary/25"
-          >
-            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-            Coba Demo Tracking
-          </a>
+          <div class="flex flex-wrap items-center gap-2.5">
+            <a
+              use:magneticButton={{ strength: 10 }}
+              href="https://demo.svralabs.com/operational/laundry"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold px-5 py-2.5 rounded-full inline-flex items-center gap-1.5 text-xs shadow-md hover:shadow-primary/25"
+            >
+              <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">local_laundry_service</span>
+              Demo Laundry
+            </a>
+            <a
+              use:magneticButton={{ strength: 10 }}
+              href="https://demo.svralabs.com/operational/purchasing-garwo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-white border border-border-hairline text-on-surface hover:bg-surface-container transition-colors duration-300 font-label-bold px-5 py-2.5 rounded-full inline-flex items-center gap-1.5 text-xs shadow-xs"
+            >
+              <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+              Demo Purchasing Garwo
+            </a>
+          </div>
         </div>
 
         <!-- Right Mockup -->

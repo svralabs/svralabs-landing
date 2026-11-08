@@ -108,6 +108,21 @@
                     Tentang Kami
                 </a>
             </li>
+            <li>
+                <a 
+                    href="https://demo.svralabs.com" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-on-surface-variant font-label-bold hover:text-primary transition-colors duration-300 inline-flex items-center gap-1.5"
+                >
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    Live Demo
+                    <span class="material-symbols-outlined text-[13px] text-text-muted">open_in_new</span>
+                </a>
+            </li>
         </ul>
 
         <a 
@@ -184,6 +199,21 @@
             >
                 Tentang Kami
                 <span class="material-symbols-outlined text-sm text-text-muted">chevron_right</span>
+            </a>
+            <a 
+                href="https://demo.svralabs.com" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-label-bold text-on-surface text-lg py-1 border-b border-border-hairline/50 flex justify-between items-center"
+            >
+                <span class="inline-flex items-center gap-2">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    Live Demo Interaktif
+                </span>
+                <span class="material-symbols-outlined text-sm text-primary">open_in_new</span>
             </a>
 
             <a 

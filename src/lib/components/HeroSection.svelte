@@ -184,19 +184,34 @@
       </p>
 
       <!-- CTAs with Magnetic Hover -->
-      <div class="hero-cta-group flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 md:mb-8">
+      <div class="hero-cta-group flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 md:mb-8">
         <button
           use:magneticButton={{ strength: 16 }}
           onclick={() => scrollTo('kontak')}
-          class="hero-cta-btn bg-on-surface text-surface px-8 py-3.5 md:py-4 rounded-full font-label-bold hover:bg-primary transition-colors duration-300 shadow-lg hover:shadow-primary/25 cursor-pointer"
+          class="hero-cta-btn bg-on-surface text-surface px-7 sm:px-8 py-3.5 md:py-4 rounded-full font-label-bold hover:bg-primary transition-colors duration-300 shadow-lg hover:shadow-primary/25 cursor-pointer w-full sm:w-auto"
         >
           Konsultasi Gratis
         </button>
 
+        <a
+          use:magneticButton={{ strength: 14 }}
+          href="https://demo.svralabs.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hero-cta-btn bg-primary text-on-primary px-7 sm:px-8 py-3.5 md:py-4 rounded-full font-label-bold hover:bg-primary-container transition-colors duration-300 shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
+        >
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+          </span>
+          Coba Live Demo
+          <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+        </a>
+
         <button
           use:magneticButton={{ strength: 12 }}
           onclick={() => scrollTo('portofolio')}
-          class="hero-cta-btn bg-white/90 backdrop-blur-sm text-on-surface border border-border-hairline px-8 py-3.5 md:py-4 rounded-full font-label-bold hover:bg-surface-container transition-colors duration-300 shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+          class="hero-cta-btn bg-white/90 backdrop-blur-sm text-on-surface border border-border-hairline px-7 sm:px-8 py-3.5 md:py-4 rounded-full font-label-bold hover:bg-surface-container transition-colors duration-300 shadow-sm flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
         >
           Lihat Portofolio
           <span class="material-symbols-outlined text-sm">arrow_forward</span>
