@@ -77,11 +77,10 @@
             </li>
             <li>
                 <a 
-                    href="/#portofolio" 
-                    onclick={(e) => navigateOrScroll(e, 'portofolio')}
+                    href="/portfolio" 
                     class="text-on-surface-variant font-label-bold hover:text-primary transition-colors duration-300"
                 >
-                    Studi Kasus
+                    Portofolio &amp; Demo
                 </a>
             </li>
             <li>
@@ -171,11 +170,11 @@
                 <span class="material-symbols-outlined text-sm text-text-muted">chevron_right</span>
             </a>
             <a 
-                href="/#portofolio" 
-                onclick={(e) => navigateOrScroll(e, 'portofolio')}
+                href="/portfolio" 
+                onclick={() => mobileMenuOpen = false}
                 class="font-label-bold text-on-surface text-lg py-1 border-b border-border-hairline/50 flex justify-between items-center"
             >
-                Studi Kasus
+                Portofolio &amp; Demo
                 <span class="material-symbols-outlined text-sm text-text-muted">chevron_right</span>
             </a>
             <a 

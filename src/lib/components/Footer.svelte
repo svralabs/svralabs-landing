@@ -218,18 +218,19 @@
             <li><a class="text-text-muted hover:text-primary transition-colors" href="/#hero" onclick={(e) => navigateOrScroll(e, 'hero')}>Beranda</a></li>
             <li><a class="text-text-muted hover:text-primary transition-colors" href="/#solusi" onclick={(e) => navigateOrScroll(e, 'solusi')}>Solusi</a></li>
             <li><a class="text-text-muted hover:text-primary transition-colors" href="/#layanan" onclick={(e) => navigateOrScroll(e, 'layanan')}>Layanan</a></li>
-            <li><a class="text-text-muted hover:text-primary transition-colors" href="/#portofolio" onclick={(e) => navigateOrScroll(e, 'portofolio')}>Studi Kasus</a></li>
+            <li><a class="text-text-muted hover:text-primary transition-colors" href="/portfolio">Portofolio &amp; Demo</a></li>
             <li><a class="text-text-muted hover:text-primary transition-colors" href="/#harga" onclick={(e) => navigateOrScroll(e, 'harga')}>Harga &amp; Paket</a></li>
             <li><a class="text-text-muted hover:text-primary transition-colors" href="/#tentang-kami" onclick={(e) => navigateOrScroll(e, 'tentang-kami')}>Tentang Kami</a></li>
-            <li><a class="text-text-muted hover:text-primary transition-colors flex items-center gap-1.5" href="https://demo.svralabs.com" target="_blank" rel="noopener noreferrer">Live Demo <span class="material-symbols-outlined text-[13px]">open_in_new</span></a></li>
+            <li><a class="text-text-muted hover:text-primary transition-colors flex items-center gap-1.5" href="https://demo.svralabs.com" target="_blank" rel="noopener noreferrer">Live Demo Hub <span class="material-symbols-outlined text-[13px]">open_in_new</span></a></li>
           </ul>
         </div>
 
         <div>
-          <h3 class="font-inter text-sm font-semibold uppercase tracking-wider text-on-surface mb-4">Studi Kasus &amp; Demo</h3>
+          <h3 class="font-inter text-sm font-semibold uppercase tracking-wider text-on-surface mb-4">Portofolio &amp; Demo</h3>
           <ul class="space-y-3 font-body-md text-sm">
+            <li><a class="text-primary font-bold hover:underline flex items-center gap-1" href="/portfolio">Katalog Portofolio (8+) <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></li>
             <li><a class="text-text-muted hover:text-primary transition-colors" href="/studi-kasus/puskesmas-wonokerto">Puskesmas Wonokerto</a></li>
-            <li><a class="text-text-muted hover:text-primary transition-colors" href="/studi-kasus/pos-wonopringgo">POS Wonopringgo</a></li>
+            <li><a class="text-text-muted hover:text-primary transition-colors" href="/studi-kasus/pos-wonopringgo">POS Toko Wonopringgo</a></li>
             <li><a class="text-text-muted hover:text-primary transition-colors flex items-center gap-1" href="https://demo.svralabs.com/operational/laundry" target="_blank" rel="noopener noreferrer">SVRA Laundry <span class="material-symbols-outlined text-[12px]">open_in_new</span></a></li>
             <li><a class="text-text-muted hover:text-primary transition-colors flex items-center gap-1" href="https://demo.svralabs.com/pos/pos-fb" target="_blank" rel="noopener noreferrer">POS Kopi Seruni <span class="material-symbols-outlined text-[12px]">open_in_new</span></a></li>
             <li><a class="text-text-muted hover:text-primary transition-colors flex items-center gap-1" href="https://demo.svralabs.com/operational/purchasing-garwo" target="_blank" rel="noopener noreferrer">Purchasing Garwo <span class="material-symbols-outlined text-[12px]">open_in_new</span></a></li>

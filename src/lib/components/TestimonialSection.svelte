@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
-  import { tilt3D, sectionLayeredParallax, isReducedMotion } from '$lib/actions/gsapParallax';
+  import { tilt3D, sectionLayeredParallax, isReducedMotion, magneticButton } from '$lib/actions/gsapParallax';
 
   let caseRoot: HTMLElement;
   let headlineEl: HTMLElement;
@@ -111,8 +111,8 @@
     <div data-depth="content" class="text-center mb-16 md:mb-20">
       <!-- Kicker Badge with Spring Drop -->
       <div class="case-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
-        <span class="case-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
-        <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-label-bold">STUDI KASUS NYATA</span>
+        <span class="case-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">folder_special</span>
+        <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-label-bold">PORTOFOLIO NYATA &amp; LIVE DEMO</span>
       </div>
 
       <!-- Masked Kinetic Word Reveal Headline -->
@@ -128,10 +128,10 @@
         <br class="hidden md:block" />
         <span class="inline-block overflow-hidden align-top"><span class="case-word inline-block italic text-primary font-light case-accent-text">bukan</span></span>
         <span class="inline-block overflow-hidden align-top"><span class="case-word inline-block italic text-primary font-light case-accent-text">sekadar</span></span>
-        <span class="inline-block overflow-hidden align-top"><span class="case-word inline-block italic text-primary font-light case-accent-text">demo.</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="case-word inline-block italic text-primary font-light case-accent-text">konsep.</span></span>
       </h2>
       <p class="case-desc font-body-lg text-body-lg text-text-muted mt-4 max-w-2xl mx-auto leading-relaxed">
-        Dari fasilitas kesehatan hingga grosir konveksi. Ini bukan portofolio konsep, ini sistem yang dipakai operasional sehari-hari.
+        Demo dan portofolio adalah satu kesatuan. Setiap demo lahir dari implementasi nyata di klien kami, dan setiap portofolio memiliki dampak bisnis nyata.
       </p>
     </div>
 
@@ -366,6 +366,30 @@
         </div>
       </div>
 
+    </div>
+
+    <!-- Unified Portfolio & Demo Catalog CTA Button -->
+    <div class="mt-14 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        use:magneticButton={{ strength: 14 }}
+        href="/portfolio"
+        class="inline-flex items-center gap-2.5 bg-primary text-on-primary hover:bg-primary-container px-8 py-4 rounded-full font-label-bold text-sm shadow-md hover:shadow-lg transition-all duration-300 group"
+      >
+        <span class="material-symbols-outlined text-[18px]">folder_special</span>
+        <span>Jelajahi Wadah Portofolio &amp; Demo (8+ Sistem)</span>
+        <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+      </a>
+
+      <a
+        href="https://demo.svralabs.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-white text-on-surface hover:text-primary border border-border-hairline hover:border-slate-300 px-6 py-4 rounded-full font-label-bold text-sm shadow-xs hover:shadow-sm transition-all duration-300"
+      >
+        <span class="material-symbols-outlined text-primary text-[18px]">play_circle</span>
+        <span>Coba Live Demo Hub</span>
+        <span class="material-symbols-outlined text-[16px] text-text-muted">open_in_new</span>
+      </a>
     </div>
   </div>
 </section>

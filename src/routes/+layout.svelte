@@ -12,15 +12,13 @@
 
   afterNavigate(() => {
     if (typeof window === 'undefined') return;
+    try {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+      ScrollTrigger.clearScrollMemory();
+    } catch (_) {}
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
-    setTimeout(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-      ScrollTrigger.refresh();
-    }, 50);
   });
 
   onMount(() => {
@@ -30,6 +28,9 @@
     }
 
     gsap.registerPlugin(ScrollTrigger);
+    try {
+      ScrollTrigger.clearScrollMemory('manual');
+    } catch (_) {}
     (window as any).ScrollTrigger = ScrollTrigger;
     (window as any).gsap = gsap;
 
