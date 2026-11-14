@@ -1,7 +1,6 @@
 <script lang="ts">
     import { magneticButton } from '$lib/actions/gsapParallax';
     import { shimmerButton } from '$lib/actions/motion';
-    import { ScrollSmoother } from 'gsap/ScrollSmoother';
     
     let y = $state(0);
     let lastY = $state(0);
@@ -36,13 +35,8 @@
             mobileMenuOpen = false;
             const el = document.getElementById(targetId);
             if (el) {
-                const smoother = ScrollSmoother.get();
-                if (smoother) {
-                    smoother.scrollTo(el, true, 'top 80px');
-                } else {
-                    const top = el.getBoundingClientRect().top + window.scrollY - 80;
-                    window.scrollTo({ top, behavior: 'smooth' });
-                }
+                const top = el.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top, behavior: 'smooth' });
             }
         }
     }
@@ -51,7 +45,7 @@
 <svelte:window bind:scrollY={y} />
 
 <!-- Desktop Navbar -->
-<nav class="fixed left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full border z-50 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] {isHidden ? '-top-24 opacity-0 scale-95' : 'top-6 opacity-100 scale-100'} {atTop ? 'bg-white/60 border-white/30 shadow-none backdrop-blur-md' : 'bg-white/90 border-white/50 shadow-[0px_20px_40px_rgba(17,24,39,0.08)] backdrop-blur-xl'} hidden md:block">
+<nav class="fixed left-1/2 -translate-x-1/2 top-6 w-[95%] max-w-7xl rounded-full border z-50 transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] {isHidden ? '-translate-y-28 opacity-0 scale-95 pointer-events-none' : 'translate-y-0 opacity-100 scale-100'} {atTop ? 'bg-white/60 border-white/30 shadow-none backdrop-blur-md' : 'bg-white/90 border-white/50 shadow-[0px_20px_40px_rgba(17,24,39,0.08)] backdrop-blur-xl'} hidden md:block">
     <div class="flex justify-between items-center px-8 py-3.5">
         <a 
             class="flex items-center" 
@@ -137,7 +131,7 @@
 </nav>
 
 <!-- Mobile Navbar -->
-<nav class="fixed left-4 right-4 z-50 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] {isHidden ? '-top-24 opacity-0 scale-95' : 'top-4 opacity-100 scale-100'} md:hidden">
+<nav class="fixed left-4 right-4 top-4 z-50 transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] {isHidden ? '-translate-y-24 opacity-0 scale-95 pointer-events-none' : 'translate-y-0 opacity-100 scale-100'} md:hidden">
     <div class="flex justify-between items-center rounded-2xl p-4 {atTop ? 'bg-white/80 border border-white/40 backdrop-blur-md' : 'bg-white/95 border border-border-hairline shadow-lg backdrop-blur-xl'}">
         <a 
             class="flex items-center" 

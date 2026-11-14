@@ -670,8 +670,6 @@ function wrapWordsForBokeh(node: Node, wordNodes: HTMLElement[]) {
           span.style.display = 'inline-block';
           span.style.verticalAlign = 'baseline';
           span.style.opacity = '0';
-          span.style.filter = 'blur(14px) brightness(1.2)';
-          span.style.willChange = 'opacity, filter';
           span.textContent = part;
 
           fragment.appendChild(span);
@@ -689,9 +687,8 @@ function wrapWordsForBokeh(node: Node, wordNodes: HTMLElement[]) {
 }
 
 /**
- * BOKEH REVEAL — Luxury Apple/Studio Optical Focus & Bloom Materialization
- * Words materialize in-place from pure optical bokeh blur & soft light bloom (blur: 14px -> 0px, brightness: 1.2 -> 1.0).
- * Completely gapless & jitter-free: 0 scale distortion, 0 letter-spacing reflow, 100% stable typography layout.
+ * BOKEH REVEAL — High-performance optical focus reveal
+ * Clean compositor-driven opacity & subtle rise without forced CPU raster blur.
  */
 export function bokehReveal(
   node: HTMLElement,
@@ -710,23 +707,23 @@ export function bokehReveal(
       wordNodes,
       {
         opacity: 0,
-        filter: 'blur(14px) brightness(1.2)',
+        y: 8,
       },
       {
         opacity: 1,
-        filter: 'blur(0px) brightness(1)',
-        duration: options.duration ?? 0.95,
+        y: 0,
+        duration: options.duration ?? 0.85,
         delay: options.delay ?? 0.08,
-        stagger: options.staggerDelay ?? 0.055,
+        stagger: options.staggerDelay ?? 0.045,
         ease: options.ease ?? 'power2.out',
         scrollTrigger: {
           trigger: node,
           start: 'top 92%',
-          toggleActions: 'play none none reverse',
+          once: true,
         },
         onComplete: () => {
           wordNodes.forEach((el) => {
-            el.style.filter = '';
+            el.style.transform = '';
             el.style.willChange = '';
           });
         },
@@ -770,8 +767,6 @@ function wrapWordsPreservingHTML(node: Node, wordNodes: HTMLElement[]) {
           inner.style.opacity = '0';
           inner.style.transform = 'translateY(115%) rotate(1.5deg)';
           inner.style.transformOrigin = '50% 100%';
-          inner.style.filter = 'blur(8px)';
-          inner.style.willChange = 'transform, opacity, filter';
           inner.textContent = part;
 
           outer.appendChild(inner);
@@ -790,7 +785,7 @@ function wrapWordsPreservingHTML(node: Node, wordNodes: HTMLElement[]) {
 }
 
 /**
- * WORD REVEAL — Kinetic split-word entrance with baseline mask & optical blur
+ * WORD REVEAL — High performance masked split-word reveal
  */
 export function wordReveal(
   node: HTMLElement,
@@ -811,25 +806,22 @@ export function wordReveal(
         opacity: 0,
         y: '115%',
         rotate: 1.5,
-        filter: 'blur(8px)',
       },
       {
         opacity: 1,
         y: '0%',
         rotate: 0,
-        filter: 'blur(0px)',
-        duration: options.duration ?? 0.95,
+        duration: options.duration ?? 0.85,
         delay: options.delay ?? 0.08,
-        stagger: options.staggerDelay ?? 0.04,
+        stagger: options.staggerDelay ?? 0.035,
         ease: options.ease ?? 'power3.out',
         scrollTrigger: {
           trigger: node,
           start: 'top 92%',
-          toggleActions: 'play none none reverse',
+          once: true,
         },
         onComplete: () => {
           wordNodes.forEach((el) => {
-            el.style.filter = '';
             el.style.transform = '';
             el.style.willChange = '';
           });
@@ -847,7 +839,7 @@ export function wordReveal(
 }
 
 /**
- * BLUR REVEAL — Smooth blur-to-focus entrance with natural line height and sharp typography
+ * BLUR REVEAL — Clean fade-up entrance
  */
 export function blurReveal(
   node: HTMLElement,
@@ -865,22 +857,19 @@ export function blurReveal(
       {
         opacity: 0,
         y: options.y ?? 20,
-        filter: 'blur(10px)',
       },
       {
         opacity: 1,
         y: 0,
-        filter: 'blur(0px)',
-        duration: options.duration ?? 0.85,
-        delay: options.delay ?? 0.25,
-        ease: options.ease ?? 'power3.out',
+        duration: options.duration ?? 0.75,
+        delay: options.delay ?? 0.15,
+        ease: options.ease ?? 'power2.out',
         scrollTrigger: {
           trigger: node,
           start: 'top 92%',
-          toggleActions: 'play none none reverse',
+          once: true,
         },
         onComplete: () => {
-          node.style.filter = '';
           node.style.transform = '';
           node.style.willChange = '';
         },
@@ -1000,7 +989,6 @@ export function heroBadgeEntrance(
         y: 35,
         scale: 0.7,
         rotate: initialRotate,
-        filter: 'blur(6px)',
       },
       {
         opacity: 1,
@@ -1008,17 +996,16 @@ export function heroBadgeEntrance(
         y: 0,
         scale: 1,
         rotate: 0,
-        filter: 'blur(0px)',
-        duration: options.duration ?? 0.95,
-        delay: options.delay ?? 0.8,
+        duration: options.duration ?? 0.85,
+        delay: options.delay ?? 0.4,
         ease: options.ease ?? 'back.out(1.6)',
         scrollTrigger: {
           trigger: node,
           start: 'top 88%',
-          toggleActions: 'play none none reverse',
+          once: true,
         },
         onComplete: () => {
-          node.style.filter = '';
+          node.style.transform = '';
           node.style.willChange = '';
         },
       }

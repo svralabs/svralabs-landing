@@ -27,16 +27,16 @@
       // Kicker Badge: Smooth Fade & Subtle Rise
       entranceTl.fromTo(
         '.workflow-kicker',
-        { opacity: 0, y: 14 },
+        { opacity: 0, y: 12 },
         { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' },
         0.05
       );
 
-      // Kicker Star Icon Fade & Settle
+      // Kicker Star Icon Fade
       entranceTl.fromTo(
         '.workflow-kicker-icon',
-        { opacity: 0, scale: 0.85 },
-        { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' },
+        { opacity: 0 },
+        { opacity: 1, duration: 0.4, ease: 'power2.out' },
         0.12
       );
 
@@ -45,8 +45,8 @@
       if (words.length > 0) {
         entranceTl.fromTo(
           words,
-          { opacity: 0, y: '115%', filter: 'blur(8px)' },
-          { opacity: 1, y: '0%', filter: 'blur(0px)', duration: 0.85, stagger: 0.035, ease: 'power3.out' },
+          { opacity: 0, y: '115%' },
+          { opacity: 1, y: '0%', duration: 0.85, stagger: 0.035, ease: 'power3.out' },
           0.18
         );
       }
@@ -69,29 +69,28 @@
       // Description Paragraph
       entranceTl.fromTo(
         '.workflow-desc',
-        { opacity: 0, y: 22, filter: 'blur(6px)' },
-        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.7, ease: 'power2.out' },
+        { opacity: 0, y: 22 },
+        { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
         0.45
       );
 
       // Left Column Step 1 & Step 2 Text Cards
       entranceTl.fromTo(
         ['.workflow-step-1', '.workflow-step-2'],
-        { opacity: 0, y: 35, filter: 'blur(6px)' },
-        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8, stagger: 0.15, ease: 'power2.out' },
+        { opacity: 0, y: 35 },
+        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' },
         0.55
       );
 
       // Right Column Mockup Cards (3D Perspective Spring Entrance)
       entranceTl.fromTo(
         ['.workflow-mockup-1', '.workflow-mockup-2'],
-        { opacity: 0, y: 60, scale: 0.90, rotateX: 10, filter: 'blur(8px)' },
+        { opacity: 0, y: 60, scale: 0.90, rotateX: 10 },
         {
           opacity: 1,
           y: 0,
           scale: 1,
           rotateX: 0,
-          filter: 'blur(0px)',
           duration: 0.9,
           stagger: 0.18,
           ease: 'back.out(1.4)',
@@ -123,7 +122,6 @@
         .to('.workflow-checkout-btn', {
           backgroundColor: '#005137',
           scale: 1.04,
-          boxShadow: '0 10px 25px rgba(0, 105, 72, 0.4)',
           duration: 0.4
         }, '-=0.2')
 
@@ -180,7 +178,7 @@
     <!-- Section Title (data-depth="content") -->
     <div data-depth="content" class="flex flex-col items-center text-center mb-16 md:mb-20">
       <!-- Kicker Badge with Spring Drop -->
-      <div class="workflow-kicker inline-flex items-center space-x-2 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
+      <div class="workflow-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
         <span class="workflow-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
         <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">WORKFLOW KASIR</span>
       </div>

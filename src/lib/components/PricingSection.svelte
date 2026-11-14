@@ -22,19 +22,19 @@
         defaults: { ease: 'power2.out' },
       });
 
-      // 1. Kicker Badge: Smooth Fade & Subtle Rise (no blur/scale fight with backdrop-blur)
+      // 1. Kicker Badge: Smooth Fade & Subtle Rise
       entranceTl.fromTo(
         '.pricing-kicker',
-        { opacity: 0, y: 14 },
+        { opacity: 0, y: 12 },
         { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' },
         0.05
       );
 
-      // 2. Icon Soft Fade & Settle
+      // 2. Icon Soft Fade
       entranceTl.fromTo(
         '.pricing-kicker-icon',
-        { opacity: 0, scale: 0.85 },
-        { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' },
+        { opacity: 0 },
+        { opacity: 1, duration: 0.4, ease: 'power2.out' },
         0.12
       );
 
@@ -43,8 +43,8 @@
       if (words.length > 0) {
         entranceTl.fromTo(
           words,
-          { opacity: 0, y: '115%', filter: 'blur(8px)' },
-          { opacity: 1, y: '0%', filter: 'blur(0px)', duration: 0.85, stagger: 0.035, ease: 'power3.out' },
+          { opacity: 0, y: '115%' },
+          { opacity: 1, y: '0%', duration: 0.85, stagger: 0.035, ease: 'power3.out' },
           0.18
         );
       }
@@ -67,21 +67,20 @@
       // 5. Description Paragraph
       entranceTl.fromTo(
         '.pricing-desc',
-        { opacity: 0, y: 22, filter: 'blur(6px)' },
-        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.7, ease: 'power2.out' },
+        { opacity: 0, y: 22 },
+        { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
         0.45
       );
 
       // 6. 3 Pricing Cards: 3D Perspective Spring Rise
       entranceTl.fromTo(
         '.pricing-card',
-        { opacity: 0, y: 70, scale: 0.90, rotateX: 10, filter: 'blur(8px)' },
+        { opacity: 0, y: 70, scale: 0.90, rotateX: 10 },
         {
           opacity: 1,
           y: 0,
           scale: 1,
           rotateX: 0,
-          filter: 'blur(0px)',
           duration: 0.9,
           stagger: 0.15,
           ease: 'back.out(1.4)',
@@ -119,7 +118,7 @@
     <!-- Header (data-depth="content") -->
     <div data-depth="content" class="text-center max-w-4xl mx-auto mb-16 md:mb-20">
       <!-- Kicker Badge with Spring Drop -->
-      <div class="pricing-kicker inline-flex items-center space-x-2 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
+      <div class="pricing-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
         <span class="pricing-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">payments</span>
         <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">HARGA &amp; PAKET</span>
       </div>

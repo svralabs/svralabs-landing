@@ -36,12 +36,12 @@
         0.05
       );
 
-      // 2. Headline Words: Kinetic Masked Rise with Optical Blur Clear
+      // 2. Headline Words: Kinetic Masked Rise
       if (words.length > 0) {
         tl.fromTo(
           words,
-          { opacity: 0, y: '115%', filter: 'blur(8px)' },
-          { opacity: 1, y: '0%', filter: 'blur(0px)', duration: 0.9, stagger: 0.035, ease: 'power3.out' },
+          { opacity: 0, y: '115%' },
+          { opacity: 1, y: '0%', duration: 0.9, stagger: 0.035, ease: 'power3.out' },
           0.15
         );
       }
@@ -79,8 +79,8 @@
       // 5. Tablet chassis Grand 3D entrance rise & perspective settle
       tl.fromTo(
         '.mission-tablet-chassis',
-        { opacity: 0, y: 65, scale: 0.92, rotateX: 10, filter: 'blur(8px)' },
-        { opacity: 1, y: 0, scale: 1, rotateX: 0, filter: 'blur(0px)', duration: 1.15, ease: 'power3.out' },
+        { opacity: 0, y: 65, scale: 0.92, rotateX: 10 },
+        { opacity: 1, y: 0, scale: 1, rotateX: 0, duration: 1.15, ease: 'power3.out' },
         0.35
       );
 
@@ -103,8 +103,8 @@
       // 8. Floating Card spring pop entrance (at bottom-left with delay)
       tl.fromTo(
         '.mission-floating-card-wrap',
-        { opacity: 0, x: -65, y: 40, scale: 0.7, rotate: -10, filter: 'blur(8px)' },
-        { opacity: 1, x: 0, y: 0, scale: 1, rotate: 0, filter: 'blur(0px)', duration: 0.95, ease: 'back.out(1.6)' },
+        { opacity: 0, x: -65, y: 40, scale: 0.7, rotate: -10 },
+        { opacity: 1, x: 0, y: 0, scale: 1, rotate: 0, duration: 0.95, ease: 'back.out(1.6)' },
         1.15
       );
 
@@ -149,7 +149,7 @@
         y: -40, opacity: 0, scale: 0.96, ease: 'power1.in', duration: 0.7,
       }, 0);
       outTl.to('.tablet-morph-stage', {
-        y: -55, opacity: 0, scale: 0.92, filter: 'blur(5px)', ease: 'power1.in', duration: 0.75,
+        y: -55, opacity: 0, scale: 0.92, ease: 'power1.in', duration: 0.75,
       }, 0.05);
       outTl.to('.mission-floating-card-wrap', {
         x: -30, y: -40, opacity: 0, scale: 0.85, ease: 'power1.in', duration: 0.65,

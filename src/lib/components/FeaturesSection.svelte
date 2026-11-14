@@ -50,8 +50,8 @@
       if (words.length > 0) {
         tl.fromTo(
           words,
-          { opacity: 0, y: '110%', filter: 'blur(6px)' },
-          { opacity: 1, y: '0%', filter: 'blur(0px)', duration: 0.8, stagger: 0.03, ease: 'power3.out' },
+          { opacity: 0, y: '110%' },
+          { opacity: 1, y: '0%', duration: 0.8, stagger: 0.03, ease: 'power3.out' },
           0.12
         );
       }
@@ -72,17 +72,17 @@
 
       tl.fromTo(
         '.fitur-desc',
-        { opacity: 0, y: 20, filter: 'blur(4px)' },
-        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.65, ease: 'power2.out' },
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out' },
         0.3
       );
 
       // Cards: fast staggered 3D rise from below
       tl.fromTo(
         '.fitur-card',
-        { opacity: 0, y: 50, scale: 0.92, rotateX: 8, filter: 'blur(6px)' },
+        { opacity: 0, y: 50, scale: 0.92, rotateX: 8 },
         {
-          opacity: 1, y: 0, scale: 1, rotateX: 0, filter: 'blur(0px)',
+          opacity: 1, y: 0, scale: 1, rotateX: 0,
           duration: 0.75, stagger: 0.08, ease: 'back.out(1.3)',
         },
         0.4
@@ -111,8 +111,8 @@
 
       tl.fromTo(
         '.fitur-cta-wrap',
-        { opacity: 0, y: 22, scale: 0.93, filter: 'blur(5px)' },
-        { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 0.7, ease: 'back.out(1.4)' },
+        { opacity: 0, y: 22, scale: 0.93 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'back.out(1.4)' },
         0.88
       );
 
@@ -129,11 +129,11 @@
 
       // Cards fan out and recede upward with slight lateral spread
       outTl.to(['.fitur-card:nth-child(1)', '.fitur-card:nth-child(2)'], {
-        x: -35, y: -25, opacity: 0.1, scale: 0.93, filter: 'blur(3px)',
+        x: -35, y: -25, opacity: 0.1, scale: 0.93,
         ease: 'power1.in', duration: 0.8,
       }, 0);
       outTl.to(['.fitur-card:nth-child(3)', '.fitur-card:nth-child(4)'], {
-        x: 35, y: -25, opacity: 0.1, scale: 0.93, filter: 'blur(3px)',
+        x: 35, y: -25, opacity: 0.1, scale: 0.93,
         ease: 'power1.in', duration: 0.8,
       }, 0);
 
@@ -170,7 +170,7 @@
     <!-- Header (data-depth="content") -->
     <div data-depth="content" class="text-center mb-16 max-w-3xl">
       <!-- Kicker Badge with Spring Drop & Icon Pop -->
-      <span class="fitur-kicker inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] font-label-bold text-primary uppercase text-xs mb-6 select-none">
+      <span class="fitur-kicker inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] font-label-bold text-primary uppercase text-xs mb-6 select-none">
         <span class="fitur-kicker-icon material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
         MASALAH &amp; SOLUSI
       </span>

@@ -25,16 +25,16 @@
       // 1. Kicker Badge: Smooth Fade & Subtle Rise
       entranceTl.fromTo(
         '.security-kicker',
-        { opacity: 0, y: 14 },
+        { opacity: 0, y: 12 },
         { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' },
         0.05
       );
 
-      // 2. Shield Icon Fade & Settle
+      // 2. Shield Icon Fade
       entranceTl.fromTo(
         '.security-kicker-icon',
-        { opacity: 0, scale: 0.85 },
-        { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' },
+        { opacity: 0 },
+        { opacity: 1, duration: 0.4, ease: 'power2.out' },
         0.12
       );
 
@@ -43,8 +43,8 @@
       if (words.length > 0) {
         entranceTl.fromTo(
           words,
-          { opacity: 0, y: '115%', filter: 'blur(8px)' },
-          { opacity: 1, y: '0%', filter: 'blur(0px)', duration: 0.85, stagger: 0.035, ease: 'power3.out' },
+          { opacity: 0, y: '115%' },
+          { opacity: 1, y: '0%', duration: 0.85, stagger: 0.035, ease: 'power3.out' },
           0.18
         );
       }
@@ -67,21 +67,20 @@
       // 5. Description Paragraph
       entranceTl.fromTo(
         '.security-desc',
-        { opacity: 0, y: 22, filter: 'blur(6px)' },
-        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.7, ease: 'power2.out' },
+        { opacity: 0, y: 22 },
+        { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
         0.45
       );
 
       // 6. 2 Large Feature Cards: 3D Perspective Spring Rise
       entranceTl.fromTo(
         '.security-card',
-        { opacity: 0, y: 60, scale: 0.90, rotateX: 10, filter: 'blur(8px)' },
+        { opacity: 0, y: 60, scale: 0.90, rotateX: 10 },
         {
           opacity: 1,
           y: 0,
           scale: 1,
           rotateX: 0,
-          filter: 'blur(0px)',
           duration: 0.9,
           stagger: 0.16,
           ease: 'back.out(1.4)',
@@ -133,7 +132,7 @@
     <!-- Section Title (data-depth="content") -->
     <div data-depth="content" class="flex flex-col items-center text-center mb-16 md:mb-20">
       <!-- Kicker Badge with Spring Drop -->
-      <div class="security-kicker inline-flex items-center space-x-2 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
+      <div class="security-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
         <span class="security-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">shield</span>
         <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">KEAMANAN &amp; ANALITIK</span>
       </div>

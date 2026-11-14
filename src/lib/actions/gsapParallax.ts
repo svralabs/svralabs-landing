@@ -321,32 +321,40 @@ export function magneticButton(node: HTMLElement, options: MagneticOptions = {})
   if (typeof window === 'undefined' || isReducedMotion() || isTouchDevice()) return;
 
   const strength = options.strength ?? 14;
-  node.style.willChange = 'transform';
 
   const setX = gsap.quickTo(node, 'x', { duration: 0.35, ease: 'power2.out' });
   const setY = gsap.quickTo(node, 'y', { duration: 0.35, ease: 'power2.out' });
 
+  let cachedRect: DOMRect | null = null;
+
+  const onMouseEnter = () => {
+    cachedRect = node.getBoundingClientRect();
+  };
+
   const onMouseMove = (e: MouseEvent) => {
-    const rect = node.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
+    if (!cachedRect) cachedRect = node.getBoundingClientRect();
+    const centerX = cachedRect.left + cachedRect.width / 2;
+    const centerY = cachedRect.top + cachedRect.height / 2;
 
     const distX = e.clientX - centerX;
     const distY = e.clientY - centerY;
 
-    setX(distX * (strength / (rect.width / 2)));
-    setY(distY * (strength / (rect.height / 2)));
+    setX(distX * (strength / (cachedRect.width / 2)));
+    setY(distY * (strength / (cachedRect.height / 2)));
   };
 
   const onMouseLeave = () => {
-    gsap.to(node, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
+    cachedRect = null;
+    gsap.to(node, { x: 0, y: 0, duration: 0.4, ease: 'power2.out', overwrite: 'auto' });
   };
 
+  node.addEventListener('mouseenter', onMouseEnter, { passive: true });
   node.addEventListener('mousemove', onMouseMove, { passive: true });
   node.addEventListener('mouseleave', onMouseLeave, { passive: true });
 
   return {
     destroy() {
+      node.removeEventListener('mouseenter', onMouseEnter);
       node.removeEventListener('mousemove', onMouseMove);
       node.removeEventListener('mouseleave', onMouseLeave);
     }

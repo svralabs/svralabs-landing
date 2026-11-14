@@ -26,11 +26,11 @@
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-      // 1. Top Pill Tag Badge: 3D Spring Drop with optical blur clear
+      // 1. Top Pill Tag Badge: 3D Spring Drop
       tl.fromTo(
         '.hero-badge-tag',
-        { opacity: 0, y: -24, rotateX: 35, scale: 0.88, filter: 'blur(6px)' },
-        { opacity: 1, y: 0, rotateX: 0, scale: 1, filter: 'blur(0px)', duration: 0.8, ease: 'back.out(1.6)' },
+        { opacity: 0, y: -24, rotateX: 35, scale: 0.88 },
+        { opacity: 1, y: 0, rotateX: 0, scale: 1, duration: 0.8, ease: 'back.out(1.6)' },
         0.05
       );
 
@@ -49,19 +49,19 @@
         0.45
       );
 
-      // 3. CTA Buttons staggered spring entrance with depth blur
+      // 3. CTA Buttons staggered spring entrance
       tl.fromTo(
         '.hero-cta-btn',
-        { opacity: 0, y: 28, scale: 0.92, filter: 'blur(6px)' },
-        { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 0.85, stagger: 0.12, ease: 'back.out(1.4)' },
+        { opacity: 0, y: 28, scale: 0.92 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.85, stagger: 0.12, ease: 'back.out(1.4)' },
         0.65
       );
 
       // 4. Main Dashboard Card Floating Rise with 3D perspective tilt
       tl.fromTo(
         '.hero-card-container',
-        { opacity: 0, y: 65, scale: 0.92, rotateX: 10, filter: 'blur(6px)' },
-        { opacity: 1, y: 0, scale: 1, rotateX: 0, filter: 'blur(0px)', duration: 1.15, ease: 'power3.out' },
+        { opacity: 0, y: 65, scale: 0.92, rotateX: 10 },
+        { opacity: 1, y: 0, scale: 1, rotateX: 0, duration: 1.15, ease: 'power3.out' },
         0.75
       );
 
@@ -92,8 +92,8 @@
       // 8. Left Floating Badge ("Pembayaran Berhasil" QRIS) Entrance
       tl.fromTo(
         '.hero-badge-entrance-qris',
-        { opacity: 0, x: -60, y: 35, scale: 0.7, rotate: -10, filter: 'blur(6px)' },
-        { opacity: 1, x: 0, y: 0, scale: 1, rotate: 0, filter: 'blur(0px)', duration: 0.95, ease: 'back.out(1.6)' },
+        { opacity: 0, x: -60, y: 35, scale: 0.7, rotate: -10 },
+        { opacity: 1, x: 0, y: 0, scale: 1, rotate: 0, duration: 0.95, ease: 'back.out(1.6)' },
         1.15
       );
 
@@ -105,11 +105,11 @@
         1.45
       );
 
-      // 10. Right Floating Badge ("Data Sinkronisasi") Entrance — Clear delayed entry
+      // 10. Right Floating Badge ("Data Sinkronisasi") Entrance
       tl.fromTo(
         '.hero-badge-entrance-sync',
-        { opacity: 0, x: 60, y: 35, scale: 0.7, rotate: 10, filter: 'blur(6px)' },
-        { opacity: 1, x: 0, y: 0, scale: 1, rotate: 0, filter: 'blur(0px)', duration: 0.95, ease: 'back.out(1.6)' },
+        { opacity: 0, x: 60, y: 35, scale: 0.7, rotate: 10 },
+        { opacity: 1, x: 0, y: 0, scale: 1, rotate: 0, duration: 0.95, ease: 'back.out(1.6)' },
         1.75
       );
 
@@ -168,7 +168,7 @@
     <!-- Layer 2: Content (Headline, Subtitle, CTAs) (data-depth="content") -->
     <div data-depth="content" class="w-full flex flex-col items-center text-center">
       <!-- Top Pill Badge -->
-      <div class="hero-badge-tag inline-flex items-center gap-2 bg-white/85 backdrop-blur-md border border-border-hairline rounded-full px-4 py-1.5 mb-3 md:mb-4 shadow-sm">
+      <div class="hero-badge-tag inline-flex items-center gap-2 bg-white border border-border-hairline rounded-full px-4 py-1.5 mb-3 md:mb-4 shadow-sm">
         <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
         <span class="font-label-sm text-label-sm uppercase tracking-widest text-text-muted">Sistem Kasir · EMR · Custom Software</span>
       </div>

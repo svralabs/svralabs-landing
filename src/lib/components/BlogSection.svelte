@@ -43,8 +43,8 @@
       if (words.length > 0) {
         entranceTl.fromTo(
           words,
-          { opacity: 0, y: '115%', filter: 'blur(8px)' },
-          { opacity: 1, y: '0%', filter: 'blur(0px)', duration: 0.85, stagger: 0.035, ease: 'power3.out' },
+          { opacity: 0, y: '115%' },
+          { opacity: 1, y: '0%', duration: 0.85, stagger: 0.035, ease: 'power3.out' },
           0.18
         );
       }
@@ -69,27 +69,27 @@
       if (cards.length >= 3) {
         entranceTl.fromTo(
           cards[0],
-          { opacity: 0, y: 65, scale: 0.90, rotate: -2.8, rotateX: 8, filter: 'blur(8px)' },
-          { opacity: 1, y: 0, scale: 1, rotate: 0, rotateX: 0, filter: 'blur(0px)', duration: 0.9, ease: 'back.out(1.4)' },
+          { opacity: 0, y: 65, scale: 0.90, rotate: -2.8, rotateX: 8 },
+          { opacity: 1, y: 0, scale: 1, rotate: 0, rotateX: 0, duration: 0.9, ease: 'back.out(1.4)' },
           0.45
         );
         entranceTl.fromTo(
           cards[1],
-          { opacity: 0, y: 75, scale: 0.90, rotate: 0, rotateX: 8, filter: 'blur(8px)' },
-          { opacity: 1, y: 0, scale: 1, rotate: 0, rotateX: 0, filter: 'blur(0px)', duration: 0.9, ease: 'back.out(1.4)' },
+          { opacity: 0, y: 75, scale: 0.90, rotate: 0, rotateX: 8 },
+          { opacity: 1, y: 0, scale: 1, rotate: 0, rotateX: 0, duration: 0.9, ease: 'back.out(1.4)' },
           0.58
         );
         entranceTl.fromTo(
           cards[2],
-          { opacity: 0, y: 65, scale: 0.90, rotate: 2.8, rotateX: 8, filter: 'blur(8px)' },
-          { opacity: 1, y: 0, scale: 1, rotate: 0, rotateX: 0, filter: 'blur(0px)', duration: 0.9, ease: 'back.out(1.4)' },
+          { opacity: 0, y: 65, scale: 0.90, rotate: 2.8, rotateX: 8 },
+          { opacity: 1, y: 0, scale: 1, rotate: 0, rotateX: 0, duration: 0.9, ease: 'back.out(1.4)' },
           0.71
         );
       } else {
         entranceTl.fromTo(
           '.blog-card',
-          { opacity: 0, y: 65, scale: 0.90, rotateX: 10, filter: 'blur(8px)' },
-          { opacity: 1, y: 0, scale: 1, rotateX: 0, filter: 'blur(0px)', duration: 0.9, stagger: 0.14, ease: 'back.out(1.4)' },
+          { opacity: 0, y: 65, scale: 0.90, rotateX: 10 },
+          { opacity: 1, y: 0, scale: 1, rotateX: 0, duration: 0.9, stagger: 0.14, ease: 'back.out(1.4)' },
           0.45
         );
       }
@@ -115,7 +115,7 @@
     <!-- Header (data-depth="content") -->
     <div data-depth="content" class="text-center mb-16 flex flex-col items-center">
       <!-- Kicker Badge with Spring Drop -->
-      <div class="blog-kicker inline-flex items-center space-x-2 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
+      <div class="blog-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
         <span class="blog-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">article</span>
         <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">STUDI KASUS &amp; ARTIKEL</span>
       </div>

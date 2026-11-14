@@ -43,8 +43,8 @@
       if (words.length > 0) {
         entranceTl.fromTo(
           words,
-          { opacity: 0, y: '115%', filter: 'blur(8px)' },
-          { opacity: 1, y: '0%', filter: 'blur(0px)', duration: 0.85, stagger: 0.035, ease: 'power3.out' },
+          { opacity: 0, y: '115%' },
+          { opacity: 1, y: '0%', duration: 0.85, stagger: 0.035, ease: 'power3.out' },
           0.18
         );
       }
@@ -67,21 +67,20 @@
       // 5. Description & Header CTA button
       entranceTl.fromTo(
         '.services-desc, .services-cta',
-        { opacity: 0, y: 22, filter: 'blur(6px)' },
-        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.7, stagger: 0.1, ease: 'power2.out' },
+        { opacity: 0, y: 22 },
+        { opacity: 1, y: 0, duration: 0.7, stagger: 0.1, ease: 'power2.out' },
         0.45
       );
 
       // 6. 3 Service Cards: 3D Perspective Staggered Spring Rise
       entranceTl.fromTo(
         '.service-card',
-        { opacity: 0, y: 65, scale: 0.90, rotateX: 10, filter: 'blur(8px)' },
+        { opacity: 0, y: 65, scale: 0.90, rotateX: 10 },
         {
           opacity: 1,
           y: 0,
           scale: 1,
           rotateX: 0,
-          filter: 'blur(0px)',
           duration: 0.9,
           stagger: 0.14,
           ease: 'back.out(1.4)',
@@ -120,7 +119,7 @@
     <div data-depth="content" class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-20 gap-8">
       <div class="max-w-2xl">
         <!-- Kicker Badge with Spring Drop -->
-        <div class="services-kicker inline-flex items-center space-x-2 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
+        <div class="services-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
           <span class="services-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">hub</span>
           <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">CORE SOLUTIONS</span>
         </div>
