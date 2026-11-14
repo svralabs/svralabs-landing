@@ -21,7 +21,7 @@
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: missionRoot,
-          start: 'top 65%',
+          start: 'top 80%',
           toggleActions: 'play none none none',
           once: true,
         },
@@ -133,28 +133,6 @@
         { scaleY: 1, duration: 0.75, stagger: 0.06, ease: 'back.out(1.5)' },
         1.35
       );
-
-      // ── OUT: Scrubbed exit as Fitur slides in from below ──
-      const outTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: missionRoot,
-          start: 'bottom 85%',
-          end: 'bottom 15%',
-          scrub: 1.0,
-          invalidateOnRefresh: true,
-        }
-      });
-
-      outTl.to('.mission-text-wrapper', {
-        y: -40, opacity: 0, scale: 0.96, ease: 'power1.in', duration: 0.7,
-      }, 0);
-      outTl.to('.tablet-morph-stage', {
-        y: -55, opacity: 0, scale: 0.92, ease: 'power1.in', duration: 0.75,
-      }, 0.05);
-      outTl.to('.mission-floating-card-wrap', {
-        x: -30, y: -40, opacity: 0, scale: 0.85, ease: 'power1.in', duration: 0.65,
-      }, 0);
-
     }, missionRoot);
 
     return () => ctx.revert();

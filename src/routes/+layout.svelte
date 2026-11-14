@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { onMount, onDestroy } from 'svelte';
-  import { afterNavigate } from '$app/navigation';
+  import { beforeNavigate, afterNavigate } from '$app/navigation';
   import { page } from '$app/state';
   import Navbar from '$lib/components/Navbar.svelte';
   import { pageTransition } from '$lib/actions/motion';
@@ -10,15 +10,23 @@
 
   let { children } = $props();
 
-  afterNavigate(() => {
+  beforeNavigate(() => {
     if (typeof window === 'undefined') return;
     try {
       ScrollTrigger.getAll().forEach((t) => t.kill());
-      ScrollTrigger.clearScrollMemory();
     } catch (_) {}
+  });
+
+  afterNavigate(() => {
+    if (typeof window === 'undefined') return;
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
+    setTimeout(() => {
+      try {
+        ScrollTrigger.refresh();
+      } catch (_) {}
+    }, 60);
   });
 
   onMount(() => {

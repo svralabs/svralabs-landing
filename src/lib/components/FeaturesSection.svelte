@@ -26,7 +26,7 @@
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: fiturRoot,
-          start: 'top 65%',
+          start: 'top 80%',
           toggleActions: 'play none none none',
           once: true,
         },
@@ -115,35 +115,6 @@
         { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'back.out(1.4)' },
         0.88
       );
-
-      // ── OUT: Scrubbed recession as next section scrolls in ──
-      const outTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: fiturRoot,
-          start: 'bottom 80%',
-          end: 'bottom 10%',
-          scrub: 1.0,
-          invalidateOnRefresh: true,
-        }
-      });
-
-      // Cards fan out and recede upward with slight lateral spread
-      outTl.to(['.fitur-card:nth-child(1)', '.fitur-card:nth-child(2)'], {
-        x: -35, y: -25, opacity: 0.1, scale: 0.93,
-        ease: 'power1.in', duration: 0.8,
-      }, 0);
-      outTl.to(['.fitur-card:nth-child(3)', '.fitur-card:nth-child(4)'], {
-        x: 35, y: -25, opacity: 0.1, scale: 0.93,
-        ease: 'power1.in', duration: 0.8,
-      }, 0);
-
-      outTl.to('.fitur-desc, .fitur-kicker', {
-        y: -18, opacity: 0, ease: 'power1.in', duration: 0.55,
-      }, 0);
-      outTl.to('.fitur-cta-wrap', {
-        y: -12, opacity: 0, scale: 0.96, ease: 'power1.in', duration: 0.45,
-      }, 0.05);
-
     }, fiturRoot);
 
     return () => ctx.revert();

@@ -15,7 +15,7 @@
       const entranceTl = gsap.timeline({
         scrollTrigger: {
           trigger: servicesRoot,
-          start: 'top 65%',
+          start: 'top 80%',
           toggleActions: 'play none none none',
           once: true,
         },
