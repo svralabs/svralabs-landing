@@ -215,8 +215,7 @@ export const portfolioItems: PortfolioItem[] = [
     year: '2024',
     location: 'Indonesia',
     status: 'Katalog Demo',
-    hasDemo: true,
-    demoUrl: 'https://demo.svralabs.com/booking/padel',
+    hasDemo: false,
     hasCaseStudy: false,
     metrics: [
       { label: 'Kasus Double-Booking', value: '0%' },
@@ -247,8 +246,7 @@ export const portfolioItems: PortfolioItem[] = [
     year: '2024',
     location: 'Indonesia',
     status: 'Katalog Demo',
-    hasDemo: true,
-    demoUrl: 'https://demo.svralabs.com/booking/minisoccer',
+    hasDemo: false,
     hasCaseStudy: false,
     metrics: [
       { label: 'Keterisian Lapangan', value: '+35%' },
@@ -279,8 +277,7 @@ export const portfolioItems: PortfolioItem[] = [
     year: '2024',
     location: 'Indonesia',
     status: 'Katalog Demo',
-    hasDemo: true,
-    demoUrl: 'https://demo.svralabs.com/booking/badminton',
+    hasDemo: false,
     hasCaseStudy: false,
     metrics: [
       { label: 'Utilisasi Lapangan', value: 'Maksimal' },

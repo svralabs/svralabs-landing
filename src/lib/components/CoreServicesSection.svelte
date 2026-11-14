@@ -185,13 +185,11 @@
           <a
             use:magneticButton={{ strength: 10 }}
             class="inline-flex items-center gap-2 bg-on-surface text-surface font-label-bold text-sm rounded-full px-6 py-3 transition-colors duration-300 hover:bg-primary shadow-md"
-            href="https://demo.svralabs.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/portfolio?category=has-demo"
           >
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             Coba Live Demo
-            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
           </a>
         </div>
       </div>

@@ -10,6 +10,13 @@
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
+
+    if (typeof window !== 'undefined') {
+      const catParam = new URLSearchParams(window.location.search).get('category');
+      if (catParam) {
+        selectedCategory = catParam;
+      }
+    }
   });
 
   const filteredItems = $derived.by(() => {
@@ -279,6 +286,11 @@
                   <span>Coba Live Demo Interaktif</span>
                   <span class="material-symbols-outlined text-[14px]">open_in_new</span>
                 </a>
+              {:else if item.status === 'Katalog Demo'}
+                <div class="py-2 px-3 rounded-full bg-surface-container text-text-muted text-[11px] font-medium text-center flex items-center justify-center gap-1.5 select-none">
+                  <span class="material-symbols-outlined text-[14px] text-primary">schedule</span>
+                  <span>Demo Sedang Tahap Rilis (Segera Hadir)</span>
+                </div>
               {:else}
                 <div class="py-2 px-3 rounded-full bg-surface-container text-text-muted text-[11px] font-medium text-center flex items-center justify-center gap-1.5 select-none">
                   <span class="material-symbols-outlined text-[14px] text-text-muted">lock</span>
@@ -340,13 +352,11 @@
             <span>Konsultasi Gratis via WhatsApp</span>
           </a>
           <a
-            href="https://demo.svralabs.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/"
             class="bg-surface-container-lowest text-on-surface border border-border-hairline px-8 py-3.5 rounded-full font-label-bold text-sm hover:bg-surface-container transition-colors duration-300 shadow-sm flex items-center justify-center gap-2 w-full sm:w-auto"
           >
-            <span>Kunjungi Hub Demo Interaktif</span>
-            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            <span>Kembali ke Beranda</span>
           </a>
         </div>
       </div>

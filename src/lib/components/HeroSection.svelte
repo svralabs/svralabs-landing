@@ -195,9 +195,7 @@
 
         <a
           use:magneticButton={{ strength: 14 }}
-          href="https://demo.svralabs.com"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/portfolio?category=has-demo"
           class="hero-cta-btn bg-primary text-on-primary px-7 sm:px-8 py-3.5 md:py-4 rounded-full font-label-bold hover:bg-primary-container transition-colors duration-300 shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
         >
           <span class="relative flex h-2 w-2">
@@ -205,7 +203,7 @@
             <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
           </span>
           Coba Live Demo
-          <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
         </a>
 
         <button
