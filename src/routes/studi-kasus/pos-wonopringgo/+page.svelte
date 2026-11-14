@@ -260,8 +260,8 @@
           <a use:magneticButton href="/#kontak" class="bg-on-surface text-surface px-8 py-4 rounded-full font-label-bold hover:bg-primary transition-colors shadow-lg">
             Konsultasi Gratis
           </a>
-          <a use:shimmerButton href="/" class="bg-surface-container-lowest text-on-surface border border-border-hairline px-8 py-4 rounded-full hover:bg-surface-container transition-colors shadow-sm">
-            Lihat Studi Kasus Lain
+          <a use:shimmerButton href="/portfolio" class="bg-surface-container-lowest text-on-surface border border-border-hairline px-8 py-4 rounded-full font-label-bold hover:bg-surface-container transition-colors shadow-sm">
+            Jelajahi Portofolio Lain
           </a>
         </div>
       </div>

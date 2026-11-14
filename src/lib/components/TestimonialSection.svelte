@@ -368,8 +368,8 @@
 
     </div>
 
-    <!-- Unified Portfolio & Demo Catalog CTA Button -->
-    <div class="mt-14 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+    <!-- Unified Portfolio & Demo Catalog CTA Button (Single Direct Action to Wadah) -->
+    <div class="mt-14 text-center flex items-center justify-center">
       <a
         use:magneticButton={{ strength: 14 }}
         href="/portfolio"
@@ -378,17 +378,6 @@
         <span class="material-symbols-outlined text-[18px]">folder_special</span>
         <span>Jelajahi Wadah Portofolio &amp; Demo (8+ Sistem)</span>
         <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-      </a>
-
-      <a
-        href="https://demo.svralabs.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 bg-white text-on-surface hover:text-primary border border-border-hairline hover:border-slate-300 px-6 py-4 rounded-full font-label-bold text-sm shadow-xs hover:shadow-sm transition-all duration-300"
-      >
-        <span class="material-symbols-outlined text-primary text-[18px]">play_circle</span>
-        <span>Coba Live Demo Hub</span>
-        <span class="material-symbols-outlined text-[16px] text-text-muted">open_in_new</span>
       </a>
     </div>
   </div>

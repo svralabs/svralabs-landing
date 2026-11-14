@@ -29,8 +29,8 @@ export interface PortfolioItem {
 
 export const portfolioCategories = [
   { id: 'all', label: 'Semua Portofolio' },
-  { id: 'has-demo', label: '🎮 Ada Live Demo' },
-  { id: 'has-case-study', label: '📄 Ada Studi Kasus' },
+  { id: 'has-demo', label: 'Ada Live Demo' },
+  { id: 'has-case-study', label: 'Ada Studi Kasus' },
   { id: 'layanan-publik', label: 'Layanan Publik' },
   { id: 'fnb', label: 'F&B & Cafe' },
   { id: 'pos-retail', label: 'Ritel & Kasir' },
@@ -187,7 +187,7 @@ export const portfolioItems: PortfolioItem[] = [
     iframeSource: 'https://warmindo-garwo-purchasing.vercel.app',
     hasCaseStudy: false,
     metrics: [
-      { label: 'Waktu Rekap Nota', value: '45m ➔ 2m' },
+      { label: 'Waktu Rekap Nota', value: '45m → 2m' },
       { label: 'Deteksi Kenaikan Harga', value: 'Real-time' },
       { label: 'Akurasi OCR AI', value: '98%' }
     ],
