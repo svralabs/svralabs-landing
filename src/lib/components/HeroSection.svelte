@@ -140,7 +140,7 @@
   id="hero"
   bind:this={heroRoot}
   use:sectionLayeredParallax={{ bgSpeed: 0.6, contentSpeed: 0.3, fgSpeed: -0.5 }}
-  class="min-h-screen lg:h-screen lg:max-h-[960px] xl:max-h-[1020px] w-full relative flex flex-col justify-center items-center pt-[104px] sm:pt-[112px] md:pt-[120px] pb-6 md:pb-8 px-4 sm:px-6 md:px-gutter overflow-hidden perspective-grid bg-white"
+  class="min-h-screen w-full relative flex flex-col justify-between items-center pt-[104px] sm:pt-[112px] md:pt-[120px] pb-16 md:pb-20 px-4 sm:px-6 md:px-gutter overflow-hidden perspective-grid bg-white"
 >
   <!-- Layer 1: Background Sky & Atmosphere (data-depth="bg") -->
   <div

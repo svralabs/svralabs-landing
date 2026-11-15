@@ -1,59 +1,105 @@
 <script lang="ts">
-  import { magneticButton } from '$lib/actions/gsapParallax';
+  import { onMount } from 'svelte';
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  import { tilt3D, isReducedMotion } from '$lib/actions/gsapParallax';
+
+  let trustRoot: HTMLElement;
 
   const clientBrands = [
     {
       name: 'Puskesmas Wonokerto',
-      sector: 'Kesehatan & Rekam Medis (EMR)',
+      sector: 'Kesehatan & Rekam Medis EMR',
       slug: 'puskesmas-wonokerto',
-      icon: 'local_hospital',
-      tag: 'Instansi Pemerintah',
-      color: 'text-emerald-700 bg-emerald-50 border-emerald-200/80',
+      monogram: 'PW',
+      tag: 'Instansi Faskes',
     },
     {
       name: 'Konveksi Wonopringgo',
       sector: 'Grosir Tekstil & Multi-Gudang',
       slug: 'pos-wonopringgo',
-      icon: 'inventory_2',
+      monogram: 'KW',
       tag: 'Garmen & Wholesale',
-      color: 'text-blue-700 bg-blue-50 border-blue-200/80',
     },
     {
       name: 'Toko Kopi Seruni',
       sector: 'POS Kasir F&B & Resep HPP',
       slug: 'kopi-seruni',
-      icon: 'local_cafe',
+      monogram: 'KS',
       tag: 'Cafe & Kuliner',
-      color: 'text-amber-700 bg-amber-50 border-amber-200/80',
     },
     {
       name: 'Warmindo Garwo',
-      sector: 'AI Vision OCR Purchasing',
+      sector: 'Procurement AI OCR Scanner',
       slug: 'purchasing-garwo',
-      icon: 'receipt_long',
-      tag: 'Procurement Kuliner',
-      color: 'text-rose-700 bg-rose-50 border-rose-200/80',
+      monogram: 'WG',
+      tag: 'Procurement AI',
     },
     {
       name: 'SVRA Laundry Solutions',
       sector: 'Tracking QR & WhatsApp Bot',
       slug: 'laundry',
-      icon: 'local_laundry_service',
+      monogram: 'SL',
       tag: 'Jasa & Operasional',
-      color: 'text-cyan-700 bg-cyan-50 border-cyan-200/80',
     },
   ];
+
+  onMount(() => {
+    if (typeof window === 'undefined' || isReducedMotion()) return;
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: trustRoot,
+          start: 'top 85%',
+          toggleActions: 'play none none none',
+          once: true,
+        },
+        defaults: { ease: 'power2.out' },
+      });
+
+      // 1. Kicker Badge entrance
+      tl.fromTo(
+        '.trust-kicker',
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.55 },
+        0.05
+      );
+
+      // 2. Client Brand Cards staggered 3D rise
+      tl.fromTo(
+        '.trust-brand-card',
+        { opacity: 0, y: 30, scale: 0.94 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.75,
+          stagger: 0.08,
+          ease: 'back.out(1.4)',
+        },
+        0.15
+      );
+    }, trustRoot);
+
+    return () => ctx.revert();
+  });
 </script>
 
-<section class="w-full bg-white border-y border-border-hairline py-8 md:py-10 relative z-20 overflow-hidden">
+<!-- Seamless, borderless social proof band that flows with hero horizon fog -->
+<section
+  bind:this={trustRoot}
+  class="w-full relative z-20 py-10 md:py-16 bg-gradient-to-b from-white via-surface-container-lowest/80 to-white overflow-hidden"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
     
-    <!-- Header Title -->
-    <div class="text-center mb-6 md:mb-8">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container border border-border-hairline/80 mb-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span class="font-label-sm text-[11px] font-bold text-on-surface uppercase tracking-widest">
-          BUKTI KERJASAMA &amp; SISTEM AKTIF
+    <!-- Header Title (No Green Pulse Dot) -->
+    <div class="trust-kicker text-center mb-6 md:mb-8 will-change-transform">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container border border-border-hairline shadow-2xs mb-2">
+        <span class="material-symbols-outlined text-primary text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+        <span class="font-label-sm text-[11px] font-bold text-on-surface-variant uppercase tracking-widest">
+          Sistem Produksi Aktif &amp; Klien Terverifikasi
         </span>
       </div>
       <p class="font-body-md text-xs sm:text-sm text-text-muted max-w-xl mx-auto">
@@ -61,21 +107,22 @@
       </p>
     </div>
 
-    <!-- Client Cards Grid -->
+    <!-- Client Cards Grid with 3D Tilt & Professional Monogram Badges -->
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
       {#each clientBrands as brand}
         <a
+          use:tilt3D={{ maxTilt: 5, perspective: 900, glare: false }}
           href="/project/{brand.slug}"
-          class="group bg-white hover:bg-slate-50/80 rounded-2xl p-4 border border-border-hairline hover:border-primary/40 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+          class="trust-brand-card group bg-white hover:bg-slate-50/90 rounded-2xl p-4 border border-border-hairline hover:border-primary/50 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between will-change-transform"
         >
           <div>
             <div class="flex items-center justify-between mb-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center border {brand.color} shadow-2xs">
-                <span class="material-symbols-outlined text-[20px]">{brand.icon}</span>
+              <!-- Architectural Monogram Badge -->
+              <div class="w-8 h-8 rounded-xl bg-surface-container-high group-hover:bg-primary text-on-surface group-hover:text-white flex items-center justify-center font-mono font-bold text-xs tracking-wider transition-colors shadow-2xs">
+                {brand.monogram}
               </div>
-              <span class="inline-flex items-center gap-1 text-[9px] font-label-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
-                <span class="w-1 h-1 rounded-full bg-emerald-500"></span>
-                Aktif
+              <span class="text-[9px] font-label-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                {brand.tag}
               </span>
             </div>
 
@@ -88,8 +135,8 @@
           </div>
 
           <div class="pt-3 mt-3 border-t border-border-hairline/60 flex items-center justify-between text-[10px] text-text-muted group-hover:text-primary font-label-bold">
-            <span>Lihat Detail</span>
-            <span class="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <span>Buka Project</span>
+            <span class="material-symbols-outlined text-[13px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </div>
         </a>
       {/each}

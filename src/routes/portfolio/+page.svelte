@@ -9,43 +9,38 @@
   const clientBrands = [
     {
       name: 'Puskesmas Wonokerto',
-      sector: 'Kesehatan & EMR SATUSEHAT',
+      sector: 'Kesehatan & Rekam Medis EMR',
       slug: 'puskesmas-wonokerto',
-      icon: 'local_hospital',
+      monogram: 'PW',
       tag: 'Instansi Faskes',
-      color: 'text-emerald-700 bg-emerald-50 border-emerald-200/80',
     },
     {
       name: 'Konveksi Wonopringgo',
       sector: 'Grosir Tekstil & Multi-Gudang',
       slug: 'pos-wonopringgo',
-      icon: 'inventory_2',
+      monogram: 'KW',
       tag: 'Garmen & Wholesale',
-      color: 'text-blue-700 bg-blue-50 border-blue-200/80',
     },
     {
       name: 'Toko Kopi Seruni',
       sector: 'POS Kasir F&B & Resep HPP',
       slug: 'kopi-seruni',
-      icon: 'local_cafe',
+      monogram: 'KS',
       tag: 'Cafe & Kuliner',
-      color: 'text-amber-700 bg-amber-50 border-amber-200/80',
     },
     {
       name: 'Warmindo Garwo',
-      sector: 'AI Vision OCR Purchasing',
+      sector: 'Procurement AI OCR Scanner',
       slug: 'purchasing-garwo',
-      icon: 'receipt_long',
-      tag: 'Procurement Kuliner',
-      color: 'text-rose-700 bg-rose-50 border-rose-200/80',
+      monogram: 'WG',
+      tag: 'Procurement AI',
     },
     {
       name: 'SVRA Laundry Solutions',
       sector: 'Tracking QR & WhatsApp Bot',
       slug: 'laundry',
-      icon: 'local_laundry_service',
+      monogram: 'SL',
       tag: 'Jasa & Operasional',
-      color: 'text-cyan-700 bg-cyan-50 border-cyan-200/80',
     },
   ];
 
@@ -153,33 +148,51 @@
         Demo dan portofolio adalah satu kesatuan. Setiap demo yang kami bangun lahir dari implementasi nyata di klien kami. Pelajari alur kerjanya melalui detail project, atau langsung uji coba interaktif demonya.
       </p>
 
-      <!-- Quick Metrics Strip -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto pt-4 border-t border-border-hairline text-left">
-        <div class="p-3 bg-surface-container-lowest rounded-2xl border border-border-hairline">
-          <p class="text-xs text-text-muted font-label-bold uppercase tracking-wider">Total Portofolio</p>
-          <p class="text-xl md:text-2xl font-bold text-primary">{portfolioItems.length} Sistem</p>
-        </div>
-        <div class="p-3 bg-surface-container-lowest rounded-2xl border border-border-hairline">
-          <p class="text-xs text-text-muted font-label-bold uppercase tracking-wider">Live Demo Terbuka</p>
-          <p class="text-xl md:text-2xl font-bold text-on-surface">{portfolioItems.filter(p => p.hasDemo).length} Aplikasi</p>
-        </div>
-        <div class="p-3 bg-surface-container-lowest rounded-2xl border border-border-hairline">
-          <p class="text-xs text-text-muted font-label-bold uppercase tracking-wider">Detail Project</p>
-          <p class="text-xl md:text-2xl font-bold text-primary">{portfolioItems.filter(p => p.hasCaseStudy).length} Dokumentasi</p>
-        </div>
-        <div class="p-3 bg-surface-container-lowest rounded-2xl border border-border-hairline">
-          <p class="text-xs text-text-muted font-label-bold uppercase tracking-wider">Tingkat Utilisasi</p>
-          <p class="text-xl md:text-2xl font-bold text-on-surface">100% Teruji</p>
+      <!-- Sleek Editorial Metric Counter Bar (Clean & Professional) -->
+      <div class="max-w-3xl mx-auto pt-6 border-t border-border-hairline">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-border-hairline/60">
+          <div class="text-center pt-2 sm:pt-0 sm:px-3">
+            <p class="font-display-sm text-2xl sm:text-3xl font-bold text-on-surface tracking-tight">
+              {portfolioItems.length}
+            </p>
+            <p class="font-label-sm text-[11px] font-bold text-text-muted uppercase tracking-wider mt-1">
+              Project Sistem
+            </p>
+          </div>
+          <div class="text-center pt-2 sm:pt-0 sm:px-3">
+            <p class="font-display-sm text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+              {portfolioItems.filter(p => p.hasDemo).length}
+            </p>
+            <p class="font-label-sm text-[11px] font-bold text-text-muted uppercase tracking-wider mt-1">
+              Live Demo Siap Uji
+            </p>
+          </div>
+          <div class="text-center pt-2 sm:pt-0 sm:px-3">
+            <p class="font-display-sm text-2xl sm:text-3xl font-bold text-on-surface tracking-tight">
+              {portfolioItems.filter(p => p.hasCaseStudy).length}
+            </p>
+            <p class="font-label-sm text-[11px] font-bold text-text-muted uppercase tracking-wider mt-1">
+              Detail Alur Kasus
+            </p>
+          </div>
+          <div class="text-center pt-2 sm:pt-0 sm:px-3">
+            <p class="font-display-sm text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+              100%
+            </p>
+            <p class="font-label-sm text-[11px] font-bold text-text-muted uppercase tracking-wider mt-1">
+              Implementasi Nyata
+            </p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Client Brands Strip: Bukti Kerjasama Nyata -->
+    <!-- Client Brands Strip: Bukti Kerjasama Nyata (Architectural & No Green Pulse Dot) -->
     <div class="mb-12 bg-white rounded-3xl p-6 border border-border-hairline shadow-2xs">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5 border-b border-border-hairline/70 pb-4">
         <div>
           <h2 class="font-headline-md text-base sm:text-lg font-bold text-on-surface flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
             Brand &amp; Instansi yang Bekerja Sama
           </h2>
           <p class="font-body-md text-xs text-text-muted mt-0.5">
@@ -199,11 +212,11 @@
           >
             <div>
               <div class="flex items-center justify-between mb-2">
-                <div class="w-8 h-8 rounded-xl flex items-center justify-center border {brand.color} shadow-2xs">
-                  <span class="material-symbols-outlined text-[18px]">{brand.icon}</span>
+                <div class="w-8 h-8 rounded-xl bg-surface-container-high group-hover:bg-primary text-on-surface group-hover:text-white flex items-center justify-center font-mono font-bold text-xs tracking-wider transition-colors shadow-2xs">
+                  {brand.monogram}
                 </div>
-                <span class="text-[9px] font-label-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
-                  Aktif
+                <span class="text-[9px] font-label-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                  {brand.tag}
                 </span>
               </div>
               <h4 class="font-headline-md text-xs font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
@@ -286,53 +299,36 @@
             class="bg-white rounded-[28px] border border-border-hairline overflow-hidden flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,105,72,0.1)] transition-[box-shadow,border-color] duration-300 group hover:border-primary/30"
           >
             <div>
-              <!-- Browser Window Frame Mockup -->
-              <div class="w-full bg-slate-900 border-b border-border-hairline overflow-hidden flex flex-col">
-                <!-- Browser Chrome Bar -->
-                <div class="px-3.5 py-2 bg-slate-950 flex items-center justify-between border-b border-white/10 select-none">
-                  <div class="flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-rose-500/80 inline-block"></span>
-                    <span class="w-2 h-2 rounded-full bg-amber-500/80 inline-block"></span>
-                    <span class="w-2 h-2 rounded-full bg-emerald-500/80 inline-block"></span>
-                  </div>
-                  <div class="flex items-center gap-1 text-[9px] text-white/60 font-mono bg-white/10 px-2.5 py-0.5 rounded-full max-w-[170px] truncate">
-                    <span class="material-symbols-outlined text-[10px] text-emerald-400">lock</span>
-                    <span class="truncate">{item.slug}.svralabs.id</span>
-                  </div>
-                  <span class="text-[9px] font-mono text-white/50">{item.year}</span>
+              <!-- Thumbnail Frame with Badges (Full UI Screenshot, Never Cut Off) -->
+              <div class="relative aspect-[16/10] w-full overflow-hidden bg-slate-950 flex items-center justify-center p-2.5 sm:p-3 border-b border-border-hairline group/thumb">
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-full object-contain rounded-lg shadow-sm group-hover:scale-[1.02] transition-transform duration-300"
+                />
+                
+                <!-- Status Badges Overlay (No Green Pulse Dot) -->
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10 pointer-events-none">
+                  {#if item.hasDemo}
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary text-on-primary text-[10px] font-label-bold uppercase tracking-wider shadow-sm">
+                      <span class="material-symbols-outlined text-[13px]">play_circle</span>
+                      Live Demo
+                    </span>
+                  {/if}
+                  {#if item.hasCaseStudy}
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-xs text-white text-[10px] font-label-bold uppercase tracking-wider shadow-sm border border-white/10">
+                      <span class="material-symbols-outlined text-[13px]">assignment</span>
+                      Detail Project
+                    </span>
+                  {/if}
                 </div>
 
-                <!-- Screenshot with Zoom & Overlay -->
-                <div class="relative aspect-[16/10] w-full overflow-hidden bg-slate-950">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    loading="lazy"
-                    decoding="async"
-                    class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-                  
-                  <!-- Status Badges Overlay -->
-                  <div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1.5 z-10">
-                    {#if item.hasDemo}
-                      <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-600/95 text-white text-[10px] font-label-bold uppercase tracking-wider shadow-sm">
-                        <span class="h-1.5 w-1.5 rounded-full bg-white animate-pulse"></span>
-                        Live Demo
-                      </span>
-                    {/if}
-                    {#if item.hasCaseStudy}
-                      <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-xs text-white text-[10px] font-label-bold uppercase tracking-wider shadow-sm">
-                        <span class="material-symbols-outlined text-[12px]">assignment</span>
-                        Detail Project
-                      </span>
-                    {/if}
-                  </div>
-
-                  <div class="absolute top-2.5 right-2.5 z-10">
-                    <span class="inline-block px-2.5 py-1 rounded-full bg-white/95 text-on-surface text-[10px] font-label-bold shadow-sm border border-border-hairline">
-                      {item.client}
-                    </span>
-                  </div>
+                <div class="absolute top-3 right-3 z-10 pointer-events-none">
+                  <span class="inline-block px-2.5 py-1 rounded-full bg-white/95 text-on-surface text-[10px] font-label-bold shadow-sm border border-border-hairline">
+                    {item.client}
+                  </span>
                 </div>
               </div>
 
