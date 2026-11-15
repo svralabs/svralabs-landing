@@ -1,41 +1,52 @@
+export interface ProjectScreenshot {
+  title: string;
+  desc: string;
+  image: string;
+}
+
 export interface PortfolioItem {
   id: string;
   slug: string;
   title: string;
   client: string;
-  category: 'layanan-publik' | 'pos-retail' | 'fnb' | 'operasional' | 'booking';
+  category: 'layanan-publik' | 'pos-retail' | 'fnb' | 'operasional';
   categoryLabel: string;
   badge: string;
   tagline: string;
   description: string;
   year: string;
   location: string;
-  status: 'Klien Aktif' | 'Live Demo' | 'Katalog Demo';
+  status: 'Klien Aktif' | 'Live Demo';
   
   // Prinsip filosofi: Demo sudah pasti portofolio, portofolio belum tentu punya demo
   hasDemo: boolean;
   demoUrl?: string;          // Link ke demo interaktif (demo.svralabs.com)
   iframeSource?: string;     // URL app live
   
-  hasCaseStudy: boolean;
-  caseStudyUrl?: string;     // Link ke artikel studi kasus mendalam
+  hasCaseStudy: boolean;     // Menandakan ada halaman detail project
+  caseStudyUrl: string;      // URL ke halaman detail project (/project/[slug])
   
   metrics: { label: string; value: string }[];
   features: string[];
   techStack: string[];
   image: string;
-  featured: boolean;         // Ditampilkan di highlight homepage
+  heroImage: string;
+  featured: boolean;
+  
+  // Konten Detail Project (Tantangan, Solusi, Dampak, Galeri)
+  challenges: string[];
+  solutions: string[];
+  businessImpacts: { metric: string; title: string; desc: string }[];
+  gallery: ProjectScreenshot[];
 }
 
 export const portfolioCategories = [
-  { id: 'all', label: 'Semua Portofolio' },
+  { id: 'all', label: 'Semua Project' },
   { id: 'has-demo', label: 'Ada Live Demo' },
-  { id: 'has-case-study', label: 'Ada Studi Kasus' },
   { id: 'layanan-publik', label: 'Layanan Publik' },
-  { id: 'fnb', label: 'F&B & Cafe' },
+  { id: 'fnb', label: 'F&B & Kuliner' },
   { id: 'pos-retail', label: 'Ritel & Kasir' },
   { id: 'operasional', label: 'Operasional & Jasa' },
-  { id: 'booking', label: 'Booking & Reservasi' },
 ] as const;
 
 export const portfolioItems: PortfolioItem[] = [
@@ -52,9 +63,9 @@ export const portfolioItems: PortfolioItem[] = [
     year: '2024',
     location: 'Pekalongan, Jawa Tengah',
     status: 'Klien Aktif',
-    hasDemo: false, // Portofolio belum tentu punya public demo (karena data pasien privat & intranet)
+    hasDemo: false, // Data rekam medis privat & jaringan intranet
     hasCaseStudy: true,
-    caseStudyUrl: '/studi-kasus/puskesmas-wonokerto',
+    caseStudyUrl: '/project/puskesmas-wonokerto',
     metrics: [
       { label: 'Pencarian Berkas Pasien', value: '< 2 Detik' },
       { label: 'Penurunan Waktu Antre', value: '75%' },
@@ -68,8 +79,60 @@ export const portfolioItems: PortfolioItem[] = [
       'Pelaporan Otomatis Standar Dinas Kesehatan'
     ],
     techStack: ['SvelteKit', 'TypeScript', 'PostgreSQL', 'Tailwind CSS'],
-    image: '/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 21.59.46.webp',
-    featured: true
+    image: '/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 22.04.52.webp',
+    heroImage: '/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 22.04.52.webp',
+    featured: true,
+    challenges: [
+      'Pendaftaran pasien menumpuk setiap pagi karena proses registrasi masih ditulis tangan di buku besar.',
+      'Petugas loket dan perawat membutuhkan waktu 15–20 menit hanya untuk mencari berkas rekam medis kertas di gudang arsip.',
+      'Dokter kesulitan meninjau riwayat penyakit masa lalu pasien karena berkas fisik sering terselip atau rusak.',
+      'Rekapitulasi laporan kunjungan harian untuk dinas kesehatan memakan waktu lembur berjam-jam.'
+    ],
+    solutions: [
+      'Pembangunan sistem EMR terpadu berbasis jaringan intranet lokal yang cepat, stabil, dan aman dari kebocoran data.',
+      'Modul pencarian data pasien instan berbasis NIK atau Nomor Kartu BPJS dalam hitungan detik.',
+      'Penyatuan alur antrean dari loket pendaftaran langsung masuk ke layar komputer dokter di tiap ruang poli.',
+      'Dashboard statistik otomatis yang meng-generate laporan akreditasi dinas kesehatan dalam sekali klik.'
+    ],
+    businessImpacts: [
+      {
+        metric: '75%',
+        title: 'Waktu Antrean Terpangkas',
+        desc: 'Proses pendaftaran hingga pasien masuk ke ruang periksa dokter menjadi jauh lebih singkat dan teratur.'
+      },
+      {
+        metric: '0 Kasus',
+        title: 'Kehilangan Rekam Medis',
+        desc: 'Seluruh riwayat diagnosa dan terapi tersimpan aman di database digital tanpa risiko berkas fisik hilang.'
+      },
+      {
+        metric: '< 2 Detik',
+        title: 'Pencarian Data Pasien',
+        desc: 'Petugas loket cukup mengetik NIK atau nama untuk memuat seluruh histori kunjungan pasien.'
+      }
+    ],
+    gallery: [
+      {
+        title: 'Dashboard Manajemen Puskesmas',
+        desc: 'Pemantauan real-time jumlah kunjungan pasien per poli dan status antrean aktif.',
+        image: '/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 22.04.52.webp'
+      },
+      {
+        title: 'Modul Loket Pendaftaran Pasien',
+        desc: 'Formulir registrasi cepat yang terhubung dengan master data kependudukan & BPJS.',
+        image: '/puskesmas wonokerto/Tangkapan Layar 2026-06-17 pukul 20.43.07.webp'
+      },
+      {
+        title: 'Rekam Medis Digital Ruang Poli',
+        desc: 'Antarmuka periksa dokter untuk menginput diagnosa ICD-10, resep obat, dan riwayat klinis.',
+        image: '/puskesmas wonokerto/Tangkapan Layar 2026-06-17 pukul 20.43.13.webp'
+      },
+      {
+        title: 'Antrean & Akses Tablet Petugas',
+        desc: 'Tampilan responsif yang dapat dioperasikan staf faskes melalui PC desktop maupun tablet perawat.',
+        image: '/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 21.59.46.webp'
+      }
+    ]
   },
   {
     id: 'pos-wonopringgo',
@@ -86,7 +149,7 @@ export const portfolioItems: PortfolioItem[] = [
     status: 'Klien Aktif',
     hasDemo: false, // Database wholesale privat
     hasCaseStudy: true,
-    caseStudyUrl: '/studi-kasus/pos-wonopringgo',
+    caseStudyUrl: '/project/pos-wonopringgo',
     metrics: [
       { label: 'SKU Kain & Barang Jadi', value: '10.000+' },
       { label: 'Selisih Stok Fisik vs Sistem', value: '< 0.1%' },
@@ -101,13 +164,65 @@ export const portfolioItems: PortfolioItem[] = [
     ],
     techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js'],
     image: '/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.23.webp',
-    featured: true
+    heroImage: '/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.23.webp',
+    featured: true,
+    challenges: [
+      'Inventaris ribuan roll kain dengan konversi satuan rumit (roll, yard, meter, kodi) rawan selisih saat stok opname.',
+      'Tiap pelanggan langganan memiliki kesepakatan harga grosir dan termin piutang yang berbeda-beda.',
+      'Stok tersebar di 3 gudang tekstil berbeda tanpa sistem mutasi otomatis, memicu kesalahan konfirmasi pesanan pembeli.',
+      'Pembuatan faktur dan surat jalan manual memperlambat pengiriman armada truk ekspedisi.'
+    ],
+    solutions: [
+      'Aplikasi POS grosir dengan kalkulasi multi-satuan otomatis dan penyesuaian potongan roll presisi.',
+      'Sistem penetapan harga dinamis bertingkat yang otomatis mendeteksi riwayat tier pelanggan.',
+      'Pusat kontrol stok multi-gudang dengan otorisasi surat jalan dan verifikasi barcode mutasi fisik.',
+      'Cetak surat jalan dan faktur penjualan format garmen hanya dalam 1.5 detik.'
+    ],
+    businessImpacts: [
+      {
+        metric: '< 0.1%',
+        title: 'Presisi Inventaris',
+        desc: 'Selisih antara stok fisik di gudang dengan catatan sistem terpangkas mendekati nol.'
+      },
+      {
+        metric: '10.000+',
+        title: 'Kapasitas SKU',
+        desc: 'Sistem mampu menangani katalog varian motif, jenis kain, dan ukuran pakaian jadi tanpa kendala performa.'
+      },
+      {
+        metric: '1.5 Detik',
+        title: 'Cetak Faktur Grosir',
+        desc: 'Armada pengiriman langsung berangkat tanpa antre panjang proses administrasi kasir.'
+      }
+    ],
+    gallery: [
+      {
+        title: 'Kasir POS Penjualan Grosir',
+        desc: 'Antarmuka kasir cepat dengan dukungan multi-satuan (roll, yard, meter) dan diskon kuantitas.',
+        image: '/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.23.webp'
+      },
+      {
+        title: 'Manajemen Stok & Kartu Kain',
+        desc: 'Pencatatan rincian warna, gramasi, dan posisi rak penyimpanan kain di gudang.',
+        image: '/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.39.webp'
+      },
+      {
+        title: 'Transfer Barang Antar Gudang',
+        desc: 'Alur mutasi stok terverifikasi dengan nomor surat jalan dan pengawasan stok opname.',
+        image: '/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.56.webp'
+      },
+      {
+        title: 'Monitoring Piutang & Keuangan',
+        desc: 'Laporan piutang jatuh tempo pembeli grosir dan rekonsiliasi arus kas masuk harian.',
+        image: '/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.25.16.webp'
+      }
+    ]
   },
   {
     id: 'pos-kopi-seruni',
-    slug: 'pos-kopi-seruni',
+    slug: 'kopi-seruni',
     title: 'POS Kasir Cafe, Kitchen Display & Pemotongan Resep HPP',
-    client: 'Kopi Seruni',
+    client: 'Toko Kopi Seruni',
     category: 'fnb',
     categoryLabel: 'F&B & Kuliner',
     badge: 'Live Demo · Klien Aktif',
@@ -116,29 +231,78 @@ export const portfolioItems: PortfolioItem[] = [
     year: '2024',
     location: 'Pekalongan, Jawa Tengah',
     status: 'Live Demo',
-    hasDemo: true, // Demo sudah pasti portofolio
+    hasDemo: true,
     demoUrl: 'https://demo.svralabs.com/pos/pos-fb',
     iframeSource: 'https://kopi-seruni.vercel.app',
-    hasCaseStudy: false,
+    hasCaseStudy: true,
+    caseStudyUrl: '/project/kopi-seruni',
     metrics: [
       { label: 'Akurasi Perhitungan HPP', value: '100%' },
-      { label: 'Kecepatan Tiket ke Dapur', value: 'Instant' },
-      { label: 'Waktu Transaksi Kasir', value: '15 Detik' }
+      { label: 'Waktu Transaksi Kasir', value: '15 Detik' },
+      { label: 'Otomasi Tiket Dapur', value: 'Real-time' }
     ],
     features: [
       'Manajemen Meja & Status Pesanan (Dine-in / Take-away)',
+      'Kustomisasi Minuman (Suhu Hot/Ice, Level Gula, Level Es)',
       'Pemisahan Tiket Bar Minuman & Dapur Makanan',
-      'Fitur Split Bill & Gabung Tagihan Cepat',
-      'Kartu Stok Otomatis Berdasarkan Resep (HPP)',
+      'Fitur Split Bill & Gabung Tagihan Meja Cepat',
+      'Kartu Stok Otomatis Berdasarkan Resep Bahan (HPP)',
       'Rekonsiliasi Shift Kasir & Laporan Omset Harian'
     ],
-    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-    image: '/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.39.webp',
-    featured: true
+    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Turso DB', 'Vercel'],
+    image: '/projects/kopi-seruni/pos-screen.webp',
+    heroImage: '/projects/kopi-seruni/pos-screen.webp',
+    featured: true,
+    challenges: [
+      'Jam sibuk malam hari sering menimbulkan pesanan terselip atau pesanan meja tertukar antara kasir dan barista bar.',
+      'Margin laba kotor tidak terkontrol karena pemakaian bahan baku (biji espresso, susu fresh milk, sirup) bocor tanpa kartu stok resep.',
+      'Kasir kewalahan saat pelanggan minta bayar pisah (split bill) atau menggabungkan tagihan meja.',
+      'Proses closing kasir shift 1 dan shift 2 memakan waktu lama dan sering selisih ratusan ribu rupiah.'
+    ],
+    solutions: [
+      'Antarmuka kasir modern berbasis Next.js dengan alur pemesanan meja, pilihan kustomisasi (es/gula), dan split bill instan.',
+      'Pemisahan tiket otomatis yang mengirim instruksi pesanan makanan ke dapur dan minuman ke stasiun barista.',
+      'Pemotongan stok bahan baku otomatis berdasarkan gramatur resep (HPP) setiap kali menu terjual.',
+      'Laporan rekonsiliasi shift harian terintegrasi dengan perhitungan kas masuk tunai, QRIS, dan EDC.'
+    ],
+    businessImpacts: [
+      {
+        metric: '100%',
+        title: 'Akurasi Resep & HPP',
+        desc: 'Setiap gram kopi dan mililiter susu tercatat presisi, menghilangkan kebocoran bahan baku yang menekan margin cafe.'
+      },
+      {
+        metric: '15 Detik',
+        title: 'Kecepatan Antrean Kasir',
+        desc: 'Proses input menu hingga cetak nota pembayaran selesai dengan cepat tanpa membuat antrean pengunjung menumpuk.'
+      },
+      {
+        metric: 'Zero Selisih',
+        title: 'Closing Shift Akurat',
+        desc: 'Uang fisik di laci kasir cocok dengan rekap digital sistem, memudahkan evaluasi omset harian owner.'
+      }
+    ],
+    gallery: [
+      {
+        title: 'Antarmuka Kasir POS Utama',
+        desc: 'Katalog menu cepat, pemilihan level gula & es, keranjang belanja aktif, serta opsi multi-pembayaran.',
+        image: '/projects/kopi-seruni/pos-screen.webp'
+      },
+      {
+        title: 'Katalog Menu & Manajemen Varian',
+        desc: 'Pengaturan kategori, harga jual, foto produk, dan status ketersediaan menu per outlet.',
+        image: '/projects/kopi-seruni/products-screen.webp'
+      },
+      {
+        title: 'Stok Inventori & Resep Bahan Baku',
+        desc: 'Pemantauan sisa bahan pokok (biji kopi, susu, sirup) dengan peringatan otomatis saat stok menipis.',
+        image: '/projects/kopi-seruni/stock-screen.webp'
+      }
+    ]
   },
   {
     id: 'laundry-management',
-    slug: 'laundry-management',
+    slug: 'laundry',
     title: 'Sistem Manajemen Laundry Kiloan, QR Tracking & WhatsApp Bot',
     client: 'Svra Laundry Solutions',
     category: 'operasional',
@@ -152,27 +316,76 @@ export const portfolioItems: PortfolioItem[] = [
     hasDemo: true,
     demoUrl: 'https://demo.svralabs.com/operational/laundry',
     iframeSource: 'https://svra-laundry.vercel.app',
-    hasCaseStudy: false,
+    hasCaseStudy: true,
+    caseStudyUrl: '/project/laundry',
     metrics: [
       { label: 'Komplain Baju Tertukar', value: 'Turun 95%' },
       { label: 'Efisiensi Waktu Kasir', value: '60%' },
-      { label: 'Pengiriman Notif WhatsApp', value: 'Otomatis' }
+      { label: 'Notifikasi WhatsApp', value: 'Otomatis' }
     ],
     features: [
-      'Input Kasir Cepat dengan Integrasi Timbangan',
+      'Input Kasir Cepat dengan Integrasi Timbangan Digital',
       'Tracking Status Cucian 4 Tahap (Cuci/Kering/Setrika/Siap)',
       'Manajemen Rak Penyimpanan dengan Nomor Barcode',
-      'Cetak Struk Thermal Bluetooth 58mm / 80mm',
-      'Kirim Notifikasi WhatsApp Saat Cucian Siap Diambil'
+      'Cetak Struk Thermal Bluetooth 58mm & 80mm',
+      'Kirim Notifikasi WhatsApp Saat Cucian Siap Diambil',
+      'Laporan Laba Rugi & Rekapitulasi Kasir Harian'
     ],
-    techStack: ['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-    image: '/laundry management/Tangkapan Layar 2026-08-09 pukul 00.17.08.webp',
-    featured: true
+    techStack: ['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Google Apps Script', 'Vercel'],
+    image: '/projects/laundry/dashboard-screen.webp',
+    heroImage: '/projects/laundry/dashboard-screen.webp',
+    featured: true,
+    challenges: [
+      'Komplain pelanggan akibat pakaian tertukar atau terselip karena hanya mengandalkan nota kertas robek bertuliskan tangan.',
+      'Admin laundry kehabisan waktu berharga hanya untuk membalas puluhan chat WhatsApp menanyakan status cucian.',
+      'Kerap terjadi kebocoran uang kasir dan tidak ada pencatatan operasional belanja harian (deterjen, pewangi, plastik).',
+      'Staf produksi bingung mencari baju yang sudah selesai disetrika di tumpukan rak laundry.'
+    ],
+    solutions: [
+      'Aplikasi kasir terintegrasi penimbangan kiloan otomatis dengan cetak nota berkode barcode unik.',
+      'Papan tracking digital 4 tahap kerja (Cuci -> Kering -> Setrika -> Siap Ambil) dengan nomor rak terverifikasi.',
+      'Layanan cek status mandiri bagi pelanggan lewat scan QR nota tanpa perlu menghubungi nomor admin.',
+      'Integrasi Bot WhatsApp yang mengirim pesan otomatis ke nomor pelanggan begitu status berubah menjadi "Siap Diambil".'
+    ],
+    businessImpacts: [
+      {
+        metric: '95%',
+        title: 'Penurunan Baju Tertukar',
+        desc: 'Setiap bundel cucian dilabeli nomor barcode dan nomor rak spesifik, mengeliminasi risiko baju hilang atau tertukar.'
+      },
+      {
+        metric: '60%',
+        title: 'Efisiensi Kasir & Admin',
+        desc: 'Kasir tidak lagi disibukkan menjawab chat manual status cucian dan nota tercatat otomatis di sistem.'
+      },
+      {
+        metric: 'Instant',
+        title: 'Notifikasi Selesai',
+        desc: 'Pelanggan langsung menerima pesan WhatsApp otomatis segera setelah cucian masuk rak penyimpanan.'
+      }
+    ],
+    gallery: [
+      {
+        title: 'Dashboard Operasional Laundry',
+        desc: 'Ringkasan performa omset harian, total berat kiloan cucian masuk, dan transaksi terbaru.',
+        image: '/projects/laundry/dashboard-screen.webp'
+      },
+      {
+        title: 'Formulir Kasir & Input Cucian Baru',
+        desc: 'Pendaftaran pelanggan cepat, pemilihan jenis paket cuci, dan kalkulasi tagihan otomatis.',
+        image: '/projects/laundry/input-screen.webp'
+      },
+      {
+        title: 'Papan Status Tracking Pengerjaan',
+        desc: 'Monitoring visual alur kerja mesin cuci, pengering, setrika uap, dan nomor rak pengambilan.',
+        image: '/projects/laundry/status-screen.webp'
+      }
+    ]
   },
   {
     id: 'purchasing-garwo',
     slug: 'purchasing-garwo',
-    title: 'Purchasing & Scan OCR Nota Pasar AI (Warmindo Garwo)',
+    title: 'Purchasing & Scan OCR Nota Pasar AI Vision (Warmindo Garwo)',
     client: 'Warmindo Garwo',
     category: 'operasional',
     categoryLabel: 'Procurement & Kuliner',
@@ -185,114 +398,70 @@ export const portfolioItems: PortfolioItem[] = [
     hasDemo: true,
     demoUrl: 'https://demo.svralabs.com/operational/purchasing-garwo',
     iframeSource: 'https://warmindo-garwo-purchasing.vercel.app',
-    hasCaseStudy: false,
+    hasCaseStudy: true,
+    caseStudyUrl: '/project/purchasing-garwo',
     metrics: [
       { label: 'Waktu Rekap Nota', value: '45m → 2m' },
       { label: 'Deteksi Kenaikan Harga', value: 'Real-time' },
-      { label: 'Akurasi OCR AI', value: '98%' }
+      { label: 'Akurasi Ekstraksi OCR', value: '98%' }
     ],
     features: [
       'Scan Foto Nota Fisik dengan AI OCR Vision',
-      'Normalisasi Nama Bahan Belanjaan Pasar',
-      'Pelacakan Tren Kenaikan Harga Bahan Pokok',
+      'Normalisasi Nama Bahan Belanjaan Pasar Tradisional',
+      'Pelacakan Tren Kenaikan Harga Bahan Pokok Harian',
       'Sinkronisasi Otomatis ke Pembukuan Google Sheets',
-      'Arsip Bukti Foto Nota Terverifikasi'
+      'Arsip Bukti Foto Nota Terverifikasi & Anti-Manipulasi',
+      'Rekapitulasi Anggaran Belanja Bahan Baku vs Operasional'
     ],
-    techStack: ['Next.js', 'TypeScript', 'AI Vision OCR', 'Tailwind CSS'],
-    image: '/laundry management/Tangkapan Layar 2026-08-09 pukul 00.17.44.webp',
-    featured: true
-  },
-  {
-    id: 'padel-court-booking',
-    slug: 'padel-court-booking',
-    title: 'Padel Court Booking, Rental Raket & Pembayaran DP 24/7',
-    client: 'Svra Sports Venue',
-    category: 'booking',
-    categoryLabel: 'Booking & Reservasi',
-    badge: 'Katalog Demo · Sistem Reservasi',
-    tagline: 'Kalender jadwal interaktif per jam, add-on sewa raket/bola, dan kunci slot via DP otomatis.',
-    description: 'Platform booking lapangan olahraga online mandiri 24 jam. Pemain dapat memilih slot jam kosong, menambahkan persewaan perlengkapan raket dan bola, serta mengonfirmasi jadwal melalui pembayaran uang muka otomatis.',
-    year: '2024',
-    location: 'Indonesia',
-    status: 'Katalog Demo',
-    hasDemo: false,
-    hasCaseStudy: false,
-    metrics: [
-      { label: 'Kasus Double-Booking', value: '0%' },
-      { label: 'Waktu Reservasi Mandiri', value: '< 1 Menit' },
-      { label: 'Pemberitahuan Jadwal', value: 'Auto WA' }
+    techStack: ['Next.js', 'TypeScript', 'AI Vision OCR', 'Tailwind CSS', 'Google Cloud', 'Vercel'],
+    image: '/projects/purchasing-garwo/dashboard-screen.webp',
+    heroImage: '/projects/purchasing-garwo/dashboard-screen.webp',
+    featured: true,
+    challenges: [
+      'Staf belanja pasar membawa puluhan lembar nota kertas lusuh dan tulisan tangan pedagang yang harus direkap manual setiap siang.',
+      'Proses input manual memakan waktu hingga 45 menit per hari dan rawan salah ketik angka nol atau nominal pengeluaran.',
+      'Owner tidak memiliki visibilitas langsung saat terjadi lonjakan harga bahan pokok penting (cabai, telur, minyak goreng).',
+      'Bukti struk fisik rawan hilang atau basah di dapur, menyulitkan proses audit pembukuan akhir bulan.'
     ],
-    features: [
-      'Kalender Slot Jam Interaktif & Real-Time',
-      'Kunci Slot Otomatis dengan Timer Pembayaran DP',
-      'Add-on Persewaan Raket, Kok, dan Bola',
-      'Pengingat Jadwal Bermain via WhatsApp',
-      'Manajemen Member & Paket Main Bulanan'
+    solutions: [
+      'Fitur foto nota belanja dari kamera HP yang langsung dibaca oleh model AI Vision & OCR otomatis.',
+      'Algoritma normalisasi nama barang pasar (misalnya "tlor 1kg" otomatis dinormalisasi menjadi "Telur Ayam").',
+      'Sinkronisasi real-time ke spreadsheet pembukuan Google Sheets tanpa perlu mengetik ulang satu per satu.',
+      'Dashboard grafik fluktuasi harga yang memberi peringatan dini saat harga vendor naik di atas batas wajar.'
     ],
-    techStack: ['SvelteKit', 'TypeScript', 'Tailwind CSS'],
-    image: '/laundry management/Tangkapan Layar 2026-08-09 pukul 00.17.31.webp',
-    featured: false
-  },
-  {
-    id: 'minisoccer-arena',
-    slug: 'minisoccer-arena',
-    title: 'Mini Soccer & Futsal Arena Management System',
-    client: 'Svra Sports Arena',
-    category: 'booking',
-    categoryLabel: 'Booking & Reservasi',
-    badge: 'Katalog Demo · Multi-Lapangan',
-    tagline: 'Manajemen jadwal multi-lapangan, sparring match, dan paket langganan tim komunitas.',
-    description: 'Sistem pengelola venue olahraga berkapasitas banyak lapangan. Mempermudah penjadwalan tim langganan mingguan, pencatatan sewa wasit/fotografer, serta kasir kantin arena dalam satu ekosistem.',
-    year: '2024',
-    location: 'Indonesia',
-    status: 'Katalog Demo',
-    hasDemo: false,
-    hasCaseStudy: false,
-    metrics: [
-      { label: 'Keterisian Lapangan', value: '+35%' },
-      { label: 'Kepastian Jadwal Rutin', value: '100%' },
-      { label: 'Rekap Kasir Arena', value: 'Otomatis' }
+    businessImpacts: [
+      {
+        metric: '2 Menit',
+        title: 'Pemangkasan Waktu Rekap',
+        desc: 'Waktu administrasi belanja dipangkas dari 45 menit menjadi kurang dari 2 menit per nota.'
+      },
+      {
+        metric: 'Real-time',
+        title: 'Deteksi Fluktuasi Harga',
+        desc: 'Owner dapat langsung memantau kenaikan harga telur dan bumbu untuk menyesuaikan porsi resep.'
+      },
+      {
+        metric: '100% Valid',
+        title: 'Arsip Nota Digital',
+        desc: 'Setiap baris pengeluaran terhubung langsung dengan foto nota fisik aslinya, bebas risiko manipulasi kasbon.'
+      }
     ],
-    features: [
-      'Matrix Tampilan Multi-Lapangan Berdampingan',
-      'Paket Langganan Mingguan / Bulanan Klub',
-      'Sistem Tambahan Sewa Wasit & Dokumentasi',
-      'Kasir Terpadu Penjualan Minuman & Jersey',
-      'Laporan Okupansi Jam Sibuk (Prime Time)'
-    ],
-    techStack: ['SvelteKit', 'TypeScript', 'Tailwind CSS'],
-    image: '/laundry management/Tangkapan Layar 2026-08-09 pukul 00.17.56.webp',
-    featured: false
-  },
-  {
-    id: 'badminton-hall',
-    slug: 'badminton-hall',
-    title: 'Badminton Hall & Multi-Court Rental System',
-    client: 'Svra Badminton Hall',
-    category: 'booking',
-    categoryLabel: 'Booking & Reservasi',
-    badge: 'Katalog Demo · GOR Terpadu',
-    tagline: 'Manajemen puluhan karpet lapangan bulutangkis dengan tarif fleksibel per jam.',
-    description: 'Solusi digital untuk gedung olahraga bulutangkis dengan banyak lapangan. Mengeliminasi buku jadwal kertas yang rawan bentrok, menyediakan sistem member komunitas, dan laporan pendapatan harian per kasir.',
-    year: '2024',
-    location: 'Indonesia',
-    status: 'Katalog Demo',
-    hasDemo: false,
-    hasCaseStudy: false,
-    metrics: [
-      { label: 'Utilisasi Lapangan', value: 'Maksimal' },
-      { label: 'Human Error Penjadwalan', value: 'Nol' },
-      { label: 'Laporan Rekap Keuangan', value: '1-Klik' }
-    ],
-    features: [
-      'Visual Grid Ketersediaan Seluruh Court',
-      'Tarif Jam Fleksibel (Pagi, Malam, Akhir Pekan)',
-      'Penjualan Kok & Perlengkapan Terintegrasi',
-      'Pendaftaran Member & Booking Mandiri',
-      'Laporan Rekapitulasi Pendapatan Harian'
-    ],
-    techStack: ['SvelteKit', 'TypeScript', 'Tailwind CSS'],
-    image: '/laundry management/Tangkapan Layar 2026-08-09 pukul 00.18.16.webp',
-    featured: false
+    gallery: [
+      {
+        title: 'Dashboard Keuangan & Purchasing',
+        desc: 'Grafik pengeluaran harian, perbandingan pos bahan baku vs operasional, dan vendor langganan.',
+        image: '/projects/purchasing-garwo/dashboard-screen.webp'
+      },
+      {
+        title: 'Riwayat Transaksi & Bukti Nota',
+        desc: 'Daftar seluruh transaksi belanja lengkap dengan status sinkronisasi spreadsheet dan arsip foto.',
+        image: '/projects/purchasing-garwo/transactions-screen.webp'
+      },
+      {
+        title: 'Arsitektur Sistem & Verifikasi AI',
+        desc: 'Alur kerja otomasi dari jepret foto nota di pasar hingga tercatat rapi di sistem analitik.',
+        image: '/projects/purchasing-garwo/about-screen.webp'
+      }
+    ]
   }
 ];

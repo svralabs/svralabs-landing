@@ -55,10 +55,10 @@
 </script>
 
 <svelte:head>
-  <title>Katalog Portofolio & Live Demo Sistem | Svralabs</title>
-  <meta name="description" content="Katalog portofolio sistem digital dan live demo interaktif Svralabs. Sistem kasir POS, rekam medis EMR, manajemen laundry, dan otomasi operasional bisnis." />
-  <meta property="og:title" content="Katalog Portofolio & Live Demo Sistem | Svralabs" />
-  <meta property="og:description" content="Setiap demo yang kami buat lahir dari portofolio nyata yang teruji di lapangan. Uji coba live demo atau baca bedah studi kasusnya." />
+  <title>Katalog Project & Live Demo Sistem | Svralabs</title>
+  <meta name="description" content="Katalog project sistem digital dan live demo interaktif Svralabs. Sistem kasir POS, rekam medis EMR, manajemen laundry, dan otomasi operasional bisnis." />
+  <meta property="og:title" content="Katalog Project & Live Demo Sistem | Svralabs" />
+  <meta property="og:description" content="Setiap demo yang kami buat lahir dari proyek nyata yang teruji di lapangan. Uji coba live demo atau telusuri detail implementasi sistemnya." />
 </svelte:head>
 
 <div class="bg-surface text-on-surface antialiased min-h-screen font-body-md selection:bg-primary-container selection:text-on-primary-container flex flex-col justify-between">
@@ -107,7 +107,7 @@
       </h1>
 
       <p class="font-body-lg text-body-lg text-text-muted max-w-2xl mx-auto leading-relaxed mb-8">
-        Demo dan portofolio adalah satu kesatuan. Setiap demo yang kami bangun lahir dari implementasi nyata di klien kami. Pelajari alur kerjanya melalui studi kasus, atau langsung uji coba interaktif demonya.
+        Demo dan portofolio adalah satu kesatuan. Setiap demo yang kami bangun lahir dari implementasi nyata di klien kami. Pelajari alur kerjanya melalui detail project, atau langsung uji coba interaktif demonya.
       </p>
 
       <!-- Quick Metrics Strip -->
@@ -121,7 +121,7 @@
           <p class="text-xl md:text-2xl font-bold text-on-surface">{portfolioItems.filter(p => p.hasDemo).length} Aplikasi</p>
         </div>
         <div class="p-3 bg-surface-container-lowest rounded-2xl border border-border-hairline">
-          <p class="text-xs text-text-muted font-label-bold uppercase tracking-wider">Studi Kasus Lengkap</p>
+          <p class="text-xs text-text-muted font-label-bold uppercase tracking-wider">Detail Project</p>
           <p class="text-xl md:text-2xl font-bold text-primary">{portfolioItems.filter(p => p.hasCaseStudy).length} Dokumentasi</p>
         </div>
         <div class="p-3 bg-surface-container-lowest rounded-2xl border border-border-hairline">
@@ -214,8 +214,8 @@
                   {/if}
                   {#if item.hasCaseStudy}
                     <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-xs text-white text-[10px] font-label-bold uppercase tracking-wider shadow-sm">
-                      <span class="material-symbols-outlined text-[12px]">description</span>
-                      Studi Kasus
+                      <span class="material-symbols-outlined text-[12px]">assignment</span>
+                      Detail Project
                     </span>
                   {/if}
                 </div>
@@ -273,7 +273,7 @@
               </div>
             </div>
 
-            <!-- Card Action Footer (Dual Actions: Demo & Studi Kasus) -->
+            <!-- Card Action Footer (Dual Actions: Demo & Detail Project) -->
             <div class="p-6 pt-0 border-t border-border-hairline/60 mt-4 flex flex-col gap-2.5">
               {#if item.hasDemo && item.demoUrl}
                 <a
@@ -286,11 +286,6 @@
                   <span>Coba Live Demo Interaktif</span>
                   <span class="material-symbols-outlined text-[14px]">open_in_new</span>
                 </a>
-              {:else if item.status === 'Katalog Demo'}
-                <div class="py-2 px-3 rounded-full bg-surface-container text-text-muted text-[11px] font-medium text-center flex items-center justify-center gap-1.5 select-none">
-                  <span class="material-symbols-outlined text-[14px] text-primary">schedule</span>
-                  <span>Demo Sedang Tahap Rilis (Segera Hadir)</span>
-                </div>
               {:else}
                 <div class="py-2 px-3 rounded-full bg-surface-container text-text-muted text-[11px] font-medium text-center flex items-center justify-center gap-1.5 select-none">
                   <span class="material-symbols-outlined text-[14px] text-text-muted">lock</span>
@@ -303,7 +298,7 @@
                   href={item.caseStudyUrl}
                   class="w-full inline-flex items-center justify-center gap-1.5 text-on-surface hover:text-primary py-2 px-4 rounded-full font-label-bold text-xs hover:bg-surface-container-lowest transition-colors border border-border-hairline"
                 >
-                  <span>Baca Bedah Studi Kasus</span>
+                  <span>Lihat Detail Project</span>
                   <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
               {/if}

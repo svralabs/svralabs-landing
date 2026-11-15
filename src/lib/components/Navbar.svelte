@@ -192,7 +192,7 @@
             </a>
             <a 
                 href="/portfolio?category=has-demo" 
-                onclick={() => isMenuOpen = false}
+                onclick={() => mobileMenuOpen = false}
                 class="font-label-bold text-on-surface text-lg py-1 border-b border-border-hairline/50 flex justify-between items-center"
             >
                 <span class="inline-flex items-center gap-2">

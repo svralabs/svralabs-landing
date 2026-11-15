@@ -210,7 +210,7 @@
             <div class="p-4 rounded-2xl bg-surface-faint border border-border-hairline/70">
               <p class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
                 <span class="material-symbols-outlined text-amber-600 text-[18px]">report_problem</span>
-                Problem
+                Tantangan Klien
               </p>
               <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
                 Antrian pasien panjang dan pencarian arsip rekam medis kertas manual yang memakan waktu lama setiap harinya.
@@ -221,7 +221,7 @@
             <div class="p-4 rounded-2xl bg-surface-faint border border-border-hairline/70">
               <p class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
                 <span class="material-symbols-outlined text-primary text-[18px]">lightbulb</span>
-                Solution
+                Solusi Sistem
               </p>
               <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
                 Digitalisasi alur pendaftaran terintegrasi dengan database pasien dan rekam medis elektronik (EMR) yang tersentral.
@@ -232,7 +232,7 @@
             <div class="p-4 rounded-2xl bg-primary/8 border border-primary/15">
               <p class="font-label-bold text-xs uppercase tracking-wider text-primary mb-1.5 flex items-center gap-1.5">
                 <span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                Outcome
+                Dampak Bisnis
               </p>
               <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
                 Pelayanan jauh lebih cepat, bebas antrian panjang yang menumpuk, dan arsip rekam medis 100% aman dan mudah diakses.
@@ -244,7 +244,7 @@
         <!-- Action Link -->
         <div class="p-6 md:p-8 pt-0">
           <a
-            href="/studi-kasus/puskesmas-wonokerto"
+            href="/project/puskesmas-wonokerto"
             class="inline-flex items-center gap-2 text-primary font-label-bold hover:gap-3 transition-all duration-300 group-hover:text-primary-container"
           >
             Lihat Detail Proyek
@@ -323,7 +323,7 @@
             <div class="p-4 rounded-2xl bg-surface-faint border border-border-hairline/70">
               <p class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
                 <span class="material-symbols-outlined text-amber-600 text-[18px]">report_problem</span>
-                Problem
+                Tantangan Klien
               </p>
               <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
                 Susah melacak stok kain, bahan baku, dan baju jadi yang keluar masuk setiap harinya secara akurat di gudang.
@@ -334,7 +334,7 @@
             <div class="p-4 rounded-2xl bg-surface-faint border border-border-hairline/70">
               <p class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
                 <span class="material-symbols-outlined text-primary text-[18px]">lightbulb</span>
-                Solution
+                Solusi Sistem
               </p>
               <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
                 Sistem POS khusus grosir/manufaktur dengan manajemen inventaris multi-gudang untuk bahan baku &amp; barang jadi.
@@ -345,7 +345,7 @@
             <div class="p-4 rounded-2xl bg-primary/8 border border-primary/15">
               <p class="font-label-bold text-xs uppercase tracking-wider text-primary mb-1.5 flex items-center gap-1.5">
                 <span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                Outcome
+                Dampak Bisnis
               </p>
               <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
                 Stok terpotong presisi, tidak ada lagi selisih laporan kas, dan mencegah barang hilang tanpa jejak catatan.
@@ -357,7 +357,7 @@
         <!-- Action Link -->
         <div class="p-6 md:p-8 pt-0">
           <a
-            href="/studi-kasus/pos-wonopringgo"
+            href="/project/pos-wonopringgo"
             class="inline-flex items-center gap-2 text-primary font-label-bold hover:gap-3 transition-all duration-300 group-hover:text-primary-container"
           >
             Lihat Detail Proyek
@@ -376,7 +376,7 @@
         class="inline-flex items-center gap-2.5 bg-primary text-on-primary hover:bg-primary-container px-8 py-4 rounded-full font-label-bold text-sm shadow-md hover:shadow-lg transition-all duration-300 group"
       >
         <span class="material-symbols-outlined text-[18px]">folder_special</span>
-        <span>Jelajahi Wadah Portofolio &amp; Demo (8+ Sistem)</span>
+        <span>Lihat Semua Project &amp; Live Demo</span>
         <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
       </a>
     </div>

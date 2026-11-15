@@ -228,12 +228,12 @@
         <div>
           <h3 class="font-inter text-sm font-semibold uppercase tracking-wider text-on-surface mb-4">Portofolio &amp; Demo</h3>
           <ul class="space-y-3 font-body-md text-sm">
-            <li><a class="text-primary font-bold hover:underline flex items-center gap-1" href="/portfolio">Katalog Portofolio (8+) <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></li>
-            <li><a class="text-text-muted hover:text-primary transition-colors" href="/studi-kasus/puskesmas-wonokerto">Puskesmas Wonokerto</a></li>
-            <li><a class="text-text-muted hover:text-primary transition-colors" href="/studi-kasus/pos-wonopringgo">POS Toko Wonopringgo</a></li>
-            <li><a class="text-text-muted hover:text-primary transition-colors flex items-center gap-1" href="https://demo.svralabs.com/operational/laundry" target="_blank" rel="noopener noreferrer">SVRA Laundry <span class="material-symbols-outlined text-[12px]">open_in_new</span></a></li>
-            <li><a class="text-text-muted hover:text-primary transition-colors flex items-center gap-1" href="https://demo.svralabs.com/pos/pos-fb" target="_blank" rel="noopener noreferrer">POS Kopi Seruni <span class="material-symbols-outlined text-[12px]">open_in_new</span></a></li>
-            <li><a class="text-text-muted hover:text-primary transition-colors flex items-center gap-1" href="https://demo.svralabs.com/operational/purchasing-garwo" target="_blank" rel="noopener noreferrer">Purchasing Garwo <span class="material-symbols-outlined text-[12px]">open_in_new</span></a></li>
+            <li><a class="text-primary font-bold hover:underline flex items-center gap-1" href="/portfolio">Semua Project &amp; Demo <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></li>
+            <li><a class="text-text-muted hover:text-primary transition-colors" href="/project/puskesmas-wonokerto">Puskesmas Wonokerto (EMR)</a></li>
+            <li><a class="text-text-muted hover:text-primary transition-colors" href="/project/pos-wonopringgo">Toko Konveksi Wonopringgo</a></li>
+            <li><a class="text-text-muted hover:text-primary transition-colors" href="/project/kopi-seruni">Toko Kopi Seruni (POS F&amp;B)</a></li>
+            <li><a class="text-text-muted hover:text-primary transition-colors" href="/project/laundry">SVRA Laundry Solutions</a></li>
+            <li><a class="text-text-muted hover:text-primary transition-colors" href="/project/purchasing-garwo">Warmindo Garwo Purchasing</a></li>
           </ul>
         </div>
 

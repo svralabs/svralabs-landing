@@ -117,7 +117,7 @@
       <!-- Kicker Badge with Spring Drop -->
       <div class="blog-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
         <span class="blog-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">article</span>
-        <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">STUDI KASUS &amp; ARTIKEL</span>
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">WAWASAN &amp; ARTIKEL BISNIS</span>
       </div>
 
       <!-- Masked Kinetic Word Reveal Headline -->
