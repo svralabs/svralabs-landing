@@ -128,25 +128,24 @@
         bind:this={headlineEl}
         class="pricing-headline font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg mb-4 tracking-tight text-on-surface"
       >
-        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block">Mulai</span></span>
-        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block">dari</span></span>
-        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block font-semibold">Rp 499.000/bulan</span></span>
-        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block">—</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block">Sistem</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block">Siap</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block">Pakai</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block">atau</span></span>
         <br class="hidden md:block" />
-        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block italic text-primary font-light pricing-accent-text">tidak</span></span>
-        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block italic text-primary font-light pricing-accent-text">ada</span></span>
-        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block italic text-primary font-light pricing-accent-text">biaya</span></span>
-        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block italic text-primary font-light pricing-accent-text">kejutan.</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block italic text-primary font-light pricing-accent-text">Custom</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block italic text-primary font-light pricing-accent-text">Software</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="pricing-word inline-block italic text-primary font-light pricing-accent-text">Development.</span></span>
       </h2>
       <p class="pricing-desc font-body-lg text-body-lg text-text-muted max-w-2xl mx-auto leading-relaxed">
-        Produk siap pakai bisa langsung dipakai hari ini. Sistem custom? Konsultasi dulu, bayar kalau cocok.
+        Dari aplikasi kasir &amp; operasional siap jalan hari ini, hingga pembuatan sistem kustom dari nol dengan hak milik source code penuh tanpa biaya langganan wajib.
       </p>
     </div>
 
     <!-- 3 Pricing Cards Grid (data-depth="foreground") -->
     <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto perspective-grid">
       
-      <!-- Card 1: Starter / POS Ritel -->
+      <!-- Card 1: Solusi Siap Pakai -->
       <div
         use:tilt3D={{ maxTilt: 6, perspective: 1000, scale: 1.015, glare: true }}
         class="pricing-card bg-white rounded-[28px] p-8 flex flex-col justify-between shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-border-hairline preserve-3d will-change-transform"
@@ -154,32 +153,39 @@
         <div>
           <div class="mb-8">
             <div class="flex items-center gap-3 mb-4">
-              <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-xl">storefront</span>
-              <h3 class="font-label-bold text-label-bold text-on-surface text-lg">Paket POS Ritel</h3>
+              <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-xl">rocket_launch</span>
+              <div>
+                <h3 class="font-label-bold text-label-bold text-on-surface text-lg">Solusi Siap Pakai</h3>
+                <span class="text-[11px] text-text-muted">POS, Laundry, &amp; Booking</span>
+              </div>
             </div>
             <div class="flex items-baseline mb-2">
               <span class="font-headline-md text-headline-md text-on-surface tabular-nums">Rp 499.000</span>
               <span class="font-body-md text-body-md text-text-muted ml-2">/bulan</span>
             </div>
-            <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Ideal untuk usaha kecil yang baru memulai digitalisasi kasir.</p>
+            <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Aplikasi matang siap pakai langsung hari ini di toko atau usaha Anda.</p>
           </div>
 
           <ul class="flex flex-col gap-3.5 mb-8 font-body-md text-sm text-on-surface-variant">
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
-              <span>1 Cabang Toko</span>
+              <span>Aplikasi Kasir POS / Laundry / Booking siap jalan</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
-              <span>Kasir POS Cloud</span>
+              <span>Cloud Server &amp; Database terkelola otomatis</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
-              <span>Laporan Harian Otomatis</span>
+              <span>Cetak struk kasir Bluetooth thermal &amp; QRIS</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
-              <span>Dukungan WhatsApp</span>
+              <span>Laporan omzet harian &amp; bulanan otomatis</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+              <span>Gratis input data menu / produk awal</span>
             </li>
           </ul>
         </div>
@@ -187,19 +193,21 @@
         <a
           use:magneticButton={{ strength: 10 }}
           class="w-full inline-flex justify-center items-center h-12 rounded-full bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold text-sm shadow-md cursor-pointer"
-          href="#kontak"
+          href="https://wa.me/6285158418944?text=Halo%20Svralabs,%20saya%20tertarik%20dengan%20Paket%20Solusi%20Siap%20Pakai"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Pilih Starter
+          Pilih Solusi Siap Pakai
         </a>
       </div>
 
-      <!-- Card 2: Growth / RECOMMENDED (Elevated + Glow) -->
+      <!-- Card 2: Custom Development / RECOMMENDED (Elevated + Glow) -->
       <div class="pricing-card recommended-pricing-card relative z-10 flex flex-col will-change-transform">
         <!-- Floating RECOMMENDED Badge -->
         <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 pointer-events-none whitespace-nowrap">
           <span class="recommended-badge bg-primary text-on-primary font-label-sm text-[11px] uppercase tracking-wider py-1.5 px-4 rounded-full shadow-lg flex items-center gap-1.5 border border-white/30">
             <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
-            RECOMMENDED
+            RECOMMENDED · ONE-TIME FEE
           </span>
         </div>
 
@@ -210,36 +218,39 @@
           <div>
             <div class="mb-8 mt-2">
               <div class="flex items-center gap-3 mb-4">
-                <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-xl">account_tree</span>
-                <h3 class="font-label-bold text-label-bold text-on-surface text-lg">Paket Multi-Cabang &amp; Stok</h3>
+                <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-xl">terminal</span>
+                <div>
+                  <h3 class="font-label-bold text-label-bold text-on-surface text-lg">Custom Development</h3>
+                  <span class="text-[11px] text-text-muted">Web App, ERP, &amp; Sistem SOP Khusus</span>
+                </div>
               </div>
               <div class="flex items-baseline mb-2">
-                <span class="font-headline-md text-headline-md text-on-surface tabular-nums">Rp 1.299.000</span>
-                <span class="font-body-md text-body-md text-text-muted ml-2">/bulan</span>
+                <span class="font-headline-md text-headline-md text-on-surface tabular-nums">Mulai Rp 3.5jt</span>
+                <span class="font-body-md text-body-md text-text-muted ml-2">/proyek</span>
               </div>
-              <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Sempurna untuk bisnis berkembang dengan banyak lokasi.</p>
+              <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Sistem dibangun spesifik sesuai alur SOP Anda — 100% hak milik kode.</p>
             </div>
 
             <ul class="flex flex-col gap-3.5 mb-8 font-body-md text-sm text-on-surface-variant">
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="font-semibold text-on-surface">Hingga 5 Cabang</span>
+                <span class="font-semibold text-on-surface">100% Hak Milik Source Code &amp; Database</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="font-semibold text-on-surface">Manajemen Stok &amp; Gudang</span>
+                <span class="font-semibold text-on-surface">Tanpa Biaya Langganan Wajib (One-Time Fee)</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span>Analitik Produk Terlaris</span>
+                <span>Desain UI/UX &amp; Alur Fitur 100% Sesuai Kebutuhan</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span>Ekspor Laporan Pajak</span>
+                <span>Multi-Gudang, Multi-Cabang, &amp; Role Akses Staf</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span>Prioritas Support 24/7</span>
+                <span>Pelatihan Staf On-Site &amp; Garansi Bug 3 Bulan</span>
               </li>
             </ul>
           </div>
@@ -247,14 +258,16 @@
           <a
             use:magneticButton={{ strength: 12 }}
             class="w-full inline-flex justify-center items-center h-12 rounded-full bg-primary text-on-primary hover:bg-on-surface transition-colors duration-300 font-label-bold text-sm shadow-lg shadow-primary/25 cursor-pointer"
-            href="#kontak"
+            href="https://wa.me/6285158418944?text=Halo%20Svralabs,%20saya%20mau%20konsultasi%20Custom%20Software%20Development%20untuk%20usaha%20saya"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Pilih Growth
+            Konsultasi Proyek Kustom
           </a>
         </div>
       </div>
 
-      <!-- Card 3: Enterprise -->
+      <!-- Card 3: Enterprise & AI Automation -->
       <div
         use:tilt3D={{ maxTilt: 6, perspective: 1000, scale: 1.015, glare: true }}
         class="pricing-card bg-white rounded-[28px] p-8 flex flex-col justify-between shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-border-hairline preserve-3d will-change-transform"
@@ -262,35 +275,38 @@
         <div>
           <div class="mb-8">
             <div class="flex items-center gap-3 mb-4">
-              <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-xl">corporate_fare</span>
-              <h3 class="font-label-bold text-label-bold text-on-surface text-lg">Paket Enterprise</h3>
+              <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-xl">hub</span>
+              <div>
+                <h3 class="font-label-bold text-label-bold text-on-surface text-lg">Enterprise &amp; AI</h3>
+                <span class="text-[11px] text-text-muted">Faskes EMR &amp; Otomasi OCR</span>
+              </div>
             </div>
             <div class="flex items-baseline mb-2">
-              <span class="font-headline-md text-headline-md text-on-surface">Custom</span>
+              <span class="font-headline-md text-headline-md text-on-surface">Sesuai Kebutuhan</span>
             </div>
-            <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Solusi khusus untuk jaringan bisnis besar, klinik, dan manufaktur.</p>
+            <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Solusi skala besar untuk faskes, instansi publik, dan integrasi API rumit.</p>
           </div>
 
           <ul class="flex flex-col gap-3.5 mb-8 font-body-md text-sm text-on-surface-variant">
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
-              <span>Cabang Tak Terbatas</span>
+              <span>Bridging SATUSEHAT Kemenkes &amp; BPJS Kesehatan</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
-              <span>Custom Feature Development</span>
+              <span>Otomasi AI Vision OCR Scanner Nota Pembelian</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
-              <span>Integrasi API &amp; ERP Khusus</span>
+              <span>Opsi On-Premise Server Lokal / Private Cloud Dedicated</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
-              <span>Dedicated Account Manager</span>
+              <span>Dedicated Software Engineer &amp; SLA Respon Cepat</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
-              <span>Pelatihan Staf di Lokasi</span>
+              <span>Audit Keamanan Data, Enkripsi, &amp; Backup Redundan</span>
             </li>
           </ul>
         </div>
@@ -298,9 +314,11 @@
         <a
           use:magneticButton={{ strength: 10 }}
           class="w-full inline-flex justify-center items-center h-12 rounded-full bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold text-sm shadow-md cursor-pointer"
-          href="#kontak"
+          href="https://wa.me/6285158418944?text=Halo%20Svralabs,%20saya%20butuh%20solusi%20Enterprise%20dan%20Integrasi%20Sistem%20Khusus"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Hubungi Tim Sales
+          Diskusikan Kebutuhan Enterprise
         </a>
       </div>
 

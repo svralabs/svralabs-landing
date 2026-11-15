@@ -146,7 +146,9 @@
           <img
             alt="Modern retail clothing store"
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6cS1HWlMi2zSa2pcPD2aOYOtvpbsn-GY9h2OJH3_PeXY3DxWVZXYoRXyEvVBImAYSCOHNHbY8a9IRVEl5JqwxKj_VlHZ0mduMWud2jR2FZ4Pf1D9TmtXyR5nTApLdRDK8Y0J_95Wo5nQ-PYBwwezzyYiTLaKN0ID5yx0z3hC-ZDdTF5kOmqlgOquki_RAL4JE3XU7S9zhlLbSDrOh8IQM7QfOOhyjzdpkXWNiAx2Df9EcHSGKan18CQ"
+            src="/blog/blog-1.webp"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -174,7 +176,9 @@
           <img
             alt="Indonesian coffee shop interior"
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYFJd9EkxA9GFcbO5L6PruiVKGOWtJQ4RCpYsyK2drjsSukyHsArRkxO7dKqomOkrJfdIYylAODctaPPnqaHTrV11bL4QsqBe1vEovq0bGakDhVoUye1XRZK4fvBEDg-5q1lbci3bpky7UDPFSe3qDjgwZCmBUMxf97bCcXWhA3310jT25GhN7dZebRIhCQJ3OXp80edAh6Ao3YDtDDlg43paIjhQFQ1rK7J3w1CIGkT03aMSdtP_fDg"
+            src="/blog/blog-2.webp"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -202,7 +206,9 @@
           <img
             alt="Indonesian F&B warehouse"
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAhg-iD3pKum8MBiixSX1qBgPhrQiQNGBVeFIs2rR-flYNIobSwB_M0MW9x2Dq0MUzP1uqvbTCF2Kw3e5j58nqyxJxozm2N_mwwgUCBYcliWSXwSETeWltxlRFvbkMB-A_vGtHPxq_oaymmlv24wN7pg_vKlVv3jJVZbDNO01eFY3Yx4DhfxC0-doz6s-SICnNxyP0ydXHmJ037oqkHwZcNQYp_t7NDAnjvEo07Fy0Em_qjVFi5_kiIQ"
+            src="/blog/blog-3.webp"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 

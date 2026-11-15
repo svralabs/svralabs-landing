@@ -204,37 +204,50 @@
       
       <!-- ─── CARD 1: Kasir & Transaksi (Base: z-10) ─── -->
       <div
-        class="solusi-card-1 absolute inset-0 w-full h-full max-h-[440px] md:max-h-[470px] lg:max-h-[490px] my-auto bg-white rounded-[28px] md:rounded-[32px] border border-border-hairline shadow-[0_25px_60px_-15px_rgba(17,24,39,0.12)] overflow-hidden flex flex-col md:flex-row will-change-transform"
+        class="solusi-card-1 absolute inset-0 w-full h-full max-h-[460px] md:max-h-[490px] lg:max-h-[510px] my-auto bg-white rounded-[28px] md:rounded-[32px] border border-border-hairline shadow-[0_25px_60px_-15px_rgba(17,24,39,0.12)] overflow-hidden flex flex-col md:flex-row will-change-transform"
       >
         <!-- Frosted White Blur Veil on Receding -->
         <div class="solusi-veil-1 pointer-events-none absolute inset-0 bg-white/70 backdrop-blur-[3px] opacity-0 z-30 transition-opacity"></div>
 
         <!-- Left Content -->
-        <div class="flex-1 flex flex-col justify-between p-6 md:p-8 lg:p-10 order-2 md:order-1 z-10 overflow-y-auto">
+        <div class="flex-1 flex flex-col justify-between p-5 sm:p-6 md:p-7 lg:p-8 order-2 md:order-1 z-10 overflow-hidden">
           <div>
-            <div class="flex items-center gap-2 mb-3">
-              <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-2xs">
-                <span class="material-symbols-outlined text-[16px] text-white" style="font-variation-settings: 'FILL' 1;">point_of_sale</span>
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-2xs">
+                <span class="material-symbols-outlined text-[15px] text-white" style="font-variation-settings: 'FILL' 1;">point_of_sale</span>
               </div>
-              <span class="font-label-bold text-on-surface uppercase tracking-wider text-xs">Sistem Kasir &amp; Transaksi</span>
+              <span class="font-label-bold text-on-surface uppercase tracking-wider text-[11px]">Sistem Kasir &amp; Transaksi</span>
             </div>
 
-            <h3 class="font-headline-md text-base md:text-xl lg:text-2xl font-bold text-on-surface mb-2.5">
-              Capek rekap penjualan manual tiap hari?
+            <h3 class="font-headline-md text-base md:text-xl lg:text-2xl font-bold text-on-surface mb-2 leading-snug">
+              Capek rekap penjualan manual tiap tutup toko?
             </h3>
 
-            <p class="font-body-md text-xs md:text-sm text-text-muted mb-2 leading-relaxed">
-              Pesanan tercatat di kertas, kadang di WhatsApp, kadang cuma diingat-ingat. Pas tutup toko, rekap penjualan jadi kerjaan tambahan yang makan waktu dan rawan salah hitung.
-            </p>
-            <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-3.5">
-              Sistem kasir yang mudah dipakai siapa aja, transaksi langsung tercatat rapi, laporan penjualan otomatis kebentuk sendiri. Kamu tinggal cek angka, bukan hitung manual satu-satu.
+            <p class="font-body-md text-xs md:text-sm text-text-muted mb-3 leading-relaxed">
+              Catat pesanan cepat, cetak struk kasir, dan terima pembayaran non-tunai. Laporan omzet dan laba terbentuk otomatis tanpa pusing hitung nota fisik satu-satu.
             </p>
 
-            <!-- Proof Point -->
-            <div class="bg-primary/5 border border-primary/15 rounded-xl px-3.5 py-2 mb-3.5 flex items-start gap-2.5">
-              <span class="material-symbols-outlined text-primary text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
-              <p class="font-body-md text-xs text-on-surface">
-                Sudah dipakai di Toko Konveksi Wonopringgo dan tersedia live demo siap pakai POS Cafe &amp; Kedai Kopi Seruni.
+            <!-- Compact Key Feature Bullets -->
+            <div class="space-y-1.5 mb-3.5 text-xs text-on-surface">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span>Transaksi kasir cepat &amp; cetak struk Bluetooth / Thermal</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span>Laporan keuangan harian, mingguan, &amp; bulanan otomatis</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span>Dapat dipakai di tablet, smartphone, maupun laptop kasir</span>
+              </div>
+            </div>
+
+            <!-- Compact Proof Badge -->
+            <div class="bg-primary/5 border border-primary/15 rounded-xl px-3 py-1.5 mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[16px] shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
+              <p class="font-body-md text-[11px] text-on-surface">
+                Aktif di Toko Konveksi Wonopringgo &amp; Kedai Kopi Seruni
               </p>
             </div>
           </div>
@@ -245,7 +258,7 @@
             href="https://demo.svralabs.com/pos/pos-fb"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold px-6 py-2.5 md:py-3 rounded-full inline-flex items-center gap-2 w-fit text-xs md:text-sm shadow-md hover:shadow-primary/25"
+            class="bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold px-5 py-2.5 rounded-full inline-flex items-center gap-2 w-fit text-xs md:text-sm shadow-md hover:shadow-primary/25"
           >
             <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">play_circle</span>
             Coba Demo POS Kopi Seruni
@@ -316,7 +329,7 @@
 
       <!-- ─── CARD 2: Booking & Jadwal (Middle: z-20) ─── -->
       <div
-        class="solusi-card-2 absolute inset-0 w-full h-full max-h-[440px] md:max-h-[470px] lg:max-h-[490px] my-auto bg-white rounded-[28px] md:rounded-[32px] border border-border-hairline shadow-[0_25px_60px_-15px_rgba(17,24,39,0.12)] overflow-hidden flex flex-col md:flex-row will-change-transform"
+        class="solusi-card-2 absolute inset-0 w-full h-full max-h-[460px] md:max-h-[490px] lg:max-h-[510px] my-auto bg-white rounded-[28px] md:rounded-[32px] border border-border-hairline shadow-[0_25px_60px_-15px_rgba(17,24,39,0.12)] overflow-hidden flex flex-col md:flex-row will-change-transform"
       >
         <!-- Frosted White Blur Veil on Receding -->
         <div class="solusi-veil-2 pointer-events-none absolute inset-0 bg-white/70 backdrop-blur-[3px] opacity-0 z-30 transition-opacity"></div>
@@ -370,30 +383,44 @@
         </div>
 
         <!-- Right Content -->
-        <div class="flex-1 flex flex-col justify-between p-6 md:p-8 lg:p-10 order-2 md:order-2 z-10 overflow-y-auto">
+        <div class="flex-1 flex flex-col justify-between p-5 sm:p-6 md:p-7 lg:p-8 order-2 md:order-2 z-10 overflow-hidden">
           <div>
-            <div class="flex items-center gap-2 mb-3">
-              <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-2xs">
-                <span class="material-symbols-outlined text-[16px] text-white" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-2xs">
+                <span class="material-symbols-outlined text-[15px] text-white" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
               </div>
-              <span class="font-label-bold text-on-surface uppercase tracking-wider text-xs">Sistem Booking &amp; Jadwal</span>
+              <span class="font-label-bold text-on-surface uppercase tracking-wider text-[11px]">Sistem Booking &amp; Jadwal</span>
             </div>
 
-            <h3 class="font-headline-md text-base md:text-xl lg:text-2xl font-bold text-on-surface mb-2.5">
-              Jadwal masih dicatat di buku atau chat WhatsApp?
+            <h3 class="font-headline-md text-base md:text-xl lg:text-2xl font-bold text-on-surface mb-2 leading-snug">
+              Jadwal reservasi sering bentrok atau kelewat di chat?
             </h3>
 
-            <p class="font-body-md text-xs md:text-sm text-text-muted mb-2 leading-relaxed">
-              Pelanggan booking lewat chat, kadang kelewat baca, kadang jadwal bentrok karena dicatat manual. Belum lagi kalau harus bolak-balik konfirmasi satu-satu.
-            </p>
-            <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-3.5">
-              Sistem booking yang bikin pelanggan bisa lihat jadwal kosong sendiri dan booking tanpa ribet — kamu tinggal pantau dari satu tempat.
+            <p class="font-body-md text-xs md:text-sm text-text-muted mb-3 leading-relaxed">
+              Biarkan pelanggan memilih slot jadwal sendiri secara online 24 jam. Admin dan staf menerima notifikasi otomatis tanpa risiko jadwal bertumpuk.
             </p>
 
-            <div class="bg-white border border-border-hairline rounded-xl px-3.5 py-2 mb-3.5 flex items-start gap-2.5 shadow-2xs">
-              <span class="material-symbols-outlined text-text-muted text-[16px] mt-0.5 shrink-0">info</span>
-              <p class="font-body-md text-xs text-text-muted">
-                Template ini sedang dalam pengembangan. Kalau butuh sekarang, ceritakan kebutuhanmu — kami bantu rancang yang sesuai.
+            <!-- Compact Key Feature Bullets -->
+            <div class="space-y-1.5 mb-3.5 text-xs text-on-surface">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span>Pilih tanggal &amp; jam kosong secara mandiri oleh pelanggan</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span>Pengingat otomatis via WhatsApp H-1 ke nomor pelanggan</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span>Panel kalender admin terpusat untuk klinik, salon, atau studio</span>
+              </div>
+            </div>
+
+            <!-- Compact Info Badge -->
+            <div class="bg-surface-container/60 border border-border-hairline rounded-xl px-3 py-1.5 mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined text-text-muted text-[16px] shrink-0">info</span>
+              <p class="font-body-md text-[11px] text-text-muted">
+                Dapat dikustomisasi sesuai alur reservasi klinik atau bisnis Anda
               </p>
             </div>
           </div>
@@ -404,7 +431,7 @@
             href="https://wa.me/6285158418944?text=Halo%20Svralabs,%20saya%20butuh%20sistem%20booking%20dan%20jadwal%20untuk%20bisnis%20saya."
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-white border border-border-hairline text-on-surface hover:bg-surface-container transition-colors duration-300 font-label-bold px-6 py-2.5 md:py-3 rounded-full inline-flex items-center gap-2 w-fit text-xs md:text-sm shadow-xs"
+            class="bg-white border border-border-hairline text-on-surface hover:bg-surface-container transition-colors duration-300 font-label-bold px-5 py-2.5 rounded-full inline-flex items-center gap-2 w-fit text-xs md:text-sm shadow-xs"
           >
             <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">chat</span>
             Diskusikan Kebutuhanmu
@@ -414,46 +441,59 @@
 
       <!-- ─── CARD 3: Tracking & Operasional (Top: z-30) ─── -->
       <div
-        class="solusi-card-3 absolute inset-0 w-full h-full max-h-[440px] md:max-h-[470px] lg:max-h-[490px] my-auto bg-white rounded-[28px] md:rounded-[32px] border border-border-hairline shadow-[0_25px_60px_-15px_rgba(17,24,39,0.12)] overflow-hidden flex flex-col md:flex-row will-change-transform"
+        class="solusi-card-3 absolute inset-0 w-full h-full max-h-[460px] md:max-h-[490px] lg:max-h-[510px] my-auto bg-white rounded-[28px] md:rounded-[32px] border border-border-hairline shadow-[0_25px_60px_-15px_rgba(17,24,39,0.12)] overflow-hidden flex flex-col md:flex-row will-change-transform"
       >
         <!-- Left Content -->
-        <div class="card3-text-group flex-1 flex flex-col justify-between p-6 md:p-8 lg:p-10 order-2 md:order-1 z-10 overflow-y-auto will-change-transform">
+        <div class="card3-text-group flex-1 flex flex-col justify-between p-5 sm:p-6 md:p-7 lg:p-8 order-2 md:order-1 z-10 overflow-hidden will-change-transform">
           <div>
-            <div class="flex items-center gap-2 mb-3">
-              <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-2xs">
-                <span class="material-symbols-outlined text-[16px] text-white" style="font-variation-settings: 'FILL' 1;">track_changes</span>
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-2xs">
+                <span class="material-symbols-outlined text-[15px] text-white" style="font-variation-settings: 'FILL' 1;">track_changes</span>
               </div>
-              <span class="font-label-bold text-on-surface uppercase tracking-wider text-xs">Sistem Tracking &amp; Operasional</span>
+              <span class="font-label-bold text-on-surface uppercase tracking-wider text-[11px]">Sistem Tracking &amp; Operasional</span>
             </div>
 
-            <h3 class="font-headline-md text-base md:text-xl lg:text-2xl font-bold text-on-surface mb-2.5">
-              Mau tahu cucian atau antrian yang belum selesai?
+            <h3 class="font-headline-md text-base md:text-xl lg:text-2xl font-bold text-on-surface mb-2 leading-snug">
+              Pantau antrian faskes &amp; pesanan tanpa nanya bolak-balik
             </h3>
 
-            <p class="font-body-md text-xs md:text-sm text-text-muted mb-2 leading-relaxed">
-              Cucian yang masih diproses, antrian pasien, atau orderan konveksi — kalau cuma di kepala satu orang, yang lain nunggu dan rawan salah langkah.
-            </p>
-            <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-3.5">
-              Setiap item punya statusnya sendiri yang kelihatan langsung di layar tanpa harus nanya. Karyawan laundry tahu mana yang belum selesai, admin klinik tahu antrian berikutnya.
+            <p class="font-body-md text-xs md:text-sm text-text-muted mb-3 leading-relaxed">
+              Semua status pekerjaan tampil di layar transparan. Staf laundry tahu mana yang harus disetrika, dokter faskes tahu antrian berikutnya, manajemen tahu belanja harian.
             </p>
 
-            <!-- Proof Point -->
-            <div class="bg-primary/5 border border-primary/15 rounded-xl px-3.5 py-2 mb-3.5 flex items-start gap-2.5">
-              <span class="material-symbols-outlined text-primary text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
-              <p class="font-body-md text-xs text-on-surface">
-                Sudah dipakai di Puskesmas Wonokerto, SVRA Laundry, serta otomasi scan OCR nota belanja di Warmindo Garwo.
+            <!-- Compact Key Feature Bullets -->
+            <div class="space-y-1.5 mb-3.5 text-xs text-on-surface">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span>Tracking QR nota cucian pelanggan secara mandiri via web</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span>Otomasi scan OCR nota belanja dapur Warmindo berbasis AI</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span>Sistem antrian pasien live poli klinik &amp; puskesmas</span>
+              </div>
+            </div>
+
+            <!-- Compact Proof Badge -->
+            <div class="bg-primary/5 border border-primary/15 rounded-xl px-3 py-1.5 mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[16px] shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
+              <p class="font-body-md text-[11px] text-on-surface">
+                Aktif di Puskesmas Wonokerto, Warmindo Garwo, &amp; SVRA Laundry
               </p>
             </div>
           </div>
 
           <!-- CTA -->
-          <div class="flex flex-wrap items-center gap-2.5">
+          <div class="flex flex-wrap items-center gap-2">
             <a
               use:magneticButton={{ strength: 10 }}
               href="https://demo.svralabs.com/operational/laundry"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold px-5 py-2.5 rounded-full inline-flex items-center gap-1.5 text-xs shadow-md hover:shadow-primary/25"
+              class="bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold px-4 py-2 rounded-full inline-flex items-center gap-1.5 text-xs shadow-md hover:shadow-primary/25"
             >
               <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">local_laundry_service</span>
               Demo Laundry
@@ -463,7 +503,7 @@
               href="https://demo.svralabs.com/operational/purchasing-garwo"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-white border border-border-hairline text-on-surface hover:bg-surface-container transition-colors duration-300 font-label-bold px-5 py-2.5 rounded-full inline-flex items-center gap-1.5 text-xs shadow-xs"
+              class="bg-white border border-border-hairline text-on-surface hover:bg-surface-container transition-colors duration-300 font-label-bold px-4 py-2 rounded-full inline-flex items-center gap-1.5 text-xs shadow-xs"
             >
               <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
               Demo Purchasing Garwo

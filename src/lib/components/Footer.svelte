@@ -3,7 +3,6 @@
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
   import { magneticButton, idleFloat, sectionLayeredParallax, isReducedMotion } from '$lib/actions/gsapParallax';
-  import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
   let footerRoot: HTMLElement;
   let headlineEl: HTMLElement;
@@ -13,12 +12,7 @@
       event.preventDefault();
       const el = document.getElementById(targetId);
       if (el) {
-        const smoother = ScrollSmoother.get();
-        if (smoother) {
-          smoother.scrollTo(el, true, 'top top');
-        } else {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   }

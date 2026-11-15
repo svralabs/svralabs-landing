@@ -4,7 +4,6 @@
   import { beforeNavigate, afterNavigate } from '$app/navigation';
   import { page } from '$app/state';
   import Navbar from '$lib/components/Navbar.svelte';
-  import { pageTransition } from '$lib/actions/motion';
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -62,7 +61,7 @@
   <Navbar />
 {/if}
 
-<div use:pageTransition class="w-full min-h-screen">
+<div class="w-full min-h-screen">
   {@render children()}
 </div>
 

@@ -1,5 +1,6 @@
 <script lang="ts">
   import HeroSection from '$lib/components/HeroSection.svelte';
+  import TrustBrandSection from '$lib/components/TrustBrandSection.svelte';
   import SolutionCategorySection from '$lib/components/SolutionCategorySection.svelte';
   import MissionSection from '$lib/components/MissionSection.svelte';
   import FeaturesSection from '$lib/components/FeaturesSection.svelte';
@@ -42,6 +43,7 @@
 <div class="bg-surface text-on-surface antialiased min-h-screen font-body-md selection:bg-primary-container selection:text-on-primary-container">
   <main>
     <HeroSection />
+    <TrustBrandSection />
     <SolutionCategorySection />
     <MissionSection />
     <FeaturesSection />

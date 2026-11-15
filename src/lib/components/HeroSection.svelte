@@ -1,19 +1,13 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
-  import { ScrollSmoother } from 'gsap/ScrollSmoother';
   import { sectionLayeredParallax, mouseParallax, tilt3D, magneticButton, idleFloat, isReducedMotion } from '$lib/actions/gsapParallax';
   import { bokehReveal, blurReveal } from '$lib/actions/motion';
 
   function scrollTo(id: string) {
     const el = document.getElementById(id);
     if (!el) return;
-    const smoother = ScrollSmoother.get();
-    if (smoother) {
-      smoother.scrollTo(el, true, 'top top');
-    } else {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   let heroRoot: HTMLElement;

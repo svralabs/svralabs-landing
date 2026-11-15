@@ -135,236 +135,244 @@
       </p>
     </div>
 
-    <!-- Case Studies Grid with Problem -> Solution -> Outcome Storytelling (data-depth="foreground") -->
-    <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 perspective-grid">
+    <!-- Case Studies Grid with High-Fidelity Browser Mockups & Agency Summary Cards (data-depth="foreground") -->
+    <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 perspective-grid">
       
-      <!-- Case Study 1: Puskesmas Wonokerto -->
-      <div
-        use:tilt3D={{ maxTilt: 4, perspective: 1100, glare: true }}
-        class="case-card bg-white rounded-[32px] border border-border-hairline overflow-hidden flex flex-col justify-between shadow-[0_15px_40px_rgba(0,0,0,0.05)] hover:shadow-[0_25px_60px_rgba(0,105,72,0.12)] transition-[box-shadow,border-color] duration-300 group will-change-transform"
+      <!-- Project 1: Puskesmas Wonokerto -->
+      <article
+        use:tilt3D={{ maxTilt: 3.5, perspective: 1100, glare: true }}
+        class="case-card bg-white rounded-[32px] border border-border-hairline overflow-hidden flex flex-col justify-between shadow-[0_15px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_60px_rgba(0,105,72,0.12)] transition-[box-shadow,border-color] duration-300 group hover:border-primary/40 will-change-transform"
       >
         <div>
-          <!-- Coded EMR & Antrian Pasien UI Dashboard -->
-          <div class="w-full min-h-[290px] p-6 border-b border-border-hairline bg-gradient-to-br from-emerald-950 via-slate-900 to-primary-container text-white flex flex-col justify-between relative overflow-hidden">
-            <!-- Subtle Grid Background -->
-            <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
+          <!-- High-Fidelity Browser Window Frame Mockup -->
+          <div class="w-full bg-slate-900 border-b border-border-hairline overflow-hidden flex flex-col">
+            <!-- Sleek Browser Chrome Title Bar -->
+            <div class="px-4 py-2.5 bg-slate-950 flex items-center justify-between border-b border-white/10 select-none">
+              <!-- Traffic Light Dots -->
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
+              </div>
 
-            <!-- Top bar -->
-            <div class="relative z-10 flex items-center justify-between border-b border-white/10 pb-3">
-              <div class="flex items-center gap-2.5">
-                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-400">
-                  <span class="material-symbols-outlined text-[18px]">local_hospital</span>
-                </div>
-                <div>
-                  <p class="font-label-bold text-xs text-white font-semibold">SIMPUS Wonokerto (EMR)</p>
-                  <p class="text-[10px] text-emerald-300">Poli Umum • Shift Pagi</p>
-                </div>
+              <!-- Browser URL Bar -->
+              <div class="flex-1 max-w-xs mx-auto bg-white/10 rounded-full px-3 py-1 flex items-center justify-center gap-1.5 text-[10px] text-white/70 font-mono">
+                <span class="material-symbols-outlined text-[11px] text-emerald-400">lock</span>
+                <span class="truncate">simpus.wonokerto.svralabs.id</span>
               </div>
-              <div class="flex items-center gap-1.5 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-2.5 py-1 rounded-full text-[10px] font-label-bold">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>SATUSEHAT Ready</span>
-              </div>
+
+              <!-- Sector Badge -->
+              <span class="text-[9px] font-label-bold text-emerald-400 bg-emerald-500/15 border border-emerald-400/30 px-2 py-0.5 rounded-full">
+                Instansi Faskes
+              </span>
             </div>
 
-            <!-- Active Serving Card -->
-            <div class="relative z-10 bg-white/15 rounded-2xl p-3.5 border border-white/20 my-2">
-              <div class="flex items-start justify-between mb-2">
-                <div>
-                  <span class="text-[10px] text-emerald-200 uppercase tracking-wider font-semibold">Nomor Antrian Aktif</span>
-                  <div class="flex items-baseline gap-2 mt-0.5">
-                    <span class="text-3xl font-mono font-bold text-white">A-042</span>
-                    <span class="text-xs text-white/80">Ny. Siti Aminah (52 th)</span>
-                  </div>
+            <!-- Authentic Full Screenshot with Soft Overlay & Hover Zoom -->
+            <div class="relative aspect-[16/10] w-full overflow-hidden bg-slate-950 group">
+              <img
+                src="/puskesmas wonokerto/Tangkapan Layar 2026-08-07 pukul 22.04.52.webp"
+                alt="Sistem Rekam Medis EMR Puskesmas Wonokerto"
+                class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+              
+              <!-- Bottom Pill Overlay inside Screenshot -->
+              <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between z-10">
+                <div class="flex items-center gap-2 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/15">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span class="text-[10px] text-white font-label-bold">Sistem Aktif Berjalan di Poli</span>
                 </div>
-                <span class="text-[10px] bg-emerald-400 text-slate-900 font-bold px-2 py-0.5 rounded-full">Diperiksa</span>
-              </div>
-              <div class="flex items-center justify-between text-[11px] text-white/70 border-t border-white/10 pt-2">
-                <span>Dokter: dr. Bambang Irawan</span>
-                <span class="font-mono text-emerald-300">Rekam Medis: #RM-002481</span>
-              </div>
-            </div>
-
-            <!-- Queue Counter Strip + Corner Authentic Thumbnail -->
-            <div class="relative z-10 flex items-center justify-between pt-1 text-xs">
-              <div class="flex items-center gap-3 text-[11px] text-white/80">
-                <span>Antrian Berikutnya: <strong class="text-white font-mono">A-043</strong></span>
-                <span>•</span>
-                <span>Sisa: <strong class="text-white">6 Pasien</strong></span>
-              </div>
-
-              <!-- Corner Authentic Proof Thumbnail -->
-              <div class="flex items-center gap-2 bg-black/60 px-2.5 py-1 rounded-xl border border-white/20">
-                <img
-                  src="/puskesmas wonokerto/Tangkapan Layar 2026-06-17 pukul 20.43.07.webp"
-                  alt="Dokumentasi Puskesmas Wonokerto"
-                  class="w-6 h-6 rounded-md object-cover border border-white/30"
-                />
-                <span class="text-[10px] text-white/90 font-label-bold">Foto Asli</span>
+                <span class="text-[10px] font-mono text-white/80 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
+                  SATUSEHAT Ready
+                </span>
               </div>
             </div>
           </div>
 
-          <!-- Problem -> Solution -> Outcome Stack -->
-          <div class="p-6 md:p-8 flex flex-col gap-5">
-            <!-- Problem -->
-            <div class="p-4 rounded-2xl bg-surface-faint border border-border-hairline/70">
-              <p class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-amber-600 text-[18px]">report_problem</span>
-                Tantangan Klien
-              </p>
-              <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
-                Antrian pasien panjang dan pencarian arsip rekam medis kertas manual yang memakan waktu lama setiap harinya.
-              </p>
+          <!-- Agency Project Summary Body -->
+          <div class="p-6 md:p-8">
+            <!-- Client Identity Header -->
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 shadow-2xs">
+                  <span class="material-symbols-outlined text-[22px]">local_hospital</span>
+                </div>
+                <div>
+                  <h4 class="font-headline-md text-sm sm:text-base font-bold text-on-surface">Puskesmas Wonokerto</h4>
+                  <p class="font-body-md text-xs text-text-muted">Kabupaten Pekalongan · Faskes Tingkat 1</p>
+                </div>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-label-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Klien Terverifikasi
+              </span>
             </div>
 
-            <!-- Solution -->
-            <div class="p-4 rounded-2xl bg-surface-faint border border-border-hairline/70">
-              <p class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-primary text-[18px]">lightbulb</span>
-                Solusi Sistem
-              </p>
-              <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
-                Digitalisasi alur pendaftaran terintegrasi dengan database pasien dan rekam medis elektronik (EMR) yang tersentral.
-              </p>
+            <!-- Title & Pitch -->
+            <h3 class="font-headline-md text-lg sm:text-xl font-bold text-on-surface mb-2.5 group-hover:text-primary transition-colors leading-snug">
+              SIMPUS &amp; Rekam Medis Elektronik (EMR) Terintegrasi
+            </h3>
+            <p class="font-body-md text-xs sm:text-sm text-text-muted mb-6 leading-relaxed">
+              Menggantikan tumpukan berkas manual dengan sistem antrian layar poli digital, arsip rekam medis tersentral, dan persiapan bridging SATUSEHAT Kemenkes RI.
+            </p>
+
+            <!-- Key Metric Chips -->
+            <div class="grid grid-cols-3 gap-2.5 p-3.5 bg-surface-container-lowest rounded-2xl border border-border-hairline mb-6">
+              <div class="text-center">
+                <p class="text-base sm:text-lg font-bold text-primary font-mono">100%</p>
+                <p class="text-[10px] text-text-muted uppercase tracking-tight font-label-bold">Paperless EMR</p>
+              </div>
+              <div class="text-center border-x border-border-hairline/80 px-1">
+                <p class="text-base sm:text-lg font-bold text-on-surface font-mono">&lt; 2 Menit</p>
+                <p class="text-[10px] text-text-muted uppercase tracking-tight font-label-bold">Cari Berkas</p>
+              </div>
+              <div class="text-center">
+                <p class="text-base sm:text-lg font-bold text-emerald-600 font-mono">Real-Time</p>
+                <p class="text-[10px] text-text-muted uppercase tracking-tight font-label-bold">Antrian Layar</p>
+              </div>
             </div>
 
-            <!-- Outcome -->
-            <div class="p-4 rounded-2xl bg-primary/8 border border-primary/15">
-              <p class="font-label-bold text-xs uppercase tracking-wider text-primary mb-1.5 flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                Dampak Bisnis
-              </p>
-              <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
-                Pelayanan jauh lebih cepat, bebas antrian panjang yang menumpuk, dan arsip rekam medis 100% aman dan mudah diakses.
-              </p>
+            <!-- Tech Stack Tags -->
+            <div class="flex flex-wrap items-center gap-1.5 text-[10px] font-mono text-text-muted">
+              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">SvelteKit</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">TypeScript</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">PostgreSQL</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">TailwindCSS</span>
             </div>
           </div>
         </div>
 
-        <!-- Action Link -->
-        <div class="p-6 md:p-8 pt-0">
+        <!-- Action Link Footer -->
+        <div class="p-6 md:p-8 pt-0 border-t border-border-hairline/60 flex items-center justify-between">
           <a
             href="/project/puskesmas-wonokerto"
-            class="inline-flex items-center gap-2 text-primary font-label-bold hover:gap-3 transition-all duration-300 group-hover:text-primary-container"
+            class="inline-flex items-center gap-2 text-primary font-label-bold text-xs sm:text-sm hover:gap-3 transition-all duration-300 group-hover:text-primary-container"
           >
-            Lihat Detail Proyek
+            <span>Pelajari Studi Kasus &amp; Alur Sistem</span>
             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
           </a>
         </div>
-      </div>
+      </article>
 
-      <!-- Case Study 2: POS Toko Konveksi Wonopringgo -->
-      <div
-        use:tilt3D={{ maxTilt: 4, perspective: 1100, glare: true }}
-        class="case-card bg-white rounded-[32px] border border-border-hairline overflow-hidden flex flex-col justify-between shadow-[0_15px_40px_rgba(0,0,0,0.05)] hover:shadow-[0_25px_60px_rgba(0,105,72,0.12)] transition-[box-shadow,border-color] duration-300 group will-change-transform"
+      <!-- Project 2: Toko Konveksi Wonopringgo -->
+      <article
+        use:tilt3D={{ maxTilt: 3.5, perspective: 1100, glare: true }}
+        class="case-card bg-white rounded-[32px] border border-border-hairline overflow-hidden flex flex-col justify-between shadow-[0_15px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_60px_rgba(0,105,72,0.12)] transition-[box-shadow,border-color] duration-300 group hover:border-primary/40 will-change-transform"
       >
         <div>
-          <!-- Coded POS Wholesale & Multi-Gudang Dashboard -->
-          <div class="w-full min-h-[290px] p-6 border-b border-border-hairline bg-gradient-to-br from-slate-900 via-slate-850 to-primary-fixed-variant text-white flex flex-col justify-between relative overflow-hidden">
-            <!-- Subtle Grid Background -->
-            <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
+          <!-- High-Fidelity Browser Window Frame Mockup -->
+          <div class="w-full bg-slate-900 border-b border-border-hairline overflow-hidden flex flex-col">
+            <!-- Sleek Browser Chrome Title Bar -->
+            <div class="px-4 py-2.5 bg-slate-950 flex items-center justify-between border-b border-white/10 select-none">
+              <!-- Traffic Light Dots -->
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
+              </div>
 
-            <!-- Top bar -->
-            <div class="relative z-10 flex items-center justify-between border-b border-white/10 pb-3">
-              <div class="flex items-center gap-2.5">
-                <div class="w-8 h-8 rounded-lg bg-primary/20 border border-primary/40 flex items-center justify-center text-primary-fixed">
-                  <span class="material-symbols-outlined text-[18px]">inventory_2</span>
-                </div>
-                <div>
-                  <p class="font-label-bold text-xs text-white font-semibold">Wonopringgo Fashion ERP</p>
-                  <p class="text-[10px] text-primary-fixed-dim">Grosir &amp; Multi-Gudang Bahan</p>
-                </div>
+              <!-- Browser URL Bar -->
+              <div class="flex-1 max-w-xs mx-auto bg-white/10 rounded-full px-3 py-1 flex items-center justify-center gap-1.5 text-[10px] text-white/70 font-mono">
+                <span class="material-symbols-outlined text-[11px] text-blue-400">lock</span>
+                <span class="truncate">pos.wonopringgo.svralabs.id</span>
               </div>
-              <div class="flex items-center gap-1.5 bg-primary/20 text-primary-fixed border border-primary/30 px-2.5 py-1 rounded-full text-[10px] font-label-bold">
-                <span class="w-1.5 h-1.5 rounded-full bg-primary-fixed animate-pulse"></span>
-                <span>Kasir Online</span>
-              </div>
+
+              <!-- Sector Badge -->
+              <span class="text-[9px] font-label-bold text-blue-400 bg-blue-500/15 border border-blue-400/30 px-2 py-0.5 rounded-full">
+                Garmen &amp; Wholesale
+              </span>
             </div>
 
-            <!-- Key Metrics Strip -->
-            <div class="relative z-10 grid grid-cols-2 gap-2.5 my-2">
-              <div class="bg-white/15 rounded-2xl p-3 border border-white/20">
-                <span class="text-[10px] text-white/70 block">Penjualan Grosir Hari Ini</span>
-                <span class="text-xl font-bold font-mono text-white">Rp 38.450.000</span>
-                <span class="text-[10px] text-emerald-400 block mt-0.5">↑ 18.2% vs target</span>
-              </div>
-              <div class="bg-white/15 rounded-2xl p-3 border border-white/20">
-                <span class="text-[10px] text-white/70 block">Stok Bahan Baku Keluar</span>
-                <span class="text-xl font-bold font-mono text-primary-fixed">1.420 Yard</span>
-                <span class="text-[10px] text-white/70 block mt-0.5">42 rol kain katun</span>
-              </div>
-            </div>
-
-            <!-- Inventory SKU Quick Table + Corner Authentic Thumbnail -->
-            <div class="relative z-10 flex items-center justify-between pt-1 text-xs">
-              <div class="flex items-center gap-3 text-[11px] text-white/80">
-                <span>Surat Jalan: <strong class="text-white font-mono">#SJ-8912</strong></span>
-                <span>•</span>
-                <span>Status: <strong class="text-emerald-300">Siap Kirim Cargo</strong></span>
-              </div>
-
-              <!-- Corner Authentic Proof Thumbnail -->
-              <div class="flex items-center gap-2 bg-black/60 px-2.5 py-1 rounded-xl border border-white/20">
-                <img
-                  src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.23.webp"
-                  alt="Dokumentasi Toko Konveksi Wonopringgo"
-                  class="w-6 h-6 rounded-md object-cover border border-white/30"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span class="text-[10px] text-white/90 font-label-bold">Foto Asli</span>
+            <!-- Authentic Full Screenshot with Soft Overlay & Hover Zoom -->
+            <div class="relative aspect-[16/10] w-full overflow-hidden bg-slate-950 group">
+              <img
+                src="/toko konveksi wonopringgo/Tangkapan Layar 2026-08-09 pukul 00.24.23.webp"
+                alt="Sistem POS Multi-Gudang Toko Konveksi Wonopringgo"
+                class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+              
+              <!-- Bottom Pill Overlay inside Screenshot -->
+              <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between z-10">
+                <div class="flex items-center gap-2 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/15">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+                  <span class="text-[10px] text-white font-label-bold">Kasir Online &amp; Multi-Gudang</span>
+                </div>
+                <span class="text-[10px] font-mono text-white/80 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
+                  Surat Jalan Otomatis
+                </span>
               </div>
             </div>
           </div>
 
-          <!-- Problem -> Solution -> Outcome Stack -->
-          <div class="p-6 md:p-8 flex flex-col gap-5">
-            <!-- Problem -->
-            <div class="p-4 rounded-2xl bg-surface-faint border border-border-hairline/70">
-              <p class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-amber-600 text-[18px]">report_problem</span>
-                Tantangan Klien
-              </p>
-              <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
-                Susah melacak stok kain, bahan baku, dan baju jadi yang keluar masuk setiap harinya secara akurat di gudang.
-              </p>
+          <!-- Agency Project Summary Body -->
+          <div class="p-6 md:p-8">
+            <!-- Client Identity Header -->
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-700 shadow-2xs">
+                  <span class="material-symbols-outlined text-[22px]">inventory_2</span>
+                </div>
+                <div>
+                  <h4 class="font-headline-md text-sm sm:text-base font-bold text-on-surface">Toko Konveksi Wonopringgo</h4>
+                  <p class="font-body-md text-xs text-text-muted">Pusat Grosir Tekstil &amp; Celana Chino</p>
+                </div>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-label-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                Klien Terverifikasi
+              </span>
             </div>
 
-            <!-- Solution -->
-            <div class="p-4 rounded-2xl bg-surface-faint border border-border-hairline/70">
-              <p class="font-label-bold text-xs uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-primary text-[18px]">lightbulb</span>
-                Solusi Sistem
-              </p>
-              <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
-                Sistem POS khusus grosir/manufaktur dengan manajemen inventaris multi-gudang untuk bahan baku &amp; barang jadi.
-              </p>
+            <!-- Title & Pitch -->
+            <h3 class="font-headline-md text-lg sm:text-xl font-bold text-on-surface mb-2.5 group-hover:text-primary transition-colors leading-snug">
+              POS Grosir &amp; Sistem Manajemen Multi-Gudang Bahan
+            </h3>
+            <p class="font-body-md text-xs sm:text-sm text-text-muted mb-6 leading-relaxed">
+              Pencatatan ribuan yard kain katun, pemotongan stok otomatis saat penjualan partai besar, dan pencetakan nota &amp; surat jalan ekspedisi instan.
+            </p>
+
+            <!-- Key Metric Chips -->
+            <div class="grid grid-cols-3 gap-2.5 p-3.5 bg-surface-container-lowest rounded-2xl border border-border-hairline mb-6">
+              <div class="text-center">
+                <p class="text-base sm:text-lg font-bold text-blue-700 font-mono">0 Selisih</p>
+                <p class="text-[10px] text-text-muted uppercase tracking-tight font-label-bold">Audit Stok</p>
+              </div>
+              <div class="text-center border-x border-border-hairline/80 px-1">
+                <p class="text-base sm:text-lg font-bold text-on-surface font-mono">1.400+ Yd</p>
+                <p class="text-[10px] text-text-muted uppercase tracking-tight font-label-bold">Bahan Terlacak</p>
+              </div>
+              <div class="text-center">
+                <p class="text-base sm:text-lg font-bold text-primary font-mono">Otomatis</p>
+                <p class="text-[10px] text-text-muted uppercase tracking-tight font-label-bold">Surat Jalan</p>
+              </div>
             </div>
 
-            <!-- Outcome -->
-            <div class="p-4 rounded-2xl bg-primary/8 border border-primary/15">
-              <p class="font-label-bold text-xs uppercase tracking-wider text-primary mb-1.5 flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                Dampak Bisnis
-              </p>
-              <p class="font-body-md text-sm text-on-surface font-medium leading-relaxed">
-                Stok terpotong presisi, tidak ada lagi selisih laporan kas, dan mencegah barang hilang tanpa jejak catatan.
-              </p>
+            <!-- Tech Stack Tags -->
+            <div class="flex flex-wrap items-center gap-1.5 text-[10px] font-mono text-text-muted">
+              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">SvelteKit</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">TypeScript</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">Prisma ORM</span>
+              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">TailwindCSS</span>
             </div>
           </div>
         </div>
 
-        <!-- Action Link -->
-        <div class="p-6 md:p-8 pt-0">
+        <!-- Action Link Footer -->
+        <div class="p-6 md:p-8 pt-0 border-t border-border-hairline/60 flex items-center justify-between">
           <a
             href="/project/pos-wonopringgo"
-            class="inline-flex items-center gap-2 text-primary font-label-bold hover:gap-3 transition-all duration-300 group-hover:text-primary-container"
+            class="inline-flex items-center gap-2 text-primary font-label-bold text-xs sm:text-sm hover:gap-3 transition-all duration-300 group-hover:text-primary-container"
           >
-            Lihat Detail Proyek
+            <span>Pelajari Studi Kasus &amp; Alur Sistem</span>
             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
           </a>
         </div>
-      </div>
+      </article>
 
     </div>
 

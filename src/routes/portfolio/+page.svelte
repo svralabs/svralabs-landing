@@ -6,6 +6,49 @@
   let selectedCategory = $state<string>('all');
   let searchQuery = $state<string>('');
 
+  const clientBrands = [
+    {
+      name: 'Puskesmas Wonokerto',
+      sector: 'Kesehatan & EMR SATUSEHAT',
+      slug: 'puskesmas-wonokerto',
+      icon: 'local_hospital',
+      tag: 'Instansi Faskes',
+      color: 'text-emerald-700 bg-emerald-50 border-emerald-200/80',
+    },
+    {
+      name: 'Konveksi Wonopringgo',
+      sector: 'Grosir Tekstil & Multi-Gudang',
+      slug: 'pos-wonopringgo',
+      icon: 'inventory_2',
+      tag: 'Garmen & Wholesale',
+      color: 'text-blue-700 bg-blue-50 border-blue-200/80',
+    },
+    {
+      name: 'Toko Kopi Seruni',
+      sector: 'POS Kasir F&B & Resep HPP',
+      slug: 'kopi-seruni',
+      icon: 'local_cafe',
+      tag: 'Cafe & Kuliner',
+      color: 'text-amber-700 bg-amber-50 border-amber-200/80',
+    },
+    {
+      name: 'Warmindo Garwo',
+      sector: 'AI Vision OCR Purchasing',
+      slug: 'purchasing-garwo',
+      icon: 'receipt_long',
+      tag: 'Procurement Kuliner',
+      color: 'text-rose-700 bg-rose-50 border-rose-200/80',
+    },
+    {
+      name: 'SVRA Laundry Solutions',
+      sector: 'Tracking QR & WhatsApp Bot',
+      slug: 'laundry',
+      icon: 'local_laundry_service',
+      tag: 'Jasa & Operasional',
+      color: 'text-cyan-700 bg-cyan-50 border-cyan-200/80',
+    },
+  ];
+
   onMount(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     document.documentElement.scrollTop = 0;
@@ -131,6 +174,54 @@
       </div>
     </div>
 
+    <!-- Client Brands Strip: Bukti Kerjasama Nyata -->
+    <div class="mb-12 bg-white rounded-3xl p-6 border border-border-hairline shadow-2xs">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5 border-b border-border-hairline/70 pb-4">
+        <div>
+          <h2 class="font-headline-md text-base sm:text-lg font-bold text-on-surface flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Brand &amp; Instansi yang Bekerja Sama
+          </h2>
+          <p class="font-body-md text-xs text-text-muted mt-0.5">
+            Sistem produksi aktif yang dikembangkan dan dioperasikan oleh klien Svralabs.
+          </p>
+        </div>
+        <span class="text-[11px] font-label-bold text-primary bg-primary/10 px-3 py-1 rounded-full self-start sm:self-auto">
+          5 Klien Terverifikasi
+        </span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        {#each clientBrands as brand}
+          <a
+            href="/project/{brand.slug}"
+            class="group bg-surface-container-lowest hover:bg-slate-50 rounded-2xl p-3.5 border border-border-hairline hover:border-primary/40 transition-all duration-200 flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <div class="w-8 h-8 rounded-xl flex items-center justify-center border {brand.color} shadow-2xs">
+                  <span class="material-symbols-outlined text-[18px]">{brand.icon}</span>
+                </div>
+                <span class="text-[9px] font-label-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
+                  Aktif
+                </span>
+              </div>
+              <h4 class="font-headline-md text-xs font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                {brand.name}
+              </h4>
+              <p class="font-body-md text-[10px] text-text-muted mt-0.5 line-clamp-1">
+                {brand.sector}
+              </p>
+            </div>
+            <div class="pt-2 mt-2 border-t border-border-hairline/60 flex items-center justify-between text-[10px] text-text-muted group-hover:text-primary font-label-bold">
+              <span>Buka Project</span>
+              <span class="material-symbols-outlined text-[13px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </div>
+          </a>
+        {/each}
+      </div>
+    </div>
+
     <!-- Search & Filter Bar -->
     <div class="mb-10 flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center">
       
@@ -195,35 +286,53 @@
             class="bg-white rounded-[28px] border border-border-hairline overflow-hidden flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,105,72,0.1)] transition-[box-shadow,border-color] duration-300 group hover:border-primary/30"
           >
             <div>
-              <!-- Thumbnail Frame with Badges -->
-              <div class="relative aspect-video w-full overflow-hidden bg-slate-900 border-b border-border-hairline">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  loading="lazy"
-                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                />
-                
-                <!-- Status Badges Overlay -->
-                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
-                  {#if item.hasDemo}
-                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-600/95 text-white text-[10px] font-label-bold uppercase tracking-wider shadow-sm">
-                      <span class="h-1.5 w-1.5 rounded-full bg-white animate-pulse"></span>
-                      Live Demo
-                    </span>
-                  {/if}
-                  {#if item.hasCaseStudy}
-                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-xs text-white text-[10px] font-label-bold uppercase tracking-wider shadow-sm">
-                      <span class="material-symbols-outlined text-[12px]">assignment</span>
-                      Detail Project
-                    </span>
-                  {/if}
+              <!-- Browser Window Frame Mockup -->
+              <div class="w-full bg-slate-900 border-b border-border-hairline overflow-hidden flex flex-col">
+                <!-- Browser Chrome Bar -->
+                <div class="px-3.5 py-2 bg-slate-950 flex items-center justify-between border-b border-white/10 select-none">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-rose-500/80 inline-block"></span>
+                    <span class="w-2 h-2 rounded-full bg-amber-500/80 inline-block"></span>
+                    <span class="w-2 h-2 rounded-full bg-emerald-500/80 inline-block"></span>
+                  </div>
+                  <div class="flex items-center gap-1 text-[9px] text-white/60 font-mono bg-white/10 px-2.5 py-0.5 rounded-full max-w-[170px] truncate">
+                    <span class="material-symbols-outlined text-[10px] text-emerald-400">lock</span>
+                    <span class="truncate">{item.slug}.svralabs.id</span>
+                  </div>
+                  <span class="text-[9px] font-mono text-white/50">{item.year}</span>
                 </div>
 
-                <div class="absolute top-3 right-3 z-10">
-                  <span class="inline-block px-2.5 py-1 rounded-full bg-white/90 text-on-surface text-[10px] font-label-bold shadow-sm">
-                    {item.client}
-                  </span>
+                <!-- Screenshot with Zoom & Overlay -->
+                <div class="relative aspect-[16/10] w-full overflow-hidden bg-slate-950">
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  
+                  <!-- Status Badges Overlay -->
+                  <div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1.5 z-10">
+                    {#if item.hasDemo}
+                      <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-600/95 text-white text-[10px] font-label-bold uppercase tracking-wider shadow-sm">
+                        <span class="h-1.5 w-1.5 rounded-full bg-white animate-pulse"></span>
+                        Live Demo
+                      </span>
+                    {/if}
+                    {#if item.hasCaseStudy}
+                      <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-xs text-white text-[10px] font-label-bold uppercase tracking-wider shadow-sm">
+                        <span class="material-symbols-outlined text-[12px]">assignment</span>
+                        Detail Project
+                      </span>
+                    {/if}
+                  </div>
+
+                  <div class="absolute top-2.5 right-2.5 z-10">
+                    <span class="inline-block px-2.5 py-1 rounded-full bg-white/95 text-on-surface text-[10px] font-label-bold shadow-sm border border-border-hairline">
+                      {item.client}
+                    </span>
+                  </div>
                 </div>
               </div>
 
