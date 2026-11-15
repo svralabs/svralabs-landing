@@ -146,7 +146,7 @@
 <section
   id="solusi"
   bind:this={sectionRoot}
-  class="relative w-full h-screen h-[100dvh] bg-white flex flex-col justify-between items-center pt-16 md:pt-20 pb-4 md:pb-6 px-4 sm:px-6 md:px-gutter overflow-hidden z-10"
+  class="relative w-full h-screen h-[100dvh] bg-white flex flex-col justify-center items-center py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-gutter overflow-hidden z-10"
 >
   <!-- Background Atmosphere Glow -->
   <div class="absolute inset-0 z-0 pointer-events-none opacity-35">
@@ -158,16 +158,16 @@
   <div class="absolute inset-x-0 bottom-0 h-24 md:h-36 pointer-events-none bg-gradient-to-b from-transparent via-white/70 via-50% to-white z-0"></div>
 
   <!-- Section Depth Stage Container -->
-  <div class="section-depth-stage w-full max-w-6xl mx-auto flex flex-col h-full justify-between items-center relative z-10">
+  <div class="section-depth-stage w-full max-w-6xl mx-auto flex flex-col h-full justify-center items-center relative z-10 gap-2 sm:gap-3 md:gap-3.5">
     
     <!-- Compact Header & Step Navigation -->
-    <div class="solusi-header-group text-center max-w-3xl mx-auto shrink-0 mb-2 md:mb-3 will-change-transform">
-      <div class="inline-flex items-center gap-2 bg-surface-container border border-border-hairline px-3.5 py-1 rounded-full font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest text-[11px] mb-1.5 shadow-2xs">
+    <div class="solusi-header-group text-center max-w-3xl mx-auto shrink-0 mb-1 sm:mb-2 will-change-transform">
+      <div class="inline-flex items-center gap-2 bg-surface-container border border-border-hairline px-3 py-0.5 rounded-full font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest text-[10px] sm:text-[11px] mb-1 shadow-2xs">
         <span class="material-symbols-outlined text-[13px] text-primary" style="font-variation-settings: 'FILL' 1;">hub</span>
         Solusi Kami
       </div>
 
-      <h2 use:bokehReveal={{ delay: 0.05, staggerDelay: 0.04 }} class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">
+      <h2 use:bokehReveal={{ delay: 0.05, staggerDelay: 0.04 }} class="text-xl sm:text-2xl md:text-3xl font-headline-md font-bold text-on-surface mb-1.5 tracking-tight">
         Satu sistem, masalah operasional <i class="text-primary font-light">selesai</i>
       </h2>
 
@@ -200,53 +200,53 @@
     </div>
 
     <!-- Center Stage: Stacking Cards Deck -->
-    <div class="relative w-full flex-1 flex items-center justify-center min-h-0 my-auto">
+    <div class="relative w-full flex-1 flex items-center justify-center min-h-0">
       
       <!-- ─── CARD 1: Kasir & Transaksi (Base: z-10) ─── -->
       <div
-        class="solusi-card-1 absolute inset-0 w-full h-full max-h-[460px] md:max-h-[490px] lg:max-h-[510px] my-auto bg-white rounded-[28px] md:rounded-[32px] border border-border-hairline shadow-[0_25px_60px_-15px_rgba(17,24,39,0.12)] overflow-hidden flex flex-col md:flex-row will-change-transform"
+        class="solusi-card-1 absolute inset-0 w-full h-full max-h-[390px] sm:max-h-[420px] md:max-h-[450px] lg:max-h-[470px] my-auto bg-white rounded-[24px] md:rounded-[28px] border border-border-hairline shadow-[0_20px_50px_-15px_rgba(17,24,39,0.1)] overflow-hidden flex flex-col md:flex-row will-change-transform"
       >
         <!-- Frosted White Blur Veil on Receding -->
         <div class="solusi-veil-1 pointer-events-none absolute inset-0 bg-white/70 backdrop-blur-[3px] opacity-0 z-30 transition-opacity"></div>
 
         <!-- Left Content -->
-        <div class="flex-1 flex flex-col justify-between p-5 sm:p-6 md:p-7 lg:p-8 order-2 md:order-1 z-10 overflow-hidden">
+        <div class="flex-1 flex flex-col justify-between p-4 sm:p-5 md:p-6 lg:p-7 order-2 md:order-1 z-10 overflow-hidden">
           <div>
-            <div class="flex items-center gap-2 mb-2">
-              <div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-2xs">
-                <span class="material-symbols-outlined text-[15px] text-white" style="font-variation-settings: 'FILL' 1;">point_of_sale</span>
+            <div class="flex items-center gap-2 mb-1.5">
+              <div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-2xs">
+                <span class="material-symbols-outlined text-[13px] text-white" style="font-variation-settings: 'FILL' 1;">point_of_sale</span>
               </div>
-              <span class="font-label-bold text-on-surface uppercase tracking-wider text-[11px]">Sistem Kasir &amp; Transaksi</span>
+              <span class="font-label-bold text-on-surface uppercase tracking-wider text-[10px] sm:text-[11px]">Sistem Kasir &amp; Transaksi</span>
             </div>
 
-            <h3 class="font-headline-md text-base md:text-xl lg:text-2xl font-bold text-on-surface mb-2 leading-snug">
+            <h3 class="font-headline-md text-sm sm:text-lg md:text-xl font-bold text-on-surface mb-1.5 leading-snug">
               Capek rekap penjualan manual tiap tutup toko?
             </h3>
 
-            <p class="font-body-md text-xs md:text-sm text-text-muted mb-3 leading-relaxed">
+            <p class="font-body-md text-xs sm:text-xs md:text-sm text-text-muted mb-2.5 leading-relaxed">
               Catat pesanan cepat, cetak struk kasir, dan terima pembayaran non-tunai. Laporan omzet dan laba terbentuk otomatis tanpa pusing hitung nota fisik satu-satu.
             </p>
 
             <!-- Compact Key Feature Bullets -->
-            <div class="space-y-1.5 mb-3.5 text-xs text-on-surface">
+            <div class="space-y-1 mb-2.5 text-[11px] sm:text-xs text-on-surface">
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span class="material-symbols-outlined text-primary text-[14px] shrink-0">check_circle</span>
                 <span>Transaksi kasir cepat &amp; cetak struk Bluetooth / Thermal</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span class="material-symbols-outlined text-primary text-[14px] shrink-0">check_circle</span>
                 <span>Laporan keuangan harian, mingguan, &amp; bulanan otomatis</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span class="material-symbols-outlined text-primary text-[14px] shrink-0">check_circle</span>
                 <span>Dapat dipakai di tablet, smartphone, maupun laptop kasir</span>
               </div>
             </div>
 
             <!-- Compact Proof Badge -->
-            <div class="bg-primary/5 border border-primary/15 rounded-xl px-3 py-1.5 mb-3 flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary text-[16px] shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
-              <p class="font-body-md text-[11px] text-on-surface">
+            <div class="bg-primary/5 border border-primary/15 rounded-xl px-2.5 py-1 mb-2.5 flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[15px] shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
+              <p class="font-body-md text-[10px] sm:text-[11px] text-on-surface">
                 Aktif di Toko Konveksi Wonopringgo &amp; Kedai Kopi Seruni
               </p>
             </div>
@@ -258,16 +258,16 @@
             href="https://demo.svralabs.com/pos/pos-fb"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold px-5 py-2.5 rounded-full inline-flex items-center gap-2 w-fit text-xs md:text-sm shadow-md hover:shadow-primary/25"
+            class="bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-full inline-flex items-center gap-2 w-fit text-xs shadow-md hover:shadow-primary/25"
           >
-            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+            <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">play_circle</span>
             Coba Demo POS Kopi Seruni
           </a>
         </div>
 
         <!-- Right Mockup -->
-        <div class="relative md:w-[48%] min-h-[220px] md:min-h-full order-1 md:order-2 p-4 md:p-6 flex flex-col justify-center bg-gradient-to-br from-slate-50 to-surface-container-low border-b md:border-b-0 md:border-l border-border-hairline">
-          <div class="bg-white rounded-2xl p-4 border border-border-hairline shadow-md flex flex-col gap-3 relative">
+        <div class="relative md:w-[48%] min-h-[200px] md:min-h-full order-1 md:order-2 p-3.5 sm:p-4 md:p-5 flex flex-col justify-center bg-gradient-to-br from-slate-50 to-surface-container-low border-b md:border-b-0 md:border-l border-border-hairline">
+          <div class="bg-white rounded-2xl p-3 sm:p-3.5 border border-border-hairline shadow-md flex flex-col gap-2.5 relative">
             <div class="flex items-center justify-between border-b border-border-hairline/70 pb-2">
               <div class="flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-success animate-pulse"></span>
@@ -329,15 +329,15 @@
 
       <!-- ─── CARD 2: Booking & Jadwal (Middle: z-20) ─── -->
       <div
-        class="solusi-card-2 absolute inset-0 w-full h-full max-h-[460px] md:max-h-[490px] lg:max-h-[510px] my-auto bg-white rounded-[28px] md:rounded-[32px] border border-border-hairline shadow-[0_25px_60px_-15px_rgba(17,24,39,0.12)] overflow-hidden flex flex-col md:flex-row will-change-transform"
+        class="solusi-card-2 absolute inset-0 w-full h-full max-h-[390px] sm:max-h-[420px] md:max-h-[450px] lg:max-h-[470px] my-auto bg-white rounded-[24px] md:rounded-[28px] border border-border-hairline shadow-[0_20px_50px_-15px_rgba(17,24,39,0.1)] overflow-hidden flex flex-col md:flex-row will-change-transform"
       >
         <!-- Frosted White Blur Veil on Receding -->
         <div class="solusi-veil-2 pointer-events-none absolute inset-0 bg-white/70 backdrop-blur-[3px] opacity-0 z-30 transition-opacity"></div>
 
         <!-- Left Mockup -->
-        <div class="relative md:w-[48%] min-h-[220px] md:min-h-full order-1 md:order-1 p-4 md:p-6 flex flex-col justify-center bg-gradient-to-br from-primary/5 via-surface-container-low to-slate-50 border-b md:border-b-0 md:border-r border-border-hairline">
-          <div class="bg-white rounded-2xl p-4 border border-border-hairline shadow-md flex flex-col gap-3 relative">
-            <div class="flex items-center justify-between border-b border-border-hairline/70 pb-2">
+        <div class="relative md:w-[48%] min-h-[200px] md:min-h-full order-1 md:order-1 p-3.5 sm:p-4 md:p-5 flex flex-col justify-center bg-gradient-to-br from-primary/5 via-surface-container-low to-slate-50 border-b md:border-b-0 md:border-r border-border-hairline">
+          <div class="bg-white rounded-2xl p-3 sm:p-3.5 border border-border-hairline shadow-md flex flex-col gap-2.5 relative">
+            <div class="flex items-center justify-between border-b border-border-hairline/70 pb-1.5">
               <div>
                 <span class="font-label-bold text-xs text-on-surface block">Jadwal Praktik &amp; Reservasi</span>
                 <span class="text-[10px] text-text-muted">Senin, 17 Agustus 2026</span>
@@ -383,43 +383,43 @@
         </div>
 
         <!-- Right Content -->
-        <div class="flex-1 flex flex-col justify-between p-5 sm:p-6 md:p-7 lg:p-8 order-2 md:order-2 z-10 overflow-hidden">
+        <div class="flex-1 flex flex-col justify-between p-4 sm:p-5 md:p-6 lg:p-7 order-2 md:order-2 z-10 overflow-hidden">
           <div>
-            <div class="flex items-center gap-2 mb-2">
-              <div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-2xs">
-                <span class="material-symbols-outlined text-[15px] text-white" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+            <div class="flex items-center gap-2 mb-1.5">
+              <div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-2xs">
+                <span class="material-symbols-outlined text-[13px] text-white" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
               </div>
-              <span class="font-label-bold text-on-surface uppercase tracking-wider text-[11px]">Sistem Booking &amp; Jadwal</span>
+              <span class="font-label-bold text-on-surface uppercase tracking-wider text-[10px] sm:text-[11px]">Sistem Booking &amp; Jadwal</span>
             </div>
 
-            <h3 class="font-headline-md text-base md:text-xl lg:text-2xl font-bold text-on-surface mb-2 leading-snug">
+            <h3 class="font-headline-md text-sm sm:text-lg md:text-xl font-bold text-on-surface mb-1.5 leading-snug">
               Jadwal reservasi sering bentrok atau kelewat di chat?
             </h3>
 
-            <p class="font-body-md text-xs md:text-sm text-text-muted mb-3 leading-relaxed">
+            <p class="font-body-md text-xs sm:text-xs md:text-sm text-text-muted mb-2.5 leading-relaxed">
               Biarkan pelanggan memilih slot jadwal sendiri secara online 24 jam. Admin dan staf menerima notifikasi otomatis tanpa risiko jadwal bertumpuk.
             </p>
 
             <!-- Compact Key Feature Bullets -->
-            <div class="space-y-1.5 mb-3.5 text-xs text-on-surface">
+            <div class="space-y-1 mb-2.5 text-[11px] sm:text-xs text-on-surface">
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span class="material-symbols-outlined text-primary text-[14px] shrink-0">check_circle</span>
                 <span>Pilih tanggal &amp; jam kosong secara mandiri oleh pelanggan</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span class="material-symbols-outlined text-primary text-[14px] shrink-0">check_circle</span>
                 <span>Pengingat otomatis via WhatsApp H-1 ke nomor pelanggan</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span class="material-symbols-outlined text-primary text-[14px] shrink-0">check_circle</span>
                 <span>Panel kalender admin terpusat untuk klinik, salon, atau studio</span>
               </div>
             </div>
 
             <!-- Compact Info Badge -->
-            <div class="bg-surface-container/60 border border-border-hairline rounded-xl px-3 py-1.5 mb-3 flex items-center gap-2">
-              <span class="material-symbols-outlined text-text-muted text-[16px] shrink-0">info</span>
-              <p class="font-body-md text-[11px] text-text-muted">
+            <div class="bg-surface-container/60 border border-border-hairline rounded-xl px-2.5 py-1 mb-2.5 flex items-center gap-2">
+              <span class="material-symbols-outlined text-text-muted text-[15px] shrink-0">info</span>
+              <p class="font-body-md text-[10px] sm:text-[11px] text-text-muted">
                 Dapat dikustomisasi sesuai alur reservasi klinik atau bisnis Anda
               </p>
             </div>
@@ -431,9 +431,9 @@
             href="https://wa.me/6285158418944?text=Halo%20Svralabs,%20saya%20butuh%20sistem%20booking%20dan%20jadwal%20untuk%20bisnis%20saya."
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-white border border-border-hairline text-on-surface hover:bg-surface-container transition-colors duration-300 font-label-bold px-5 py-2.5 rounded-full inline-flex items-center gap-2 w-fit text-xs md:text-sm shadow-xs"
+            class="bg-white border border-border-hairline text-on-surface hover:bg-surface-container transition-colors duration-300 font-label-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-full inline-flex items-center gap-2 w-fit text-xs shadow-xs"
           >
-            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+            <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">chat</span>
             Diskusikan Kebutuhanmu
           </a>
         </div>
@@ -441,46 +441,46 @@
 
       <!-- ─── CARD 3: Tracking & Operasional (Top: z-30) ─── -->
       <div
-        class="solusi-card-3 absolute inset-0 w-full h-full max-h-[460px] md:max-h-[490px] lg:max-h-[510px] my-auto bg-white rounded-[28px] md:rounded-[32px] border border-border-hairline shadow-[0_25px_60px_-15px_rgba(17,24,39,0.12)] overflow-hidden flex flex-col md:flex-row will-change-transform"
+        class="solusi-card-3 absolute inset-0 w-full h-full max-h-[390px] sm:max-h-[420px] md:max-h-[450px] lg:max-h-[470px] my-auto bg-white rounded-[24px] md:rounded-[28px] border border-border-hairline shadow-[0_20px_50px_-15px_rgba(17,24,39,0.1)] overflow-hidden flex flex-col md:flex-row will-change-transform"
       >
         <!-- Left Content -->
-        <div class="card3-text-group flex-1 flex flex-col justify-between p-5 sm:p-6 md:p-7 lg:p-8 order-2 md:order-1 z-10 overflow-hidden will-change-transform">
+        <div class="card3-text-group flex-1 flex flex-col justify-between p-4 sm:p-5 md:p-6 lg:p-7 order-2 md:order-1 z-10 overflow-hidden will-change-transform">
           <div>
-            <div class="flex items-center gap-2 mb-2">
-              <div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-2xs">
-                <span class="material-symbols-outlined text-[15px] text-white" style="font-variation-settings: 'FILL' 1;">track_changes</span>
+            <div class="flex items-center gap-2 mb-1.5">
+              <div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-2xs">
+                <span class="material-symbols-outlined text-[13px] text-white" style="font-variation-settings: 'FILL' 1;">track_changes</span>
               </div>
-              <span class="font-label-bold text-on-surface uppercase tracking-wider text-[11px]">Sistem Tracking &amp; Operasional</span>
+              <span class="font-label-bold text-on-surface uppercase tracking-wider text-[10px] sm:text-[11px]">Sistem Tracking &amp; Operasional</span>
             </div>
 
-            <h3 class="font-headline-md text-base md:text-xl lg:text-2xl font-bold text-on-surface mb-2 leading-snug">
+            <h3 class="font-headline-md text-sm sm:text-lg md:text-xl font-bold text-on-surface mb-1.5 leading-snug">
               Pantau antrian faskes &amp; pesanan tanpa nanya bolak-balik
             </h3>
 
-            <p class="font-body-md text-xs md:text-sm text-text-muted mb-3 leading-relaxed">
+            <p class="font-body-md text-xs sm:text-xs md:text-sm text-text-muted mb-2.5 leading-relaxed">
               Semua status pekerjaan tampil di layar transparan. Staf laundry tahu mana yang harus disetrika, dokter faskes tahu antrian berikutnya, manajemen tahu belanja harian.
             </p>
 
             <!-- Compact Key Feature Bullets -->
-            <div class="space-y-1.5 mb-3.5 text-xs text-on-surface">
+            <div class="space-y-1 mb-2.5 text-[11px] sm:text-xs text-on-surface">
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span class="material-symbols-outlined text-primary text-[14px] shrink-0">check_circle</span>
                 <span>Tracking QR nota cucian pelanggan secara mandiri via web</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span class="material-symbols-outlined text-primary text-[14px] shrink-0">check_circle</span>
                 <span>Otomasi scan OCR nota belanja dapur Warmindo berbasis AI</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
+                <span class="material-symbols-outlined text-primary text-[14px] shrink-0">check_circle</span>
                 <span>Sistem antrian pasien live poli klinik &amp; puskesmas</span>
               </div>
             </div>
 
             <!-- Compact Proof Badge -->
-            <div class="bg-primary/5 border border-primary/15 rounded-xl px-3 py-1.5 mb-3 flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary text-[16px] shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
-              <p class="font-body-md text-[11px] text-on-surface">
+            <div class="bg-primary/5 border border-primary/15 rounded-xl px-2.5 py-1 mb-2.5 flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[15px] shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
+              <p class="font-body-md text-[10px] sm:text-[11px] text-on-surface">
                 Aktif di Puskesmas Wonokerto, Warmindo Garwo, &amp; SVRA Laundry
               </p>
             </div>
@@ -493,9 +493,9 @@
               href="https://demo.svralabs.com/operational/laundry"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold px-4 py-2 rounded-full inline-flex items-center gap-1.5 text-xs shadow-md hover:shadow-primary/25"
+              class="bg-on-surface text-surface hover:bg-primary transition-colors duration-300 font-label-bold px-3.5 py-2 rounded-full inline-flex items-center gap-1.5 text-xs shadow-md hover:shadow-primary/25"
             >
-              <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">local_laundry_service</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">local_laundry_service</span>
               Demo Laundry
             </a>
             <a
@@ -503,17 +503,17 @@
               href="https://demo.svralabs.com/operational/purchasing-garwo"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-white border border-border-hairline text-on-surface hover:bg-surface-container transition-colors duration-300 font-label-bold px-4 py-2 rounded-full inline-flex items-center gap-1.5 text-xs shadow-xs"
+              class="bg-white border border-border-hairline text-on-surface hover:bg-surface-container transition-colors duration-300 font-label-bold px-3.5 py-2 rounded-full inline-flex items-center gap-1.5 text-xs shadow-xs"
             >
-              <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
               Demo Purchasing Garwo
             </a>
           </div>
         </div>
 
         <!-- Right Mockup -->
-        <div class="card3-mockup-group relative md:w-[48%] min-h-[220px] md:min-h-full order-1 md:order-2 p-4 md:p-6 flex flex-col justify-center bg-gradient-to-br from-slate-50 to-surface-container-low border-b md:border-b-0 md:border-l border-border-hairline will-change-transform">
-          <div class="bg-white rounded-2xl p-4 border border-border-hairline shadow-md flex flex-col gap-3 relative">
+        <div class="card3-mockup-group relative md:w-[48%] min-h-[200px] md:min-h-full order-1 md:order-2 p-3.5 sm:p-4 md:p-5 flex flex-col justify-center bg-gradient-to-br from-slate-50 to-surface-container-low border-b md:border-b-0 md:border-l border-border-hairline will-change-transform">
+          <div class="bg-white rounded-2xl p-3 sm:p-3.5 border border-border-hairline shadow-md flex flex-col gap-2.5 relative">
             <div class="flex items-center justify-between border-b border-border-hairline/70 pb-2">
               <div class="flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
