@@ -163,8 +163,8 @@
     <div data-depth="content" class="w-full flex flex-col items-center text-center">
       <!-- Top Pill Badge -->
       <div class="hero-badge-tag inline-flex items-center gap-2 bg-white border border-border-hairline rounded-full px-4 py-1.5 mb-3 md:mb-4 shadow-sm">
-        <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-        <span class="font-label-sm text-label-sm uppercase tracking-widest text-text-muted">Sistem Kasir · EMR · Custom Software</span>
+        <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">hub</span>
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-text-muted">Software House &amp; Sistem Bisnis Teruji</span>
       </div>
 
       <!-- Headline: Luxury Bokeh Optical Focus & Tracking Reveal -->
@@ -174,40 +174,33 @@
 
       <!-- Subtitle: Fluid Optical Bokeh Cascade -->
       <p use:bokehReveal={{ delay: 0.35, staggerDelay: 0.022, duration: 0.9 }} class="font-body-lg text-body-lg text-text-muted max-w-2xl mb-5 md:mb-6 leading-relaxed">
-        Operasional manual bikin pusing? Svralabs bantu bisnismu beralih digital dengan sistem yang langsung jalan — cepat, efisien, dan terjangkau.
+        Dari sistem kasir POS, rekam medis EMR faskes, manajemen stok multi-gudang, hingga custom software. Svralabs membangun sistem operasional yang langsung jalan — praktis, teruji, dan tanpa langganan mahal.
       </p>
 
       <!-- CTAs with Magnetic Hover -->
       <div class="hero-cta-group flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 md:mb-8">
-        <button
-          use:magneticButton={{ strength: 16 }}
-          onclick={() => scrollTo('kontak')}
-          class="hero-cta-btn bg-on-surface text-surface px-7 sm:px-8 py-3.5 md:py-4 rounded-full font-label-bold hover:bg-primary transition-colors duration-300 shadow-lg hover:shadow-primary/25 cursor-pointer w-full sm:w-auto"
-        >
-          Konsultasi Gratis
-        </button>
-
         <a
-          use:magneticButton={{ strength: 14 }}
-          href="/portfolio?category=has-demo"
-          class="hero-cta-btn bg-primary text-on-primary px-7 sm:px-8 py-3.5 md:py-4 rounded-full font-label-bold hover:bg-primary-container transition-colors duration-300 shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
+          use:magneticButton={{ strength: 16 }}
+          href="/portfolio"
+          class="hero-cta-btn bg-primary text-on-primary px-8 sm:px-9 py-3.5 md:py-4 rounded-full font-label-bold hover:bg-primary-container transition-all duration-300 shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto text-sm sm:text-base"
         >
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
-          </span>
-          Coba Live Demo
+          <span class="material-symbols-outlined text-[18px]">visibility</span>
+          Lihat Project &amp; Demo
           <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
         </a>
 
-        <button
-          use:magneticButton={{ strength: 12 }}
-          onclick={() => scrollTo('portofolio')}
-          class="hero-cta-btn bg-white/90 backdrop-blur-sm text-on-surface border border-border-hairline px-7 sm:px-8 py-3.5 md:py-4 rounded-full font-label-bold hover:bg-surface-container transition-colors duration-300 shadow-sm flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
+        <a
+          use:magneticButton={{ strength: 14 }}
+          href="https://wa.me/6285158418944?text=Halo%20Svralabs%2C%20saya%20ingin%20konsultasi%20mengenai%20sistem%20operasional%20bisnis"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hero-cta-btn bg-white/95 backdrop-blur-sm text-on-surface border border-border-hairline hover:border-emerald-500 hover:text-emerald-700 px-8 sm:px-9 py-3.5 md:py-4 rounded-full font-label-bold transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2.5 cursor-pointer w-full sm:w-auto text-sm sm:text-base"
         >
-          Lihat Portofolio
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </button>
+          <svg class="w-4 h-4 fill-emerald-600" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.96.541 1.961.828 3.003.828 3.18 0 5.767-2.587 5.768-5.767 0-3.18-2.587-5.768-5.768-5.768zm3.364 8.163c-.144.405-.837.774-1.17.824-.312.045-.634.074-1.849-.427-1.442-.596-2.368-2.072-2.439-2.167-.072-.095-.579-.771-.579-1.47 0-.699.366-1.042.497-1.185.131-.143.286-.179.382-.179.095 0 .191.002.274.006.088.004.205-.034.32.245.119.29.407.994.443 1.066.036.072.06.155.012.25-.048.096-.072.155-.144.239-.071.083-.151.186-.216.25-.072.072-.147.15-.063.294.084.144.373.615.8 1 .552.496 1.016.65 1.16.721.144.072.227.06.31-.036.084-.096.358-.417.454-.56.096-.144.191-.12.323-.072.131.048.835.394.979.465.144.072.239.108.274.168.036.06.036.347-.108.752zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.981-1.306C8.441 21.536 10.16 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+          </svg>
+          Konsultasi WhatsApp
+        </a>
       </div>
     </div>
 
@@ -227,11 +220,11 @@
         <div class="flex justify-between items-center mb-3.5 md:mb-4 border-b border-border-hairline/60 pb-2.5 md:pb-3">
           <div class="flex items-center gap-3">
             <div class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-2xs">
-              <span class="material-symbols-outlined text-white text-[16px] md:text-[18px]" style="font-variation-settings: 'FILL' 1;">store</span>
+              <span class="material-symbols-outlined text-white text-[16px] md:text-[18px]" style="font-variation-settings: 'FILL' 1;">terminal</span>
             </div>
             <div class="text-left">
-              <p class="font-label-bold text-xs md:text-sm text-on-surface">POS Coffee Shop</p>
-              <p class="font-label-sm text-[10px] md:text-xs text-text-muted">Ready-Made Product</p>
+              <p class="font-label-bold text-xs md:text-sm text-on-surface">Svralabs Core Engine</p>
+              <p class="font-label-sm text-[10px] md:text-xs text-text-muted">Kasir POS · EMR Faskes · Stok Gudang · Custom</p>
             </div>
           </div>
           <div class="flex gap-1.5 text-text-muted">

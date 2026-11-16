@@ -20,6 +20,8 @@
   <meta property="og:title" content="{project.client} — {project.title} | Svralabs" />
   <meta property="og:description" content="{project.description}" />
   <meta property="og:image" content="{project.heroImage}" />
+  <meta property="og:url" content="https://www.svralabs.com/project/{project.slug}" />
+  <link rel="canonical" href="https://www.svralabs.com/project/{project.slug}" />
 </svelte:head>
 
 <div class="bg-surface text-on-surface antialiased min-h-screen font-body-md selection:bg-primary-container selection:text-on-primary-container">
@@ -290,7 +292,7 @@
             {#each project.businessImpacts as impact, i}
               <div>
                 <p class="font-display-xl text-3xl md:text-4xl font-bold text-emerald-400 mb-2 tracking-tight">{impact.metric}</p>
-                <h4 class="font-label-bold text-white text-base mb-2">{impact.title}</h4>
+                <h3 class="font-label-bold text-white text-base mb-2">{impact.title}</h3>
                 <p class="font-body-md text-xs text-slate-300 leading-relaxed">{impact.desc}</p>
               </div>
             {/each}
@@ -355,7 +357,7 @@
               />
               <div class="flex-1">
                 <span class="text-[10px] uppercase font-bold text-primary tracking-wider">{rel.categoryLabel}</span>
-                <h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-1 mt-0.5">{rel.client}</h4>
+                <h3 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-1 mt-0.5">{rel.client}</h3>
                 <p class="text-xs text-text-muted line-clamp-2 mt-1">{rel.tagline}</p>
               </div>
               <span class="material-symbols-outlined text-text-muted group-hover:text-primary group-hover:translate-x-1 transition-all text-[20px] hidden sm:block">

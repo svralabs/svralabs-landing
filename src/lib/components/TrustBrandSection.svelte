@@ -102,8 +102,11 @@
           Sistem Produksi Aktif &amp; Klien Terverifikasi
         </span>
       </div>
+      <h2 class="font-headline-md text-base sm:text-lg font-bold text-on-surface mb-1">
+        Dipercaya oleh Berbagai Sektor Bisnis Nyata
+      </h2>
       <p class="font-body-md text-xs sm:text-sm text-text-muted max-w-xl mx-auto">
-        Dipercaya oleh berbagai bidang usaha di Pekalongan &amp; sekitarnya — dari faskes layanan publik hingga ritel dan kuliner.
+        Dari faskes layanan publik hingga ritel grosir, kuliner, dan jasa operasional di Pekalongan &amp; sekitarnya.
       </p>
     </div>
 
@@ -126,9 +129,9 @@
               </span>
             </div>
 
-            <h4 class="font-headline-md text-xs sm:text-sm font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+            <h3 class="font-headline-md text-xs sm:text-sm font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
               {brand.name}
-            </h4>
+            </h3>
             <p class="font-body-md text-[11px] text-text-muted mt-0.5 line-clamp-1">
               {brand.sector}
             </p>

@@ -97,6 +97,9 @@
   <meta name="description" content="Katalog project sistem digital dan live demo interaktif Svralabs. Sistem kasir POS, rekam medis EMR, manajemen laundry, dan otomasi operasional bisnis." />
   <meta property="og:title" content="Katalog Project & Live Demo Sistem | Svralabs" />
   <meta property="og:description" content="Setiap demo yang kami buat lahir dari proyek nyata yang teruji di lapangan. Uji coba live demo atau telusuri detail implementasi sistemnya." />
+  <meta property="og:url" content="https://www.svralabs.com/portfolio" />
+  <meta property="og:image" content="https://www.svralabs.com/logo.png" />
+  <link rel="canonical" href="https://www.svralabs.com/portfolio" />
 </svelte:head>
 
 <div class="bg-surface text-on-surface antialiased min-h-screen font-body-md selection:bg-primary-container selection:text-on-primary-container flex flex-col justify-between">
@@ -219,9 +222,9 @@
                   {brand.tag}
                 </span>
               </div>
-              <h4 class="font-headline-md text-xs font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+              <h3 class="font-headline-md text-xs font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
                 {brand.name}
-              </h4>
+              </h3>
               <p class="font-body-md text-[10px] text-text-muted mt-0.5 line-clamp-1">
                 {brand.sector}
               </p>

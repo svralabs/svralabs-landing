@@ -15,19 +15,19 @@
 
 <svelte:head>
   <title>Svralabs — Software House &amp; Sistem Bisnis Digital | Pekalongan</title>
-  <meta name="description" content="Svralabs adalah software house di Pekalongan. Sistem kasir POS, rekam medis EMR, laundry management, dan custom software untuk usaha ritel, F&B, hingga klinik." />
+  <meta name="description" content="Svralabs adalah software house di Pekalongan spesialis sistem operasional bisnis: Sistem Kasir POS, Rekam Medis EMR Faskes, Manajemen Stok Gudang, dan Custom Software Development." />
   <meta property="og:title" content="Svralabs — Software House &amp; Sistem Bisnis Digital" />
-  <meta property="og:description" content="Digitalisasi usaha gak perlu mahal dan ribet. Sistem siap pakai dan custom development untuk bisnis lokal hingga enterprise." />
+  <meta property="og:description" content="Digitalisasi usaha gak perlu mahal dan ribet. Sistem siap pakai dan custom development teruji untuk bisnis lokal hingga enterprise." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://svralabs.id/" />
-  <meta property="og:image" content="https://svralabs.id/logo.png" />
-  <link rel="canonical" href="https://svralabs.id/" />
+  <meta property="og:url" content="https://www.svralabs.com/" />
+  <meta property="og:image" content="https://www.svralabs.com/logo.png" />
+  <link rel="canonical" href="https://www.svralabs.com/" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Svralabs",
-    "description": "Software house di Pekalongan yang menyediakan sistem kasir POS, rekam medis EMR, laundry management, dan custom software.",
-    "url": "https://svralabs.id",
+    "description": "Software house di Pekalongan spesialis sistem kasir POS, rekam medis EMR faskes, manajemen stok gudang, dan custom software.",
+    "url": "https://www.svralabs.com",
     "telephone": "+6285158418944",
     "email": "svralabs@gmail.com",
     "address": {

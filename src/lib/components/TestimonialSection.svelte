@@ -200,7 +200,7 @@
                   <span class="material-symbols-outlined text-[22px]">local_hospital</span>
                 </div>
                 <div>
-                  <h4 class="font-headline-md text-sm sm:text-base font-bold text-on-surface">Puskesmas Wonokerto</h4>
+                  <div class="font-headline-md text-sm sm:text-base font-bold text-on-surface">Puskesmas Wonokerto</div>
                   <p class="font-body-md text-xs text-text-muted">Kabupaten Pekalongan · Faskes Tingkat 1</p>
                 </div>
               </div>
@@ -318,7 +318,7 @@
                   <span class="material-symbols-outlined text-[22px]">inventory_2</span>
                 </div>
                 <div>
-                  <h4 class="font-headline-md text-sm sm:text-base font-bold text-on-surface">Toko Konveksi Wonopringgo</h4>
+                  <div class="font-headline-md text-sm sm:text-base font-bold text-on-surface">Toko Konveksi Wonopringgo</div>
                   <p class="font-body-md text-xs text-text-muted">Pusat Grosir Tekstil &amp; Celana Chino</p>
                 </div>
               </div>
