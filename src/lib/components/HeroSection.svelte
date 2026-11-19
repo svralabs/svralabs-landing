@@ -2,7 +2,6 @@
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
   import { sectionLayeredParallax, mouseParallax, tilt3D, magneticButton, idleFloat, isReducedMotion } from '$lib/actions/gsapParallax';
-  import { bokehReveal, blurReveal } from '$lib/actions/motion';
 
   function scrollTo(id: string) {
     const el = document.getElementById(id);
@@ -16,119 +15,109 @@
   onMount(() => {
     if (typeof window === 'undefined' || isReducedMotion()) return;
 
-    // Orchestrated Entrance Master Timeline for Hero elements
+    // Fast, buttery-smooth entrance timeline that settles in < 0.6s
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
 
-      // 1. Top Pill Tag Badge: 3D Spring Drop
-      tl.fromTo(
+      // 1. Top Pill Tag Badge: gentle rise
+      tl.from(
         '.hero-badge-tag',
-        { opacity: 0, y: -24, rotateX: 35, scale: 0.88 },
-        { opacity: 1, y: 0, rotateX: 0, scale: 1, duration: 0.8, ease: 'back.out(1.6)' },
-        0.05
+        { opacity: 0, y: -12, duration: 0.45 },
+        0.02
       );
 
-      // 2. Accent Text Soft Emerald Bloom Pulse ("Gak Perlu")
+      // 2. Accent Text Soft Emerald Bloom Pulse
       tl.fromTo(
         '.hero-accent-text',
         { filter: 'drop-shadow(0 0 0px rgba(0,105,72,0))' },
         {
-          filter: 'drop-shadow(0 0 16px rgba(0,105,72,0.45))',
-          duration: 0.75,
+          filter: 'drop-shadow(0 0 14px rgba(0,105,72,0.4))',
+          duration: 0.6,
           ease: 'power2.out',
           yoyo: true,
           repeat: 1,
-          repeatDelay: 0.15,
+          repeatDelay: 0.1,
         },
-        0.45
+        0.15
       );
 
-      // 3. CTA Buttons staggered spring entrance
-      tl.fromTo(
+      // 3. CTA Buttons: immediate fast reveal
+      tl.from(
         '.hero-cta-btn',
-        { opacity: 0, y: 28, scale: 0.92 },
-        { opacity: 1, y: 0, scale: 1, duration: 0.85, stagger: 0.12, ease: 'back.out(1.4)' },
-        0.65
+        { opacity: 0, y: 16, duration: 0.45, stagger: 0.06 },
+        0.08
       );
 
-      // 4. Main Dashboard Card Floating Rise with 3D perspective tilt
-      tl.fromTo(
+      // 4. Main Dashboard Card: responsive smooth lift
+      tl.from(
         '.hero-card-container',
-        { opacity: 0, y: 65, scale: 0.92, rotateX: 10 },
-        { opacity: 1, y: 0, scale: 1, rotateX: 0, duration: 1.15, ease: 'power3.out' },
-        0.75
+        { opacity: 0, y: 28, duration: 0.55 },
+        0.12
       );
 
       // 5. Metric summary cards inside dashboard
-      tl.fromTo(
+      tl.from(
         '.hero-metric-card',
-        { opacity: 0, y: 20, scale: 0.97 },
-        { opacity: 1, y: 0, scale: 1, duration: 0.65, stagger: 0.1, ease: 'power2.out' },
-        1.05
+        { opacity: 0, y: 12, duration: 0.4, stagger: 0.05 },
+        0.2
       );
 
       // 6. Revenue Chart Bars Staggered Growth from bottom
       tl.fromTo(
         '.hero-chart-bar',
         { scaleY: 0, opacity: 0 },
-        { scaleY: 1, opacity: 1, duration: 0.75, stagger: 0.05, ease: 'back.out(1.5)' },
-        1.1
+        { scaleY: 1, opacity: 1, duration: 0.55, stagger: 0.03, ease: 'back.out(1.4)' },
+        0.25
       );
 
       // 7. "Hari Ini" Tooltip Badge Pop
-      tl.fromTo(
+      tl.from(
         '.hero-chart-tooltip',
-        { opacity: 0, scale: 0.5, y: 8 },
-        { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: 'back.out(2)' },
-        1.45
+        { opacity: 0, scale: 0.6, y: 4, duration: 0.35, ease: 'back.out(1.8)' },
+        0.35
       );
 
       // 8. Left Floating Badge ("Pembayaran Berhasil" QRIS) Entrance
-      tl.fromTo(
+      tl.from(
         '.hero-badge-entrance-qris',
-        { opacity: 0, x: -60, y: 35, scale: 0.7, rotate: -10 },
-        { opacity: 1, x: 0, y: 0, scale: 1, rotate: 0, duration: 0.95, ease: 'back.out(1.6)' },
-        1.15
+        { opacity: 0, x: -30, y: 15, duration: 0.55, ease: 'back.out(1.4)' },
+        0.28
       );
 
       // 9. QRIS Checkmark Icon Pop
-      tl.fromTo(
+      tl.from(
         '.hero-qris-icon',
-        { scale: 0, rotate: -50 },
-        { scale: 1, rotate: 0, duration: 0.55, ease: 'back.out(2.2)' },
-        1.45
+        { scale: 0, duration: 0.35, ease: 'back.out(2)' },
+        0.38
       );
 
       // 10. Right Floating Badge ("Data Sinkronisasi") Entrance
-      tl.fromTo(
+      tl.from(
         '.hero-badge-entrance-sync',
-        { opacity: 0, x: 60, y: 35, scale: 0.7, rotate: 10 },
-        { opacity: 1, x: 0, y: 0, scale: 1, rotate: 0, duration: 0.95, ease: 'back.out(1.6)' },
-        1.75
+        { opacity: 0, x: 30, y: 15, duration: 0.55, ease: 'back.out(1.4)' },
+        0.32
       );
 
       // 11. Sync Bolt Icon Flash/Pop
-      tl.fromTo(
+      tl.from(
         '.hero-sync-icon',
-        { scale: 0, rotate: 35 },
-        { scale: 1, rotate: 0, duration: 0.5, ease: 'back.out(2)' },
-        2.05
+        { scale: 0, duration: 0.35, ease: 'back.out(2)' },
+        0.42
       );
 
       // 12. Sync Progress Bar Fill-in
       tl.fromTo(
         '.hero-sync-progress-bar',
         { width: '0%' },
-        { width: '85%', duration: 1.1, ease: 'power2.out' },
-        2.15
+        { width: '85%', duration: 0.7, ease: 'power2.out' },
+        0.45
       );
 
       // 13. Glow Orbs Breathing expansion
-      tl.fromTo(
+      tl.from(
         '.hero-glow-orb',
-        { opacity: 0, scale: 0.6 },
-        { opacity: 1, scale: 1, duration: 1.5, ease: 'power2.out' },
-        0.2
+        { opacity: 0, scale: 0.8, duration: 0.8 },
+        0.1
       );
     }, heroRoot);
 
@@ -167,13 +156,13 @@
         <span class="font-label-sm text-label-sm uppercase tracking-widest text-text-muted">Software House &amp; Sistem Bisnis Teruji</span>
       </div>
 
-      <!-- Headline: Luxury Bokeh Optical Focus & Tracking Reveal -->
-      <h1 use:bokehReveal={{ delay: 0.08, staggerDelay: 0.065, duration: 1.15 }} class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface max-w-4xl mb-3 md:mb-4 tracking-tight">
+      <!-- Headline: Instant zero-delay semantic render for optimal LCP -->
+      <h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface max-w-4xl mb-3 md:mb-4 tracking-tight">
         Digitalisasi Usaha, <span class="italic font-light text-primary hero-accent-text inline-block">Gak Perlu</span> Mahal dan Ribet
       </h1>
 
-      <!-- Subtitle: Fluid Optical Bokeh Cascade -->
-      <p use:bokehReveal={{ delay: 0.35, staggerDelay: 0.022, duration: 0.9 }} class="font-body-lg text-body-lg text-text-muted max-w-2xl mb-5 md:mb-6 leading-relaxed">
+      <!-- Subtitle -->
+      <p class="font-body-lg text-body-lg text-text-muted max-w-2xl mb-5 md:mb-6 leading-relaxed">
         Dari sistem kasir POS, rekam medis EMR faskes, manajemen stok multi-gudang, hingga custom software. Svralabs membangun sistem operasional yang langsung jalan — praktis, teruji, dan tanpa langganan mahal.
       </p>
 

@@ -211,8 +211,7 @@ export function tilt3D(node: HTMLElement, options: Tilt3DOptions = {}) {
     glareEl.className = 'tilt-glare-overlay pointer-events-none absolute inset-0 rounded-[inherit] overflow-hidden opacity-0 transition-opacity duration-300';
     glareEl.style.background = 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 80%)';
     glareEl.style.zIndex = '5';
-    const currentPos = window.getComputedStyle(node).position;
-    if (currentPos === 'static') {
+    if (!node.style.position || node.style.position === 'static') {
       node.style.position = 'relative';
     }
     node.appendChild(glareEl);
@@ -447,7 +446,7 @@ export function sectionLayeredParallax(node: HTMLElement, options: SectionLayere
   const travelFg = fgMult * 140 * mobileDamp;
   const scrub = options.scrub ?? true;
 
-  const isTopSection = node.id === 'hero' || node.offsetTop < 100;
+  const isTopSection = node.id === 'hero';
   const startPos = isTopSection ? 'top top' : 'top bottom';
   const endPos = 'bottom top';
 

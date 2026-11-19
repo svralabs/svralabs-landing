@@ -53,7 +53,7 @@
             onclick={(e) => navigateOrScroll(e, 'hero')}
             aria-label="svralabs"
         >
-            <img src="/logo.webp" alt="svralabs" class="h-7 lg:h-8 w-auto object-contain" />
+            <img src="/logo.webp" alt="svralabs" width="144" height="32" fetchpriority="high" class="h-7 lg:h-8 w-auto object-contain" />
         </a>
 
         <ul class="flex items-center gap-8">
@@ -135,7 +135,7 @@
             onclick={(e) => navigateOrScroll(e, 'hero')}
             aria-label="svralabs"
         >
-            <img src="/logo.webp" alt="svralabs" class="h-6.5 w-auto object-contain" />
+            <img src="/logo.webp" alt="svralabs" width="117" height="26" fetchpriority="high" class="h-6.5 w-auto object-contain" />
         </a>
 
         <button 

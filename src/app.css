@@ -258,6 +258,23 @@
   background: radial-gradient(circle at center, rgba(104, 219, 169, 0.16) 0%, rgba(104, 219, 169, 0.08) 35%, rgba(104, 219, 169, 0.02) 55%, transparent 70%);
 }
 
+/* Material Symbols baseline font rendering to prevent raw ligature text flash on initial load */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
 
 
 

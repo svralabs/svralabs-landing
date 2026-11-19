@@ -31,7 +31,9 @@
 
     if (isReducedMotion()) return;
 
-    const ctx = gsap.context(() => {
+    let ctx: gsap.Context | null = null;
+    const rafId = requestAnimationFrame(() => {
+      ctx = gsap.context(() => {
       // Stacking Cards Scroll Scrubbing Timeline with GSAP Pinning & Smooth Fluid Scrub (Zero Snap)
       mainTimeline = gsap.timeline({
         scrollTrigger: {
@@ -134,10 +136,12 @@
 
         // Explicitly fix timeline total duration to exactly 2.0s so progress 0..1 matches 0..2.0s
         .set({}, {}, 2.0);
-    }, sectionRoot);
+      }, sectionRoot);
+    });
 
     return () => {
-      ctx.revert();
+      cancelAnimationFrame(rafId);
+      if (ctx) ctx.revert();
     };
   });
 </script>
