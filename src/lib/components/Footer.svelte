@@ -182,7 +182,7 @@
         </a>
 
         <p class="font-body-md text-sm text-text-muted leading-relaxed">
-          Software house untuk bisnis yang mau tumbuh. Sistem kasir POS, rekam medis EMR, laundry, dan custom software di Pekalongan.
+          Partner digitalisasi untuk bisnis yang mau tumbuh. Sistem kasir, rekam medis klinik, laundry, dan sistem kustom di Pekalongan.
         </p>
 
         <div>

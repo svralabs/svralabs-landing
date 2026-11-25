@@ -115,7 +115,7 @@
         <!-- Kicker Badge with Spring Drop -->
         <div class="services-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
           <span class="services-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">hub</span>
-          <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">CORE SOLUTIONS</span>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">SOLUSI UTAMA</span>
         </div>
 
         <!-- Masked Kinetic Word Reveal Headline -->
@@ -137,7 +137,7 @@
           <span class="inline-block overflow-hidden align-top"><span class="services-word inline-block italic text-primary font-light services-accent-text">bisnismu.</span></span>
         </h2>
         <p class="services-desc font-body-md text-body-md text-text-muted leading-relaxed">
-          Mulai dari template instan yang siap pakai hari ini hingga sistem custom skala besar.
+          Mulai dari sistem siap pakai yang langsung jalan hari ini hingga pembuatan khusus sesuai alur usahamu.
         </p>
       </div>
 
@@ -171,7 +171,7 @@
           </h3>
 
           <p class="font-body-md text-body-md text-text-muted mb-8 leading-relaxed">
-            Cepat dan hemat. Tersedia live demo untuk Laundry Management, POS Kopi Seruni, dan Purchasing Warmindo Garwo. Langsung jalan tanpa nunggu dari nol.
+            Cepat dan hemat. Tersedia live demo untuk sistem Laundry, Kasir Kopi Seruni, dan Belanja Bahan Warmindo. Langsung jalan tanpa nunggu dari nol.
           </p>
         </div>
 
@@ -188,7 +188,7 @@
         </div>
       </div>
 
-      <!-- Service 2: Custom Development -->
+      <!-- Service 2: Sistem Kustom -->
       <div
         use:tilt3D={{ maxTilt: 8, perspective: 1000, scale: 1.025, glare: true }}
         class="service-card group relative bg-[#F8FAFC] rounded-[32px] p-8 border border-border-hairline flex flex-col justify-between h-full preserve-3d shadow-sm hover:shadow-[0_20px_45px_rgba(0,105,72,0.1)] transition-[box-shadow,border-color] duration-300 will-change-transform"
@@ -199,11 +199,11 @@
           </div>
 
           <h3 class="font-headline-md text-[24px] leading-tight font-semibold text-on-surface mb-4 group-hover:text-primary transition-colors">
-            Custom Development
+            Sistem Kustom
           </h3>
 
           <p class="font-body-md text-body-md text-text-muted mb-8 leading-relaxed">
-            Bisnis punya alur kerja unik? Kami bangun sistem yang dijahit sesuai kebutuhan — dari ritel, klinik, hingga manufaktur.
+            Punya alur kerja unik yang gak cocok dengan aplikasi pasaran? Kami bangun sistem yang pas dengan cara kerja timmu — dari ritel, klinik, hingga pabrik.
           </p>
         </div>
 
@@ -219,7 +219,7 @@
         </div>
       </div>
 
-      <!-- Service 3: Integrasi Enterprise -->
+      <!-- Service 3: Koneksi Cabang & Instansi -->
       <div
         use:tilt3D={{ maxTilt: 8, perspective: 1000, scale: 1.025, glare: true }}
         class="service-card group relative bg-[#F8FAFC] rounded-[32px] p-8 border border-border-hairline flex flex-col justify-between h-full preserve-3d shadow-sm hover:shadow-[0_20px_45px_rgba(0,105,72,0.1)] transition-[box-shadow,border-color] duration-300 will-change-transform"
@@ -230,11 +230,11 @@
           </div>
 
           <h3 class="font-headline-md text-[24px] leading-tight font-semibold text-on-surface mb-4 group-hover:text-primary transition-colors">
-            Integrasi Enterprise
+            Koneksi Cabang &amp; Instansi
           </h3>
 
           <p class="font-body-md text-body-md text-text-muted mb-8 leading-relaxed">
-            Skalakan sistem dengan mudah. Kami membantu menghubungkan operasional cabang dengan ERP dan analitik terpusat.
+            Satukan operasional banyak cabang, kontrol gudang, hingga laporan keuangan dalam satu dashboard terpusat tanpa rekap ulang manual.
           </p>
         </div>
 

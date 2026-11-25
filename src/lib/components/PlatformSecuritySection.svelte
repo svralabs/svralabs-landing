@@ -166,7 +166,7 @@
         <span class="inline-block overflow-hidden align-top"><span class="security-word inline-block italic text-primary font-light security-accent-text">data.</span></span>
       </h2>
       <p class="security-desc font-body-lg text-body-lg text-text-muted max-w-2xl mx-auto leading-relaxed">
-        Keamanan data berlapis dengan analitik real-time yang akurat untuk setiap keputusan bisnismu.
+        Pembagian hak akses staf yang aman dipadukan dengan pantauan laporan omzet seketika untuk keputusan bisnis yang tepat.
       </p>
     </div>
 
@@ -182,13 +182,13 @@
         >
           <div class="mb-8">
             <span class="inline-block px-3.5 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-sm text-label-sm uppercase tracking-wider mb-5">
-              DATA SECURITY
+              KEAMANAN DATA
             </span>
             <h3 class="font-headline-md text-headline-md mb-3 text-on-surface">
               Transaksi &amp; Akses Aman
             </h3>
             <p class="font-body-md text-body-md text-text-muted leading-relaxed">
-              Hak akses kasir, manajer, dan owner terpisah dengan enkripsi data kelas enterprise, mencegah manipulasi data transaksi dan kebocoran kas.
+              Hak akses kasir, manajer, dan owner terpisah dengan perlindungan data berlapis, mencegah manipulasi nota dan kebocoran kas.
             </p>
           </div>
 
@@ -252,7 +252,7 @@
         >
         <div class="mb-8">
           <span class="inline-block px-3.5 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-sm text-label-sm uppercase tracking-wider mb-5">
-            REAL-TIME INSIGHTS
+            LAPORAN REAL-TIME
           </span>
           <h3 class="font-headline-md text-headline-md mb-3 text-on-surface">
             Analitik Stok &amp; Penjualan

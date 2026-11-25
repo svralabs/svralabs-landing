@@ -198,7 +198,7 @@
 
       <!-- Subtitle -->
       <p class="font-body-lg text-body-lg text-text-muted max-w-2xl mb-5 md:mb-6 leading-relaxed">
-        Dari sistem kasir POS, rekam medis EMR faskes, manajemen stok multi-gudang, hingga custom software. Svralabs membangun sistem operasional yang langsung jalan — praktis, teruji, dan tanpa langganan mahal.
+        Dari sistem kasir, rekam medis klinik, kontrol stok gudang, hingga sistem kustom sesuai alur kerja. Svralabs membangun sistem operasional yang langsung jalan — praktis, teruji, dan tersedia opsi sekali bayar milik selamanya.
       </p>
 
       <!-- CTAs with Magnetic Hover -->

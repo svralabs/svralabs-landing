@@ -372,7 +372,7 @@
             <div class="bg-surface-faint rounded-xl p-2 border border-border-hairline flex items-center justify-between text-[11px] text-text-muted">
               <span class="flex items-center gap-1">
                 <span class="material-symbols-outlined text-[14px] text-primary">notifications_active</span>
-                WhatsApp Reminder
+                Pengingat WhatsApp
               </span>
               <span class="text-success font-semibold">Aktif (H-1)</span>
             </div>
@@ -421,7 +421,7 @@
             <div class="bg-surface-container/60 border border-border-hairline rounded-xl px-2.5 py-1 mb-2.5 flex items-center gap-2">
               <span class="material-symbols-outlined text-text-muted text-[15px] shrink-0">info</span>
               <p class="font-body-md text-[10px] sm:text-[11px] text-text-muted">
-                Dapat dikustomisasi sesuai alur reservasi klinik atau bisnis Anda
+                Dapat disesuaikan mengikuti alur reservasi klinik atau bisnismu
               </p>
             </div>
           </div>
@@ -455,26 +455,26 @@
             </div>
 
             <h3 class="font-headline-md text-sm sm:text-lg md:text-xl font-bold text-on-surface mb-1.5 leading-snug">
-              Pantau antrian faskes &amp; pesanan tanpa nanya bolak-balik
+              Pantau antrean faskes &amp; pesanan tanpa nanya bolak-balik
             </h3>
 
             <p class="font-body-md text-xs sm:text-xs md:text-sm text-text-muted mb-2.5 leading-relaxed">
-              Semua status pekerjaan tampil di layar transparan. Staf laundry tahu mana yang harus disetrika, dokter faskes tahu antrian berikutnya, manajemen tahu belanja harian.
+              Semua status pekerjaan tampil di layar transparan. Staf laundry tahu mana yang harus disetrika, dokter faskes tahu antrean berikutnya, manajemen tahu belanja harian.
             </p>
 
             <!-- Compact Key Feature Bullets -->
             <div class="space-y-1 mb-2.5 text-[11px] sm:text-xs text-on-surface">
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-primary text-[14px] shrink-0">check_circle</span>
-                <span>Tracking QR nota cucian pelanggan secara mandiri via web</span>
+                <span>Lacak QR nota cucian pelanggan secara mandiri lewat web</span>
               </div>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-primary text-[14px] shrink-0">check_circle</span>
-                <span>Otomasi scan OCR nota belanja dapur Warmindo berbasis AI</span>
+                <span>Catat nota belanja dapur Warmindo otomatis cukup dari foto (AI)</span>
               </div>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-primary text-[14px] shrink-0">check_circle</span>
-                <span>Sistem antrian pasien live poli klinik &amp; puskesmas</span>
+                <span>Sistem antrean pasien langsung di layar poli klinik &amp; puskesmas</span>
               </div>
             </div>
 
@@ -518,7 +518,7 @@
             <div class="flex items-center justify-between border-b border-border-hairline/70 pb-2">
               <div class="flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span class="font-label-bold text-xs text-on-surface">SvraFlow — Monitoring Antrian &amp; Cucian</span>
+                <span class="font-label-bold text-xs text-on-surface">SvraFlow — Pantau Antrean &amp; Cucian</span>
               </div>
               <span class="text-[10px] font-mono text-text-muted bg-surface-container px-2 py-0.5 rounded">24 Aktif</span>
             </div>
@@ -549,7 +549,7 @@
                 <span class="font-mono font-semibold text-on-surface text-[11px]">#LND-9021 • Bpk. Hendra W.</span>
                 <p class="text-[10px] text-text-muted">Cuci Kering Kilat • 7.5 Kg</p>
               </div>
-              <span class="text-[9px] bg-amber-100 text-amber-800 font-label-bold px-1.5 py-0.5 rounded-full">SLA 45 mnt</span>
+              <span class="text-[9px] bg-amber-100 text-amber-800 font-label-bold px-1.5 py-0.5 rounded-full">Estimasi 45 mnt</span>
             </div>
 
             <!-- Floating Real Project Badge -->
@@ -566,7 +566,7 @@
                   <span class="material-symbols-outlined text-success text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
                   <span class="font-label-bold text-[10px] text-on-surface">Puskesmas Wonokerto</span>
                 </div>
-                <p class="text-[9px] text-text-muted">Implementasi sistem antrian</p>
+                <p class="text-[9px] text-text-muted">Implementasi sistem antrean</p>
               </div>
             </div>
           </div>

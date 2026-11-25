@@ -9,35 +9,40 @@
   const clientBrands = [
     {
       name: 'Puskesmas Wonokerto',
-      sector: 'Kesehatan & Rekam Medis EMR',
+      sector: 'Rekam Medis Digital & Antrean Poli',
+      impact: 'Cari berkas pasien < 2 menit',
       slug: 'puskesmas-wonokerto',
       monogram: 'PW',
       tag: 'Instansi Faskes',
     },
     {
       name: 'Konveksi Wonopringgo',
-      sector: 'Grosir Tekstil & Multi-Gudang',
+      sector: 'Kasir Grosir & Stok Multi-Gudang',
+      impact: '1.400+ yard kain terlacak akurat',
       slug: 'pos-wonopringgo',
       monogram: 'KW',
-      tag: 'Garmen & Wholesale',
+      tag: 'Grosir & Produksi',
     },
     {
       name: 'Toko Kopi Seruni',
-      sector: 'POS Kasir F&B & Resep HPP',
+      sector: 'Kasir Cepat & Hitung Modal Resep',
+      impact: 'Rekap shift kasir langsung cocok',
       slug: 'kopi-seruni',
       monogram: 'KS',
       tag: 'Cafe & Kuliner',
     },
     {
       name: 'Warmindo Garwo',
-      sector: 'Procurement AI OCR Scanner',
+      sector: 'Catat Nota Belanja dari Foto AI',
+      impact: 'Rekap belanja tanpa ketik ulang',
       slug: 'purchasing-garwo',
       monogram: 'WG',
-      tag: 'Procurement AI',
+      tag: 'Belanja Stok AI',
     },
     {
       name: 'SVRA Laundry Solutions',
-      sector: 'Tracking QR & WhatsApp Bot',
+      sector: 'Lacak Cucian QR & Info WhatsApp',
+      impact: 'Pelanggan pantau cucian mandiri',
       slug: 'laundry',
       monogram: 'SL',
       tag: 'Jasa & Operasional',
@@ -134,6 +139,9 @@
             </h3>
             <p class="font-body-md text-[11px] text-text-muted mt-0.5 line-clamp-1">
               {brand.sector}
+            </p>
+            <p class="font-body-md text-[10px] text-primary font-medium mt-2 line-clamp-1">
+              {brand.impact}
             </p>
           </div>
 

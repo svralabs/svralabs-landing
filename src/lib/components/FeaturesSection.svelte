@@ -209,14 +209,14 @@
               <span class="material-symbols-outlined text-white text-[22px]" data-icon="inventory_2">inventory_2</span>
             </div>
             <span class="fitur-card-badge inline-flex items-center gap-1 bg-primary/10 text-primary text-[11px] font-semibold px-2.5 py-1 rounded-full border border-primary/20 transition-all duration-300 group-hover:bg-primary group-hover:text-white">
-              Auto Restock
+              Cegah Stok Kosong
             </span>
           </div>
           <h3 class="font-headline-md text-[20px] font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors duration-200">
             Manajemen Stok Otomatis
           </h3>
           <p class="font-body-md text-[14px] text-text-muted leading-relaxed">
-            Lacak pergerakan bahan baku dan barang jadi dengan peringatan restock sebelum kehabisan.
+            Lacak pergerakan bahan baku dan barang jadi dengan peringatan belanja stok sebelum habis.
           </p>
         </div>
 
@@ -241,14 +241,14 @@
               <span class="material-symbols-outlined text-white text-[22px]" data-icon="cloud_sync">cloud_sync</span>
             </div>
             <span class="fitur-card-badge inline-flex items-center gap-1 bg-primary/10 text-primary text-[11px] font-semibold px-2.5 py-1 rounded-full border border-primary/20 transition-all duration-300 group-hover:bg-primary group-hover:text-white">
-              All-in-One Cloud
+              Semua Terhubung
             </span>
           </div>
           <h3 class="font-headline-md text-[20px] font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors duration-200">
             Digitalisasi Alur Bisnis
           </h3>
           <p class="font-body-md text-[14px] text-text-muted leading-relaxed">
-            Integrasikan seluruh alur kerja bisnis ke dalam satu ekosistem cloud modern — dari kasir hingga laporan.
+            Satukan semua alur kerja bisnis dalam satu sistem online terpadu — dari meja kasir langsung beres jadi laporan laba.
           </p>
         </div>
 

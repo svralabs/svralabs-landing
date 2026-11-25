@@ -179,7 +179,7 @@
                   <span class="text-[10px] text-white font-label-bold">Sistem Aktif Berjalan di Poli</span>
                 </div>
                 <span class="text-[10px] font-mono text-white/80 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
-                  SATUSEHAT Ready
+                  Terhubung SATUSEHAT
                 </span>
               </div>
             </div>
@@ -206,34 +206,34 @@
 
             <!-- Title & Pitch -->
             <h3 class="font-headline-md text-lg sm:text-xl font-bold text-on-surface mb-2.5 group-hover:text-primary transition-colors leading-snug">
-              SIMPUS &amp; Rekam Medis Elektronik (EMR) Terintegrasi
+              Sistem Puskesmas &amp; Rekam Medis Digital Terintegrasi
             </h3>
             <p class="font-body-md text-xs sm:text-sm text-text-muted mb-6 leading-relaxed">
-              Menggantikan tumpukan berkas manual dengan sistem antrian layar poli digital, arsip rekam medis tersentral, dan persiapan bridging SATUSEHAT Kemenkes RI.
+              Menggantikan tumpukan berkas manual dengan sistem antrean layar poli digital, arsip rekam medis tersentral, dan persiapan koneksi SATUSEHAT Kemenkes RI.
             </p>
 
             <!-- Key Metric Chips -->
-            <div class="grid grid-cols-3 gap-2.5 p-3.5 bg-surface-container-lowest rounded-2xl border border-border-hairline mb-6">
+            <div class="grid grid-cols-3 gap-2.5 p-3.5 bg-surface-container-lowest rounded-2xl border border-border-hairline mb-5">
               <div class="text-center">
                 <p class="text-base sm:text-lg font-bold text-primary font-mono">100%</p>
-                <p class="text-[10px] text-text-muted uppercase tracking-tight font-label-bold">Paperless EMR</p>
+                <p class="text-[10px] text-text-muted uppercase tracking-tight font-label-bold">Tanpa Kertas</p>
               </div>
               <div class="text-center border-x border-border-hairline/80 px-1">
                 <p class="text-base sm:text-lg font-bold text-on-surface font-mono">&lt; 2 Menit</p>
                 <p class="text-[10px] text-text-muted uppercase tracking-tight font-label-bold">Cari Berkas</p>
               </div>
               <div class="text-center">
-                <p class="text-base sm:text-lg font-bold text-emerald-600 font-mono">Real-Time</p>
-                <p class="text-[10px] text-text-muted uppercase tracking-tight font-label-bold">Antrian Layar</p>
+                <p class="text-base sm:text-lg font-bold text-emerald-600 font-mono">Otomatis</p>
+                <p class="text-[10px] text-text-muted uppercase tracking-tight font-label-bold">Antrean Layar</p>
               </div>
             </div>
 
-            <!-- Tech Stack Tags -->
-            <div class="flex flex-wrap items-center gap-1.5 text-[10px] font-mono text-text-muted">
-              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">SvelteKit</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">TypeScript</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">PostgreSQL</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">TailwindCSS</span>
+            <!-- Field Outcome Summary -->
+            <div class="rounded-2xl bg-emerald-50/70 border border-emerald-200/70 px-4 py-3 text-left">
+              <p class="text-[10px] font-label-bold uppercase tracking-wider text-emerald-800 mb-1">Dampak Implementasi di Lapangan</p>
+              <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+                Petugas poli tak lagi mencari map rekam medis fisik satu per satu, panggilan antrean langsung tampil sinkron di layar ruang tunggu.
+              </p>
             </div>
           </div>
         </div>
@@ -275,7 +275,7 @@
 
               <!-- Sector Badge -->
               <span class="text-[9px] font-label-bold text-blue-400 bg-blue-500/15 border border-blue-400/30 px-2 py-0.5 rounded-full">
-                Garmen &amp; Wholesale
+                Grosir &amp; Produksi
               </span>
             </div>
 
@@ -294,7 +294,7 @@
               <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between z-10">
                 <div class="flex items-center gap-2 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/15">
                   <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
-                  <span class="text-[10px] text-white font-label-bold">Kasir Online &amp; Multi-Gudang</span>
+                  <span class="text-[10px] text-white font-label-bold">Kasir &amp; Multi-Gudang</span>
                 </div>
                 <span class="text-[10px] font-mono text-white/80 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
                   Surat Jalan Otomatis
@@ -324,16 +324,16 @@
 
             <!-- Title & Pitch -->
             <h3 class="font-headline-md text-lg sm:text-xl font-bold text-on-surface mb-2.5 group-hover:text-primary transition-colors leading-snug">
-              POS Grosir &amp; Sistem Manajemen Multi-Gudang Bahan
+              Kasir Grosir &amp; Manajemen Stok Multi-Gudang Bahan
             </h3>
             <p class="font-body-md text-xs sm:text-sm text-text-muted mb-6 leading-relaxed">
-              Pencatatan ribuan yard kain katun, pemotongan stok otomatis saat penjualan partai besar, dan pencetakan nota &amp; surat jalan ekspedisi instan.
+              Pencatatan ribuan yard kain katun, pemotongan stok otomatis saat penjualan partai besar, dan pencetakan nota serta surat jalan ekspedisi instan.
             </p>
 
             <!-- Key Metric Chips -->
-            <div class="grid grid-cols-3 gap-2.5 p-3.5 bg-surface-container-lowest rounded-2xl border border-border-hairline mb-6">
+            <div class="grid grid-cols-3 gap-2.5 p-3.5 bg-surface-container-lowest rounded-2xl border border-border-hairline mb-5">
               <div class="text-center">
-                <p class="text-base sm:text-lg font-bold text-blue-700 font-mono">0 Selisih</p>
+                <p class="text-base sm:text-lg font-bold text-blue-700 font-mono">Tepat Akurat</p>
                 <p class="text-[10px] text-text-muted uppercase tracking-tight font-label-bold">Audit Stok</p>
               </div>
               <div class="text-center border-x border-border-hairline/80 px-1">
@@ -346,12 +346,12 @@
               </div>
             </div>
 
-            <!-- Tech Stack Tags -->
-            <div class="flex flex-wrap items-center gap-1.5 text-[10px] font-mono text-text-muted">
-              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">SvelteKit</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">TypeScript</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">Prisma ORM</span>
-              <span class="px-2.5 py-1 rounded-lg bg-surface border border-border-hairline">TailwindCSS</span>
+            <!-- Field Outcome Summary -->
+            <div class="rounded-2xl bg-blue-50/70 border border-blue-200/70 px-4 py-3 text-left">
+              <p class="text-[10px] font-label-bold uppercase tracking-wider text-blue-800 mb-1">Dampak Implementasi di Lapangan</p>
+              <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+                Stok ribuan yard kain lintas gudang otomatis terpotong setiap kali kasir menerbitkan nota partai besar dan surat jalan.
+              </p>
             </div>
           </div>
         </div>
