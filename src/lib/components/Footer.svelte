@@ -6,6 +6,15 @@
 
   let footerRoot: HTMLElement;
   let headlineEl: HTMLElement;
+  let newsletterEmail = $state('');
+  let newsletterSubmitted = $state(false);
+
+  function handleNewsletterSubmit(e: Event) {
+    e.preventDefault();
+    if (!newsletterEmail.trim()) return;
+    newsletterSubmitted = true;
+    newsletterEmail = '';
+  }
 
   function navigateOrScroll(event: MouseEvent, targetId: string) {
     if (typeof window !== 'undefined' && window.location.pathname === '/') {
@@ -127,18 +136,14 @@
             bind:this={headlineEl}
             class="footer-headline font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-white mb-6 leading-tight tracking-tight"
           >
-            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">Sistem</span></span>
-            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">yang</span></span>
+            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">Siap</span></span>
             <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">bikin</span></span>
             <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">operasional</span></span>
-            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">beres,</span></span>
+            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">usahamu</span></span>
             <br class="hidden md:block" />
-            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">biar</span></span>
-            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">kamu</span></span>
-            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">bisa</span></span>
-            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block italic text-primary-fixed font-light">fokus</span></span>
-            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block italic text-primary-fixed font-light">analisa</span></span>
-            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block italic text-primary-fixed font-light">bisnis.</span></span>
+            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">berjalan</span></span>
+            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block italic text-primary-fixed font-light">rapi</span></span>
+            <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block italic text-primary-fixed font-light">otomatis?</span></span>
           </h2>
 
           <p class="footer-desc font-body-lg text-body-lg text-white/75 mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -182,14 +187,15 @@
 
         <div>
           <h3 class="font-inter text-sm font-semibold text-on-surface mb-3">Dapatkan insight digitalisasi bisnis</h3>
-          <form action="#" class="flex gap-2" onsubmit={(e) => e.preventDefault()}>
+          <form action="#" class="flex gap-2" onsubmit={handleNewsletterSubmit}>
             <label class="sr-only" for="email-address">Alamat Email</label>
             <input
               autocomplete="email"
+              bind:value={newsletterEmail}
               class="min-w-0 flex-auto rounded-full border border-border-hairline bg-[#F3F4F6] px-4 py-2.5 text-on-surface text-sm font-inter focus:ring-2 focus:ring-primary focus:outline-none"
               id="email-address"
               name="email"
-              placeholder="Masukkan email anda"
+              placeholder="Masukkan email kamu"
               required
               type="email"
             />
@@ -201,6 +207,12 @@
               Kirim
             </button>
           </form>
+          {#if newsletterSubmitted}
+            <p class="mt-2.5 text-xs font-label-bold text-primary flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[15px]">check_circle</span>
+              <span>Terima kasih! Insight terbaru akan kami kirimkan ke email kamu.</span>
+            </p>
+          {/if}
         </div>
       </div>
 
@@ -228,6 +240,7 @@
             <li><a class="text-text-muted hover:text-primary transition-colors" href="/project/kopi-seruni">Toko Kopi Seruni (POS F&amp;B)</a></li>
             <li><a class="text-text-muted hover:text-primary transition-colors" href="/project/laundry">SVRA Laundry Solutions</a></li>
             <li><a class="text-text-muted hover:text-primary transition-colors" href="/project/purchasing-garwo">Warmindo Garwo Purchasing</a></li>
+            <li><a class="text-text-muted hover:text-primary transition-colors" href="/portfolio?scope=landing">Website &amp; Landing Page</a></li>
           </ul>
         </div>
 

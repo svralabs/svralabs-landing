@@ -49,19 +49,12 @@
         );
       }
 
-      // 4. Accent Text Soft Emerald Bloom Pulse
+      // 4. Accent Text Smooth Scale Pulse (GPU only)
       entranceTl.fromTo(
         '.security-accent-text',
-        { filter: 'drop-shadow(0 0 0px rgba(0,105,72,0))' },
-        {
-          filter: 'drop-shadow(0 0 18px rgba(0,105,72,0.45))',
-          duration: 0.75,
-          ease: 'power2.out',
-          yoyo: true,
-          repeat: 1,
-          repeatDelay: 0.12,
-        },
-        0.65
+        { scale: 0.96 },
+        { scale: 1, duration: 0.55, ease: 'back.out(1.5)' },
+        0.48
       );
 
       // 5. Description Paragraph
@@ -96,19 +89,37 @@
         0.80
       );
 
-      // 8. Draw-in animation for Revenue Product Bars
+      // 8. Draw-in animation for Revenue Product Bars + Total Revenue Count-up
       entranceTl.fromTo(
         '.product-metric-bar',
         { scaleX: 0 },
         {
           scaleX: 1,
           transformOrigin: 'left center',
-          stagger: 0.14,
-          duration: 0.85,
+          stagger: 0.12,
+          duration: 0.8,
           ease: 'power3.out',
         },
-        0.90
+        0.75
       );
+
+      const secRevObj = { val: 0 };
+      const secRevEl = securityRoot.querySelector('.security-revenue-num');
+      if (secRevEl) {
+        entranceTl.to(
+          secRevObj,
+          {
+            val: 452,
+            duration: 0.9,
+            ease: 'power2.out',
+            onUpdate: () => {
+              const v = Math.round(secRevObj.val);
+              secRevEl.textContent = `Rp ${(v / 10).toFixed(1)} Jt`;
+            }
+          },
+          0.7
+        );
+      }
     }, securityRoot);
 
     return () => ctx.revert();
@@ -118,6 +129,7 @@
 <section
   id="platform-security"
   bind:this={securityRoot}
+  use:sectionLayeredParallax={{ bgSpeed: 0.45, contentSpeed: 0.16, fgSpeed: -0.28 }}
   class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-center items-center pt-28 pb-20 md:pt-36 md:pb-28 bg-surface overflow-hidden perspective-grid"
 >
   <!-- Background Glow Layer (data-depth="bg") -->
@@ -148,10 +160,10 @@
         <span class="inline-block overflow-hidden align-top"><span class="security-word inline-block">di</span></span>
         <span class="inline-block overflow-hidden align-top"><span class="security-word inline-block">tanganmu,</span></span>
         <br class="hidden md:block" />
-        <span class="inline-block overflow-hidden align-top"><span class="security-word inline-block italic text-primary font-light security-accent-text">bukan</span></span>
-        <span class="inline-block overflow-hidden align-top"><span class="security-word inline-block italic text-primary font-light security-accent-text">di</span></span>
-        <span class="inline-block overflow-hidden align-top"><span class="security-word inline-block italic text-primary font-light security-accent-text">tangan</span></span>
-        <span class="inline-block overflow-hidden align-top"><span class="security-word inline-block italic text-primary font-light security-accent-text">karyawan.</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="security-word inline-block italic text-primary font-light security-accent-text">aman</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="security-word inline-block italic text-primary font-light security-accent-text">dari</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="security-word inline-block italic text-primary font-light security-accent-text">kebocoran</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="security-word inline-block italic text-primary font-light security-accent-text">data.</span></span>
       </h2>
       <p class="security-desc font-body-lg text-body-lg text-text-muted max-w-2xl mx-auto leading-relaxed">
         Keamanan data berlapis dengan analitik real-time yang akurat untuk setiap keputusan bisnismu.
@@ -191,7 +203,7 @@
                     <span class="material-symbols-outlined text-[18px]">verified_user</span>
                   </div>
                   <div>
-                    <span class="text-sm font-semibold text-primary block">Owner Access</span>
+                    <span class="text-sm font-semibold text-primary block">Akses Owner</span>
                     <span class="text-[11px] text-text-muted">Akses penuh laporan &amp; keuangan</span>
                   </div>
                 </div>
@@ -205,7 +217,7 @@
                     <span class="material-symbols-outlined text-[18px]">manage_accounts</span>
                   </div>
                   <div>
-                    <span class="text-sm font-semibold text-on-surface block">Manager Access</span>
+                    <span class="text-sm font-semibold text-on-surface block">Akses Manajer</span>
                     <span class="text-[11px] text-text-muted">Kelola stok, harga, &amp; shift kasir</span>
                   </div>
                 </div>
@@ -219,7 +231,7 @@
                     <span class="material-symbols-outlined text-[18px]">point_of_sale</span>
                   </div>
                   <div>
-                    <span class="text-sm font-semibold text-on-surface block">Cashier Access</span>
+                    <span class="text-sm font-semibold text-on-surface block">Akses Kasir</span>
                     <span class="text-[11px] text-text-muted">Hanya input transaksi kasir</span>
                   </div>
                 </div>
@@ -257,8 +269,8 @@
             <!-- Top Stats -->
             <div class="flex items-center justify-between mb-6 pb-3 border-b border-border-hairline">
               <div>
-                <div class="text-xs text-text-muted mb-0.5">Total Revenue</div>
-                <div class="text-2xl font-bold text-on-surface">Rp 45.2M</div>
+                <div class="text-xs text-text-muted mb-0.5">Total Pendapatan</div>
+                <div class="security-revenue-num text-2xl font-bold text-on-surface tabular-nums">Rp 45.2 Jt</div>
               </div>
               <div class="bg-success/10 text-success text-xs font-bold px-2.5 py-1 rounded-full flex items-center border border-success/20">
                 <span class="material-symbols-outlined text-[16px] mr-1">trending_up</span> +12%
@@ -272,7 +284,7 @@
               <div>
                 <div class="flex justify-between text-xs mb-1.5 font-medium">
                   <span class="text-on-surface">Kopi Susu Gula Aren</span>
-                  <span class="text-primary font-bold">450 qty (85%)</span>
+                  <span class="text-primary font-bold">450 terjual (85%)</span>
                 </div>
                 <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
                   <div class="product-metric-bar h-full bg-primary rounded-full origin-left" style="width: 85%; transform-origin: left center;"></div>
@@ -283,7 +295,7 @@
               <div>
                 <div class="flex justify-between text-xs mb-1.5 font-medium">
                   <span class="text-on-surface">Matcha Latte</span>
-                  <span class="text-primary font-bold">320 qty (60%)</span>
+                  <span class="text-primary font-bold">320 terjual (60%)</span>
                 </div>
                 <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
                   <div class="product-metric-bar h-full bg-primary/70 rounded-full origin-left" style="width: 60%; transform-origin: left center;"></div>
@@ -294,7 +306,7 @@
               <div>
                 <div class="flex justify-between text-xs mb-1.5 font-medium">
                   <span class="text-on-surface">Croissant Butter</span>
-                  <span class="text-primary font-bold">180 qty (45%)</span>
+                  <span class="text-primary font-bold">180 terjual (45%)</span>
                 </div>
                 <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
                   <div class="product-metric-bar h-full bg-primary/45 rounded-full origin-left" style="width: 45%; transform-origin: left center;"></div>

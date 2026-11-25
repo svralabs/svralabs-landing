@@ -49,19 +49,12 @@
         );
       }
 
-      // 4. Accent Text Soft Emerald Bloom Pulse
+      // 4. Accent Text Crisp Scale Pulse
       entranceTl.fromTo(
         '.pricing-accent-text',
-        { filter: 'drop-shadow(0 0 0px rgba(0,105,72,0))' },
-        {
-          filter: 'drop-shadow(0 0 18px rgba(0,105,72,0.45))',
-          duration: 0.75,
-          ease: 'power2.out',
-          yoyo: true,
-          repeat: 1,
-          repeatDelay: 0.12,
-        },
-        0.65
+        { scale: 0.96 },
+        { scale: 1, duration: 0.55, ease: 'back.out(1.5)' },
+        0.48
       );
 
       // 5. Description Paragraph
@@ -104,6 +97,7 @@
 <section
   id="harga"
   bind:this={pricingRoot}
+  use:sectionLayeredParallax={{ bgSpeed: 0.45, contentSpeed: 0.16, fgSpeed: -0.28 }}
   class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-center items-center pt-28 pb-20 md:pt-36 md:pb-28 bg-surface overflow-hidden perspective-grid"
 >
   <!-- Background Layer (data-depth="bg") -->
@@ -163,7 +157,7 @@
               <span class="font-headline-md text-headline-md text-on-surface tabular-nums">Rp 499.000</span>
               <span class="font-body-md text-body-md text-text-muted ml-2">/bulan</span>
             </div>
-            <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Aplikasi matang siap pakai langsung hari ini di toko atau usaha Anda.</p>
+            <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Aplikasi matang siap pakai langsung hari ini di toko atau usahamu.</p>
           </div>
 
           <ul class="flex flex-col gap-3.5 mb-8 font-body-md text-sm text-on-surface-variant">
@@ -207,7 +201,7 @@
         <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 pointer-events-none whitespace-nowrap">
           <span class="recommended-badge bg-primary text-on-primary font-label-sm text-[11px] uppercase tracking-wider py-1.5 px-4 rounded-full shadow-lg flex items-center gap-1.5 border border-white/30">
             <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
-            RECOMMENDED · ONE-TIME FEE
+            PALING DIMINATI · SEKALI BAYAR
           </span>
         </div>
 
@@ -228,7 +222,7 @@
                 <span class="font-headline-md text-headline-md text-on-surface tabular-nums">Mulai Rp 3.5jt</span>
                 <span class="font-body-md text-body-md text-text-muted ml-2">/proyek</span>
               </div>
-              <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Sistem dibangun spesifik sesuai alur SOP Anda — 100% hak milik kode.</p>
+              <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Sistem dibangun spesifik sesuai alur kerja usahamu — 100% hak milik kode.</p>
             </div>
 
             <ul class="flex flex-col gap-3.5 mb-8 font-body-md text-sm text-on-surface-variant">

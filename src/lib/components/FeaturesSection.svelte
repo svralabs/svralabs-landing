@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
-  import { tilt3D, magneticButton, isReducedMotion } from '$lib/actions/gsapParallax';
+  import { tilt3D, magneticButton, sectionLayeredParallax, isReducedMotion } from '$lib/actions/gsapParallax';
   import { glareCard } from '$lib/actions/motion';
 
   if (typeof window !== 'undefined') {
@@ -58,16 +58,9 @@
 
       tl.fromTo(
         '.fitur-accent-text',
-        { filter: 'drop-shadow(0 0 0px rgba(0,105,72,0))' },
-        {
-          filter: 'drop-shadow(0 0 18px rgba(0,105,72,0.45))',
-          duration: 0.7,
-          ease: 'power2.out',
-          yoyo: true,
-          repeat: 1,
-          repeatDelay: 0.1,
-        },
-        0.55
+        { scale: 0.96 },
+        { scale: 1, duration: 0.55, ease: 'back.out(1.5)' },
+        0.48
       );
 
       tl.fromTo(
@@ -124,6 +117,7 @@
 <section
   id="fitur"
   bind:this={fiturRoot}
+  use:sectionLayeredParallax={{ bgSpeed: 0.45, contentSpeed: 0.16, fgSpeed: -0.28 }}
   class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-center items-center pt-24 pb-10 md:pt-28 md:pb-14 bg-surface overflow-hidden perspective-grid"
 >
   <!-- Background Atmosphere Layer -->
@@ -158,13 +152,13 @@
         <span class="inline-block overflow-hidden align-top"><span class="fitur-word inline-block">hilang</span></span>
         <br class="hidden md:block" />
         <span class="inline-block overflow-hidden align-top"><span class="fitur-word inline-block">dan</span></span>
-        <span class="inline-block overflow-hidden align-top"><span class="fitur-word inline-block italic text-primary fitur-accent-text">antrian</span></span>
+        <span class="inline-block overflow-hidden align-top"><span class="fitur-word inline-block italic text-primary fitur-accent-text">antrean</span></span>
         <span class="inline-block overflow-hidden align-top"><span class="fitur-word inline-block italic text-primary fitur-accent-text">panjang?</span></span>
       </h2>
 
       <!-- Description Paragraph -->
       <p class="fitur-desc mt-6 text-on-surface-variant font-body-md max-w-2xl mx-auto leading-relaxed">
-        Kami paham sakit kepalanya — stok nggak cocok, laporan kelewatan, antrian numpuk. Svralabs bikin sistem yang beresin itu satu per satu.
+        Kami paham sakit kepalanya — stok nggak cocok, laporan kelewatan, antrean numpuk. Svralabs bikin sistem yang beresin itu satu per satu.
       </p>
     </div>
 
@@ -197,7 +191,7 @@
         <div class="fitur-card-pill mt-6 pt-4 border-t border-slate-100 w-full flex items-center justify-between text-xs text-text-muted group-hover:text-on-surface transition-colors">
           <span class="inline-flex items-center gap-1.5 font-medium">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            Real-time Cloud Sync
+            Sinkronisasi Otomatis
           </span>
           <span class="material-symbols-outlined text-[16px] text-primary opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all duration-200">arrow_forward</span>
         </div>
@@ -279,11 +273,11 @@
               <span class="material-symbols-outlined text-white text-[22px]" data-icon="trending_up">trending_up</span>
             </div>
             <span class="fitur-card-badge inline-flex items-center gap-1 bg-primary/10 text-primary text-[11px] font-semibold px-2.5 py-1 rounded-full border border-primary/20 transition-all duration-300 group-hover:bg-primary group-hover:text-white">
-              Smart Analytics
+              Analisa Laris
             </span>
           </div>
           <h3 class="font-headline-md text-[20px] font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors duration-200">
-            Ekspansi Pasar Lebih Mudah
+            Analisa Produk &amp; Omzet
           </h3>
           <p class="font-body-md text-[14px] text-text-muted leading-relaxed">
             Analisis tren penjualan produk terlaris untuk merancang strategi promosi yang akurat.

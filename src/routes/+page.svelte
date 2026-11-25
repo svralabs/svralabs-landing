@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
   import HeroSection from '$lib/components/HeroSection.svelte';
   import TrustBrandSection from '$lib/components/TrustBrandSection.svelte';
   import SolutionCategorySection from '$lib/components/SolutionCategorySection.svelte';
@@ -11,6 +14,25 @@
   import TestimonialSection from '$lib/components/TestimonialSection.svelte';
   import BlogSection from '$lib/components/BlogSection.svelte';
   import Footer from '$lib/components/Footer.svelte';
+
+  onMount(() => {
+    if (typeof window === 'undefined') return;
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Recalculate all ScrollTrigger positions after pinned #solusi injects spacer height
+    ScrollTrigger.refresh();
+
+    let alive = true;
+    document.fonts?.ready.then(() => {
+      if (alive) {
+        ScrollTrigger.refresh();
+      }
+    });
+
+    return () => {
+      alive = false;
+    };
+  });
 </script>
 
 <svelte:head>

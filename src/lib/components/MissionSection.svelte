@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
-  import { tilt3D, idleFloat, isReducedMotion } from '$lib/actions/gsapParallax';
+  import { tilt3D, idleFloat, sectionLayeredParallax, isReducedMotion } from '$lib/actions/gsapParallax';
   import { glareCard } from '$lib/actions/motion';
 
   if (typeof window !== 'undefined') {
@@ -46,19 +46,12 @@
         );
       }
 
-      // 3. Emphasized Text Soft Emerald Bloom Pulse
+      // 3. Emphasized Text Crisp Scale Pulse
       tl.fromTo(
         '.mission-accent-text',
-        { filter: 'drop-shadow(0 0 0px rgba(0,105,72,0))' },
-        {
-          filter: 'drop-shadow(0 0 20px rgba(0,105,72,0.5))',
-          duration: 0.8,
-          ease: 'power2.out',
-          yoyo: true,
-          repeat: 1,
-          repeatDelay: 0.12,
-        },
-        0.7
+        { scale: 0.96 },
+        { scale: 1, duration: 0.55, ease: 'back.out(1.5)' },
+        0.55
       );
 
       // 4. Feature points cascade with icon micro-spring rotation
@@ -142,6 +135,7 @@
 <section
   id="tentang-kami"
   bind:this={missionRoot}
+  use:sectionLayeredParallax={{ bgSpeed: 0.45, contentSpeed: 0.16, fgSpeed: -0.28 }}
   class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-center items-center pt-24 pb-16 md:pt-28 md:pb-20 bg-surface-container-lowest overflow-hidden perspective-grid"
 >
   <!-- Background Glow Layer (data-depth="bg") -->
@@ -175,15 +169,15 @@
             bind:this={headlineEl}
             class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg text-on-surface leading-tight"
           >
-            <span class="inline-block overflow-hidden"><span class="mission-word inline-block">Efisiensikan</span></span>
-            <span class="inline-block overflow-hidden"><span class="mission-word inline-block">waktumu</span></span>
-            <span class="inline-block overflow-hidden"><span class="mission-word inline-block">dari</span></span>
+            <span class="inline-block overflow-hidden"><span class="mission-word inline-block">Rapikan</span></span>
+            <span class="inline-block overflow-hidden"><span class="mission-word inline-block">urusan</span></span>
             <span class="inline-block overflow-hidden"><span class="mission-word inline-block">operasional,</span></span>
             <span class="inline-block overflow-hidden"><span class="mission-word inline-block">biar</span></span>
+            <span class="inline-block overflow-hidden"><span class="mission-word inline-block">kamu</span></span>
             <span class="inline-block overflow-hidden"><span class="mission-word inline-block">bisa</span></span>
             <span class="inline-block overflow-hidden"><span class="mission-word inline-block">fokus</span></span>
-            <em class="mission-accent-text italic text-primary font-normal relative inline-block transition-all duration-300 hover:text-primary-hover hover:drop-shadow-[0_0_20px_rgba(0,105,72,0.45)] hover:scale-[1.03] cursor-pointer group/em">
-              <span class="inline-block overflow-hidden"><span class="mission-word inline-block">menganalisa</span></span>
+            <em class="mission-accent-text italic text-primary font-normal relative inline-block transition-all duration-300 hover:text-primary-hover hover:scale-[1.03] cursor-pointer group/em">
+              <span class="inline-block overflow-hidden"><span class="mission-word inline-block">kembangkan</span></span>
               <span class="inline-block overflow-hidden"><span class="mission-word inline-block">bisnismu</span></span>.
               <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-primary to-emerald-400 group-hover/em:w-full transition-all duration-300 rounded-full"></span>
             </em>

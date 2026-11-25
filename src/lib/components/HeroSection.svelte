@@ -26,19 +26,17 @@
         0.02
       );
 
-      // 2. Accent Text Soft Emerald Bloom Pulse
+      // 2. Accent Text Subtle Composite Pulse (GPU only, zero filter repaint)
       tl.fromTo(
         '.hero-accent-text',
-        { filter: 'drop-shadow(0 0 0px rgba(0,105,72,0))' },
+        { scale: 0.96, y: 4 },
         {
-          filter: 'drop-shadow(0 0 14px rgba(0,105,72,0.4))',
-          duration: 0.6,
-          ease: 'power2.out',
-          yoyo: true,
-          repeat: 1,
-          repeatDelay: 0.1,
+          scale: 1,
+          y: 0,
+          duration: 0.55,
+          ease: 'back.out(1.6)',
         },
-        0.15
+        0.12
       );
 
       // 3. CTA Buttons: immediate fast reveal
@@ -105,13 +103,50 @@
         0.42
       );
 
-      // 12. Sync Progress Bar Fill-in
+      // 12. Sync Progress Bar Fill-in (GPU scaleX, zero layout width thrashing)
       tl.fromTo(
         '.hero-sync-progress-bar',
-        { width: '0%' },
-        { width: '85%', duration: 0.7, ease: 'power2.out' },
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.7, ease: 'power2.out' },
         0.45
       );
+
+      // 12b. Animated Revenue & Transaction Count-up
+      const revObj = { val: 850 };
+      const revEl = heroRoot.querySelector('.hero-revenue-num');
+      if (revEl) {
+        tl.to(
+          revObj,
+          {
+            val: 1245,
+            duration: 0.9,
+            ease: 'power2.out',
+            onUpdate: () => {
+              const millions = Math.floor(revObj.val / 10);
+              const hundredThousands = revObj.val % 10;
+              revEl.textContent = `Rp ${millions}.${hundredThousands}00.000`;
+            }
+          },
+          0.2
+        );
+      }
+
+      const txObj = { val: 920 };
+      const txEl = heroRoot.querySelector('.hero-tx-num');
+      if (txEl) {
+        tl.to(
+          txObj,
+          {
+            val: 1482,
+            duration: 0.85,
+            ease: 'power2.out',
+            onUpdate: () => {
+              txEl.textContent = Math.round(txObj.val).toLocaleString('id-ID');
+            }
+          },
+          0.24
+        );
+      }
 
       // 13. Glow Orbs Breathing expansion
       tl.from(
@@ -231,7 +266,7 @@
               <div class="flex justify-between items-start mb-2 md:mb-3">
                 <div>
                   <p class="font-label-sm text-[11px] md:text-xs text-text-muted mb-0.5">Pendapatan Bulan Ini</p>
-                  <p class="font-headline-md text-lg md:text-xl font-bold text-on-surface">Rp 124.500.000</p>
+                  <p class="hero-revenue-num font-headline-md text-lg md:text-xl font-bold text-on-surface tabular-nums">Rp 124.500.000</p>
                 </div>
                 <div class="bg-success/10 text-success px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-success/20">
                   <span class="material-symbols-outlined text-xs">trending_up</span>
@@ -240,21 +275,33 @@
               </div>
             </div>
 
-            <!-- Revenue Bars -->
+            <!-- Revenue Bars with Interactive Hover Values -->
             <div>
-              <div class="h-24 md:h-28 flex items-end justify-between gap-1.5 md:gap-2.5 mt-2">
-                <div class="hero-chart-bar w-full bg-surface-container rounded-t h-[40%] hover:bg-primary/20 transition-all origin-bottom"></div>
-                <div class="hero-chart-bar w-full bg-surface-container rounded-t h-[60%] hover:bg-primary/20 transition-all origin-bottom"></div>
-                <div class="hero-chart-bar w-full bg-surface-container rounded-t h-[45%] hover:bg-primary/20 transition-all origin-bottom"></div>
-                <div class="hero-chart-bar w-full bg-surface-container rounded-t h-[80%] hover:bg-primary/20 transition-all origin-bottom"></div>
+              <div class="h-24 md:h-28 flex items-end justify-between gap-1.5 md:gap-2.5 mt-4">
+                <div class="hero-chart-bar w-full bg-surface-container rounded-t h-[40%] hover:bg-primary/25 transition-colors duration-200 relative group cursor-pointer origin-bottom">
+                  <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-[10px] py-0.5 px-2 rounded shadow whitespace-nowrap font-mono">Rp 11.4 Jt</div>
+                </div>
+                <div class="hero-chart-bar w-full bg-surface-container rounded-t h-[60%] hover:bg-primary/25 transition-colors duration-200 relative group cursor-pointer origin-bottom">
+                  <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-[10px] py-0.5 px-2 rounded shadow whitespace-nowrap font-mono">Rp 16.8 Jt</div>
+                </div>
+                <div class="hero-chart-bar w-full bg-surface-container rounded-t h-[45%] hover:bg-primary/25 transition-colors duration-200 relative group cursor-pointer origin-bottom">
+                  <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-[10px] py-0.5 px-2 rounded shadow whitespace-nowrap font-mono">Rp 13.1 Jt</div>
+                </div>
+                <div class="hero-chart-bar w-full bg-surface-container rounded-t h-[80%] hover:bg-primary/25 transition-colors duration-200 relative group cursor-pointer origin-bottom">
+                  <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-[10px] py-0.5 px-2 rounded shadow whitespace-nowrap font-mono">Rp 21.5 Jt</div>
+                </div>
                 <div class="hero-chart-bar w-full bg-primary rounded-t h-[100%] shadow-[0_0_18px_rgba(0,105,72,0.4)] relative group cursor-pointer origin-bottom">
                   <div class="hero-chart-tooltip absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-[10px] py-0.5 px-2 rounded shadow whitespace-nowrap">Hari Ini</div>
                 </div>
-                <div class="hero-chart-bar w-full bg-surface-container rounded-t h-[55%] hover:bg-primary/20 transition-all origin-bottom"></div>
-                <div class="hero-chart-bar w-full bg-surface-container rounded-t h-[70%] hover:bg-primary/20 transition-all origin-bottom"></div>
+                <div class="hero-chart-bar w-full bg-surface-container rounded-t h-[55%] hover:bg-primary/25 transition-colors duration-200 relative group cursor-pointer origin-bottom">
+                  <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-[10px] py-0.5 px-2 rounded shadow whitespace-nowrap font-mono">Rp 15.2 Jt</div>
+                </div>
+                <div class="hero-chart-bar w-full bg-surface-container rounded-t h-[70%] hover:bg-primary/25 transition-colors duration-200 relative group cursor-pointer origin-bottom">
+                  <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-[10px] py-0.5 px-2 rounded shadow whitespace-nowrap font-mono">Rp 19.6 Jt</div>
+                </div>
               </div>
               <div class="flex justify-between text-[11px] text-text-muted mt-2 font-label-sm">
-                <span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span>
+                <span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span class="text-primary font-bold">Jum</span><span>Sab</span><span>Min</span>
               </div>
             </div>
           </div>
@@ -268,7 +315,7 @@
                 <span class="material-symbols-outlined text-primary text-[16px] md:text-[18px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
                 <p class="font-label-bold text-xs text-on-surface">Total Transaksi</p>
               </div>
-              <p class="font-headline-md text-base md:text-lg font-bold text-on-surface mb-0.5">1,482</p>
+              <p class="hero-tx-num font-headline-md text-base md:text-lg font-bold text-on-surface mb-0.5 tabular-nums">1.482</p>
               <p class="font-label-sm text-[10px] md:text-[11px] text-text-muted">Rata-rata: Rp 84.000 / transaksi</p>
             </div>
 
@@ -295,47 +342,47 @@
       </div>
       </div>
 
-      <!-- Floating Badge 1: QRIS Payment Success (Floats to the left, no overlap with POS header) -->
+      <!-- Floating Badge 1: QRIS Payment Success (Zero text overlap at xl+) -->
       <div
         use:mouseParallax={{ strengthX: 20, strengthY: 12 }}
-        class="absolute -left-6 md:-left-12 lg:-left-16 top-10 md:top-14 z-20 hidden lg:block pointer-events-none"
+        class="absolute xl:-left-44 2xl:-left-48 top-24 z-20 hidden xl:block pointer-events-none"
       >
         <div class="hero-badge-entrance-qris">
           <div
             use:idleFloat={{ y: 8, duration: 4.0 }}
-            class="bg-white/95 backdrop-blur-md p-3 md:p-3.5 rounded-2xl shadow-xl border border-border-hairline flex items-center gap-3"
+            class="bg-white/95 backdrop-blur-md px-3 py-2.5 rounded-2xl shadow-xl border border-border-hairline flex items-center gap-2.5"
           >
-            <div class="hero-qris-icon-wrap w-9 h-9 bg-success/15 rounded-full flex items-center justify-center text-success relative overflow-hidden">
-              <span class="hero-qris-icon material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            <div class="hero-qris-icon-wrap w-8 h-8 bg-success/15 rounded-full flex items-center justify-center text-success relative overflow-hidden shrink-0">
+              <span class="hero-qris-icon material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
             </div>
             <div class="text-left">
-              <p class="font-label-bold text-xs text-on-surface">Pembayaran Berhasil</p>
-              <p class="font-label-sm text-[11px] text-text-muted">QRIS - Rp 150.000</p>
+              <p class="font-label-bold text-[11px] text-on-surface leading-tight">Pembayaran Berhasil</p>
+              <p class="font-label-sm text-[10px] text-text-muted leading-tight mt-0.5">QRIS - Rp 150.000</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Floating Badge 2: Data Sinkronisasi (Floats to the right, no overlap with Stok list) -->
+      <!-- Floating Badge 2: Data Sinkronisasi (Zero text overlap at xl+) -->
       <div
         use:mouseParallax={{ strengthX: -18, strengthY: -10 }}
-        class="absolute -right-6 md:-right-12 lg:-right-16 bottom-8 md:bottom-12 z-20 hidden lg:block pointer-events-none"
+        class="absolute xl:-right-40 2xl:-right-44 bottom-8 z-20 hidden xl:block pointer-events-none"
       >
         <div class="hero-badge-entrance-sync">
           <div
             use:idleFloat={{ y: -6, duration: 4.8, delay: 0.6 }}
-            class="bg-white/95 backdrop-blur-md p-3 md:p-3.5 rounded-2xl shadow-xl border border-border-hairline flex flex-col gap-1.5 text-left min-w-[170px]"
+            class="bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-xl border border-border-hairline flex flex-col gap-1.5 text-left min-w-[172px]"
           >
             <p class="font-label-bold text-xs text-on-surface flex items-center gap-1.5">
               <span class="hero-sync-icon material-symbols-outlined text-primary text-xs inline-block" style="font-variation-settings: 'FILL' 1;">bolt</span>
               Data Sinkronisasi
             </p>
             <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden relative">
-              <div class="hero-sync-progress-bar h-full bg-primary rounded-full w-0"></div>
+              <div class="hero-sync-progress-bar h-full w-[85%] bg-primary rounded-full origin-left"></div>
             </div>
             <div class="flex justify-between items-center font-label-sm text-[10px] text-text-muted mt-0.5 gap-2">
-              <span class="text-primary font-medium shrink-0">85% synced</span>
-              <span class="shrink-0">Updated just now</span>
+              <span class="text-primary font-medium shrink-0">Sinkron 85%</span>
+              <span class="shrink-0">Baru diperbarui</span>
             </div>
           </div>
         </div>

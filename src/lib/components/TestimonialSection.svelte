@@ -49,19 +49,12 @@
         );
       }
 
-      // 4. Accent Text Soft Emerald Bloom Pulse
+      // 4. Accent Text Smooth Scale Pulse
       entranceTl.fromTo(
         '.case-accent-text',
-        { filter: 'drop-shadow(0 0 0px rgba(0,105,72,0))' },
-        {
-          filter: 'drop-shadow(0 0 18px rgba(0,105,72,0.45))',
-          duration: 0.75,
-          ease: 'power2.out',
-          yoyo: true,
-          repeat: 1,
-          repeatDelay: 0.12,
-        },
-        0.65
+        { scale: 0.96 },
+        { scale: 1, duration: 0.55, ease: 'back.out(1.5)' },
+        0.48
       );
 
       // 5. Description Paragraph
@@ -96,6 +89,7 @@
 <section
   id="portofolio"
   bind:this={caseRoot}
+  use:sectionLayeredParallax={{ bgSpeed: 0.45, contentSpeed: 0.16, fgSpeed: -0.28 }}
   class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-center items-center pt-28 pb-20 md:pt-36 md:pb-28 bg-surface overflow-hidden perspective-grid"
 >
   <!-- Background Layer (data-depth="bg") -->
@@ -131,7 +125,7 @@
         <span class="inline-block overflow-hidden align-top"><span class="case-word inline-block italic text-primary font-light case-accent-text">konsep.</span></span>
       </h2>
       <p class="case-desc font-body-lg text-body-lg text-text-muted mt-4 max-w-2xl mx-auto leading-relaxed">
-        Demo dan portofolio adalah satu kesatuan. Setiap demo lahir dari implementasi nyata di klien kami, dan setiap portofolio memiliki dampak bisnis nyata.
+        Setiap sistem yang kami tampilkan sudah teruji langsung di lapangan dan memberi dampak terukur bagi bisnis klien.
       </p>
     </div>
 

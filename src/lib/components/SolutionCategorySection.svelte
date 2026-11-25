@@ -31,9 +31,7 @@
 
     if (isReducedMotion()) return;
 
-    let ctx: gsap.Context | null = null;
-    const rafId = requestAnimationFrame(() => {
-      ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       // Stacking Cards Scroll Scrubbing Timeline with GSAP Pinning & Smooth Fluid Scrub (Zero Snap)
       mainTimeline = gsap.timeline({
         scrollTrigger: {
@@ -43,6 +41,7 @@
           end: '+=200%',
           pin: true,
           pinSpacing: true,
+          refreshPriority: 10,
           scrub: 0.6,
           anticipatePin: 1,
           invalidateOnRefresh: true,
@@ -136,12 +135,10 @@
 
         // Explicitly fix timeline total duration to exactly 2.0s so progress 0..1 matches 0..2.0s
         .set({}, {}, 2.0);
-      }, sectionRoot);
-    });
+    }, sectionRoot);
 
     return () => {
-      cancelAnimationFrame(rafId);
-      if (ctx) ctx.revert();
+      ctx.revert();
     };
   });
 </script>
@@ -380,8 +377,8 @@
               <span class="text-success font-semibold">Aktif (H-1)</span>
             </div>
 
-            <div class="absolute -top-2.5 -right-2 bg-on-surface text-surface text-[9px] font-label-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
-              Segera Hadir
+            <div class="absolute -top-2.5 -right-2 bg-primary text-on-primary text-[9px] font-label-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
+              Siap Kustomisasi
             </div>
           </div>
         </div>
@@ -541,7 +538,7 @@
                 Setrika
               </div>
               <div class="p-1 rounded bg-surface-faint border border-border-hairline text-text-muted font-medium">
-                <span class="block">○ Antri</span>
+                <span class="block">○ Antre</span>
                 Siap
               </div>
             </div>
