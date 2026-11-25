@@ -19,7 +19,7 @@ export interface PortfolioItem {
   description: string;
   year: string;
   location: string;
-  status: 'Klien Aktif' | 'Live Demo' | 'Live Showcase';
+  status: 'Klien Aktif' | 'Live Demo' | 'Live Website';
   
   // Prinsip filosofi: Demo sudah pasti portofolio, portofolio belum tentu punya demo
   hasDemo: boolean;
@@ -480,77 +480,77 @@ export const portfolioItems: PortfolioItem[] = [
     client: 'Vortex Padel Club',
     category: 'sports-lifestyle',
     categoryLabel: 'Sports & Lifestyle',
-    badge: 'Landing Page · Interactive Booking',
-    tagline: 'Landing page modern bernuansa luxury athletic dengan kalkulator booking lapangan, add-on sewa raket, dan checkout WhatsApp otomatis.',
-    description: 'Website profil sekaligus gerbang reservasi untuk klub padel modern. Dirancang dengan tata letak editorial asimetris, palet elektrik biru dan neon optik, animasi halus GSAP ScrollTrigger, serta modal pemesanan lapangan interaktif.',
+    badge: 'Website & Booking Interaktif',
+    tagline: 'Website klub olahraga modern dengan fitur pilih jadwal lapangan, hitung sewa raket otomatis, dan pemesanan langsung ke WhatsApp.',
+    description: 'Website profil sekaligus gerbang reservasi untuk klub padel modern. Dirancang agar calon member mudah melihat fasilitas arena, menghitung total biaya sewa lapangan beserta perlengkapan, lalu langsung melakukan pemesanan.',
     year: '2026',
     location: 'Jakarta Selatan',
-    status: 'Live Showcase',
+    status: 'Live Website',
     hasDemo: true,
     demoUrl: 'https://demo.svralabs.com/landing/vortex-padel',
     iframeSource: 'https://svralabs-vortex-padel-club.vercel.app',
     hasCaseStudy: true,
     caseStudyUrl: '/project/vortex-padel',
     metrics: [
-      { label: 'Arsitektur', value: 'Astro SSG' },
-      { label: 'Animasi', value: 'GSAP Smooth' },
-      { label: 'Konversi', value: 'Booking Modal' }
+      { label: 'Gaya Tampilan', value: 'Sport Modern' },
+      { label: 'Pemesanan', value: 'Hitung Otomatis' },
+      { label: 'Checkout', value: 'Langsung ke WA' }
     ],
     features: [
-      'Modal booking interaktif + hitung estimasi tarif',
-      'Add-on sewa raket, bola, dan coach otomatis',
-      'Filter fasilitas dinamis & carousel testimoni'
+      'Pilih tipe lapangan & hitung estimasi harga otomatis',
+      'Tambahan sewa raket, bola, dan pelatih sekali klik',
+      'Katalog fasilitas klub & ulasan member interaktif'
     ],
-    techStack: ['Astro', 'TypeScript', 'Native CSS Tokens', 'GSAP'],
+    techStack: ['Astro', 'TypeScript', 'CSS Modern', 'GSAP'],
     image: '/projects/vortex-padel/hero-screen.webp',
     heroImage: '/projects/vortex-padel/hero-screen.webp',
     featured: true,
     challenges: [
-      'Website klub olahraga konvensional sering kali tampil kaku seperti brosur statis sehingga gagal membangun aura komunitas modern.',
-      'Calon pemain kesulitan memperkirakan total biaya sewa lapangan beserta add-on raket dan pelatih sebelum menghubungi admin.',
-      'Dibutuhkan pengalaman menjelajah fasilitas club yang terasa mulus di perangkat seluler tanpa memberatkan loading awal.'
+      'Website klub olahraga konvensional sering kali tampil kaku seperti brosur biasa sehingga kurang menarik minat komunitas baru.',
+      'Calon pemain kesulitan memperkirakan total biaya sewa lapangan beserta tambahan raket dan pelatih sebelum menghubungi admin.',
+      'Pengunjung yang masuk lewat iklan media sosial membutuhkan halaman yang ringan dan cepat dibuka dari HP.'
     ],
     solutions: [
-      'Penerapan komposisi editorial asimetris dengan kontras royal blue, dark panel, dan aksen neon lime khas arena padel.',
-      'Pembangunan Booking Modal interaktif yang menghitung tarif durasi, tipe lapangan kaca/outdoor, dan add-on secara real-time lalu mengirim format pesan rapi ke WhatsApp.',
-      'Optimasi arsitektur statis berbasis Astro yang dipadukan dengan GSAP ScrollTrigger untuk animasi ringan dan responsif.'
+      'Merancang tata letak modern bernuansa biru dan neon khas arena padel kelas atas yang langsung membangun kepercayaan.',
+      'Menyediakan formulir pemesanan interaktif yang menghitung tarif durasi, jenis lapangan, dan perlengkapan secara otomatis lalu mengirim rincian rapi ke WhatsApp admin.',
+      'Mengoptimalkan struktur halaman dan gambar agar tetap mulus dan nyaman diakses dari berbagai ukuran layar HP.'
     ],
     businessImpacts: [
       {
-        metric: 'Instant',
-        title: 'Estimasi & Checkout WhatsApp',
-        desc: 'Pengunjung mendapat rincian biaya sebelum chat admin, mempercepat closing reservasi lapangan.'
+        metric: 'Otomatis',
+        title: 'Rincian Biaya Sebelum Chat',
+        desc: 'Pengunjung sudah tahu estimasi biaya sebelum menghubungi admin, sehingga proses deal reservasi lebih cepat.'
       },
       {
-        metric: '< 0.5s',
-        title: 'Kecepatan Muat Statis',
-        desc: 'Dibangun sebagai output statis Astro tanpa overhead bundle berat sehingga mulus dibuka dari iklan media sosial.'
+        metric: 'Anti Lemot',
+        title: 'Ringan Dibuka dari Iklan HP',
+        desc: 'Halaman terbuka dengan cepat saat diklik dari iklan Instagram atau TikTok sehingga calon pemain tidak keburu pergi.'
       },
       {
-        metric: 'Modular',
-        title: 'Design Token Konsisten',
-        desc: 'Tipografi fluid clamp() dan CSS custom properties siap dikembangkan ke halaman event maupun membership penuh.'
+        metric: 'Siap Pakai',
+        title: 'Rapi di Semua Ukuran Layar',
+        desc: 'Tampilan menyesuaikan otomatis di layar smartphone maupun laptop tanpa perlu geser kanan-kiri.'
       }
     ],
     gallery: [
       {
-        title: 'Hero Section & Athletic Framing',
-        desc: 'Komposisi utama dengan statistik klub, visual raket karbon, dan tombol aksi cepat menuju reservasi lapangan.',
+        title: 'Halaman Pembuka & Identitas Klub',
+        desc: 'Tampilan pembuka dengan ringkasan fasilitas unggulan dan tombol pemesanan lapangan yang langsung terlihat.',
         image: '/projects/vortex-padel/hero-screen.webp'
       },
       {
-        title: 'Interactive Booking Court Modal',
-        desc: 'Modal pemilihan tipe court, tanggal, slot jam, serta add-on sewa raket dengan kalkulasi otomatis.',
+        title: 'Formulir Booking & Hitung Biaya',
+        desc: 'Pilihan jenis lapangan, tanggal, durasi jam, serta tambahan sewa raket lengkap dengan kalkulasi harga otomatis.',
         image: '/projects/vortex-padel/booking-screen.webp'
       },
       {
-        title: 'Court Gallery & Club Experience',
-        desc: 'Panel showcase gelap untuk menonjolkan kualitas pencahayaan arena, pro shop, dan fasilitas pelatihan.',
+        title: 'Galeri Lapangan & Pengalaman Bermain',
+        desc: 'Bagian khusus yang menampilkan kualitas pencahayaan arena, perlengkapan pro, dan layanan pelatih.',
         image: '/projects/vortex-padel/experience-screen.webp'
       },
       {
-        title: 'Explore Facilities Bento Grid',
-        desc: 'Kartu fasilitas interaktif mulai dari lapangan kaca panoramik hingga lounge kafe dan fitness zone.',
+        title: 'Daftar Fasilitas Lengkap Klub',
+        desc: 'Menampilkan pilihan area mulai dari lapangan kaca panoramik hingga ruang santai kafe dan gym.',
         image: '/projects/vortex-padel/facilities-screen.webp'
       }
     ]
@@ -563,72 +563,72 @@ export const portfolioItems: PortfolioItem[] = [
     client: 'Tennis Plaza',
     category: 'sports-lifestyle',
     categoryLabel: 'Sports & Lifestyle',
-    badge: 'Landing Page · Visual Craft',
-    tagline: 'Web experience berkarakter dengan tipografi display kontras tinggi, faceted badge geometry, dan alur booking coaching.',
-    description: 'Landing page modern untuk akademi dan klub tenis profesional. Menggabungkan estetika court green dan neon lime dengan tipografi display heavy-italic, interaksi ringan Alpine.js, dan animasi halus GSAP ScrollTrigger.',
+    badge: 'Website & Desain Brand',
+    tagline: 'Website klub dan akademi tenis bergaya profesional dengan tampilan tegas, navigasi simpel, dan alur daftar sesi latihan yang praktis.',
+    description: 'Website profil dan pendaftaran untuk akademi serta klub tenis modern. Menggabungkan warna khas lapangan tenis dengan penulisan tegas yang mudah dibaca, galeri program latihan, hingga formulir daftar sesi.',
     year: '2026',
     location: 'Jakarta Pusat',
-    status: 'Live Showcase',
+    status: 'Live Website',
     hasDemo: true,
     demoUrl: 'https://demo.svralabs.com/landing/tennis-plaza',
     iframeSource: 'https://svralabs-tennis-plaza.vercel.app',
     hasCaseStudy: true,
     caseStudyUrl: '/project/tennis-plaza',
     metrics: [
-      { label: 'Stack', value: 'Alpine + GSAP' },
-      { label: 'Tipografi', value: 'Editorial Bold' },
-      { label: 'Runtime', value: 'Ultra-Light' }
+      { label: 'Gaya Desain', value: 'Atletik Tegas' },
+      { label: 'Tampilan', value: 'Rapi di HP & PC' },
+      { label: 'Akses Web', value: 'Super Ringan' }
     ],
     features: [
-      'Tipografi alternating italic & heavy display',
-      'Faceted badge geometry & watermark footer',
-      'Booking court & jadwal coaching interaktif'
+      'Penulisan judul tebal & tegas yang memikat perhatian',
+      'Penjelasan program latihan, lapangan, dan pro shop',
+      'Tombol daftar sesi & booking lapangan yang mudah diakses'
     ],
-    techStack: ['HTML5', 'Tailwind CSS', 'Alpine.js', 'GSAP ScrollTrigger'],
+    techStack: ['HTML5', 'Tailwind CSS', 'Alpine.js', 'GSAP'],
     image: '/projects/tennis-plaza/hero-screen.webp',
     heroImage: '/projects/tennis-plaza/hero-screen.webp',
     featured: true,
     challenges: [
-      'Menghadirkan landing page bergaya studio desain olahraga global tanpa memakai framework JavaScript yang berat.',
-      'Menjaga hierarki visual tetap tajam antara program coaching, informasi lapangan standar turnamen, dan pro shop.',
-      'Membuat komponen interaktif seperti booking modal dan filter program tetap responsif dalam satu bundle super ringkas.'
+      'Menghadirkan website klub tenis dengan tampilan premium setara brand olahraga besar tanpa membuat halaman terasa berat saat dibuka.',
+      'Menyusun informasi program latihan, kualitas lapangan standar turnamen, dan katalog perlengkapan agar tidak membingungkan pengunjung.',
+      'Memastikan calon anggota baru bisa langsung mendaftar sesi latihan hanya dengan beberapa klik.'
     ],
     solutions: [
-      'Kombinasi Plus Jakarta Sans dengan ritme alternating italic dan heavy roman yang memberikan karakter dinamis pada setiap headline.',
-      'Penggunaan faceted badge clip-path, bar metrik gelap beraksen volt lime, serta giant watermark footer untuk kesan modern dan berkelas.',
-      'Integrasi Alpine.js dan GSAP ScrollTrigger agar interaksi dialog dan transisi gulir berjalan mulus dengan bobot file minimal.'
+      'Merancang identitas visual khas lapangan tenis (hijau tua, neon terang, dan aksen biru) yang langsung mencuri perhatian.',
+      'Mengatur alur informasi secara bertahap mulai dari keunggulan klub, statistik komunitas aktif, hingga fasilitas lapangan.',
+      'Menempatkan tombol pendaftaran dan formulir booking di posisi yang selalu mudah dijangkau saat pengunjung menjelajah halaman.'
     ],
     businessImpacts: [
       {
-        metric: 'Zero Bloat',
-        title: 'Single-File Ultra Ringan',
-        desc: 'Struktur statis minimalis yang cepat diakses dan mudah di-deploy di berbagai platform edge CDN.'
+        metric: 'Super Ringan',
+        title: 'Akses Cepat & Hemat Kuota',
+        desc: 'Struktur halaman yang ringkas membuat website tetap lancar dibuka bahkan saat sinyal seluler kurang stabil.'
       },
       {
-        metric: 'Distinct',
-        title: 'Identitas Visual Kuat',
-        desc: 'Kombinasi court green, volt lime, dan biru kokoh langsung membedakan brand di mata calon anggota klub.'
+        metric: 'Berkarakter',
+        title: 'Identitas Brand Lebih Kuat',
+        desc: 'Desain khusus yang berbeda dari website template umum langsung mengangkat citra profesional akademi.'
       },
       {
-        metric: 'Direct Action',
-        title: 'Alur Booking Ringkas',
-        desc: 'Tombol CTA permanen di navbar dan hero mengarahkan pengunjung langsung ke dialog pemesanan sesi.'
+        metric: 'Praktis',
+        title: 'Alur Pendaftaran Lebih Singkat',
+        desc: 'Tombol ajakan yang jelas di bagian atas dan isi halaman mempercepat calon anggota untuk langsung booking.'
       }
     ],
     gallery: [
       {
-        title: 'Hero Arena & Bold Display Typography',
-        desc: 'Tampilan pembuka bernuansa lapangan hijau gelap dengan kontras tipografi tinggi dan ajakan booking langsung.',
+        title: 'Halaman Pembuka Berkarakter Atletik',
+        desc: 'Bagian atas halaman dengan tipografi besar yang tegas, warna khas lapangan, dan tombol booking langsung.',
         image: '/projects/tennis-plaza/hero-screen.webp'
       },
       {
-        title: 'Tournament Metrics & Courts Showcase',
-        desc: 'Bar metrik pencapaian klub yang mengantar pengunjung menuju eksplorasi standar lapangan indoor dan clay.',
+        title: 'Statistik Klub & Standar Lapangan',
+        desc: 'Ringkasan pencapaian komunitas anggota aktif serta pilihan lapangan indoor maupun outdoor.',
         image: '/projects/tennis-plaza/courts-screen.webp'
       },
       {
-        title: 'Giant Watermark Footer Architecture',
-        desc: 'Penutup halaman bergaya editorial dengan tipografi watermark besar, form newsletter, dan galeri ringkas.',
+        title: 'Bagian Penutup & Informasi Kontak',
+        desc: 'Penutup halaman yang bersih berisi alamat lokasi klub, kontak WhatsApp, dan kolom berlangganan info.',
         image: '/projects/tennis-plaza/footer-screen.webp'
       }
     ]

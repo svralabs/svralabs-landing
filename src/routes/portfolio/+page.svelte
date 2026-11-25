@@ -240,7 +240,7 @@
         {#if activeScope === 'system'}
           Demo dan portofolio adalah satu kesatuan. Setiap demo sistem lahir dari implementasi nyata di klien kami. Pelajari alur kerjanya melalui detail project, atau langsung uji coba demonya.
         {:else}
-          Showcase website dan landing page yang dirancang dengan tipografi kuat, animasi halus, alur booking interaktif, serta kecepatan akses optimal.
+          Contoh website dan landing page yang kami rancang agar bisnismu terlihat terpercaya, enak dilihat di HP maupun laptop, dan memudahkan calon pelanggan memesan.
         {/if}
       </p>
 
@@ -317,7 +317,7 @@
                 {landingItems.length}
               </p>
               <p class="font-label-sm text-[11px] font-bold text-text-muted uppercase tracking-wider mt-1">
-                Website Showcase
+                Koleksi Website
               </p>
             </div>
             <div class="text-center pt-2 sm:pt-0 sm:px-3">
@@ -325,23 +325,23 @@
                 {landingItems.filter((p) => p.hasDemo).length}
               </p>
               <p class="font-label-sm text-[11px] font-bold text-text-muted uppercase tracking-wider mt-1">
-                Live Web Terpasang
+                Web Siap Dicoba
               </p>
             </div>
             <div class="text-center pt-2 sm:pt-0 sm:px-3">
               <p class="font-display-sm text-2xl sm:text-3xl font-bold text-on-surface tracking-tight">
-                GSAP
+                100%
               </p>
               <p class="font-label-sm text-[11px] font-bold text-text-muted uppercase tracking-wider mt-1">
-                Interactive Motion
+                Desain Eksklusif
               </p>
             </div>
             <div class="text-center pt-2 sm:pt-0 sm:px-3">
               <p class="font-display-sm text-2xl sm:text-3xl font-bold text-primary tracking-tight">
-                &lt; 0.5s
+                Cepat
               </p>
               <p class="font-label-sm text-[11px] font-bold text-text-muted uppercase tracking-wider mt-1">
-                Target Load Cepat
+                Rapi &amp; Ringan di HP
               </p>
             </div>
           </div>
@@ -405,10 +405,10 @@
           </div>
           <div>
             <h2 class="font-headline-md text-sm sm:text-base font-bold text-on-surface">
-              Terpusat di Ekosistem Live Demo Svralabs
+              Bisa Langsung Kamu Klik dan Coba Sendiri
             </h2>
             <p class="font-body-md text-xs text-text-muted mt-0.5">
-              Setiap desain landing page dapat dicoba interaksinya secara langsung melalui payung <span class="font-mono text-on-surface font-medium">demo.svralabs.com</span>.
+              Semua contoh website di bawah ini sudah online dan bisa langsung kamu coba alur booking-nya lewat <span class="font-mono text-on-surface font-medium">demo.svralabs.com</span>.
             </p>
           </div>
         </div>
@@ -418,7 +418,7 @@
           rel="noopener noreferrer"
           class="inline-flex items-center gap-1.5 text-xs font-label-bold text-primary bg-white hover:bg-primary hover:text-white border border-primary/20 px-4 py-2 rounded-full transition-colors self-start sm:self-auto shrink-0 shadow-2xs"
         >
-          <span>Katalog Landing Demo</span>
+          <span>Lihat Semua Demo Web</span>
           <span class="material-symbols-outlined text-[15px]">open_in_new</span>
         </a>
       </div>
@@ -449,7 +449,7 @@
           aria-label="Cari portofolio atau demo"
           type="text"
           bind:value={searchQuery}
-          placeholder={activeScope === 'system' ? 'Cari sistem, kasir, laundry...' : 'Cari padel, tennis, astro...'}
+          placeholder={activeScope === 'system' ? 'Cari sistem, kasir, laundry...' : 'Cari desain padel, tennis, toko...'}
           class="w-full bg-surface-container-lowest border border-border-hairline rounded-full pl-10 pr-8 py-2 text-xs font-body-md text-on-surface placeholder:text-text-muted/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
         />
         {#if searchQuery}
@@ -664,7 +664,7 @@
                     </p>
                     <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-primary text-[10px] font-label-bold">
                       <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                      Live Showcase
+                      Live Website
                     </span>
                   </div>
 
@@ -778,7 +778,7 @@
         <p class="font-body-lg text-body-lg text-text-muted mb-8 leading-relaxed max-w-2xl mx-auto">
           {activeScope === 'system'
             ? 'Tidak menemukan fitur yang pas di katalog? Svralabs siap merancang dan membangun sistem bisnis yang 100% disesuaikan dengan alur operasional usahamu.'
-            : 'Ceritakan target brand dan kampanye bisnismu. Kami bantu wujudkan desain web dengan animasi presisi, alur konversi rapi, dan performa ekstra cepat.'}
+            : 'Ceritakan gambaran usaha dan target pembelimu. Tim Svralabs siap buatkan website yang tampil meyakinkan, enak dilihat di HP, dan memudahkan calon pelanggan memesan.'}
         </p>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
           <a
