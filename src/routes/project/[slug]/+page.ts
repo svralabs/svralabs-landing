@@ -23,10 +23,14 @@ export const load: PageLoad = ({ params }) => {
     throw error(404, `Project "${params.slug}" tidak ditemukan.`);
   }
 
-  // Rekomendasi project lain (exclude current)
-  const relatedProjects = portfolioItems
-    .filter((p) => p.slug !== params.slug)
-    .slice(0, 2);
+  // Rekomendasi project lain (prioritaskan tipe project yang sama)
+  const sameType = portfolioItems.filter(
+    (p) => p.slug !== params.slug && p.projectType === project.projectType
+  );
+  const otherType = portfolioItems.filter(
+    (p) => p.slug !== params.slug && p.projectType !== project.projectType
+  );
+  const relatedProjects = [...sameType, ...otherType].slice(0, 2);
 
   return {
     project,

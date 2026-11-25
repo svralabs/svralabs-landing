@@ -54,7 +54,7 @@
             class="bg-primary text-on-primary px-4 sm:px-5 py-2 rounded-full font-label-bold text-xs sm:text-sm hover:bg-primary-container transition-all duration-300 shadow-sm inline-flex items-center gap-1.5"
           >
             <span class="material-symbols-outlined text-[16px]">play_circle</span>
-            <span>Uji Coba Demo</span>
+            <span>{project.projectType === 'landing-page' ? 'Lihat Web Live' : 'Uji Coba Demo'}</span>
           </a>
         {:else}
           <a
@@ -82,6 +82,7 @@
             {#if project.category === 'layanan-publik'}medical_services
             {:else if project.category === 'fnb'}local_cafe
             {:else if project.category === 'pos-retail'}storefront
+            {:else if project.projectType === 'landing-page'}web
             {:else}precision_manufacturing
             {/if}
           </span>
@@ -109,7 +110,7 @@
               class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-bold text-sm hover:bg-primary-container transition-all duration-300 shadow-md inline-flex items-center gap-2"
             >
               <span class="material-symbols-outlined text-[18px]">play_circle</span>
-              <span>Buka Live Demo Interaktif</span>
+              <span>{project.projectType === 'landing-page' ? 'Buka Website Live' : 'Buka Live Demo Interaktif'}</span>
               <span class="material-symbols-outlined text-[16px]">open_in_new</span>
             </a>
           {/if}
@@ -130,11 +131,11 @@
       <!-- Main Screenshot Frame -->
       <div use:fadeUp={{ delay: 0.15 }} class="max-w-5xl mx-auto">
         <div use:glareCard class="bg-surface-container-lowest rounded-[28px] p-3 md:p-4 border border-border-hairline shadow-[0_30px_70px_rgba(0,0,0,0.08)]">
-          <div class="bg-surface-faint rounded-[20px] overflow-hidden border border-border-hairline aspect-[16/10] relative">
+          <div class="bg-surface-faint rounded-[20px] overflow-hidden border border-border-hairline {project.projectType === 'landing-page' ? 'aspect-[21/10]' : 'aspect-[16/10]'} relative">
             <img 
               src={project.heroImage} 
               alt={project.title} 
-              class="w-full h-full object-cover object-top"
+              class="w-full h-full {project.projectType === 'landing-page' ? 'object-cover object-top' : 'object-cover object-top'}"
               loading="eager"
             />
           </div>
@@ -152,13 +153,13 @@
         </div>
         
         <div use:tiltCard class="bg-[#F8F9FA] p-5 rounded-2xl border border-slate-200/60">
-          <p class="font-label-sm text-text-muted uppercase tracking-wider text-[11px] mb-1.5">Sektor Industri</p>
+          <p class="font-label-sm text-text-muted uppercase tracking-wider text-[11px] mb-1.5">{project.projectType === 'landing-page' ? 'Kategori Desain' : 'Sektor Industri'}</p>
           <p class="font-headline-md text-base md:text-lg font-bold text-on-surface">{project.categoryLabel}</p>
           <p class="font-body-sm text-xs text-text-muted mt-0.5">Tahun {project.year}</p>
         </div>
 
         <div use:tiltCard class="bg-[#F8F9FA] p-5 rounded-2xl border border-slate-200/60">
-          <p class="font-label-sm text-text-muted uppercase tracking-wider text-[11px] mb-1.5">Status Sistem</p>
+          <p class="font-label-sm text-text-muted uppercase tracking-wider text-[11px] mb-1.5">{project.projectType === 'landing-page' ? 'Status Showcase' : 'Status Sistem'}</p>
           <p class="font-headline-md text-base md:text-lg font-bold text-primary flex items-center gap-1.5">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse inline-block"></span>
             <span>{project.status}</span>
@@ -201,9 +202,11 @@
             <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-700 flex items-center justify-center mb-6">
               <span class="material-symbols-outlined text-[26px]">warning</span>
             </div>
-            <h2 class="font-headline-lg text-2xl md:text-[28px] font-bold text-on-surface mb-4">Tantangan Klien</h2>
+            <h2 class="font-headline-lg text-2xl md:text-[28px] font-bold text-on-surface mb-4">{project.projectType === 'landing-page' ? 'Arah Desain & Tujuan' : 'Tantangan Klien'}</h2>
             <p class="font-body-md text-text-muted text-sm leading-relaxed mb-6">
-              Sebelum sistem ini diimplementasikan, alur kerja operasional menghadapi kendala nyata di lapangan:
+              {project.projectType === 'landing-page'
+                ? 'Target pengalaman pengguna dan standar komunikasi visual yang perlu dicapai halaman ini:'
+                : 'Sebelum sistem ini diimplementasikan, alur kerja operasional menghadapi kendala nyata di lapangan:'}
             </p>
             <ul class="space-y-3.5">
               {#each project.challenges as ch}
@@ -222,9 +225,11 @@
             <div class="w-12 h-12 rounded-2xl bg-primary-container text-on-primary-container flex items-center justify-center mb-6">
               <span class="material-symbols-outlined text-[26px]">check_circle</span>
             </div>
-            <h2 class="font-headline-lg text-2xl md:text-[28px] font-bold text-on-surface mb-4">Solusi Sistem Svralabs</h2>
+            <h2 class="font-headline-lg text-2xl md:text-[28px] font-bold text-on-surface mb-4">{project.projectType === 'landing-page' ? 'Eksekusi Visual & Interaksi' : 'Solusi Sistem Svralabs'}</h2>
             <p class="font-body-md text-text-muted text-sm leading-relaxed mb-6">
-              Svralabs merancang arsitektur perangkat lunak yang memecahkan akar masalah secara langsung dan terukur:
+              {project.projectType === 'landing-page'
+                ? 'Pendekatan tata letak, tipografi, animasi, dan alur konversi yang diterapkan tim Svralabs:'
+                : 'Svralabs merancang arsitektur perangkat lunak yang memecahkan akar masalah secara langsung dan terukur:'}
             </p>
             <ul class="space-y-3.5">
               {#each project.solutions as sol}
@@ -245,13 +250,15 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <div use:fadeUp class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <span class="inline-block bg-white text-primary border border-slate-200 font-label-sm text-label-sm uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 font-bold shadow-sm">
-            FOTO ASLI ANTARMUKA SISTEM
+            {project.projectType === 'landing-page' ? 'GALERI TAMPILAN WEBSITE' : 'FOTO ASLI ANTARMUKA SISTEM'}
           </span>
           <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight">
-            Tampilan Layar &amp; <span class="text-primary italic font-light">Alur Pengguna</span>
+            {project.projectType === 'landing-page' ? 'Eksplorasi Layar & ' : 'Tampilan Layar & '}<span class="text-primary italic font-light">{project.projectType === 'landing-page' ? 'Detail Interaksi' : 'Alur Pengguna'}</span>
           </h2>
           <p class="font-body-md text-text-muted text-sm mt-3 max-w-xl mx-auto">
-            Setiap tangkapan layar diambil langsung dari aplikasi produksi yang aktif digunakan untuk mendukung operasional harian.
+            {project.projectType === 'landing-page'
+              ? 'Tangkapan layar diambil langsung dari website produksi yang dapat diakses dan diuji interaksinya.'
+              : 'Setiap tangkapan layar diambil langsung dari aplikasi produksi yang aktif digunakan untuk mendukung operasional harian.'}
           </p>
         </div>
 
@@ -259,7 +266,7 @@
           {#each project.gallery as item}
             <div use:floatCard class="bg-white rounded-[24px] p-4 border border-border-hairline shadow-sm overflow-hidden flex flex-col justify-between">
               <div>
-                <div class="rounded-xl overflow-hidden border border-border-hairline aspect-[16/10] mb-4 bg-surface-faint relative group">
+                <div class="rounded-xl overflow-hidden border border-border-hairline {project.projectType === 'landing-page' ? 'aspect-[21/10]' : 'aspect-[16/10]'} mb-4 bg-surface-faint relative group">
                   <img 
                     src={item.image} 
                     alt={item.title} 
@@ -308,11 +315,13 @@
           <div>
             <div class="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-bold mb-3 border border-emerald-400/30">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>Demo Siap Uji Coba</span>
+              <span>{project.projectType === 'landing-page' ? 'Website Live Siap Dibuka' : 'Demo Siap Uji Coba'}</span>
             </div>
-            <h3 class="text-2xl md:text-3xl font-bold text-white">Ingin Coba Langsung Sistem Ini?</h3>
+            <h3 class="text-2xl md:text-3xl font-bold text-white">{project.projectType === 'landing-page' ? 'Ingin Rasakan Langsung Website Ini?' : 'Ingin Coba Langsung Sistem Ini?'}</h3>
             <p class="text-slate-300 text-sm mt-1 max-w-xl">
-              Uji coba seluruh fitur interaktif aplikasi {project.client} langsung di perambanmu tanpa perlu mendaftar.
+              {project.projectType === 'landing-page'
+                ? `Jelajahi langsung animasi, tata letak responsif, dan alur booking interaktif ${project.client} di browser.`
+                : `Uji coba seluruh fitur interaktif aplikasi ${project.client} langsung di perambanmu tanpa perlu mendaftar.`}
             </p>
           </div>
           <a
@@ -323,7 +332,7 @@
             class="bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-label-bold px-8 py-3.5 rounded-full text-sm shrink-0 transition-colors shadow-lg inline-flex items-center gap-2"
           >
             <span class="material-symbols-outlined text-[18px]">play_circle</span>
-            <span>Buka Live Demo Sekarang</span>
+            <span>{project.projectType === 'landing-page' ? 'Buka Website Live Sekarang' : 'Buka Live Demo Sekarang'}</span>
             <span class="material-symbols-outlined text-[16px]">open_in_new</span>
           </a>
         </div>

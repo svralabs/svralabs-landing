@@ -4,19 +4,22 @@ export interface ProjectScreenshot {
   image: string;
 }
 
+export type ProjectType = 'system' | 'landing-page';
+
 export interface PortfolioItem {
   id: string;
   slug: string;
+  projectType: ProjectType;
   title: string;
   client: string;
-  category: 'layanan-publik' | 'pos-retail' | 'fnb' | 'operasional';
+  category: string;
   categoryLabel: string;
   badge: string;
   tagline: string;
   description: string;
   year: string;
   location: string;
-  status: 'Klien Aktif' | 'Live Demo';
+  status: 'Klien Aktif' | 'Live Demo' | 'Live Showcase';
   
   // Prinsip filosofi: Demo sudah pasti portofolio, portofolio belum tentu punya demo
   hasDemo: boolean;
@@ -53,6 +56,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 'puskesmas-wonokerto',
     slug: 'puskesmas-wonokerto',
+    projectType: 'system',
     title: 'Digitalisasi Pelayanan & Rekam Medis Elektronik (EMR)',
     client: 'Puskesmas Wonokerto',
     category: 'layanan-publik',
@@ -137,6 +141,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 'pos-wonopringgo',
     slug: 'pos-wonopringgo',
+    projectType: 'system',
     title: 'Sistem POS Grosir & Manajemen Inventaris Tekstil',
     client: 'Toko Konveksi Wonopringgo',
     category: 'pos-retail',
@@ -221,6 +226,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 'pos-kopi-seruni',
     slug: 'kopi-seruni',
+    projectType: 'system',
     title: 'POS Kasir Cafe, Kitchen Display & Pemotongan Resep HPP',
     client: 'Toko Kopi Seruni',
     category: 'fnb',
@@ -303,6 +309,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 'laundry-management',
     slug: 'laundry',
+    projectType: 'system',
     title: 'Sistem Manajemen Laundry Kiloan, QR Tracking & WhatsApp Bot',
     client: 'Svra Laundry Solutions',
     category: 'operasional',
@@ -385,6 +392,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 'purchasing-garwo',
     slug: 'purchasing-garwo',
+    projectType: 'system',
     title: 'Purchasing & Scan OCR Nota Pasar AI Vision (Warmindo Garwo)',
     client: 'Warmindo Garwo',
     category: 'operasional',
@@ -461,6 +469,167 @@ export const portfolioItems: PortfolioItem[] = [
         title: 'Arsitektur Sistem & Verifikasi AI',
         desc: 'Alur kerja otomasi dari jepret foto nota di pasar hingga tercatat rapi di sistem analitik.',
         image: '/projects/purchasing-garwo/about-screen.webp'
+      }
+    ]
+  },
+  {
+    id: 'vortex-padel',
+    slug: 'vortex-padel',
+    projectType: 'landing-page',
+    title: 'Vortex Padel Club — Arena & Social Sanctuary',
+    client: 'Vortex Padel Club',
+    category: 'sports-lifestyle',
+    categoryLabel: 'Sports & Lifestyle',
+    badge: 'Landing Page · Interactive Booking',
+    tagline: 'Landing page modern bernuansa luxury athletic dengan kalkulator booking lapangan, add-on sewa raket, dan checkout WhatsApp otomatis.',
+    description: 'Website profil sekaligus gerbang reservasi untuk klub padel modern. Dirancang dengan tata letak editorial asimetris, palet elektrik biru dan neon optik, animasi halus GSAP ScrollTrigger, serta modal pemesanan lapangan interaktif.',
+    year: '2026',
+    location: 'Jakarta Selatan',
+    status: 'Live Showcase',
+    hasDemo: true,
+    demoUrl: 'https://demo.svralabs.com/landing/vortex-padel',
+    iframeSource: 'https://svralabs-vortex-padel-club.vercel.app',
+    hasCaseStudy: true,
+    caseStudyUrl: '/project/vortex-padel',
+    metrics: [
+      { label: 'Arsitektur', value: 'Astro SSG' },
+      { label: 'Animasi', value: 'GSAP Smooth' },
+      { label: 'Konversi', value: 'Booking Modal' }
+    ],
+    features: [
+      'Modal booking interaktif + hitung estimasi tarif',
+      'Add-on sewa raket, bola, dan coach otomatis',
+      'Filter fasilitas dinamis & carousel testimoni'
+    ],
+    techStack: ['Astro', 'TypeScript', 'Native CSS Tokens', 'GSAP'],
+    image: '/projects/vortex-padel/hero-screen.webp',
+    heroImage: '/projects/vortex-padel/hero-screen.webp',
+    featured: true,
+    challenges: [
+      'Website klub olahraga konvensional sering kali tampil kaku seperti brosur statis sehingga gagal membangun aura komunitas modern.',
+      'Calon pemain kesulitan memperkirakan total biaya sewa lapangan beserta add-on raket dan pelatih sebelum menghubungi admin.',
+      'Dibutuhkan pengalaman menjelajah fasilitas club yang terasa mulus di perangkat seluler tanpa memberatkan loading awal.'
+    ],
+    solutions: [
+      'Penerapan komposisi editorial asimetris dengan kontras royal blue, dark panel, dan aksen neon lime khas arena padel.',
+      'Pembangunan Booking Modal interaktif yang menghitung tarif durasi, tipe lapangan kaca/outdoor, dan add-on secara real-time lalu mengirim format pesan rapi ke WhatsApp.',
+      'Optimasi arsitektur statis berbasis Astro yang dipadukan dengan GSAP ScrollTrigger untuk animasi ringan dan responsif.'
+    ],
+    businessImpacts: [
+      {
+        metric: 'Instant',
+        title: 'Estimasi & Checkout WhatsApp',
+        desc: 'Pengunjung mendapat rincian biaya sebelum chat admin, mempercepat closing reservasi lapangan.'
+      },
+      {
+        metric: '< 0.5s',
+        title: 'Kecepatan Muat Statis',
+        desc: 'Dibangun sebagai output statis Astro tanpa overhead bundle berat sehingga mulus dibuka dari iklan media sosial.'
+      },
+      {
+        metric: 'Modular',
+        title: 'Design Token Konsisten',
+        desc: 'Tipografi fluid clamp() dan CSS custom properties siap dikembangkan ke halaman event maupun membership penuh.'
+      }
+    ],
+    gallery: [
+      {
+        title: 'Hero Section & Athletic Framing',
+        desc: 'Komposisi utama dengan statistik klub, visual raket karbon, dan tombol aksi cepat menuju reservasi lapangan.',
+        image: '/projects/vortex-padel/hero-screen.webp'
+      },
+      {
+        title: 'Interactive Booking Court Modal',
+        desc: 'Modal pemilihan tipe court, tanggal, slot jam, serta add-on sewa raket dengan kalkulasi otomatis.',
+        image: '/projects/vortex-padel/booking-screen.webp'
+      },
+      {
+        title: 'Court Gallery & Club Experience',
+        desc: 'Panel showcase gelap untuk menonjolkan kualitas pencahayaan arena, pro shop, dan fasilitas pelatihan.',
+        image: '/projects/vortex-padel/experience-screen.webp'
+      },
+      {
+        title: 'Explore Facilities Bento Grid',
+        desc: 'Kartu fasilitas interaktif mulai dari lapangan kaca panoramik hingga lounge kafe dan fitness zone.',
+        image: '/projects/vortex-padel/facilities-screen.webp'
+      }
+    ]
+  },
+  {
+    id: 'tennis-plaza',
+    slug: 'tennis-plaza',
+    projectType: 'landing-page',
+    title: 'Tennis Plaza — Club & Academy Landing Page',
+    client: 'Tennis Plaza',
+    category: 'sports-lifestyle',
+    categoryLabel: 'Sports & Lifestyle',
+    badge: 'Landing Page · Visual Craft',
+    tagline: 'Web experience berkarakter dengan tipografi display kontras tinggi, faceted badge geometry, dan alur booking coaching.',
+    description: 'Landing page modern untuk akademi dan klub tenis profesional. Menggabungkan estetika court green dan neon lime dengan tipografi display heavy-italic, interaksi ringan Alpine.js, dan animasi halus GSAP ScrollTrigger.',
+    year: '2026',
+    location: 'Jakarta Pusat',
+    status: 'Live Showcase',
+    hasDemo: true,
+    demoUrl: 'https://demo.svralabs.com/landing/tennis-plaza',
+    iframeSource: 'https://svralabs-tennis-plaza.vercel.app',
+    hasCaseStudy: true,
+    caseStudyUrl: '/project/tennis-plaza',
+    metrics: [
+      { label: 'Stack', value: 'Alpine + GSAP' },
+      { label: 'Tipografi', value: 'Editorial Bold' },
+      { label: 'Runtime', value: 'Ultra-Light' }
+    ],
+    features: [
+      'Tipografi alternating italic & heavy display',
+      'Faceted badge geometry & watermark footer',
+      'Booking court & jadwal coaching interaktif'
+    ],
+    techStack: ['HTML5', 'Tailwind CSS', 'Alpine.js', 'GSAP ScrollTrigger'],
+    image: '/projects/tennis-plaza/hero-screen.webp',
+    heroImage: '/projects/tennis-plaza/hero-screen.webp',
+    featured: true,
+    challenges: [
+      'Menghadirkan landing page bergaya studio desain olahraga global tanpa memakai framework JavaScript yang berat.',
+      'Menjaga hierarki visual tetap tajam antara program coaching, informasi lapangan standar turnamen, dan pro shop.',
+      'Membuat komponen interaktif seperti booking modal dan filter program tetap responsif dalam satu bundle super ringkas.'
+    ],
+    solutions: [
+      'Kombinasi Plus Jakarta Sans dengan ritme alternating italic dan heavy roman yang memberikan karakter dinamis pada setiap headline.',
+      'Penggunaan faceted badge clip-path, bar metrik gelap beraksen volt lime, serta giant watermark footer untuk kesan modern dan berkelas.',
+      'Integrasi Alpine.js dan GSAP ScrollTrigger agar interaksi dialog dan transisi gulir berjalan mulus dengan bobot file minimal.'
+    ],
+    businessImpacts: [
+      {
+        metric: 'Zero Bloat',
+        title: 'Single-File Ultra Ringan',
+        desc: 'Struktur statis minimalis yang cepat diakses dan mudah di-deploy di berbagai platform edge CDN.'
+      },
+      {
+        metric: 'Distinct',
+        title: 'Identitas Visual Kuat',
+        desc: 'Kombinasi court green, volt lime, dan biru kokoh langsung membedakan brand di mata calon anggota klub.'
+      },
+      {
+        metric: 'Direct Action',
+        title: 'Alur Booking Ringkas',
+        desc: 'Tombol CTA permanen di navbar dan hero mengarahkan pengunjung langsung ke dialog pemesanan sesi.'
+      }
+    ],
+    gallery: [
+      {
+        title: 'Hero Arena & Bold Display Typography',
+        desc: 'Tampilan pembuka bernuansa lapangan hijau gelap dengan kontras tipografi tinggi dan ajakan booking langsung.',
+        image: '/projects/tennis-plaza/hero-screen.webp'
+      },
+      {
+        title: 'Tournament Metrics & Courts Showcase',
+        desc: 'Bar metrik pencapaian klub yang mengantar pengunjung menuju eksplorasi standar lapangan indoor dan clay.',
+        image: '/projects/tennis-plaza/courts-screen.webp'
+      },
+      {
+        title: 'Giant Watermark Footer Architecture',
+        desc: 'Penutup halaman bergaya editorial dengan tipografi watermark besar, form newsletter, dan galeri ringkas.',
+        image: '/projects/tennis-plaza/footer-screen.webp'
       }
     ]
   }
