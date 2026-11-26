@@ -183,7 +183,7 @@
   id="workflow"
   bind:this={workflowRoot}
   use:sectionLayeredParallax={{ bgSpeed: 0.45, contentSpeed: 0.18, fgSpeed: -0.3 }}
-  class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-center items-center pt-28 pb-20 md:pt-36 md:pb-28 bg-surface overflow-hidden perspective-grid"
+  class="w-full relative flex flex-col justify-center items-center py-16 md:py-24 bg-surface overflow-hidden perspective-grid"
 >
   <!-- Background Glow Layer (data-depth="bg") -->
   <div data-depth="bg" class="absolute inset-0 z-0 pointer-events-none opacity-30">
@@ -192,11 +192,11 @@
   </div>
 
   <!-- Section Depth Stage -->
-  <div class="section-depth-stage w-full max-w-7xl mx-auto px-6 md:px-8 flex flex-col justify-center relative z-10">
+  <div class="section-depth-stage w-full max-w-6xl mx-auto px-6 md:px-gutter flex flex-col justify-center relative z-10">
     
     <!-- Section Title (data-depth="content") -->
-    <div data-depth="content" class="flex flex-col items-center text-center mb-16 md:mb-20">
-      <div class="workflow-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
+    <div data-depth="content" class="flex flex-col items-center text-center mb-10 md:mb-14">
+      <div class="workflow-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-4 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
         <span class="workflow-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
         <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">ALUR KERJA KASIR</span>
       </div>
@@ -222,10 +222,10 @@
 
     <!-- Content Container (data-depth="foreground") -->
     <div data-depth="foreground" bind:this={pinContainer} class="w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
         <!-- Left Column: Story Steps Text -->
-        <div class="flex flex-col gap-16">
+        <div class="flex flex-col gap-10">
           
           <!-- Step 1 Text -->
           <div class="workflow-step-1 transition-opacity duration-300">
@@ -278,37 +278,37 @@
         </div>
 
         <!-- Right Column: Interactive Mockup Stage -->
-        <div class="relative w-full flex flex-col gap-8">
+        <div class="relative w-full flex flex-col gap-6">
           
           <!-- Mockup 1: Checkout Interface Card -->
           <div
             use:tilt3D={{ maxTilt: 4, scale: 1.01 }}
-            class="workflow-mockup-1 relative rounded-[28px] overflow-hidden bg-white border border-border-hairline shadow-[0_20px_50px_rgba(0,0,0,0.06)] p-6 md:p-8 will-change-transform"
+            class="workflow-mockup-1 relative rounded-[24px] overflow-hidden bg-white border border-border-hairline shadow-[0_20px_50px_rgba(0,0,0,0.06)] p-5 md:p-6 will-change-transform"
           >
-            <div class="w-full max-w-[360px] mx-auto bg-surface-container-lowest rounded-2xl p-5 border border-border-hairline shadow-sm">
-              <div class="flex items-center justify-between mb-5 pb-3 border-b border-border-hairline">
+            <div class="w-full max-w-[340px] mx-auto bg-surface-container-lowest rounded-2xl p-4 border border-border-hairline shadow-sm">
+              <div class="flex items-center justify-between mb-4 pb-2.5 border-b border-border-hairline">
                 <div class="flex items-center space-x-3">
-                  <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-                    <span class="material-symbols-outlined text-[20px]">point_of_sale</span>
+                  <div class="w-9 h-9 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-[18px]">point_of_sale</span>
                   </div>
                   <div class="text-left">
                     <p class="font-label-bold text-xs text-on-surface leading-tight">Kedai Kopi Seruni</p>
                     <p class="font-label-sm text-[10px] text-text-muted">Shift Sore · Kasir 01</p>
                   </div>
                 </div>
-                <div class="h-7 px-3 bg-primary/15 rounded-full flex items-center justify-center text-primary font-bold text-[11px]">MEJA 04</div>
+                <div class="h-6 px-2.5 bg-primary/15 rounded-full flex items-center justify-center text-primary font-bold text-[10px]">MEJA 04</div>
               </div>
 
-              <div class="grid grid-cols-3 gap-2.5 mb-5">
+              <div class="grid grid-cols-3 gap-2 mb-4">
                 {#each menuCells as cell}
-                  <div class="workflow-item-cell h-14 bg-surface-container rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:bg-primary/15 hover:text-primary transition-colors duration-200 cursor-pointer">
-                    <span class="material-symbols-outlined text-[17px]">{cell.icon}</span>
+                  <div class="workflow-item-cell h-12 bg-surface-container rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:bg-primary/15 hover:text-primary transition-colors duration-200 cursor-pointer">
+                    <span class="material-symbols-outlined text-[16px]">{cell.icon}</span>
                     <span class="text-[9px] font-label-bold">{cell.label}</span>
                   </div>
                 {/each}
               </div>
 
-              <button type="button" class="workflow-checkout-btn w-full bg-primary text-on-primary py-3 rounded-xl font-label-bold text-sm shadow-md transition-colors duration-300 cursor-pointer flex items-center justify-center gap-2">
+              <button type="button" class="workflow-checkout-btn w-full bg-primary text-on-primary py-2.5 rounded-xl font-label-bold text-xs sm:text-sm shadow-md transition-colors duration-300 cursor-pointer flex items-center justify-center gap-2">
                 <span>Checkout Transaksi</span>
                 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
               </button>
@@ -318,7 +318,7 @@
           <!-- Mockup 2: Velocity Efficiency Growth Chart (Fixed Concrete Container Heights) -->
           <div
             use:tilt3D={{ maxTilt: 4, scale: 1.01 }}
-            class="workflow-mockup-2 relative rounded-[28px] overflow-hidden bg-white border border-border-hairline shadow-[0_20px_50px_rgba(0,0,0,0.06)] p-6 md:p-8 will-change-transform"
+            class="workflow-mockup-2 relative rounded-[24px] overflow-hidden bg-white border border-border-hairline shadow-[0_20px_50px_rgba(0,0,0,0.06)] p-5 md:p-6 will-change-transform"
           >
             <div class="flex items-center justify-between mb-3 gap-2">
               <div>
@@ -330,7 +330,7 @@
               </span>
             </div>
 
-            <div class="w-full h-44 flex items-end justify-between gap-2.5 sm:gap-3.5 pt-4 border-b border-border-hairline pb-2.5">
+            <div class="w-full h-36 flex items-end justify-between gap-2.5 sm:gap-3 pt-3 border-b border-border-hairline pb-2">
               {#each workflowChartBars as bar}
                 <div class="flex-1 h-full flex flex-col items-center justify-end gap-1.5 group/wbar cursor-pointer relative">
                   <span class="opacity-0 group-hover/wbar:opacity-100 transition-opacity duration-150 bg-on-surface text-surface text-[9px] font-mono px-1.5 py-0.5 rounded shadow-sm whitespace-nowrap pointer-events-none">

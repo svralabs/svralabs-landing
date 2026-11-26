@@ -95,12 +95,12 @@
 <!-- Seamless, borderless social proof band that flows with hero horizon fog -->
 <section
   bind:this={trustRoot}
-  class="w-full relative z-20 py-10 md:py-16 bg-gradient-to-b from-white via-surface-container-lowest/80 to-white overflow-hidden"
+  class="w-full relative z-20 py-8 md:py-12 bg-gradient-to-b from-white via-surface-container-lowest/80 to-white overflow-hidden"
 >
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
     
     <!-- Header Title (No Green Pulse Dot) -->
-    <div class="trust-kicker text-center mb-6 md:mb-8 will-change-transform">
+    <div class="trust-kicker text-center mb-5 md:mb-6 will-change-transform">
       <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container border border-border-hairline shadow-2xs mb-2">
         <span class="material-symbols-outlined text-primary text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
         <span class="font-label-sm text-[11px] font-bold text-on-surface-variant uppercase tracking-widest">

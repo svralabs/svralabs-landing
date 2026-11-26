@@ -136,7 +136,7 @@
   id="tentang-kami"
   bind:this={missionRoot}
   use:sectionLayeredParallax={{ bgSpeed: 0.45, contentSpeed: 0.16, fgSpeed: -0.28 }}
-  class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-center items-center pt-24 pb-16 md:pt-28 md:pb-20 bg-surface-container-lowest overflow-hidden perspective-grid"
+  class="w-full relative flex flex-col justify-center items-center py-16 md:py-24 bg-surface-container-lowest overflow-hidden perspective-grid"
 >
   <!-- Background Glow Layer (data-depth="bg") -->
   <div data-depth="bg" class="absolute inset-0 z-0 pointer-events-none opacity-40">
@@ -151,15 +151,15 @@
   <div class="absolute inset-x-0 bottom-0 h-24 md:h-36 pointer-events-none bg-gradient-to-t from-white via-white/80 via-40% to-transparent z-0"></div>
 
   <!-- Section Depth Stage -->
-  <div class="section-depth-stage w-full max-w-7xl mx-auto px-gutter flex flex-col lg:flex-row items-center gap-14 lg:gap-20 relative z-10">
+  <div class="section-depth-stage w-full max-w-6xl mx-auto px-gutter flex flex-col lg:flex-row items-center gap-10 lg:gap-14 relative z-10">
     
     <!-- Left Side: Header & Stats (Restored to Original Clean Design with Kinetic Word Reveals) -->
     <div data-depth="content" class="flex-1 w-full">
       <div class="mission-text-wrapper w-full">
-        <div class="text-left mb-12">
+        <div class="text-left mb-8">
           
           <!-- Kicker badge with interactive hover shine & spin -->
-          <div class="mission-kicker inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container border border-outline-variant/30 mb-8 shadow-xs group/badge hover:border-primary/50 hover:bg-primary/5 hover:scale-105 hover:shadow-sm transition-all duration-300 cursor-default">
+          <div class="mission-kicker inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container border border-outline-variant/30 mb-5 shadow-xs group/badge hover:border-primary/50 hover:bg-primary/5 hover:scale-105 hover:shadow-sm transition-all duration-300 cursor-default">
             <span class="material-symbols-outlined text-[16px] text-primary group-hover/badge:rotate-72 group-hover/badge:scale-125 transition-all duration-500" style="font-variation-settings: 'FILL' 1;">star</span>
             <span class="font-label-bold text-label-bold text-on-surface uppercase tracking-wider text-xs">TENTANG KAMI</span>
           </div>
@@ -220,13 +220,13 @@
 
 
     <!-- Right Side: Coded Tablet UI Component with 3D Depth (data-depth="foreground") -->
-    <div data-depth="foreground" class="flex-1 w-full max-w-[540px] mx-auto lg:mx-0 preserve-3d">
+    <div data-depth="foreground" class="flex-1 w-full max-w-[490px] mx-auto lg:mx-0 preserve-3d">
       <div class="tablet-morph-stage relative w-full preserve-3d">
         
         <!-- Base Tablet Chassis with 3D Tilt: Apple-style Aluminum Light Finish -->
         <div
           use:tilt3D={{ maxTilt: 5, perspective: 1200, glare: true }}
-          class="mission-tablet-chassis relative bg-slate-100/95 rounded-[32px] p-3 sm:p-3.5 shadow-[0_20px_50px_-10px_rgba(0,105,72,0.12),0_10px_25px_-5px_rgba(17,24,39,0.06)] border border-slate-200/90 preserve-3d"
+          class="mission-tablet-chassis relative bg-slate-100/95 rounded-[28px] p-2.5 sm:p-3 shadow-[0_20px_50px_-10px_rgba(0,105,72,0.12),0_10px_25px_-5px_rgba(17,24,39,0.06)] border border-slate-200/90 preserve-3d"
         >
           <!-- Front Camera Dot -->
           <div class="absolute top-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-slate-300 border border-slate-300 flex items-center justify-center">
@@ -234,7 +234,7 @@
           </div>
 
           <!-- Tablet Screen Display (Crisp Light Mode) -->
-          <div class="w-full bg-white rounded-[22px] overflow-hidden flex flex-col border border-slate-200/80 text-on-surface font-sans select-none min-h-[440px] sm:min-h-[470px]">
+          <div class="w-full bg-white rounded-[20px] overflow-hidden flex flex-col border border-slate-200/80 text-on-surface font-sans select-none min-h-[390px] sm:min-h-[420px]">
             
             <!-- Top App Bar -->
             <div class="px-4 py-2.5 bg-slate-50/90 border-b border-slate-200/80 flex items-center justify-between">

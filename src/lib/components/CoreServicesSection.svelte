@@ -98,7 +98,7 @@
   id="layanan"
   bind:this={servicesRoot}
   use:sectionLayeredParallax={{ bgSpeed: 0.45, contentSpeed: 0.16, fgSpeed: -0.28 }}
-  class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-center items-center pt-28 pb-20 md:pt-36 md:pb-28 bg-surface overflow-hidden perspective-grid"
+  class="w-full relative flex flex-col justify-center items-center py-16 md:py-24 bg-surface overflow-hidden perspective-grid"
 >
   <!-- Background Layer (data-depth="bg") -->
   <div data-depth="bg" class="absolute inset-0 z-0 pointer-events-none opacity-30">
@@ -107,13 +107,13 @@
   </div>
 
   <!-- Section Depth Stage: Scales and fades smoothly for 3D page transitions -->
-  <div class="section-depth-stage w-full max-w-7xl mx-auto px-gutter flex flex-col justify-center relative z-10">
+  <div class="section-depth-stage w-full max-w-6xl mx-auto px-gutter flex flex-col justify-center relative z-10">
     
     <!-- Header (data-depth="content") -->
-    <div data-depth="content" class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-20 gap-8">
+    <div data-depth="content" class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 gap-6">
       <div class="max-w-2xl">
         <!-- Kicker Badge with Spring Drop -->
-        <div class="services-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
+        <div class="services-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-4 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
           <span class="services-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">hub</span>
           <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">SOLUSI UTAMA</span>
         </div>
@@ -154,23 +154,23 @@
     </div>
 
     <!-- 3 Service Cards with 3D Depth Layering (data-depth="foreground") -->
-    <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-3 gap-8 perspective-grid">
+    <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-3 gap-6 perspective-grid">
       
       <!-- Service 1: Sistem Siap Pakai -->
       <div
         use:tilt3D={{ maxTilt: 8, perspective: 1000, scale: 1.025, glare: true }}
-        class="service-card group relative bg-[#F8FAFC] rounded-[32px] p-8 border border-border-hairline flex flex-col justify-between h-full preserve-3d shadow-sm hover:shadow-[0_20px_45px_rgba(0,105,72,0.1)] transition-[box-shadow,border-color] duration-300 will-change-transform"
+        class="service-card group relative bg-[#F8FAFC] rounded-[28px] p-6 md:p-7 border border-border-hairline flex flex-col justify-between h-full preserve-3d shadow-sm hover:shadow-[0_20px_45px_rgba(0,105,72,0.1)] transition-[box-shadow,border-color] duration-300 will-change-transform"
       >
         <div>
-          <div class="service-icon-box w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm border border-border-hairline group-hover:scale-110 transition-transform duration-300">
-            <span class="material-symbols-outlined text-primary text-[28px]" style="font-variation-settings: 'FILL' 1;">point_of_sale</span>
+          <div class="service-icon-box w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-border-hairline group-hover:scale-110 transition-transform duration-300">
+            <span class="material-symbols-outlined text-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">point_of_sale</span>
           </div>
 
-          <h3 class="font-headline-md text-[24px] leading-tight font-semibold text-on-surface mb-4 group-hover:text-primary transition-colors">
+          <h3 class="font-headline-md text-[21px] leading-tight font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">
             Sistem Siap Pakai
           </h3>
 
-          <p class="font-body-md text-body-md text-text-muted mb-8 leading-relaxed">
+          <p class="font-body-md text-body-md text-text-muted mb-6 leading-relaxed">
             Cepat dan hemat. Tersedia live demo untuk sistem Laundry, Kasir Kopi Seruni, dan Belanja Bahan Warmindo. Langsung jalan tanpa nunggu dari nol.
           </p>
         </div>
@@ -178,7 +178,7 @@
         <div class="pt-4 border-t border-border-hairline/60">
           <a
             use:magneticButton={{ strength: 10 }}
-            class="inline-flex items-center gap-2 bg-on-surface text-surface font-label-bold text-sm rounded-full px-6 py-3 transition-colors duration-300 hover:bg-primary shadow-md"
+            class="inline-flex items-center gap-2 bg-on-surface text-surface font-label-bold text-xs sm:text-sm rounded-full px-5 py-2.5 transition-colors duration-300 hover:bg-primary shadow-md"
             href="/portfolio?category=has-demo"
           >
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -191,18 +191,18 @@
       <!-- Service 2: Sistem Kustom -->
       <div
         use:tilt3D={{ maxTilt: 8, perspective: 1000, scale: 1.025, glare: true }}
-        class="service-card group relative bg-[#F8FAFC] rounded-[32px] p-8 border border-border-hairline flex flex-col justify-between h-full preserve-3d shadow-sm hover:shadow-[0_20px_45px_rgba(0,105,72,0.1)] transition-[box-shadow,border-color] duration-300 will-change-transform"
+        class="service-card group relative bg-[#F8FAFC] rounded-[28px] p-6 md:p-7 border border-border-hairline flex flex-col justify-between h-full preserve-3d shadow-sm hover:shadow-[0_20px_45px_rgba(0,105,72,0.1)] transition-[box-shadow,border-color] duration-300 will-change-transform"
       >
         <div>
-          <div class="service-icon-box w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm border border-border-hairline group-hover:scale-110 transition-transform duration-300">
-            <span class="material-symbols-outlined text-primary text-[28px]" style="font-variation-settings: 'FILL' 1;">code</span>
+          <div class="service-icon-box w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-border-hairline group-hover:scale-110 transition-transform duration-300">
+            <span class="material-symbols-outlined text-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">code</span>
           </div>
 
-          <h3 class="font-headline-md text-[24px] leading-tight font-semibold text-on-surface mb-4 group-hover:text-primary transition-colors">
+          <h3 class="font-headline-md text-[21px] leading-tight font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">
             Sistem Kustom
           </h3>
 
-          <p class="font-body-md text-body-md text-text-muted mb-8 leading-relaxed">
+          <p class="font-body-md text-body-md text-text-muted mb-6 leading-relaxed">
             Punya alur kerja unik yang gak cocok dengan aplikasi pasaran? Kami bangun sistem yang pas dengan cara kerja timmu — dari ritel, klinik, hingga pabrik.
           </p>
         </div>
@@ -210,7 +210,7 @@
         <div class="pt-4 border-t border-border-hairline/60">
           <a
             use:magneticButton={{ strength: 10 }}
-            class="inline-flex items-center gap-2 bg-on-surface text-surface font-label-bold text-sm rounded-full px-6 py-3 transition-colors duration-300 hover:bg-primary shadow-md"
+            class="inline-flex items-center gap-2 bg-on-surface text-surface font-label-bold text-xs sm:text-sm rounded-full px-5 py-2.5 transition-colors duration-300 hover:bg-primary shadow-md"
             href="#kontak"
           >
             Konsultasi Kebutuhan
@@ -222,18 +222,18 @@
       <!-- Service 3: Koneksi Cabang & Instansi -->
       <div
         use:tilt3D={{ maxTilt: 8, perspective: 1000, scale: 1.025, glare: true }}
-        class="service-card group relative bg-[#F8FAFC] rounded-[32px] p-8 border border-border-hairline flex flex-col justify-between h-full preserve-3d shadow-sm hover:shadow-[0_20px_45px_rgba(0,105,72,0.1)] transition-[box-shadow,border-color] duration-300 will-change-transform"
+        class="service-card group relative bg-[#F8FAFC] rounded-[28px] p-6 md:p-7 border border-border-hairline flex flex-col justify-between h-full preserve-3d shadow-sm hover:shadow-[0_20px_45px_rgba(0,105,72,0.1)] transition-[box-shadow,border-color] duration-300 will-change-transform"
       >
         <div>
-          <div class="service-icon-box w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm border border-border-hairline group-hover:scale-110 transition-transform duration-300">
-            <span class="material-symbols-outlined text-primary text-[28px]" style="font-variation-settings: 'FILL' 1;">domain</span>
+          <div class="service-icon-box w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-border-hairline group-hover:scale-110 transition-transform duration-300">
+            <span class="material-symbols-outlined text-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">domain</span>
           </div>
 
-          <h3 class="font-headline-md text-[24px] leading-tight font-semibold text-on-surface mb-4 group-hover:text-primary transition-colors">
+          <h3 class="font-headline-md text-[21px] leading-tight font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">
             Koneksi Cabang &amp; Instansi
           </h3>
 
-          <p class="font-body-md text-body-md text-text-muted mb-8 leading-relaxed">
+          <p class="font-body-md text-body-md text-text-muted mb-6 leading-relaxed">
             Satukan operasional banyak cabang, kontrol gudang, hingga laporan keuangan dalam satu dashboard terpusat tanpa rekap ulang manual.
           </p>
         </div>
@@ -241,7 +241,7 @@
         <div class="pt-4 border-t border-border-hairline/60">
           <a
             use:magneticButton={{ strength: 10 }}
-            class="inline-flex items-center gap-2 bg-on-surface text-surface font-label-bold text-sm rounded-full px-6 py-3 transition-colors duration-300 hover:bg-primary shadow-md"
+            class="inline-flex items-center gap-2 bg-on-surface text-surface font-label-bold text-xs sm:text-sm rounded-full px-5 py-2.5 transition-colors duration-300 hover:bg-primary shadow-md"
             href="#kontak"
           >
             Pelajari Selengkapnya

@@ -147,7 +147,7 @@
 <section
   id="solusi"
   bind:this={sectionRoot}
-  class="relative w-full h-screen h-[100dvh] bg-white flex flex-col justify-center items-center py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-gutter overflow-hidden z-10"
+  class="relative w-full h-screen h-[100dvh] bg-white flex flex-col justify-center items-center pt-16 pb-4 sm:pt-18 sm:pb-6 md:pt-20 md:pb-7 px-4 sm:px-6 md:px-gutter overflow-hidden z-10"
 >
   <!-- Background Atmosphere Glow -->
   <div class="absolute inset-0 z-0 pointer-events-none opacity-35">
@@ -159,7 +159,7 @@
   <div class="absolute inset-x-0 bottom-0 h-24 md:h-36 pointer-events-none bg-gradient-to-b from-transparent via-white/70 via-50% to-white z-0"></div>
 
   <!-- Section Depth Stage Container -->
-  <div class="section-depth-stage w-full max-w-6xl mx-auto flex flex-col h-full justify-center items-center relative z-10 gap-2 sm:gap-3 md:gap-3.5">
+  <div class="section-depth-stage w-full max-w-5xl mx-auto flex flex-col h-full justify-center items-center relative z-10 gap-2 sm:gap-3">
     
     <!-- Compact Header & Step Navigation -->
     <div class="solusi-header-group text-center max-w-3xl mx-auto shrink-0 mb-1 sm:mb-2 will-change-transform">

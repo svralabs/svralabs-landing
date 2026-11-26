@@ -45,18 +45,18 @@
 <svelte:window bind:scrollY={y} />
 
 <!-- Desktop Navbar -->
-<nav class="fixed left-1/2 -translate-x-1/2 top-6 w-[95%] max-w-7xl rounded-full border z-50 transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] {isHidden ? '-translate-y-28 opacity-0 scale-95 pointer-events-none' : 'translate-y-0 opacity-100 scale-100'} {atTop ? 'bg-white/60 border-white/30 shadow-none backdrop-blur-md' : 'bg-white/90 border-white/50 shadow-[0px_20px_40px_rgba(17,24,39,0.08)] backdrop-blur-xl'} hidden md:block">
-    <div class="flex justify-between items-center px-8 py-3.5">
+<nav class="fixed left-1/2 -translate-x-1/2 top-4 w-[94%] max-w-6xl rounded-full border z-50 transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] {isHidden ? '-translate-y-28 opacity-0 scale-95 pointer-events-none' : 'translate-y-0 opacity-100 scale-100'} {atTop ? 'bg-white/60 border-white/30 shadow-none backdrop-blur-md' : 'bg-white/90 border-white/50 shadow-[0px_20px_40px_rgba(17,24,39,0.08)] backdrop-blur-xl'} hidden md:block">
+    <div class="flex justify-between items-center px-6 py-2.5">
         <a 
             class="flex items-center" 
             href="/#hero"
             onclick={(e) => navigateOrScroll(e, 'hero')}
             aria-label="svralabs"
         >
-            <img src="/logo.webp" alt="svralabs" width="144" height="32" fetchpriority="high" class="h-7 lg:h-8 w-auto object-contain" />
+            <img src="/logo.webp" alt="svralabs" width="144" height="32" fetchpriority="high" class="h-6 lg:h-7 w-auto object-contain" />
         </a>
 
-        <ul class="flex items-center gap-8">
+        <ul class="flex items-center gap-6 lg:gap-7">
             <li>
                 <a 
                     href="/#solusi" 
@@ -119,7 +119,7 @@
             use:magneticButton 
             href="/#kontak" 
             onclick={(e) => navigateOrScroll(e, 'kontak')}
-            class="bg-on-surface text-surface px-6 py-2.5 rounded-full font-label-bold text-sm hover:bg-primary transition-all duration-300 shadow-md inline-flex items-center"
+            class="bg-on-surface text-surface px-5 py-2 rounded-full font-label-bold text-xs lg:text-[13px] hover:bg-primary transition-all duration-300 shadow-md inline-flex items-center"
         >
             Konsultasi Gratis
         </a>

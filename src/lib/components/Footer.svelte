@@ -95,7 +95,7 @@
   bind:this={footerRoot}
   aria-labelledby="footer-heading"
   use:sectionLayeredParallax={{ bgSpeed: 1.0, contentSpeed: 1.0, fgSpeed: -1.0 }}
-  class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-between items-center pt-20 pb-8 px-gutter overflow-hidden bg-surface-container-lowest text-on-surface rounded-t-[36px] sm:rounded-t-[48px] md:rounded-t-[60px] lg:rounded-t-[72px] border-t border-slate-200/90 shadow-[0_-30px_70px_-15px_rgba(0,0,0,0.15),0_-10px_30px_-5px_rgba(0,105,72,0.06)] perspective-grid z-[90]"
+  class="w-full relative flex flex-col justify-between items-center pt-14 pb-8 px-gutter overflow-hidden bg-surface-container-lowest text-on-surface rounded-t-[32px] sm:rounded-t-[40px] md:rounded-t-[52px] border-t border-slate-200/90 shadow-[0_-30px_70px_-15px_rgba(0,0,0,0.15),0_-10px_30px_-5px_rgba(0,105,72,0.06)] perspective-grid z-[90]"
 >
   <h2 class="sr-only" id="footer-heading">Kontak dan Footer</h2>
 
@@ -106,10 +106,10 @@
   </div>
 
   <!-- Section Depth Stage: Scales and fades smoothly for 3D page transitions -->
-  <div class="section-depth-stage w-full max-w-7xl mx-auto flex flex-col justify-between flex-grow relative z-10 gap-12">
+  <div class="section-depth-stage w-full max-w-6xl mx-auto flex flex-col justify-between flex-grow relative z-10 gap-10">
     
     <!-- CTA Card Section -->
-    <div class="footer-cta-card relative w-full rounded-[36px] overflow-hidden bg-gradient-to-br from-[#111827] via-[#162130] to-[#0d131d] text-surface border border-white/10 shadow-2xl p-8 md:p-14 lg:p-16 text-center will-change-transform">
+    <div class="footer-cta-card relative w-full rounded-[28px] overflow-hidden bg-gradient-to-br from-[#111827] via-[#162130] to-[#0d131d] text-surface border border-white/10 shadow-2xl p-7 md:p-11 text-center will-change-transform">
       
       <!-- Gentle Animated Atmospheric Glow Orbs (data-depth="bg") -->
       <div data-depth="bg" class="absolute inset-0 pointer-events-none">
@@ -125,7 +125,7 @@
 
       <div class="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
         <!-- Top Tag (data-depth="foreground") -->
-        <div data-depth="foreground" class="footer-kicker inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/20 mb-8 shadow-sm select-none">
+        <div data-depth="foreground" class="footer-kicker inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/20 mb-5 shadow-sm select-none">
           <span class="material-symbols-outlined text-[16px] text-primary-fixed" style="font-variation-settings: 'FILL' 1;">star</span>
           <span class="font-label-sm text-label-sm uppercase tracking-widest text-white/90 font-label-bold">KONSULTASI GRATIS</span>
         </div>
@@ -134,7 +134,7 @@
         <div data-depth="content">
           <h2
             bind:this={headlineEl}
-            class="footer-headline font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-white mb-6 leading-tight tracking-tight"
+            class="footer-headline font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-white mb-4 leading-tight tracking-tight"
           >
             <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">Siap</span></span>
             <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block">bikin</span></span>
@@ -146,7 +146,7 @@
             <span class="inline-block overflow-hidden align-top"><span class="footer-word inline-block italic text-primary-fixed font-light">otomatis?</span></span>
           </h2>
 
-          <p class="footer-desc font-body-lg text-body-lg text-white/75 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p class="footer-desc font-body-lg text-body-lg text-white/75 mb-7 max-w-xl mx-auto leading-relaxed">
             Ceritakan tantangan operasional bisnismu. Kami siap bantu rancang sistem yang pas — tanpa ribet, tanpa mahal.
           </p>
         </div>
@@ -158,7 +158,7 @@
             href="https://wa.me/6285158418944?text=Halo%20Svralabs,%20saya%20ingin%20konsultasi%20mengenai%20sistem%20digitalisasi%20bisnis."
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-primary text-on-primary font-label-bold text-base py-4 px-10 rounded-full transition-all duration-300 shadow-xl hover:shadow-primary/30 inline-flex items-center gap-2.5 hover:bg-primary-container cursor-pointer"
+            class="bg-primary text-on-primary font-label-bold text-sm py-3.5 px-8 rounded-full transition-all duration-300 shadow-xl hover:shadow-primary/30 inline-flex items-center gap-2 hover:bg-primary-container cursor-pointer"
           >
             <span class="material-symbols-outlined text-[20px]">chat</span>
             Jadwalkan Konsultasi Gratis
@@ -259,7 +259,7 @@
   </div>
 
   <!-- Bottom Legal Strip (Kept outside section-depth-stage for accessible 100% contrast & zero opacity degradation) -->
-  <div class="w-full max-w-7xl mx-auto pt-8 border-t border-border-hairline/70 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-700 relative z-10 gap-4">
+  <div class="w-full max-w-6xl mx-auto pt-6 mt-6 border-t border-border-hairline/70 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-700 relative z-10 gap-4">
     <p class="text-slate-700 font-medium">&copy; {new Date().getFullYear()} Svralabs. Hak cipta dilindungi.</p>
     <div class="flex gap-6">
       <a href="#kontak" class="text-slate-700 font-medium hover:text-primary transition-colors">Privasi &amp; Syarat Ketentuan</a>

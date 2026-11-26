@@ -98,7 +98,7 @@
   id="harga"
   bind:this={pricingRoot}
   use:sectionLayeredParallax={{ bgSpeed: 0.45, contentSpeed: 0.16, fgSpeed: -0.28 }}
-  class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-center items-center pt-28 pb-20 md:pt-36 md:pb-28 bg-surface overflow-hidden perspective-grid"
+  class="w-full relative flex flex-col justify-center items-center py-16 md:py-24 bg-surface overflow-hidden perspective-grid"
 >
   <!-- Background Layer (data-depth="bg") -->
   <div data-depth="bg" class="absolute inset-0 z-0 pointer-events-none opacity-30">
@@ -107,12 +107,12 @@
   </div>
 
   <!-- Section Depth Stage: Scales and fades smoothly for 3D page transitions -->
-  <div class="section-depth-stage w-full max-w-7xl mx-auto px-gutter flex flex-col justify-center relative z-10">
+  <div class="section-depth-stage w-full max-w-6xl mx-auto px-gutter flex flex-col justify-center relative z-10">
     
     <!-- Header (data-depth="content") -->
-    <div data-depth="content" class="text-center max-w-4xl mx-auto mb-16 md:mb-20">
+    <div data-depth="content" class="text-center max-w-4xl mx-auto mb-10 md:mb-14">
       <!-- Kicker Badge with Spring Drop -->
-      <div class="pricing-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
+      <div class="pricing-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-4 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
         <span class="pricing-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">payments</span>
         <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">HARGA &amp; PAKET</span>
       </div>
@@ -138,30 +138,30 @@
     </div>
 
     <!-- 3 Pricing Cards Grid (data-depth="foreground") -->
-    <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto perspective-grid">
+    <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch max-w-5xl mx-auto perspective-grid">
       
       <!-- Card 1: Solusi Siap Pakai -->
       <div
         use:tilt3D={{ maxTilt: 6, perspective: 1000, scale: 1.015, glare: true }}
-        class="pricing-card bg-white rounded-[28px] p-8 flex flex-col justify-between shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-border-hairline preserve-3d will-change-transform"
+        class="pricing-card bg-white rounded-[24px] p-6 md:p-7 flex flex-col justify-between shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-border-hairline preserve-3d will-change-transform"
       >
         <div>
-          <div class="mb-8">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-xl">rocket_launch</span>
+          <div class="mb-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-xl text-[20px]">rocket_launch</span>
               <div>
-                <h3 class="font-label-bold text-label-bold text-on-surface text-lg">Solusi Siap Pakai</h3>
+                <h3 class="font-label-bold text-label-bold text-on-surface text-base lg:text-lg">Solusi Siap Pakai</h3>
                 <span class="text-[11px] text-text-muted">Kasir, Laundry, &amp; Booking</span>
               </div>
             </div>
-            <div class="flex items-baseline mb-2">
+            <div class="flex items-baseline mb-1.5">
               <span class="font-headline-md text-headline-md text-on-surface tabular-nums">Rp 499.000</span>
               <span class="font-body-md text-body-md text-text-muted ml-2">/bulan</span>
             </div>
-            <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Aplikasi matang siap pakai langsung hari ini di toko atau usahamu.</p>
+            <p class="font-body-md text-body-md text-text-muted text-[13px] leading-relaxed">Aplikasi matang siap pakai langsung hari ini di toko atau usahamu.</p>
           </div>
 
-          <ul class="flex flex-col gap-3.5 mb-8 font-body-md text-sm text-on-surface-variant">
+          <ul class="flex flex-col gap-2.5 mb-6 font-body-md text-[13px] text-on-surface-variant">
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
               <span>Aplikasi Kasir, Laundry, atau Booking langsung jalan</span>
@@ -208,25 +208,25 @@
 
         <div
           use:tilt3D={{ maxTilt: 7, perspective: 1000, scale: 1.02, glare: true }}
-          class="bg-white rounded-[28px] p-8 flex flex-col justify-between h-full shadow-[0_25px_60px_rgba(0,105,72,0.18)] border-2 border-primary preserve-3d"
+          class="bg-white rounded-[24px] p-6 md:p-7 flex flex-col justify-between h-full shadow-[0_25px_60px_rgba(0,105,72,0.18)] border-2 border-primary preserve-3d"
         >
           <div>
-            <div class="mb-8 mt-2">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-xl">terminal</span>
+            <div class="mb-6 mt-2">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-xl text-[20px]">terminal</span>
                 <div>
-                  <h3 class="font-label-bold text-label-bold text-on-surface text-lg">Sistem Kustom</h3>
+                  <h3 class="font-label-bold text-label-bold text-on-surface text-base lg:text-lg">Sistem Kustom</h3>
                   <span class="text-[11px] text-text-muted">Web App, Stok Gudang, &amp; SOP Khusus</span>
                 </div>
               </div>
-              <div class="flex items-baseline mb-2">
+              <div class="flex items-baseline mb-1.5">
                 <span class="font-headline-md text-headline-md text-on-surface tabular-nums">Mulai Rp 3.5jt</span>
                 <span class="font-body-md text-body-md text-text-muted ml-2">/proyek</span>
               </div>
-              <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Sistem dibangun khusus mengikuti cara kerja timmu — selesai dibuat, 100% jadi aset milikmu.</p>
+              <p class="font-body-md text-body-md text-text-muted text-[13px] leading-relaxed">Sistem dibangun khusus mengikuti cara kerja timmu — selesai dibuat, 100% jadi aset milikmu.</p>
             </div>
 
-            <ul class="flex flex-col gap-3.5 mb-8 font-body-md text-sm text-on-surface-variant">
+            <ul class="flex flex-col gap-2.5 mb-6 font-body-md text-[13px] text-on-surface-variant">
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
                 <span class="font-semibold text-on-surface">Sistem &amp; database 100% hak milik penuh selamanya</span>
@@ -265,24 +265,24 @@
       <!-- Card 3: Skala Besar & AI -->
       <div
         use:tilt3D={{ maxTilt: 6, perspective: 1000, scale: 1.015, glare: true }}
-        class="pricing-card bg-white rounded-[28px] p-8 flex flex-col justify-between shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-border-hairline preserve-3d will-change-transform"
+        class="pricing-card bg-white rounded-[24px] p-6 md:p-7 flex flex-col justify-between shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-border-hairline preserve-3d will-change-transform"
       >
         <div>
-          <div class="mb-8">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-xl">hub</span>
+          <div class="mb-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-xl text-[20px]">hub</span>
               <div>
-                <h3 class="font-label-bold text-label-bold text-on-surface text-lg">Skala Besar &amp; AI</h3>
+                <h3 class="font-label-bold text-label-bold text-on-surface text-base lg:text-lg">Skala Besar &amp; AI</h3>
                 <span class="text-[11px] text-text-muted">Klinik, Instansi &amp; Otomasi</span>
               </div>
             </div>
-            <div class="flex items-baseline mb-2">
+            <div class="flex items-baseline mb-1.5">
               <span class="font-headline-md text-headline-md text-on-surface">Sesuai Kebutuhan</span>
             </div>
-            <p class="font-body-md text-body-md text-text-muted text-sm leading-relaxed">Dirancang untuk klinik, jaringan cabang besar, dan kebutuhan koneksi sistem instansi resmi.</p>
+            <p class="font-body-md text-body-md text-text-muted text-[13px] leading-relaxed">Dirancang untuk klinik, jaringan cabang besar, dan kebutuhan koneksi sistem instansi resmi.</p>
           </div>
 
-          <ul class="flex flex-col gap-3.5 mb-8 font-body-md text-sm text-on-surface-variant">
+          <ul class="flex flex-col gap-2.5 mb-6 font-body-md text-[13px] text-on-surface-variant">
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
               <span>Terhubung resmi ke SATUSEHAT Kemenkes &amp; BPJS Kesehatan</span>

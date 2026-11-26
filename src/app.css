@@ -81,20 +81,20 @@
   --font-headline-md: 'Playfair Display', serif;
   --font-inter: 'Inter', sans-serif;
 
-  /* Custom Font Sizes from the config */
-  --font-size-h2: 2.5rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h1-mobile: 2.5rem;
-  --font-size-label-sm: 12px;
-  --font-size-h1: 3.75rem;
-  --font-size-body-md: 16px;
-  --font-size-display-xl-mobile: 40px;
-  --font-size-headline-lg: 48px;
-  --font-size-display-xl: 64px;
-  --font-size-body-lg: 18px;
-  --font-size-label-bold: 14px;
-  --font-size-headline-lg-mobile: 32px;
-  --font-size-headline-md: 32px;
+  /* Fluid laptop-calibrated typographic scale (natural 80%-like balance at 100% browser zoom) */
+  --font-size-h2: clamp(1.85rem, 2.5vw, 2.35rem);
+  --font-size-h3: clamp(1.2rem, 1.5vw, 1.45rem);
+  --font-size-h1-mobile: clamp(2rem, 6vw, 2.35rem);
+  --font-size-label-sm: 11px;
+  --font-size-h1: clamp(2.3rem, 3.3vw, 3.2rem);
+  --font-size-body-md: clamp(0.875rem, 0.96vw, 0.95rem);
+  --font-size-display-xl-mobile: clamp(2.15rem, 6.2vw, 2.5rem);
+  --font-size-headline-lg: clamp(1.9rem, 2.65vw, 2.5rem);
+  --font-size-display-xl: clamp(2.45rem, 3.5vw, 3.35rem);
+  --font-size-body-lg: clamp(0.95rem, 1.05vw, 1.0625rem);
+  --font-size-label-bold: 13px;
+  --font-size-headline-lg-mobile: clamp(1.75rem, 5.2vw, 2rem);
+  --font-size-headline-md: clamp(1.375rem, 1.75vw, 1.65rem);
 }
 
 @utility font-h2 {

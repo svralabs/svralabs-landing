@@ -90,7 +90,7 @@
   id="portofolio"
   bind:this={caseRoot}
   use:sectionLayeredParallax={{ bgSpeed: 0.45, contentSpeed: 0.16, fgSpeed: -0.28 }}
-  class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-center items-center pt-28 pb-20 md:pt-36 md:pb-28 bg-surface overflow-hidden perspective-grid"
+  class="w-full relative flex flex-col justify-center items-center py-16 md:py-24 bg-surface overflow-hidden perspective-grid"
 >
   <!-- Background Layer (data-depth="bg") -->
   <div data-depth="bg" class="absolute inset-0 z-0 pointer-events-none opacity-30">
@@ -99,12 +99,12 @@
   </div>
 
   <!-- Section Depth Stage: Scales and fades smoothly for 3D page transitions -->
-  <div class="section-depth-stage w-full max-w-7xl mx-auto flex flex-col justify-center relative z-10">
+  <div class="section-depth-stage w-full max-w-6xl mx-auto px-gutter flex flex-col justify-center relative z-10">
     
     <!-- Header (data-depth="content") -->
-    <div data-depth="content" class="text-center mb-16 md:mb-20">
+    <div data-depth="content" class="text-center mb-10 md:mb-12">
       <!-- Kicker Badge with Spring Drop -->
-      <div class="case-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
+      <div class="case-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-4 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
         <span class="case-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">folder_special</span>
         <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-label-bold">PORTOFOLIO NYATA &amp; LIVE DEMO</span>
       </div>
@@ -130,12 +130,12 @@
     </div>
 
     <!-- Case Studies Grid with High-Fidelity Browser Mockups & Agency Summary Cards (data-depth="foreground") -->
-    <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 perspective-grid">
+    <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 perspective-grid">
       
       <!-- Project 1: Puskesmas Wonokerto -->
       <article
         use:tilt3D={{ maxTilt: 3.5, perspective: 1100, glare: true }}
-        class="case-card bg-white rounded-[32px] border border-border-hairline overflow-hidden flex flex-col justify-between shadow-[0_15px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_60px_rgba(0,105,72,0.12)] transition-[box-shadow,border-color] duration-300 group hover:border-primary/40 will-change-transform"
+        class="case-card bg-white rounded-[28px] border border-border-hairline overflow-hidden flex flex-col justify-between shadow-[0_15px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_60px_rgba(0,105,72,0.12)] transition-[box-shadow,border-color] duration-300 group hover:border-primary/40 will-change-transform"
       >
         <div>
           <!-- High-Fidelity Browser Window Frame Mockup -->
@@ -253,7 +253,7 @@
       <!-- Project 2: Toko Konveksi Wonopringgo -->
       <article
         use:tilt3D={{ maxTilt: 3.5, perspective: 1100, glare: true }}
-        class="case-card bg-white rounded-[32px] border border-border-hairline overflow-hidden flex flex-col justify-between shadow-[0_15px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_60px_rgba(0,105,72,0.12)] transition-[box-shadow,border-color] duration-300 group hover:border-primary/40 will-change-transform"
+        class="case-card bg-white rounded-[28px] border border-border-hairline overflow-hidden flex flex-col justify-between shadow-[0_15px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_60px_rgba(0,105,72,0.12)] transition-[box-shadow,border-color] duration-300 group hover:border-primary/40 will-change-transform"
       >
         <div>
           <!-- High-Fidelity Browser Window Frame Mockup -->
@@ -371,11 +371,11 @@
     </div>
 
     <!-- Unified Portfolio & Demo Catalog CTA Button (Single Direct Action to Wadah) -->
-    <div class="mt-14 text-center flex items-center justify-center">
+    <div class="mt-10 text-center flex items-center justify-center">
       <a
         use:magneticButton={{ strength: 14 }}
         href="/portfolio"
-        class="inline-flex items-center gap-2.5 bg-primary text-on-primary hover:bg-primary-container px-8 py-4 rounded-full font-label-bold text-sm shadow-md hover:shadow-lg transition-all duration-300 group"
+        class="inline-flex items-center gap-2.5 bg-primary text-on-primary hover:bg-primary-container px-7 py-3.5 rounded-full font-label-bold text-sm shadow-md hover:shadow-lg transition-all duration-300 group"
       >
         <span class="material-symbols-outlined text-[18px]">folder_special</span>
         <span>Lihat Semua Project &amp; Live Demo</span>

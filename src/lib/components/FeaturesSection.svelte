@@ -118,7 +118,7 @@
   id="fitur"
   bind:this={fiturRoot}
   use:sectionLayeredParallax={{ bgSpeed: 0.45, contentSpeed: 0.16, fgSpeed: -0.28 }}
-  class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-center items-center pt-24 pb-10 md:pt-28 md:pb-14 bg-surface overflow-hidden perspective-grid"
+  class="w-full relative flex flex-col justify-center items-center py-16 md:py-22 bg-surface overflow-hidden perspective-grid"
 >
   <!-- Background Atmosphere Layer -->
   <div
@@ -130,12 +130,12 @@
   </div>
 
   <!-- Section Depth Stage: Scales and fades smoothly for 3D page transitions -->
-  <div class="section-depth-stage relative z-10 max-w-[1280px] w-full mx-auto px-4 md:px-8 flex flex-col items-center">
+  <div class="section-depth-stage relative z-10 max-w-6xl w-full mx-auto px-4 md:px-gutter flex flex-col items-center">
     
     <!-- Header (data-depth="content") -->
-    <div data-depth="content" class="text-center mb-16 max-w-3xl">
+    <div data-depth="content" class="text-center mb-10 md:mb-12 max-w-3xl">
       <!-- Kicker Badge with Spring Drop & Icon Pop -->
-      <span class="fitur-kicker inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] font-label-bold text-primary uppercase text-xs mb-6 select-none">
+      <span class="fitur-kicker inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] font-label-bold text-primary uppercase text-xs mb-5 select-none">
         <span class="fitur-kicker-icon material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
         MASALAH &amp; SOLUSI
       </span>
@@ -163,7 +163,7 @@
     </div>
 
     <!-- 4 Point Grid with 3D Tilt On Hover (data-depth="foreground") -->
-    <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full mb-16 perspective-grid">
+    <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 w-full mb-10 perspective-grid">
       
       <!-- Card 1: POS Kasir Multi-Cabang -->
       <div

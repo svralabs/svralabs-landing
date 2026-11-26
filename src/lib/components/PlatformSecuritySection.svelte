@@ -130,7 +130,7 @@
   id="platform-security"
   bind:this={securityRoot}
   use:sectionLayeredParallax={{ bgSpeed: 0.45, contentSpeed: 0.16, fgSpeed: -0.28 }}
-  class="min-h-screen min-h-[100dvh] w-full relative flex flex-col justify-center items-center pt-28 pb-20 md:pt-36 md:pb-28 bg-surface overflow-hidden perspective-grid"
+  class="w-full relative flex flex-col justify-center items-center py-16 md:py-24 bg-surface overflow-hidden perspective-grid"
 >
   <!-- Background Glow Layer (data-depth="bg") -->
   <div data-depth="bg" class="absolute inset-0 z-0 pointer-events-none opacity-30">
@@ -139,12 +139,12 @@
   </div>
 
   <!-- Section Depth Stage: Scales and fades smoothly for 3D page transitions -->
-  <div class="section-depth-stage w-full max-w-7xl mx-auto px-6 md:px-8 flex flex-col justify-center relative z-10">
+  <div class="section-depth-stage w-full max-w-6xl mx-auto px-6 md:px-gutter flex flex-col justify-center relative z-10">
     
     <!-- Section Title (data-depth="content") -->
-    <div data-depth="content" class="flex flex-col items-center text-center mb-16 md:mb-20">
+    <div data-depth="content" class="flex flex-col items-center text-center mb-10 md:mb-12">
       <!-- Kicker Badge with Spring Drop -->
-      <div class="security-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
+      <div class="security-kicker inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-4 border border-slate-200 shadow-[0_4px_14px_-2px_rgba(0,0,0,0.06)] select-none">
         <span class="security-kicker-icon material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">shield</span>
         <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-label-bold">KEAMANAN &amp; ANALITIK</span>
       </div>
@@ -171,20 +171,20 @@
     </div>
 
     <!-- 2 Large Feature Cards (data-depth="foreground") -->
-    <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 perspective-grid">
+    <div data-depth="foreground" class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 perspective-grid">
       
       <!-- Door 1 Wrapper for 3D Architectural Swing -->
       <div class="security-door-1 w-full h-full preserve-3d">
         <!-- Feature 1: Keamanan & Role Access -->
         <div
           use:tilt3D={{ maxTilt: 6, perspective: 1000, glare: true }}
-          class="security-card bg-surface-faint rounded-[32px] p-8 md:p-10 border border-border-hairline hover:border-primary/30 transition-[box-shadow,border-color] duration-300 flex flex-col justify-between shadow-sm hover:shadow-[0_20px_50px_rgba(0,105,72,0.08)] preserve-3d will-change-transform h-full"
+          class="security-card bg-surface-faint rounded-[28px] p-6 md:p-8 border border-border-hairline hover:border-primary/30 transition-[box-shadow,border-color] duration-300 flex flex-col justify-between shadow-sm hover:shadow-[0_20px_50px_rgba(0,105,72,0.08)] preserve-3d will-change-transform h-full"
         >
-          <div class="mb-8">
-            <span class="inline-block px-3.5 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-sm text-label-sm uppercase tracking-wider mb-5">
+          <div class="mb-6">
+            <span class="inline-block px-3.5 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-sm text-label-sm uppercase tracking-wider mb-4">
               KEAMANAN DATA
             </span>
-            <h3 class="font-headline-md text-headline-md mb-3 text-on-surface">
+            <h3 class="font-headline-md text-headline-md mb-2.5 text-on-surface">
               Transaksi &amp; Akses Aman
             </h3>
             <p class="font-body-md text-body-md text-text-muted leading-relaxed">
@@ -193,7 +193,7 @@
           </div>
 
           <!-- Sequential Role Access Visualization -->
-          <div class="role-access-container relative rounded-2xl overflow-hidden bg-white border border-border-hairline shadow-sm p-6 flex justify-center items-center min-h-[240px]">
+          <div class="role-access-container relative rounded-2xl overflow-hidden bg-white border border-border-hairline shadow-sm p-5 flex justify-center items-center min-h-[210px]">
             <div class="w-full max-w-[320px] space-y-3">
               
               <!-- Role 1: Owner -->
@@ -248,13 +248,13 @@
         <!-- Feature 2: Analitik Stok & Revenue Chart -->
         <div
           use:tilt3D={{ maxTilt: 6, perspective: 1000, glare: true }}
-          class="security-card bg-surface-faint rounded-[32px] p-8 md:p-10 border border-border-hairline hover:border-primary/30 transition-[box-shadow,border-color] duration-300 flex flex-col justify-between shadow-sm hover:shadow-[0_20px_50px_rgba(0,105,72,0.08)] preserve-3d will-change-transform h-full"
+          class="security-card bg-surface-faint rounded-[28px] p-6 md:p-8 border border-border-hairline hover:border-primary/30 transition-[box-shadow,border-color] duration-300 flex flex-col justify-between shadow-sm hover:shadow-[0_20px_50px_rgba(0,105,72,0.08)] preserve-3d will-change-transform h-full"
         >
-        <div class="mb-8">
-          <span class="inline-block px-3.5 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-sm text-label-sm uppercase tracking-wider mb-5">
+        <div class="mb-6">
+          <span class="inline-block px-3.5 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-sm text-label-sm uppercase tracking-wider mb-4">
             LAPORAN REAL-TIME
           </span>
-          <h3 class="font-headline-md text-headline-md mb-3 text-on-surface">
+          <h3 class="font-headline-md text-headline-md mb-2.5 text-on-surface">
             Analitik Stok &amp; Penjualan
           </h3>
           <p class="font-body-md text-body-md text-text-muted leading-relaxed">
@@ -263,7 +263,7 @@
         </div>
 
         <!-- Draw-in Revenue & Product Breakdown Chart -->
-        <div class="revenue-chart-container relative rounded-2xl overflow-hidden bg-white border border-border-hairline shadow-sm p-6 flex flex-col justify-center min-h-[240px]">
+        <div class="revenue-chart-container relative rounded-2xl overflow-hidden bg-white border border-border-hairline shadow-sm p-5 flex flex-col justify-center min-h-[210px]">
           <div class="w-full max-w-[340px] mx-auto">
             
             <!-- Top Stats -->
