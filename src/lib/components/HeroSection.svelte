@@ -363,10 +363,10 @@
         </div>
       </div>
 
-      <!-- Floating Badge 2: Data Sinkronisasi (Zero text overlap at xl+) -->
+      <!-- Floating Badge 2: Data Sinkronisasi (Zero overlap with WA button or dashboard card at xl+) -->
       <div
         use:mouseParallax={{ strengthX: -18, strengthY: -10 }}
-        class="absolute xl:-right-36 2xl:-right-40 bottom-6 z-20 hidden xl:block pointer-events-none"
+        class="absolute xl:-right-36 2xl:-right-40 bottom-24 z-20 hidden xl:block pointer-events-none"
       >
         <div class="hero-badge-entrance-sync">
           <div
