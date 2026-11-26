@@ -632,5 +632,88 @@ export const portfolioItems: PortfolioItem[] = [
         image: '/projects/tennis-plaza/footer-screen.webp'
       }
     ]
+  },
+  {
+    id: 'arunika-nusantara',
+    slug: 'arunika-nusantara',
+    projectType: 'landing-page',
+    title: 'Arunika Nusantara — Kurasi Ekspedisi Alam & Wisata Indonesia',
+    client: 'Arunika Nusantara Expedition',
+    category: 'travel-tourism',
+    categoryLabel: 'Travel & Pariwisata',
+    badge: 'Website & Simulasi Booking',
+    tagline: 'Website ekspedisi wisata Nusantara dengan pilihan destinasi interaktif, galeri momen perjalanan, dan simulasi kalkulator tur.',
+    description: 'Website profil dan kurasi perjalanan alam lintas kepulauan Indonesia — mencakup Gunung Bromo, Pulau Padar Labuan Bajo, Nusa Penida Bali, hingga Dataran Tinggi Dieng. Dilengkapi fitur ganti destinasi langsung di beranda, filter jenis perjalanan, galeri foto momen, dan jendela simulasi hitung biaya tur.',
+    year: '2026',
+    location: 'Jawa Timur, Bali & NTT',
+    status: 'Live Website',
+    hasDemo: true,
+    demoUrl: 'https://demo.svralabs.com/landing/arunika-nusantara',
+    iframeSource: 'https://svralabs-arunika-nusantara.vercel.app',
+    hasCaseStudy: true,
+    caseStudyUrl: '/project/arunika-nusantara',
+    metrics: [
+      { label: 'Gaya Desain', value: 'Editorial Alam' },
+      { label: 'Cakupan Wisata', value: '4 Destinasi' },
+      { label: 'Rencana Tur', value: 'Simulasi Harga' }
+    ],
+    features: [
+      'Ganti 4 destinasi utama langsung di bagian pembuka (Bromo, Padar, Nusa Penida, Dieng)',
+      'Filter kategori aktivitas perjalanan & galeri dokumentasi momen',
+      'Kalkulator simulasi biaya tur otomatis sesuai jumlah peserta & perlengkapan'
+    ],
+    techStack: ['Astro', 'TypeScript', 'CSS Modern', 'GSAP'],
+    image: '/projects/arunika-nusantara/hero-screen.webp',
+    heroImage: '/projects/arunika-nusantara/hero-screen.webp',
+    featured: true,
+    challenges: [
+      'Menampilkan banyak destinasi wisata alam Indonesia dalam satu halaman depan tanpa membuat pengunjung bingung memilih rute.',
+      'Membantu calon peserta tur menghitung gambaran biaya perjalanan beserta perlengkapan tambahan sebelum menghubungi tim admin.',
+      'Menjaga foto pemandangan beresolusi tinggi dan animasi transisi halaman tetap ringan saat diakses lewat koneksi HP.'
+    ],
+    solutions: [
+      'Merancang bagian pembuka layar lebar lengkap dengan pengalih 4 destinasi utama (Bromo, Padar, Nusa Penida, Dieng) yang bisa diklik langsung.',
+      'Menghadirkan filter kategori tur interaktif dan galeri foto perjalanan dengan animasi halus agar halaman terasa hidup.',
+      'Memasang jendela simulasi rencana tur yang otomatis menghitung estimasi total biaya berdasarkan paket pilihan dan jumlah peserta.'
+    ],
+    businessImpacts: [
+      {
+        metric: 'Interaktif',
+        title: 'Banyak Destinasi Tetap Ringkas',
+        desc: 'Pengunjung cukup klik pilihan destinasi di bagian atas untuk melihat detail wilayah dan jadwal keberangkatan tanpa perlu pindah halaman.'
+      },
+      {
+        metric: 'Terstruktur',
+        title: 'Gambaran Biaya Jelas di Awal',
+        desc: 'Calon peserta bisa menimbang paket perjalanan beserta perlengkapan sebelum chat admin, membuat konsultasi lebih cepat deal.'
+      },
+      {
+        metric: 'Tampil Elegan',
+        title: 'Citra Layanan Lebih Tepercaya',
+        desc: 'Paduan tipografi editorial dan foto alam berbingkai lebar langsung menampilkan kesan agen ekspedisi yang terkurasi rapi.'
+      }
+    ],
+    gallery: [
+      {
+        title: 'Halaman Pembuka & Pengalih 4 Destinasi',
+        desc: 'Kanvas lebar pembuka dengan pemilih wilayah Fajar Bromo, Pulau Padar, Nusa Penida, hingga Dataran Tinggi Dieng.',
+        image: '/projects/arunika-nusantara/hero-screen.webp'
+      },
+      {
+        title: 'Kurasi Aktivitas Tur & Filter Medan',
+        desc: 'Daftar aktivitas ekspedisi lengkap dengan filter Jip Vulkanik, Kepulauan & Laut, Pendakian Sabana, dan Dataran Tinggi.',
+        image: '/projects/arunika-nusantara/destinations-screen.webp'
+      },
+      {
+        title: 'Dokumentasi Momen & Kisah Peserta',
+        desc: 'Bagian cerita peserta dipadukan slider foto momen lapangan dari jalur sabana, air terjun, hingga pantai.',
+        image: '/projects/arunika-nusantara/moments-screen.webp'
+      },
+      {
+        title: 'Pilihan Paket Tur Nusantara',
+        desc: 'Susunan paket ekspedisi harian hingga lintas pulau dengan rincian harga per orang dan tombol simulasi pesan.',
+        image: '/projects/arunika-nusantara/packages-screen.webp'
+      }
+    ]
   }
 ];
